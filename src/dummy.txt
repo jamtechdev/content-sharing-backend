@@ -1,0 +1,20 @@
+role user login
+{
+    "name":"lucifer",
+    "email":"neet@gmail.com",
+    "password":"Hellosir@123",
+    "role_id":3
+
+}
+
+role_admin
+
+{
+    "name":"lucifer",
+    "email":"lucifer@gmail.com",
+    "password":"hellosir",
+    "role_id":2
+
+}
+
+
