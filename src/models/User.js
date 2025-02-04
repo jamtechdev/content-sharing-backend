@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "role_id",
         as: "role",
       });
-      // User.hasOne(models.model_profile, {
-      //   foreignKey: "user_id",
-      //   as: "model_profiles",
-      // });
+      User.hasOne(models.ModelProfile, {
+        foreignKey: "user_id",
+        as: "model_profiles",
+      });
     }
   }
   User.init(

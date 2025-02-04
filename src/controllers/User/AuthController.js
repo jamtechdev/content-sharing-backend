@@ -11,9 +11,22 @@ class AuthController {
     // Using TryCatch to wrap async controller functions
     this.router.addRoute("post", "/signup", TryCatch(this.register.bind(this)));
     this.router.addRoute("post", "/login", TryCatch(this.login.bind(this)));
-    this.router.addRoute("post", "/logout", authenticate,TryCatch(this.logout.bind(this)));
-    this.router.addRoute("post", "/login-with-google", TryCatch(this.loginWithGoogle.bind(this)));
-    this.router.addRoute("post", "/forgot-password", TryCatch(this.forgotPassword.bind(this)));
+    this.router.addRoute(
+      "post",
+      "/logout",
+      authenticate,
+      TryCatch(this.logout.bind(this))
+    );
+    this.router.addRoute(
+      "post",
+      "/login-with-google",
+      TryCatch(this.loginWithGoogle.bind(this))
+    );
+    this.router.addRoute(
+      "post",
+      "/forgot-password",
+      TryCatch(this.forgotPassword.bind(this))
+    );
   }
   async register(req, res) {
     const newUser = await AuthService.register(req.body);
@@ -75,29 +88,31 @@ class AuthController {
       },
     });
   }
-
   // logout
-  async logout (req, res){
-    res.clearCookie('token');
+  async logout(req, res) {
+    res.clearCookie("token");
     return res.status(200).json({
       code: 200,
       message: "Logout successful",
     });
-
-
-  };
+  }
   // Login with Google
   async loginWithGoogle(req, res) {
     const { accessToken, email, name, photoURL } = req.body;
-    const { token, user } = await AuthService.loginWithGoogle({ accessToken, email, name, photoURL });
-    
+    const { token, user } = await AuthService.loginWithGoogle({
+      accessToken,
+      email,
+      name,
+      photoURL,
+    });
+
     // Set token in HTTP-only cookie (15 days)
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 15 * 24 * 60 * 60 * 1000,
       path: "/",
     });
-    
+
     return res.status(200).json({
       code: 200,
       token,
@@ -107,11 +122,10 @@ class AuthController {
         email: user.email,
         avatar: user.avatar,
         role_id: user.role_id,
-        platfrom_type: user.platform_type
+        platfrom_type: user.platform_type,
       },
     });
   }
-
   // fortgot password
   async forgotPassword(req, res) {
     const { email } = req.body;
@@ -121,13 +135,12 @@ class AuthController {
       message,
     });
   }
-// resetPassword
+  // resetPassword
   async resetPassword(req, res) {
     const { token, email, password } = req.body;
     const message = await AuthService.resetPassword(token, email, password);
     res.status(201).json({ code: 201, success: true, message });
   }
-
   /**
    * Expose the configured router
    */

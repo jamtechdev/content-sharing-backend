@@ -1,12 +1,11 @@
+// src/middleware/RoleMiddleware.js
 
-const authorize = (roles) => {
+const authorize = (allowedRoles) => {
   return (req, res, next) => {
-    // Ensure that req.user.role exists (set during authentication)
-    console.log(req);
-    if (!roles.includes(req.user.role)) {
-      return res.status(403).json({ message: "Access denied" });
+    if (req.user && allowedRoles.includes(req.user.role)) {
+      return next();
     }
-    next();
+    return res.status(403).json({ code: 403, message: "Access denied" });
   };
 };
 

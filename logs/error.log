@@ -1,378 +1,229 @@
-2025-02-02T14:18:25.148Z [ERROR]: Error in bound login: Invalid credentials
-2025-02-02T14:18:25.155Z [ERROR]: Error: Invalid credentials
-    at AuthService.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
+2025-02-03T05:49:35.413Z [ERROR]: Error in bound login: Unknown column 'users.platform_type' in 'field list'
+2025-02-03T05:49:35.415Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:18:19)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T14:26:18.310Z [ERROR]: Error in bound register: Validation error
-2025-02-02T14:26:18.311Z [ERROR]: Error
-    at Query.run (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
-    at async MySQLQueryInterface.insert (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
-    at async User.save (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:4154:35)
-    at async Function.create (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:2305:12)
-    at async UserRepository.create (E:\2025\MyProject\Content-sharing\Backend-typescript\src\repositories\UserRepository.js:15:12)
-    at async AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:10:12)
-    at async AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:18)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T14:29:24.249Z [ERROR]: Error in bound register: User already exists
-2025-02-02T14:29:24.254Z [ERROR]: Error: User already exists
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:9:13)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\2025\backend-typescript\src\repositories\UserRepository.js:6:12)
+    at async AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:41:18)
+    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:55:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T06:16:09.032Z [ERROR]: Error in bound login: Unknown column 'users.platform_type' in 'field list'
+2025-02-03T06:16:09.035Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:18)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T14:29:25.801Z [ERROR]: Error in bound register: User already exists
-2025-02-02T14:29:25.802Z [ERROR]: Error: User already exists
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:9:13)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\2025\backend-typescript\src\repositories\UserRepository.js:6:12)
+    at async AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:41:18)
+    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:68:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T06:21:51.830Z [ERROR]: Error in bound loginWithGoogle: Data too long for column 'access_token' at row 1
+2025-02-03T06:21:51.832Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\2025\backend-typescript\src\repositories\UserRepository.js:27:12)
+    at async AuthService.loginWithGoogle (D:\2025\backend-typescript\src\services\AuthService.js:67:23)
+    at async AuthController.loginWithGoogle (D:\2025\backend-typescript\src\controllers\User\AuthController.js:103:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T07:04:56.022Z [ERROR]: Error in bound forgotPassword: Class constructor HttpError cannot be invoked without 'new'
+2025-02-03T07:04:56.025Z [ERROR]: TypeError: Class constructor HttpError cannot be invoked without 'new'
+    at AuthService.forgotPassword (D:\2025\backend-typescript\src\services\AuthService.js:86:14)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:18)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T14:33:49.459Z [ERROR]: Error in bound register: User already exists
-2025-02-02T14:33:49.463Z [ERROR]: Error: User already exists
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
+    at async AuthController.forgotPassword (D:\2025\backend-typescript\src\controllers\User\AuthController.js:134:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T07:09:36.324Z [ERROR]: Error in bound forgotPassword: User not found
+2025-02-03T07:09:36.327Z [ERROR]: Error: User not found
+    at AuthService.forgotPassword (D:\2025\backend-typescript\src\services\AuthService.js:86:13)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:18)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T14:33:56.306Z [ERROR]: Error in bound register: res is not defined
-2025-02-02T14:33:56.308Z [ERROR]: ReferenceError: res is not defined
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:8:7)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T14:33:59.622Z [ERROR]: Error in bound register: res is not defined
-2025-02-02T14:33:59.624Z [ERROR]: ReferenceError: res is not defined
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:8:7)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T14:34:22.363Z [ERROR]: Error in bound register: All fields are required
-2025-02-02T14:34:22.368Z [ERROR]: Error: All fields are required
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:8:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T14:34:24.424Z [ERROR]: Error in bound register: All fields are required
-2025-02-02T14:34:24.425Z [ERROR]: Error: All fields are required
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:8:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:07:07.258Z [ERROR]: Error in bound register: All fields are required
-2025-02-02T15:07:07.264Z [ERROR]: Error: All fields are required
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:12:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:07:10.069Z [ERROR]: Error in bound register: All fields are required
-2025-02-02T15:07:10.070Z [ERROR]: Error: All fields are required
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:12:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:09:10.195Z [ERROR]: Error in bound register: All fields are required
-2025-02-02T15:09:10.200Z [ERROR]: Error: All fields are required
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:12:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:09:25.217Z [ERROR]: Error in bound register: Password must be at least 8 characters long and include at least one letter and one number
-2025-02-02T15:09:25.218Z [ERROR]: Error: Password must be at least 8 characters long and include at least one letter and one number
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:13:36)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:11:31.239Z [ERROR]: Error in bound register: Password must be at least 8 characters long and include at least one letter and one number
-2025-02-02T15:11:31.245Z [ERROR]: Error: Password must be at least 8 characters long and include at least one letter and one number
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:11:37.118Z [ERROR]: Error in bound register: Password must be at least 8 characters long and include at least one letter and one number
-2025-02-02T15:11:37.119Z [ERROR]: Error: Password must be at least 8 characters long and include at least one letter and one number
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:12:48.522Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:12:48.527Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:12:57.637Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:12:57.638Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:12:59.143Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:12:59.144Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:13:00.286Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:13:00.286Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:13:38.220Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:13:38.227Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:15:14.463Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-2025-02-02T15:15:14.487Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
-    at AuthService.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:16:13)
-    at AuthController.register (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:19:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:24:08.357Z [ERROR]: Error in bound login: Email and password are required
-2025-02-02T15:24:08.364Z [ERROR]: Error: Email and password are required
-    at AuthService.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:37:13)
-    at AuthController.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:52:47)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:24:11.729Z [ERROR]: Error in bound login: Email and password are required
-2025-02-02T15:24:11.730Z [ERROR]: Error: Email and password are required
-    at AuthService.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:37:13)
-    at AuthController.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:52:47)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:25:47.628Z [ERROR]: Error in bound login: Email and password are required
-2025-02-02T15:25:47.633Z [ERROR]: Error: Email and password are required
-    at AuthService.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:37:13)
-    at AuthController.login (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:52:47)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T15:41:36.665Z [ERROR]: Error in bound login: Include unexpected. Element has to be either a Model, an Association or an object.
-2025-02-02T15:41:36.677Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
-    at Function._conformInclude (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:416:11)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:352:59
-    at Array.map (<anonymous>)
-    at Function._conformIncludes (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:352:39)
-    at Function._baseMerge (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:818:10)
-    at Function._defaultsOptions (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:861:17)
-    at Function._injectScope (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:3413:10)
-    at Function.findAll (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1777:10)
-    at Function.findOne (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1998:23)
-    at UserRepository.findByEmail (E:\2025\MyProject\Content-sharing\Backend-typescript\src\repositories\UserRepository.js:6:23)
-2025-02-02T16:34:32.048Z [ERROR]: Error in bound loginWithGoogle: Unknown column 'users.platform_type' in 'field list'
-2025-02-02T16:34:32.052Z [ERROR]: Error
-    at Query.run (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at async AuthController.forgotPassword (D:\2025\backend-typescript\src\controllers\User\AuthController.js:134:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T07:25:24.420Z [ERROR]: Error in bound login: Email and password are required
+2025-02-03T07:25:24.424Z [ERROR]: Error: Email and password are required
+    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:39:13)
+    at AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:68:47)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-03T07:28:47.175Z [ERROR]: Error in bound forgotPassword: User not found
+2025-02-03T07:28:47.178Z [ERROR]: Error: User not found
+    at AuthService.forgotPassword (D:\2025\backend-typescript\src\services\AuthService.js:86:13)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1998:12)
-    at async UserRepository.findByEmail (E:\2025\MyProject\Content-sharing\Backend-typescript\src\repositories\UserRepository.js:6:12)
-    at async AuthService.loginWithGoogle (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:54:16)
-    at async AuthController.loginWithGoogle (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:89:29)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T16:34:33.587Z [ERROR]: Error in bound loginWithGoogle: Unknown column 'users.platform_type' in 'field list'
-2025-02-02T16:34:33.587Z [ERROR]: Error
-    at Query.run (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at async AuthController.forgotPassword (D:\2025\backend-typescript\src\controllers\User\AuthController.js:134:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T07:29:00.563Z [ERROR]: Error in bound forgotPassword: User not found
+2025-02-03T07:29:00.566Z [ERROR]: Error: User not found
+    at AuthService.forgotPassword (D:\2025\backend-typescript\src\services\AuthService.js:86:13)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\sequelize\src\model.js:1998:12)
-    at async UserRepository.findByEmail (E:\2025\MyProject\Content-sharing\Backend-typescript\src\repositories\UserRepository.js:6:12)
-    at async AuthService.loginWithGoogle (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:54:16)
-    at async AuthController.loginWithGoogle (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:89:29)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T17:45:59.738Z [ERROR]: Error in bound forgotPassword: User is not defined
-2025-02-02T17:45:59.744Z [ERROR]: ReferenceError: User is not defined
-    at AuthService.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:83:18)
-    at AuthController.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:116:39)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-2025-02-02T17:47:18.535Z [ERROR]: Error in bound forgotPassword: mailToSpecificUser is not defined
-2025-02-02T17:47:18.547Z [ERROR]: ReferenceError: mailToSpecificUser is not defined
-    at AuthService.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:99:5)
+    at async AuthController.forgotPassword (D:\2025\backend-typescript\src\controllers\User\AuthController.js:134:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T09:54:36.489Z [ERROR]: Error in bound login: Email and password are required
+2025-02-03T09:54:36.493Z [ERROR]: Error: Email and password are required
+    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:39:13)
+    at AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:68:47)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-03T09:54:51.269Z [ERROR]: Error in bound me: HttpError is not defined
+2025-02-03T09:54:51.270Z [ERROR]: ReferenceError: HttpError is not defined
+    at userService.getUserById (D:\2025\backend-typescript\src\services\UserService.js:8:7)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:116:21)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T17:47:56.541Z [ERROR]: Error in bound forgotPassword: 786B0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
-
-2025-02-02T17:47:56.550Z [ERROR]: Error: 786B0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
-
-2025-02-02T17:48:37.660Z [ERROR]: Error in bound forgotPassword: 786B0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
-
-2025-02-02T17:48:37.664Z [ERROR]: Error: 786B0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
-
-2025-02-02T17:56:33.901Z [ERROR]: Error in bound forgotPassword: transporter is not defined
-2025-02-02T17:56:33.911Z [ERROR]: ReferenceError: transporter is not defined
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\utils\mailToSpecificUser.js:24:7
-    at new Promise (<anonymous>)
-    at mailToSpecificUser (E:\2025\MyProject\Content-sharing\Backend-typescript\src\utils\mailToSpecificUser.js:23:12)
-    at AuthService.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\services\AuthService.js:100:11)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:24:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T09:55:09.763Z [ERROR]: Error in bound me: User not found
+2025-02-03T09:55:09.769Z [ERROR]: Error: User not found
+    at userService.getUserById (D:\2025\backend-typescript\src\services\UserService.js:9:13)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.forgotPassword (E:\2025\MyProject\Content-sharing\Backend-typescript\src\controllers\User\AuthController.js:116:21)
-    at async E:\2025\MyProject\Content-sharing\Backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-02T18:31:23.509Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'role')
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\middleware\RoleMiddleware.js:5:34
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:175:3)
-    at router (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:47:12)
-2025-02-02T18:32:10.841Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'role')
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\middleware\RoleMiddleware.js:6:34
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:175:3)
-    at router (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:47:12)
-2025-02-02T18:36:30.127Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'role')
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\middleware\RoleMiddleware.js:6:34
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:175:3)
-    at router (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:47:12)
-2025-02-02T18:37:10.235Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'role')
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\src\middleware\RoleMiddleware.js:6:34
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:149:13)
-    at Route.dispatch (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\route.js:119:3)
-    at Layer.handle [as handle_request] (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\layer.js:95:5)
-    at E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:284:15
-    at Function.process_params (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:346:12)
-    at next (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:280:10)
-    at Function.handle (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:175:3)
-    at router (E:\2025\MyProject\Content-sharing\Backend-typescript\node_modules\express\lib\router\index.js:47:12)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:24:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T10:56:23.347Z [ERROR]: Error: ENOENT: no such file or directory, open 'D:\2025\backend-typescript\public\uploads\author-page.png'
+2025-02-03T10:58:31.015Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T10:58:31.018Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.open (node:internal/fs/sync:76:10)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:7:32)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:70:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T10:59:06.051Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T10:59:06.052Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.open (node:internal/fs/sync:76:10)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:7:32)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:70:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T10:59:50.433Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T10:59:50.438Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.open (node:internal/fs/sync:76:10)
+    at Object.openSync (node:fs:565:17)
+    at Object.readFileSync (node:fs:445:35)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:7:32)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:71:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T11:06:00.948Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T11:06:00.950Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlink (node:fs:1841:10)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:39:8)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:71:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T11:07:16.364Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T11:07:16.367Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlink (node:fs:1841:10)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:39:8)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:71:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T11:07:17.892Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T11:07:17.893Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlink (node:fs:1841:10)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:39:8)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:93:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:71:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T11:08:58.718Z [ERROR]: Error in bound uploadAvatar: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+2025-02-03T11:08:58.721Z [ERROR]: TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlink (node:fs:1841:10)
+    at module.exports.cloudinaryImageUpload (D:\2025\backend-typescript\src\utils\cloudinaryService.js:39:8)
+    at UserRepository.updateUserAvatar (D:\2025\backend-typescript\src\repositories\UserRepository.js:94:34)
+    at userService.updateUserAvatar (D:\2025\backend-typescript\src\services\UserService.js:16:49)
+    at UserController.uploadAvatar (D:\2025\backend-typescript\src\controllers\User\UserController.js:71:42)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T11:14:27.911Z [ERROR]: undefined
+2025-02-03T11:16:04.748Z [ERROR]: undefined
+2025-02-03T11:16:05.858Z [ERROR]: undefined
+2025-02-03T11:16:14.733Z [ERROR]: undefined
+2025-02-03T11:18:01.108Z [ERROR]: undefined
+2025-02-03T11:18:03.031Z [ERROR]: undefined
+2025-02-03T11:18:03.945Z [ERROR]: undefined
+2025-02-03T11:18:04.452Z [ERROR]: undefined
+2025-02-03T11:18:05.905Z [ERROR]: undefined
+2025-02-03T11:18:42.605Z [ERROR]: undefined
+2025-02-03T11:18:43.665Z [ERROR]: undefined
+2025-02-03T11:18:44.444Z [ERROR]: undefined
+2025-02-03T11:19:14.406Z [ERROR]: undefined
+2025-02-03T11:20:01.387Z [ERROR]: undefined
+2025-02-03T11:20:02.461Z [ERROR]: undefined
+2025-02-03T11:20:03.066Z [ERROR]: undefined
+2025-02-03T11:20:04.889Z [ERROR]: undefined
+2025-02-03T11:20:05.422Z [ERROR]: undefined
+2025-02-03T11:20:06.042Z [ERROR]: undefined
+2025-02-03T11:22:31.449Z [ERROR]: undefined
+2025-02-03T12:02:00.188Z [ERROR]: Error in bound updateUser: Incorrect datetime value: 'Invalid date' for column 'birthdate' at row 1
+2025-02-03T12:02:00.190Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T12:02:16.496Z [ERROR]: Error in bound updateUser: Incorrect datetime value: 'Invalid date' for column 'birthdate' at row 1
+2025-02-03T12:02:16.497Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T12:07:56.476Z [ERROR]: Error in bound updateUser: Incorrect date value: 'Invalid date' for column 'birthdate' at row 1
+2025-02-03T12:07:56.477Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-03T12:09:16.661Z [ERROR]: Error in bound updateUser: Incorrect date value: 'Invalid date' for column 'birthdate' at row 1
+2025-02-03T12:09:16.662Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

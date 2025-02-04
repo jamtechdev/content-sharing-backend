@@ -35,7 +35,7 @@ class AuthService {
   }
 
   async login(email, password) {
-    if(!email || !password) {
+    if (!email || !password) {
       throw new HttpError(400, "Email and password are required");
     }
     const user = await UserRepository.findByEmail(email);
@@ -56,9 +56,13 @@ class AuthService {
     let user = await UserRepository.findByEmail(email);
     if (user) {
       // If user exists, generate a token
-      const token = jwt.sign({ userId: user.id, role_id: user.role_id }, process.env.JWT_SECRET, {
-        expiresIn: "15d",
-      });
+      const token = jwt.sign(
+        { userId: user.id, role_id: user.role_id },
+        process.env.JWT_SECRET,
+        {
+          expiresIn: "15d",
+        }
+      );
       return { token, user };
     } else {
       // Otherwise, create a new user.
@@ -73,9 +77,13 @@ class AuthService {
         password: defaultPassword,
         platform_type: "google",
       });
-      const token = jwt.sign({ userId: newUser.id, role_id: newUser.role_id }, process.env.JWT_SECRET, {
-        expiresIn: "15d",
-      });
+      const token = jwt.sign(
+        { userId: newUser.id, role_id: newUser.role_id },
+        process.env.JWT_SECRET,
+        {
+          expiresIn: "15d",
+        }
+      );
       return { token, user: newUser };
     }
   }
@@ -88,9 +96,13 @@ class AuthService {
 
     // Prepare payload and generate a reset token (expires in 5 minutes)
     const payload = { id: user.id, email: user.email };
-    const resetToken = jwt.sign(payload, process.env.RESET_PASSWORD_SECRET_KEY, {
-      expiresIn: "5m",
-    });
+    const resetToken = jwt.sign(
+      payload,
+      process.env.RESET_PASSWORD_SECRET_KEY,
+      {
+        expiresIn: "5m",
+      }
+    );
 
     // Construct email subject and HTML content
     const subject = `Password reset mail to: ${user.email}`;
@@ -106,16 +118,16 @@ class AuthService {
       decoded = jwt.verify(token, process.env.RESET_PASSWORD_SECRET_KEY);
     } catch (error) {
       if (error.name === "TokenExpiredError") {
-        throw new AppError(400, "Reset token has expired");
+        throw new HttpError(400, "Reset token has expired");
       }
-      throw new AppError(500, error.message);
+      throw new HttpError(500, error.message);
     }
 
     // Find the user by decoded id and email, including the associated role
-   let user = await UserRepository.resetPassword(decoded.id, email);
+    let user = await UserRepository.resetPassword(decoded.id, email);
     // Validate the new password against your regex
     if (!passwordRegex.test(password)) {
-      throw new AppError(
+      throw new HttpError(
         400,
         "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
       );
@@ -124,15 +136,13 @@ class AuthService {
     // Hash the new password and update the user record
     const salt = await bcrypt.genSalt(12);
     const hashedPassword = await bcrypt.hash(password, salt);
-    await UserRepository.updatePassword(user.id , hashedPassword,email);
-      // { password: hashedPassword },
-      // { where: { id: user.id, email: user.email } }
+    await UserRepository.updatePassword(user.id, hashedPassword, email);
+    // { password: hashedPassword },
+    // { where: { id: user.id, email: user.email } }
     // );
 
     return "User's password updated successfully";
   }
-
 }
-
 
 module.exports = new AuthService();

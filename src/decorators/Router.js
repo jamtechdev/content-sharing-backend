@@ -5,8 +5,8 @@ class Router {
     this.router = express.Router();
   }
 
-  addRoute(method, path, handler) {
-    this.router[method](path, handler);
+  addRoute(method, path, ...handlers) {
+    this.router[method](path, ...handlers);
   }
 
   getRouter() {

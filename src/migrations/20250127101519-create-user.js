@@ -14,7 +14,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         isLowercase: true,
-
       },
       email: {
         type: Sequelize.STRING,
@@ -89,8 +88,8 @@ module.exports = {
         ),
       },
     });
-    // await queryInterface.addColumn("users", "role_id", {
-    //   type: Sequelize.INTEGER,
+    // await queryInterface.addColumn("users", "is_modal", {
+    //   type: Sequelize.BOOLEAN,
     //   allowNull: true,
     // });
   },

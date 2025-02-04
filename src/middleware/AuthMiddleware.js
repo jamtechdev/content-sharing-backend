@@ -3,11 +3,12 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const authenticate = (req, res, next) => {
-  const token = req.headers["authorization"];
+  const token = req.header("authorization")?.split(" ")[1];
+  console.log(token);
   if (!token) {
     return res.status(403).json({ message: "No token provided" });
   }
-  console.log(token , process.env.JWT_SECRET);
+  console.log(token, process.env.JWT_SECRET);
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
@@ -19,4 +20,3 @@ const authenticate = (req, res, next) => {
 };
 
 module.exports = authenticate;
-  
