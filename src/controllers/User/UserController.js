@@ -22,7 +22,7 @@ class UserController {
       "post",
       "/upload-avatar",
       authenticate,
-      authorize(["user", "model"]),
+      authorize(["user","model"]),
       upload.single("avatar"),
       TryCatch(this.uploadAvatar.bind(this))
     );
@@ -30,7 +30,7 @@ class UserController {
       "put",
       "/my-profile-update",
       authenticate,
-      authorize(["user"]),
+      authorize(["user","model"]),
       TryCatch(this.updateUser.bind(this))
     );
   }
@@ -86,14 +86,19 @@ class UserController {
   async updateUser(req, res) {
     const user = req?.user;
     const formData = req.body;
-
+   
+   
     const response = await UserService.updateUserbyId(user?.userId, formData);
+    console.log(response);
+    
     if (response[0] === 0) {
       return res.status(404).json({
         error: true,
         message: "Id not found in table!",
       });
     }
+
+ 
 
     return res.status(200).json({
       code: 200,

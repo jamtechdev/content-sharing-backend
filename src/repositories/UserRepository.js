@@ -131,11 +131,12 @@ class UserRepository {
   }
 
   async updateUserById(id, query) {
-    return await User.update(query, {
+    return await User.update(query, { 
       where: {
         id: id,
       },
     });
+    
   }
 }
 

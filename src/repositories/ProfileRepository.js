@@ -13,7 +13,55 @@ class ProfileRepository {
     return await ModelProfile.findOne({ where: { user_id: id } });
   }
   async findProfileById(id) {
-    return await ModelProfile.findOne({ where: { user_id: id } });
+    console.log(id, ">--------------<");
+    return await ModelProfile.findOne({
+      where: { user_id: id },
+      include: [
+        {
+          model: User,
+          as: "user",
+          attributes: [
+            "id",
+            "name",
+            "email",
+            "address",
+            "phone_number",
+            "birthdate",
+          ],
+        },
+        {
+          model: Region,
+          as: "region",
+          attributes: ["name"],
+        },
+      ],
+      raw: true,
+      nest: false,
+    });
+  }
+
+  async findByUsername(username) {
+    return ModelProfile.findOne({ where: { username } });
+  }
+
+  async createProfile(profileData) {
+    console.log(profileData);
+    return ModelProfile.create(profileData);
+  }
+
+  async updateModelProfileAndCoverPhoto(id, imageUri, data) {
+    // console.log(data,imageUri,id);
+    if (data) {
+      return await ModelProfile.update(
+        { profile_picture: imageUri },
+        { where: { user_id: id } }
+      );
+    } else {
+      return await ModelProfile.update(
+        { cover_photo: imageUri },
+        { where: { user_id: id } }
+      );
+    }
   }
 }
 

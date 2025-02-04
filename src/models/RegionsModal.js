@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "region_id",
         as: "region",
       });
+      Regions.hasOne(models.ModelProfile, {
+        foreignKey: "region_id",
+        as: "model_profiles",
+      });
     //   Regions.hasOne(models.model_profile, {
     //     foreignKey: "region_id",
     //     as: "model_profiles",

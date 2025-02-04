@@ -227,3 +227,909 @@
     at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
     at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T06:39:22.764Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'router')
+    at getRouter (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:64:17)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:328:13)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:328:13)
+2025-02-04T06:41:12.376Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'router')
+    at getRouter (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:63:17)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:328:13)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:328:13)
+2025-02-04T06:41:43.301Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T06:41:43.304Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:22:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T06:41:46.275Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T06:41:46.276Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:22:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:20:20.950Z [ERROR]: Error in bound register: User already exists
+2025-02-04T07:20:20.952Z [ERROR]: Error: User already exists
+    at AuthService.register (D:\2025\backend-typescript\src\services\AuthService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (D:\2025\backend-typescript\src\controllers\User\AuthController.js:32:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:20:46.352Z [ERROR]: Error in bound register: User already exists
+2025-02-04T07:20:46.352Z [ERROR]: Error: User already exists
+    at AuthService.register (D:\2025\backend-typescript\src\services\AuthService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (D:\2025\backend-typescript\src\controllers\User\AuthController.js:32:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:21:49.105Z [ERROR]: Error in bound register: User already exists
+2025-02-04T07:21:49.108Z [ERROR]: Error: User already exists
+    at AuthService.register (D:\2025\backend-typescript\src\services\AuthService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (D:\2025\backend-typescript\src\controllers\User\AuthController.js:32:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:23:34.438Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T07:23:34.440Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:22:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:23:43.935Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T07:23:43.937Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:22:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:24:34.311Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T07:24:34.314Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:23:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:25:43.736Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T07:25:43.737Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:23:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:39:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:26:01.690Z [ERROR]: Error in bound createModalProfile: Cannot read properties of undefined (reading 'userId')
+2025-02-04T07:26:01.692Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'userId')
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:23:71)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:40:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at D:\2025\backend-typescript\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\index.js:280:10)
+2025-02-04T07:26:22.379Z [ERROR]: Error in bound createModalProfile: ProfileRepository.findByUserId is not a function
+2025-02-04T07:26:22.381Z [ERROR]: TypeError: ProfileRepository.findByUserId is not a function
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:23:53)
+    at ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:53)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at D:\2025\backend-typescript\src\middleware\AuthMiddleware.js:18:5
+    at D:\2025\backend-typescript\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\2025\backend-typescript\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\2025\backend-typescript\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\2025\backend-typescript\src\middleware\AuthMiddleware.js:13:7)
+2025-02-04T07:26:57.620Z [ERROR]: Error in bound createModalProfile: WHERE parameter "user_id" has invalid "undefined" value
+2025-02-04T07:26:57.659Z [ERROR]: Error: WHERE parameter "user_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+2025-02-04T07:27:55.755Z [ERROR]: Error in bound createModalProfile: WHERE parameter "user_id" has invalid "undefined" value
+2025-02-04T07:27:55.764Z [ERROR]: Error: WHERE parameter "user_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+2025-02-04T07:28:04.221Z [ERROR]: Error in bound createModalProfile: WHERE parameter "user_id" has invalid "undefined" value
+2025-02-04T07:28:04.229Z [ERROR]: Error: WHERE parameter "user_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+2025-02-04T07:28:15.511Z [ERROR]: Error in bound createModalProfile: notNull Violation: ModelProfile.user_id cannot be null
+2025-02-04T07:28:15.531Z [ERROR]: SequelizeValidationError: notNull Violation: ModelProfile.user_id cannot be null
+    at InstanceValidator._validate (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async ModelProfile.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:39:24)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:28:41.586Z [ERROR]: Error in bound createModalProfile: notNull Violation: ModelProfile.user_id cannot be null
+2025-02-04T07:28:41.591Z [ERROR]: SequelizeValidationError: notNull Violation: ModelProfile.user_id cannot be null
+    at InstanceValidator._validate (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\2025\backend-typescript\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async ModelProfile.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:39:24)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:29:30.125Z [ERROR]: Error in bound createModalProfile: Data truncated for column 'content_visibility' at row 1
+2025-02-04T07:29:30.127Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async ModelProfile.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:39:24)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:37:45.719Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-04T07:37:45.721Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:37:47.008Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-04T07:37:47.008Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:43:45.220Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-04T07:43:45.223Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:41:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:47:03.598Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:47:03.600Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:47:27.999Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:47:27.999Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:47:48.598Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:47:48.600Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:49:36.849Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:49:36.851Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:50:09.448Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:50:09.450Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:54:34.370Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:54:34.372Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:56:42.769Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:56:42.770Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:47.050Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:47.052Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:48.231Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:48.231Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:49.197Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:49.197Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:50.066Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:50.066Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:50.827Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:50.828Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:51.541Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:51.541Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T07:58:52.145Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T07:58:52.145Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:04:07.278Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:04:07.279Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:05:14.717Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:05:14.719Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:05:35.329Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:05:35.331Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:05:36.250Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:05:36.251Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:05:37.019Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:05:37.020Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:06:24.120Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:06:24.122Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:92:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:07:01.178Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:07:01.179Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:92:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:07:27.730Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:07:27.732Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:27:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:93:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:10:58.188Z [ERROR]: Error in bound updateUser: User not found
+2025-02-04T08:10:58.190Z [ERROR]: Error: User not found
+    at userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:11:12.643Z [ERROR]: Error in bound updateUser: User not found
+2025-02-04T08:11:12.646Z [ERROR]: Error: User not found
+    at userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:11:26.742Z [ERROR]: Error in bound updateUser: User not found
+2025-02-04T08:11:26.744Z [ERROR]: Error: User not found
+    at userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:13:20.864Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:13:20.866Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:14:22.561Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:14:22.564Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:14:49.116Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:14:49.118Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:15:41.481Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:15:41.484Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:138:7)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:20:53.651Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:20:53.653Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:24:22.989Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:24:22.990Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T08:30:18.007Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T08:30:18.009Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:32:19.076Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:32:19.078Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:32:53.610Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:32:53.612Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:33:26.440Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:33:26.443Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:33:52.220Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:33:52.223Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:34:29.125Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:34:29.127Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:135:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:38:11.375Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:38:11.376Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:39:50.314Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:39:50.316Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:91:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:32.930Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:32.932Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:33.819Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:33.819Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:34.533Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:34.534Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:35.218Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:35.218Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:35.909Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:35.910Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:36.539Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:36.539Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:37.195Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:37.196Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:37.862Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:37.862Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:38.486Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:38.487Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:40:39.175Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:40:39.175Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:28:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:41:06.931Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:41:06.932Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:41:26.850Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:41:26.852Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:43:41.615Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:43:41.617Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:43:42.547Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:43:42.547Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:43:43.259Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:43:43.259Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:43:43.760Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:43:43.760Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:43:44.232Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:43:44.233Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:44:35.529Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:44:35.529Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:44:52.486Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-04T09:44:52.487Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:68:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:45:16.634Z [ERROR]: Error in bound updateUser: User.save is not a function
+2025-02-04T09:45:16.635Z [ERROR]: TypeError: User.save is not a function
+    at UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:139:23)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T09:46:05.884Z [ERROR]: Error in bound updateUser: Validation error
+2025-02-04T09:46:05.886Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:134:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateUser (D:\2025\backend-typescript\src\controllers\User\UserController.js:90:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T11:17:31.569Z [ERROR]: Error in bound uploadModalAsset: image is not defined
+2025-02-04T11:17:31.571Z [ERROR]: ReferenceError: image is not defined
+    at ModelProfileController.uploadModalAsset (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:90:5)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at D:\2025\backend-typescript\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at D:\2025\backend-typescript\src\middleware\AuthMiddleware.js:18:5
+    at D:\2025\backend-typescript\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\2025\backend-typescript\node_modules\jsonwebtoken\verify.js:97:14)
+2025-02-04T11:17:50.949Z [ERROR]: Error in bound uploadModalAsset: image is not defined
+2025-02-04T11:17:50.952Z [ERROR]: ReferenceError: image is not defined
+    at ModelProfileController.uploadModalAsset (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:92:5)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\2025\backend-typescript\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:526:35)
+    at WriteStream.emit (node:domain:488:12)
+2025-02-04T11:18:13.032Z [ERROR]: Error in bound uploadModalAsset: photo is not defined
+2025-02-04T11:18:13.036Z [ERROR]: ReferenceError: photo is not defined
+    at ModelProfileController.uploadModalAsset (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:100:7)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\2025\backend-typescript\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\2025\backend-typescript\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:526:35)
+    at WriteStream.emit (node:domain:488:12)
+2025-02-04T11:19:27.118Z [ERROR]: Error in bound uploadModalAsset: profile is not defined
+2025-02-04T11:19:27.125Z [ERROR]: ReferenceError: profile is not defined
+    at ProfileService.uploadModalPhoto (D:\2025\backend-typescript\src\services\ProfileService.js:85:5)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:97:30)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-04T11:55:37.690Z [ERROR]: Error in bound getModelProfile: Profile not found
+2025-02-04T11:55:37.693Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:64:33)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

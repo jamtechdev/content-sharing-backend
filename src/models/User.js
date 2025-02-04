@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
       },
       birthdate: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: true,
       },
       social_links: {
