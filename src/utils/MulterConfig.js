@@ -36,9 +36,11 @@ const fileFilter = (req, file, cb) => {
     cb(null, true);
   } else {
     cb(null, false);
-    return cb("Supported file formats: .jpg, .jpeg, .png", false);
+    return cb("Supported file formats: .jpg, .jpeg, .png, .webp, .mp4, .mov, .mpeg, .webm", false);
   }
 };
 
-const upload = multer({ storage, fileFilter });
+const upload = multer({ storage, fileFilter, limits: {
+  fileSize: 1024 * 1024 * 4 // 4Mb file size
+}, });
 module.exports = { upload };
