@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
         // onDelete: "CASCADE",
       });
 
-      // this.belongsTo(models.users, {
+      // this.belongsTo(models.users, { 
       //   foreignKey: "user_id",
       // });
       // this.belongsTo(models.Regions, {

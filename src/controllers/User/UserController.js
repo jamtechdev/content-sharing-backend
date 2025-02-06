@@ -35,7 +35,6 @@ class UserController {
       TryCatch(this.updateUser.bind(this))
     );
   }
-
   //   get-user-profile
   async me(req, res) {
     const user = req?.user;
@@ -58,7 +57,7 @@ class UserController {
           id: newUser.id,
           name: newUser.name,
           email: newUser.email,
-          avatar: newUser.avatar,
+          profile_picture: newUser.avatar,
           address: newUser.address,
           phone_number: newUser.phone_number,
           birthdate: newUser.birthdate,
@@ -71,9 +70,7 @@ class UserController {
       });
     }
   }
-
   //   update-user-profile
-
   async uploadAvatar(req, res) {
     const user = req?.user;
     const avatar = req?.file;
@@ -94,7 +91,6 @@ class UserController {
       data: updateUser,
     });
   }
-
   async updateUser(req, res) {
     const user = req?.user;
     const formData = req.body;
@@ -114,7 +110,6 @@ class UserController {
       message: "User details updated successfully.",
     });
   }
-
   getRouter() {
     return this.router.getRouter();
   }

@@ -2067,206 +2067,202 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T06:25:31.019Z [ERROR]: Error in bound login: Invalid credentials
-2025-02-06T06:25:31.021Z [ERROR]: Error: Invalid credentials
-    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:43:13)
-    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:69:29)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T06:26:03.916Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T06:26:03.918Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+2025-02-06T09:46:54.957Z [ERROR]: Error in bound uploadModalAsset: role is not defined
+2025-02-06T09:46:54.960Z [ERROR]: ReferenceError: role is not defined
+    at ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:99:5)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+    at WriteStream.emit (node:domain:488:12)
+2025-02-06T09:52:24.614Z [ERROR]: Error in bound uploadModalAsset: id is not defined
+2025-02-06T09:52:24.621Z [ERROR]: ReferenceError: id is not defined
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:81:7)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T07:44:55.593Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T07:44:55.595Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T07:45:01.545Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T07:45:01.549Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T07:55:47.406Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T07:55:47.409Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:93:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T10:30:40.257Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T10:30:40.259Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T10:30:40.488Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T10:30:40.489Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T10:46:06.877Z [ERROR]: Error in bound getContent: Not content found
-2025-02-06T10:46:06.879Z [ERROR]: Error: Not content found
-    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
-    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
-2025-02-06T12:12:41.491Z [ERROR]: Error in bound register: User already exists
-2025-02-06T12:12:41.494Z [ERROR]: Error: User already exists
-    at AuthService.register (D:\content-sharing-backend\src\services\AuthService.js:26:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async AuthController.register (D:\content-sharing-backend\src\controllers\User\AuthController.js:32:21)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:24:08.430Z [ERROR]: Error in bound contentLike: Likes is not defined
-2025-02-06T12:24:08.432Z [ERROR]: ReferenceError: Likes is not defined
-    at ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:88:5)
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:46)
-    at ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:39)
-    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
-    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
-    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
-    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
-    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
-    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
-    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
-2025-02-06T12:24:41.155Z [ERROR]: Error in bound contentLike: Unknown column 'updatedAt' in 'field list'
-2025-02-06T12:24:41.158Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
-    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
-    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:29:31.011Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:29:31.012Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:31:21.254Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:31:21.256Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:32:53.803Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:32:53.804Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:33:56.006Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:33:56.007Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:40:53.638Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:40:53.641Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:41:04.753Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:41:04.756Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:47:57.171Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:47:57.174Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:49:12.586Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:49:12.588Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:78:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T12:50:10.134Z [ERROR]: Error in bound contentLike: Content not created
-2025-02-06T12:50:10.137Z [ERROR]: Error: Content not created
-    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:78:13)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T13:27:15.271Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
-2025-02-06T13:27:15.274Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
-    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
-    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T13:27:57.295Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
-2025-02-06T13:27:57.297Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
-    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
-    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T13:28:12.464Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
-2025-02-06T13:28:12.466Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
-    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
-    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T13:28:51.578Z [ERROR]: Error in bound contentLike: Unknown column 'updatedAt' in 'field list'
-2025-02-06T13:28:51.581Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
-    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
-    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
-    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
-    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
-2025-02-06T13:31:50.752Z [ERROR]: Error in bound contentLike: WHERE parameter "content_id" has invalid "undefined" value
-2025-02-06T13:31:50.768Z [ERROR]: Error: WHERE parameter "content_id" has invalid "undefined" value
-    at MySQLQueryGenerator.whereItemQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
-    at D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:106:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T09:53:35.853Z [ERROR]: Error in bound uploadModalAsset: WHERE parameter "user_id" has invalid "undefined" value
+2025-02-06T09:53:35.878Z [ERROR]: Error: WHERE parameter "user_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
     at Array.forEach (<anonymous>)
-    at MySQLQueryGenerator.whereItemsQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
-    at MySQLQueryGenerator.whereQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2411:24)
-    at MySQLQueryGenerator.updateQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:515:116)
-    at MySQLQueryInterface.bulkUpdate (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:924:37)
-    at Function.update (D:\content-sharing-backend\node_modules\sequelize\src\model.js:3352:54)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.whereQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2411:24)
+    at MySQLQueryGenerator.updateQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:515:116)
+    at MySQLQueryInterface.bulkUpdate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:924:37)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3352:54)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async ContentRepository.updateLikeByUsercontentId (D:\content-sharing-backend\src\repositories\ContentRepository.js:103:12)
-2025-02-06T13:37:18.470Z [ERROR]: Error in bound contentLike: Validation error
-2025-02-06T13:37:18.475Z [ERROR]: Error
-    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
-    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:55:14)
+2025-02-06T10:45:48.702Z [ERROR]: Error in bound uploadModalAsset: Profile not found
+2025-02-06T10:45:48.705Z [ERROR]: Error: Profile not found
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:89:13)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
-    at async Likes.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
-    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
-    at async ContentRepository.addLike (D:\content-sharing-backend\src\repositories\ContentRepository.js:85:12)
-    at async ContentService.addLike (D:\content-sharing-backend\src\services\ContentService.js:66:22)
-    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:206:5)
-    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:49:04.881Z [ERROR]: Error in bound uploadModalAsset: Profile not found
+2025-02-06T10:49:04.884Z [ERROR]: Error: Profile not found
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:91:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:50:19.986Z [ERROR]: Error in bound uploadModalAsset: Cannot access 'user' before initialization
+2025-02-06T10:50:19.989Z [ERROR]: ReferenceError: Cannot access 'user' before initialization
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:73:50)
+    at ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:53)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+2025-02-06T10:50:47.412Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:50:47.415Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:62:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:52:14.180Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:52:14.182Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:63:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:54:57.415Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:54:57.417Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:65:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+<<<<<<< HEAD
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:55:09.884Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:55:09.885Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:58:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:57:05.451Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:57:05.453Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:58:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T10:59:10.765Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T10:59:10.767Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:58:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:00:45.695Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T11:00:45.696Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:65:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:01:49.300Z [ERROR]: Error in bound uploadModalAsset: profile is not defined
+2025-02-06T11:01:49.302Z [ERROR]: ReferenceError: profile is not defined
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:109:5)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:02:15.464Z [ERROR]: Error in bound uploadModalAsset: profile is not defined
+2025-02-06T11:02:15.464Z [ERROR]: ReferenceError: profile is not defined
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:109:5)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:02:26.378Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T11:02:26.380Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:58:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:02:36.546Z [ERROR]: Error in bound uploadModalAsset: profile is not defined
+2025-02-06T11:02:36.547Z [ERROR]: ReferenceError: profile is not defined
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:109:5)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T11:04:03.844Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
+2025-02-06T11:04:03.846Z [ERROR]: AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3569:5)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3203:10)
+    at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:58:27)
+    at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:18:01.503Z [ERROR]: Error in bound uploadModalAsset: file.originalname.splice is not a function
+2025-02-06T12:18:01.506Z [ERROR]: TypeError: file.originalname.splice is not a function
+    at ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:98:39)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+    at WriteStream.emit (node:domain:488:12)
+=======
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:15:20.370Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:15:20.373Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:15:27.106Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:15:27.107Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:39.803Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:39.804Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:41.072Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:41.072Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:45.910Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:45.911Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
