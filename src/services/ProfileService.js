@@ -79,7 +79,7 @@ class ProfileService {
 
     const profile = await ProfileRepository.updateModelProfileAndCoverPhoto(
       id,
-      imageUri,
+      imageUri.secureUrl,
       updateField
     );
     if (!profile) {

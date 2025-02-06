@@ -18,6 +18,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "model_profiles",
       });
+
+      User.hasOne(models.Content, {
+        foreignKey: "user_id",
+        as: "user",
+      })
     }
   }
   User.init(

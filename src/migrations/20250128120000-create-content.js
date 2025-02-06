@@ -42,7 +42,7 @@ module.exports = {
         defaultValue: false,
       },
       region_id: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: true,
       },
       status: {
@@ -66,6 +66,12 @@ module.exports = {
     await queryInterface.addIndex("contents", ["category_id"]);
     await queryInterface.addIndex("contents", ["plan_id"]);
     await queryInterface.addIndex("contents", ["region_id"]);
+    // Add the new column content_visibility
+    await queryInterface.addColumn("contents", "content_visibility", {
+      type: Sequelize.ENUM("all", "subscribers_only", "premium_only"), // Adjust as needed
+      defaultValue: "all", // Set a default value if needed
+    });
+    
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("contents");

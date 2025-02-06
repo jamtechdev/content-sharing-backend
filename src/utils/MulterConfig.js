@@ -19,12 +19,20 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  if (
-    file.mimetype === "image/jpg" ||
-    file.mimetype === "image/jpeg" ||
-    file.mimetype === "image/png"||
-    file.mimetype === "image/webp"
-  ) {
+  console.log("Received file: ", file.originalname);
+  console.log("MIME type: ", file.mimetype);
+  const acceptedMimeTypes = [
+    "video/mp4",
+    "video/mov",
+    "video/mpeg",
+    "video/webm",
+    "image/jpg",
+    "image/jpeg",
+    "image/png",
+    "image/webp",
+    "video/quicktime"
+  ];
+  if (acceptedMimeTypes.includes(file.mimetype)) {
     cb(null, true);
   } else {
     cb(null, false);

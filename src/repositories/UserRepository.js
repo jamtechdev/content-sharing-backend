@@ -100,6 +100,7 @@ class UserRepository {
         "birthdate",
         "social_links",
         "bio",
+        "region_id"
       ],
       include: [
         {
@@ -127,7 +128,7 @@ class UserRepository {
         message: uploadedAvatar?.error,
       });
     }
-    return await User.update({ avatar: uploadedAvatar }, { where: { id: id } });
+    return await User.update({ avatar: uploadedAvatar.secureUrl }, { where: { id: id } });
   }
 
   async updateUserById(id, query) {

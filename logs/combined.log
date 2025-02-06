@@ -1133,3 +1133,835 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:64:33)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-05T06:26:47.926Z [ERROR]: Error in bound login: connect ECONNREFUSED 127.0.0.1:3306
+2025-02-05T06:26:47.982Z [ERROR]: SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:27:09.468Z [ERROR]: Error in bound login: 
+2025-02-05T06:27:09.476Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:28:25.139Z [ERROR]: Error in bound login: 
+2025-02-05T06:28:25.147Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:29:37.787Z [ERROR]: Error in bound login: 
+2025-02-05T06:29:37.794Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:31:20.164Z [ERROR]: Error in bound login: 
+2025-02-05T06:31:20.173Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:31:46.693Z [ERROR]: Error in bound login: 
+2025-02-05T06:31:46.706Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:32:10.631Z [ERROR]: Error in bound login: 
+2025-02-05T06:32:10.631Z [ERROR]: SequelizeConnectionRefusedError
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:32:29.931Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-05T06:32:29.937Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T06:49:23.279Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-05T06:49:23.331Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:54:40.609Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-05T06:54:40.623Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T06:55:52.825Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-05T06:55:52.841Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-05T08:13:02.278Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-05T08:13:02.283Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:51:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:16:43.839Z [ERROR]: MulterError: Unexpected field
+    at wrappedFileFilter (D:\Content Sharing\content-sharing-backend\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:519:28)
+    at Multipart.emit (node:domain:488:12)
+    at HeaderParser.cb (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:567:19)
+2025-02-05T09:17:34.572Z [ERROR]: undefined
+2025-02-05T09:20:24.776Z [ERROR]: Error in bound uploadAvatar: string violation: avatar cannot be an array or an object
+2025-02-05T09:20:24.810Z [ERROR]: SequelizeValidationError: string violation: avatar cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3253:26)
+    at async UserRepository.updateUserAvatar (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:130:12)
+    at async userService.updateUserAvatar (D:\Content Sharing\content-sharing-backend\src\services\UserService.js:16:28)
+    at async UserController.uploadAvatar (D:\Content Sharing\content-sharing-backend\src\controllers\User\UserController.js:78:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:23:19.631Z [ERROR]: undefined
+2025-02-05T09:23:41.195Z [ERROR]: undefined
+2025-02-05T09:24:10.259Z [ERROR]: undefined
+2025-02-05T09:25:59.823Z [ERROR]: undefined
+2025-02-05T09:27:02.928Z [ERROR]: undefined
+2025-02-05T09:27:08.494Z [ERROR]: undefined
+2025-02-05T09:27:30.083Z [ERROR]: undefined
+2025-02-05T09:27:44.929Z [ERROR]: undefined
+2025-02-05T09:28:50.389Z [ERROR]: undefined
+2025-02-05T09:29:31.764Z [ERROR]: undefined
+2025-02-05T09:36:36.996Z [ERROR]: undefined
+2025-02-05T09:37:53.983Z [ERROR]: undefined
+2025-02-05T09:42:16.213Z [ERROR]: undefined
+2025-02-05T09:42:38.794Z [ERROR]: undefined
+2025-02-05T09:44:56.397Z [ERROR]: undefined
+2025-02-05T09:46:17.719Z [ERROR]: Error in bound createContent: userId is not defined
+2025-02-05T09:46:17.723Z [ERROR]: ReferenceError: userId is not defined
+    at ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:67:16)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:46:37.006Z [ERROR]: undefined
+2025-02-05T09:47:04.073Z [ERROR]: undefined
+2025-02-05T09:48:51.441Z [ERROR]: undefined
+2025-02-05T09:49:07.393Z [ERROR]: Error: Supported file formats: .mp4, .mov, .mpeg, .webm, .jpg, .jpeg, .png, .webp
+    at fileFilter (D:\Content Sharing\content-sharing-backend\src\utils\MulterConfig.js:38:15)
+    at wrappedFileFilter (D:\Content Sharing\content-sharing-backend\node_modules\multer\index.js:44:7)
+    at Multipart.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:519:28)
+    at Multipart.emit (node:domain:488:12)
+    at HeaderParser.cb (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+2025-02-05T09:50:28.009Z [ERROR]: undefined
+2025-02-05T09:51:51.846Z [ERROR]: Error in bound createContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T09:51:51.851Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:65:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:54:14.290Z [ERROR]: Error in bound createContent: path is not defined
+2025-02-05T09:54:14.293Z [ERROR]: ReferenceError: path is not defined
+    at module.exports.cloudinaryImageUpload (D:\Content Sharing\content-sharing-backend\src\utils\cloudinaryService.js:9:27)
+    at ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:59:32)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+2025-02-05T09:54:51.792Z [ERROR]: Error in bound createContent: userId is not defined
+2025-02-05T09:54:51.794Z [ERROR]: ReferenceError: userId is not defined
+    at ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:67:16)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:56:03.795Z [ERROR]: Error in bound createContent: user is not defined
+2025-02-05T09:56:03.798Z [ERROR]: ReferenceError: user is not defined
+    at ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:66:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T09:56:42.792Z [ERROR]: Error in bound createContent: Unknown column 'createdAt' in 'field list'
+2025-02-05T09:56:42.794Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Content.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:8:16)
+    at async ContentService.createContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:7:26)
+    at async ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:69:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T10:27:39.239Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T10:27:39.242Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T10:28:05.654Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T10:28:05.655Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T10:45:06.716Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:45:06.751Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:51:34.814Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:51:34.827Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:57:48.778Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:57:48.786Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:57:50.574Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:57:50.575Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:58:00.042Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:58:00.048Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:58:44.117Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:58:44.125Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T10:59:07.588Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T10:59:07.595Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T11:05:15.029Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T11:05:15.038Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+2025-02-05T11:15:04.735Z [ERROR]: Error in bound createContent: string violation: region_id cannot be an array or an object
+2025-02-05T11:15:04.746Z [ERROR]: SequelizeValidationError: string violation: region_id cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Content.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:8:16)
+    at async ContentService.createContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:7:26)
+    at async ContentController.createContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:70:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:19:52.024Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T11:19:52.030Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+2025-02-05T11:20:24.417Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T11:20:24.418Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+2025-02-05T11:20:30.305Z [ERROR]: Error in bound getContent: Invalid value { region_id: 5 }
+2025-02-05T11:20:30.311Z [ERROR]: Error: Invalid value { region_id: 5 }
+    at Object.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2839:41)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2541:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+2025-02-05T11:21:30.076Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:21:30.078Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:23:03.354Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:23:03.357Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:23:05.523Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:23:05.524Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:24:36.985Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:24:36.988Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:25:11.409Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:25:11.411Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:26:52.867Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T11:26:52.869Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:29:00.667Z [ERROR]: Error in bound getContent: Assignment to constant variable.
+2025-02-05T11:29:00.670Z [ERROR]: TypeError: Assignment to constant variable.
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:15:26)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:29:27.556Z [ERROR]: Error in bound getContent: item is not defined
+2025-02-05T11:29:27.559Z [ERROR]: ReferenceError: item is not defined
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:70)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:15:26)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:32:09.651Z [ERROR]: Error in bound getContent: item is not iterable
+2025-02-05T11:32:09.653Z [ERROR]: TypeError: item is not iterable
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:43
+    at Array.map (<anonymous>)
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:15:26)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:35:48.066Z [ERROR]: Error in bound getContent: regionArray is not defined
+2025-02-05T11:35:48.070Z [ERROR]: ReferenceError: regionArray is not defined
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:29:89
+    at Array.some (<anonymous>)
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:29:66
+    at Array.filter (<anonymous>)
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:21:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:15:26)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:36:15.041Z [ERROR]: Error in bound getContent: regionId.includes is not a function
+2025-02-05T11:36:15.044Z [ERROR]: TypeError: regionId.includes is not a function
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:29:86
+    at Array.some (<anonymous>)
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:29:66
+    at Array.filter (<anonymous>)
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:21:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:15:26)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:43:22.570Z [ERROR]: Error in bound updateContent: contentId is not defined
+2025-02-05T11:43:22.573Z [ERROR]: ReferenceError: contentId is not defined
+    at ContentService.updateContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:23:53)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:43)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+2025-02-05T11:44:18.217Z [ERROR]: Error in bound updateContent: userId is not defined
+2025-02-05T11:44:18.220Z [ERROR]: ReferenceError: userId is not defined
+    at ContentService.updateContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:23:53)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:43)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+2025-02-05T11:49:33.048Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:49:33.050Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:50:09.226Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:50:09.228Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:50:22.399Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:50:22.402Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:53:12.673Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:53:12.676Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:53:32.948Z [ERROR]: Error in bound updateContent: undefined
+2025-02-05T11:53:32.951Z [ERROR]: Error
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:54:31.292Z [ERROR]: Error in bound updateContent: undefined
+2025-02-05T11:54:31.295Z [ERROR]: Error
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:54:32.859Z [ERROR]: Error in bound updateContent: undefined
+2025-02-05T11:54:32.859Z [ERROR]: Error
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:54:40.767Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:54:40.770Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:54:42.718Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:54:42.718Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:55:02.858Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:55:02.861Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T11:56:19.763Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T11:56:19.764Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:01:12.636Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T12:01:12.639Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:110:27)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:14:01.346Z [ERROR]: Error in bound deleteContent: WHERE parameter "id" has invalid "undefined" value
+2025-02-05T12:14:01.373Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-05T12:16:11.658Z [ERROR]: Error in bound deleteContent: No content found
+2025-02-05T12:16:11.661Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.deleteContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:128:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:16:15.974Z [ERROR]: Error in bound deleteContent: No content found
+2025-02-05T12:16:15.975Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.deleteContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:128:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:22:03.720Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-05T12:22:03.723Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:51:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:22:31.934Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-05T12:22:31.935Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:51:32)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:35:30.447Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T12:35:30.449Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:111:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:36:27.501Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'path')
+2025-02-05T12:36:27.501Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:112:63)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:37:36.201Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'path')
+2025-02-05T12:37:36.204Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:112:63)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:40:02.147Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:40:02.149Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:126:31)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:40:34.369Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:40:34.372Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:126:31)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:44:32.928Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T12:44:32.931Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:124:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:45:13.499Z [ERROR]: MulterError: Unexpected field
+    at wrappedFileFilter (D:\Content Sharing\content-sharing-backend\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:519:28)
+    at Multipart.emit (node:domain:488:12)
+    at HeaderParser.cb (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:200:10)
+    at SBMH.push (D:\Content Sharing\content-sharing-backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Content Sharing\content-sharing-backend\node_modules\busboy\lib\types\multipart.js:567:19)
+2025-02-05T12:51:15.707Z [ERROR]: Error in bound updateContent: No content found
+2025-02-05T12:51:15.711Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:25:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:111:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:52:50.077Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T12:52:50.078Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:124:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:53:41.990Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:53:41.993Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:117:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:54:38.864Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'path')
+2025-02-05T12:54:38.866Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:60)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:55:29.449Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'path')
+2025-02-05T12:55:29.451Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:60)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:55:46.223Z [ERROR]: Error in bound updateContent: No file path provided to cloudinaryImageUpload.
+2025-02-05T12:55:46.227Z [ERROR]: Error: No file path provided to cloudinaryImageUpload.
+    at module.exports.cloudinaryImageUpload (D:\Content Sharing\content-sharing-backend\src\utils\cloudinaryService.js:8:11)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:56:12.111Z [ERROR]: Error in bound updateContent: The "path" argument must be of type string. Received undefined
+2025-02-05T12:56:12.114Z [ERROR]: TypeError: The "path" argument must be of type string. Received undefined
+    at Object.extname (node:path:841:5)
+    at module.exports.cloudinaryImageUpload (D:\Content Sharing\content-sharing-backend\src\utils\cloudinaryService.js:10:32)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:57:35.524Z [ERROR]: Error in bound updateContent: The "path" argument must be of type string. Received undefined
+2025-02-05T12:57:35.525Z [ERROR]: TypeError: The "path" argument must be of type string. Received undefined
+    at Object.extname (node:path:841:5)
+    at module.exports.cloudinaryImageUpload (D:\Content Sharing\content-sharing-backend\src\utils\cloudinaryService.js:10:32)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:57:54.351Z [ERROR]: Error in bound updateContent: The "path" argument must be of type string. Received null
+2025-02-05T12:57:54.354Z [ERROR]: TypeError: The "path" argument must be of type string. Received null
+    at Object.extname (node:path:841:5)
+    at module.exports.cloudinaryImageUpload (D:\Content Sharing\content-sharing-backend\src\utils\cloudinaryService.js:10:32)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:115:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:58:11.663Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:58:11.665Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:118:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:58:42.345Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:58:42.347Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:119:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:59:02.053Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:59:02.055Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:120:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T12:59:38.794Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'secureUrl')
+2025-02-05T12:59:38.796Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'secureUrl')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:120:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:00:09.492Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:00:09.494Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:125:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:00:34.381Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:00:34.386Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:125:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:00:49.234Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:00:49.237Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:125:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:02:12.527Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:02:12.529Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:122:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:02:33.301Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:02:33.304Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:122:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:03:21.579Z [ERROR]: Error in bound updateContent: Cannot access 'response' before initialization
+2025-02-05T13:03:21.582Z [ERROR]: ReferenceError: Cannot access 'response' before initialization
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:116:7)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:04:17.174Z [ERROR]: Error in bound updateContent: Cannot access 'data' before initialization
+2025-02-05T13:04:17.177Z [ERROR]: ReferenceError: Cannot access 'data' before initialization
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:116:7)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:04:27.741Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:04:27.747Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:121:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:05:06.984Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:05:06.987Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:121:36)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:08:47.071Z [ERROR]: Error in bound updateContent: Cannot access 'response' before initialization
+2025-02-05T13:08:47.075Z [ERROR]: ReferenceError: Cannot access 'response' before initialization
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:116:7)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:09:28.352Z [ERROR]: Error in bound updateContent: data is not defined
+2025-02-05T13:09:28.355Z [ERROR]: ReferenceError: data is not defined
+    at ContentRepository.update (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:33:106)
+    at ContentService.updateContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:31:40)
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:118:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:19:30.039Z [ERROR]: Error in bound updateContent: user is not defined
+2025-02-05T13:19:30.042Z [ERROR]: ReferenceError: user is not defined
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:111:62)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+    at WriteStream.emit (node:domain:488:12)
+2025-02-05T13:23:30.625Z [ERROR]: Error in bound updateContent: Cannot read properties of undefined (reading 'resourceType')
+2025-02-05T13:23:30.628Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'resourceType')
+    at ContentController.updateContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:122:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:39:44.441Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T13:39:44.444Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-05T13:42:15.963Z [ERROR]: Error in bound getContent: Not content found
+2025-02-05T13:42:15.967Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T05:02:44.079Z [ERROR]: Error in bound getContent: users is associated to Content using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+2025-02-06T05:02:44.095Z [ERROR]: SequelizeEagerLoadingError: users is associated to Content using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:754:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:14:19)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:14:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:22)
+2025-02-06T05:03:29.323Z [ERROR]: Error in bound getContent: user is not defined
+2025-02-06T05:03:29.326Z [ERROR]: ReferenceError: user is not defined
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:14:70)
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:14:46)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T05:04:39.850Z [ERROR]: Error in bound getContent: Region is not defined
+2025-02-06T05:04:39.853Z [ERROR]: ReferenceError: Region is not defined
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:14:87)
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:14:46)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T05:04:53.753Z [ERROR]: Error in bound getContent: Region is not defined
+2025-02-06T05:04:53.756Z [ERROR]: ReferenceError: Region is not defined
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:14:87)
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:14:46)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

@@ -9,7 +9,8 @@
     "sequelize": "NODE_ENV=development npx sequelize-cli",
     "db:migrate": "npx sequelize-cli db:migrate --config src/config/config.js",
     "db:migrate:undo": "npx sequelize-cli db:migrate:undo --config src/config/config.js",
-    "db:seed": "npx sequelize-cli db:seed:all --config src/config/config.js",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --config src/config/config.js",
+    "db:seed:all": "npx sequelize-cli db:seed:all --config src/config/config.js",
     "db:generate:migration": "npx sequelize-cli migration:generate --name ",
     "configs": "--config src/config/config.js"
   },
