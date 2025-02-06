@@ -2114,3 +2114,159 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:12:41.491Z [ERROR]: Error in bound register: User already exists
+2025-02-06T12:12:41.494Z [ERROR]: Error: User already exists
+    at AuthService.register (D:\content-sharing-backend\src\services\AuthService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.register (D:\content-sharing-backend\src\controllers\User\AuthController.js:32:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:24:08.430Z [ERROR]: Error in bound contentLike: Likes is not defined
+2025-02-06T12:24:08.432Z [ERROR]: ReferenceError: Likes is not defined
+    at ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:88:5)
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:46)
+    at ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:39)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-06T12:24:41.155Z [ERROR]: Error in bound contentLike: Unknown column 'updatedAt' in 'field list'
+2025-02-06T12:24:41.158Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
+    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:29:31.011Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:29:31.012Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:31:21.254Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:31:21.256Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:32:53.803Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:32:53.804Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:33:56.006Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:33:56.007Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:40:53.638Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:40:53.641Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:41:04.753Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:41:04.756Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:47:57.171Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:47:57.174Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:77:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:49:12.586Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:49:12.588Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:50:10.134Z [ERROR]: Error in bound contentLike: Content not created
+2025-02-06T12:50:10.137Z [ERROR]: Error: Content not created
+    at ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T13:27:15.271Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
+2025-02-06T13:27:15.274Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
+    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T13:27:57.295Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
+2025-02-06T13:27:57.297Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
+    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T13:28:12.464Z [ERROR]: Error in bound contentLike: Unknown column 'isLike' in 'field list'
+2025-02-06T13:28:12.466Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
+    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T13:28:51.578Z [ERROR]: Error in bound contentLike: Unknown column 'updatedAt' in 'field list'
+2025-02-06T13:28:51.581Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:89:12)
+    at async ContentService.getLikeByContentUserId (D:\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:195:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T13:31:50.752Z [ERROR]: Error in bound contentLike: WHERE parameter "content_id" has invalid "undefined" value
+2025-02-06T13:31:50.768Z [ERROR]: Error: WHERE parameter "content_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.whereQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2411:24)
+    at MySQLQueryGenerator.updateQuery (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:515:116)
+    at MySQLQueryInterface.bulkUpdate (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:924:37)
+    at Function.update (D:\content-sharing-backend\node_modules\sequelize\src\model.js:3352:54)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.updateLikeByUsercontentId (D:\content-sharing-backend\src\repositories\ContentRepository.js:103:12)
+2025-02-06T13:37:18.470Z [ERROR]: Error in bound contentLike: Validation error
+2025-02-06T13:37:18.475Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Likes.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.addLike (D:\content-sharing-backend\src\repositories\ContentRepository.js:85:12)
+    at async ContentService.addLike (D:\content-sharing-backend\src\services\ContentService.js:66:22)
+    at async ContentController.contentLike (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:206:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7

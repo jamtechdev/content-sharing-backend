@@ -49,6 +49,14 @@ class ContentController {
       authorize(["model"]),
       TryCatch(this.deleteContent.bind(this))
     );
+
+    this.router.addRoute(
+      "post",
+      "/like-content",
+      authenticate,
+      authorize(["user"]),
+      TryCatch(this.contentLike.bind(this))
+    );
   }
 
   async createContent(req, res) {
@@ -172,6 +180,37 @@ class ContentController {
       success: true,
       message: "Content fetched successfully",
       data: response,
+    });
+  }
+
+  async contentLike(req, res) {
+    const { contentId, userId } = req?.body;
+    if (!contentId && !userId) {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Content id and User id are required",
+      });
+    }
+    const data = await ContentService.getLikeByContentUserId(contentId, userId);
+
+    if (data) {
+      await ContentService.updateLikeByUsercontentId({
+        content_id: contentId,
+        user_id: userId,
+        is_like: data?.is_like ? 0 : 1,
+      });
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: `You ${data?.is_like ?"Unliked":"Liked"} this Content`,
+      });
+    }
+    await ContentService.addLike({ content_id: contentId, user_id: userId });
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "You liked this Content",
     });
   }
 

@@ -2,6 +2,7 @@ const db = require("../models/index");
 const Content = db.Content;
 const User = db.users;
 const Region = db.Regions;
+const Likes = db.Likes
 
 const { Op, where } = require("sequelize");
 
@@ -78,6 +79,36 @@ class ContentRepository {
 
   async findAll(id) {
     return await Content.findAll({ where: { user_id: id } });
+  }
+
+  async addLike(data) {
+    return await Likes.create(data);
+  }
+
+  async getLikeByContentUserId(contentId, userId) {
+    return await Likes.findOne({
+      where: { content_id: contentId, user_id: userId },
+    });
+  }
+
+  async getLikeByContentId(contentId) {
+    return await Likes.findAll({ where: { content_id: contentId } });
+  }
+  
+  async getLikeByUserId(userId){
+    return await Likes.findAll({ where: { user_id: userId } });
+  }
+
+  async updateLikeByUsercontentId(data){
+    return await Likes.update({is_like:data?.is_like},{
+      where: { content_id: data?.content_id, user_id: data?.user_id },
+    });
+  }
+
+  async destroyLikeByContentUserId(contentId, userId) {
+    return await Likes.destroy({
+      where: { content_id: contentId, user_id: userId },
+    });
   }
 }
 
