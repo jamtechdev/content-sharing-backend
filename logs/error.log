@@ -2067,3 +2067,50 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:25:31.019Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-06T06:25:31.021Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:69:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:26:03.916Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T06:26:03.918Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T07:44:55.593Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T07:44:55.595Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T07:45:01.545Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T07:45:01.549Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T07:55:47.406Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T07:55:47.409Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:93:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T10:30:40.257Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T10:30:40.259Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T10:30:40.488Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T10:30:40.489Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T10:46:06.877Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T10:46:06.879Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

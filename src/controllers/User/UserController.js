@@ -6,6 +6,7 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const UserService = require("../../services/UserService");
 const { upload } = require("../../utils/MulterConfig");
+const ProfileService = require("../../services/ProfileService");
 
 class UserController {
   constructor() {
@@ -22,7 +23,7 @@ class UserController {
       "post",
       "/upload-avatar",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       upload.single("avatar"),
       TryCatch(this.uploadAvatar.bind(this))
     );
@@ -30,7 +31,7 @@ class UserController {
       "put",
       "/my-profile-update",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       TryCatch(this.updateUser.bind(this))
     );
   }
@@ -39,25 +40,36 @@ class UserController {
   async me(req, res) {
     const user = req?.user;
     console.log(user);
-    const newUser = await UserService.getUserById(user?.userId);
+    if (user.role === "model") {
+      const getModelProfileData = await ProfileService.getProfileByUserId(
+        user?.userId
+      );
 
-    return res.status(200).json({
-      code: 200,
-      data: {
-        id: newUser.id,
-        name: newUser.name,
-        email: newUser.email,
-        avatar: newUser.avatar,
-        address: newUser.address,
-        phone_number: newUser.phone_number,
-        birthdate: newUser.birthdate,
-        social: newUser.social,
-        bio: newUser.bio,
-        platform_type: newUser.platform_type,
-        region: newUser.region?.regionName,
-        role: newUser.role?.roleName,
-      },
-    });
+      return res.status(200).json({
+        code: 200,
+        data: getModelProfileData,
+      });
+    } else {
+      const newUser = await UserService.getUserById(user?.userId);
+
+      return res.status(200).json({
+        code: 200,
+        data: {
+          id: newUser.id,
+          name: newUser.name,
+          email: newUser.email,
+          avatar: newUser.avatar,
+          address: newUser.address,
+          phone_number: newUser.phone_number,
+          birthdate: newUser.birthdate,
+          social: newUser.social,
+          bio: newUser.bio,
+          platform_type: newUser.platform_type,
+          region: newUser.region?.regionName,
+          role: newUser.role?.roleName,
+        },
+      });
+    }
   }
 
   //   update-user-profile
@@ -86,19 +98,16 @@ class UserController {
   async updateUser(req, res) {
     const user = req?.user;
     const formData = req.body;
-   
-   
+
     const response = await UserService.updateUserbyId(user?.userId, formData);
     console.log(response);
-    
+
     if (response[0] === 0) {
       return res.status(404).json({
         error: true,
         message: "Id not found in table!",
       });
     }
-
- 
 
     return res.status(200).json({
       code: 200,

@@ -3,6 +3,7 @@ const UserRepository = require("../repositories/UserRepository");
 
 class userService {
   async getUserById(id) {
+    
     const getUserData = await UserRepository.getUserById(id);
 
     if (!getUserData) {

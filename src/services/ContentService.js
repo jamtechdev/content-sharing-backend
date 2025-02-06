@@ -57,5 +57,9 @@ class ContentService {
   async deleteContent(contentId) {
     return await ContentRepository.delete(contentId);
   }
+
+  async findAllContentById(id) {
+    return await ContentRepository.findAll(id);
+  }
 }
 module.exports = new ContentService();

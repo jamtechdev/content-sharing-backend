@@ -3,7 +3,7 @@ const Content = db.Content;
 const User = db.users;
 const Region = db.Regions;
 
-const { Op } = require("sequelize");
+const { Op, where } = require("sequelize");
 
 class ContentRepository {
   async create(data) {
@@ -13,7 +13,12 @@ class ContentRepository {
   async getContent(regionId) {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
 
-    let content = await Content.findAll({include: [{model: User, as: "user"}, {model: Region, as: "region"}]});
+    let content = await Content.findAll({
+      include: [
+        { model: User, as: "user" },
+        { model: Region, as: "region" },
+      ],
+    });
     content = content.filter((item) => {
       let itemRegionIds;
       try {
@@ -41,7 +46,7 @@ class ContentRepository {
       media_url,
       content_type,
       contentId,
-      region_id
+      region_id,
     },
     userId
   ) {
@@ -54,7 +59,7 @@ class ContentRepository {
         media_url,
         content_type,
         contentId,
-        region_id
+        region_id,
       },
       { where: { id: contentId, user_id: userId } }
     );
@@ -69,6 +74,10 @@ class ContentRepository {
       };
     }
     return await content.destroy();
+  }
+
+  async findAll(id) {
+    return await Content.findAll({ where: { user_id: id } });
   }
 }
 
