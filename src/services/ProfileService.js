@@ -1,5 +1,6 @@
 const HttpError = require("../decorators/HttpError");
 const ProfileRepository = require("../repositories/ProfileRepository");
+const UserRepository = require('../repositories/UserRepository')
 const { cloudinaryImageUpload } = require("../utils/cloudinaryService");
 
 class ProfileService {
@@ -66,26 +67,46 @@ class ProfileService {
     return profile;
   }
 
-  async uploadModalPhoto(id, file, formData) {
-    const modalProfile = await ProfileRepository.findProfileById(id);
+  async uploadModalPhoto(user, file, formData) {
+    console.log("Passing data ==========>", user, file, formData)
+    if(user.role === "user"){
+      const userData = await UserRepository.findById(user.userId)
+        if(!userData){
+          throw new HttpError(404, "User not found")
+        }
+        const imageUri = await cloudinaryImageUpload(file.path)
+        const updateField = formData.profile_picture ? true: false
+        console.log("User image uri", imageUri)
+        const userAsset = await ProfileRepository.updateModelProfileAndCoverPhoto(
+          user, 
+          imageUri.secureUrl,
+          updateField
+        )
+        console.log('Asset ===========>', userAsset)
+        return userAsset
+    }
+
+    else {
+      const modalProfile = await ProfileRepository.findProfileById(user?.userId);
     if (!modalProfile) {
       throw new HttpError(404, "Profile not found");
     }
-    const imageUri = await cloudinaryImageUpload(file.path, "image");
+    const imageUri = await cloudinaryImageUpload(file.path);
     const updateField = formData.profile_picture
       ?  true
       : false;
     console.log(imageUri);
 
     const profile = await ProfileRepository.updateModelProfileAndCoverPhoto(
-      id,
+      user,
       imageUri.secureUrl,
       updateField
     );
-    if (!profile) {
-      throw new HttpError(404, "Profile not found");
-    }
+    // if (!profile) {
+    //   throw new HttpError(404, "Profile not found");
+    // }
     return profile;
+    }
   }
 }
 

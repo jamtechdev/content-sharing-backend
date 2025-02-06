@@ -49,18 +49,41 @@ class ProfileRepository {
     return ModelProfile.create(profileData);
   }
 
-  async updateModelProfileAndCoverPhoto(id, imageUri, data) {
+  async updateModelProfileAndCoverPhoto(user, imageUri, data) {
     // console.log(data,imageUri,id);
-    if (data) {
-      return await ModelProfile.update(
-        { profile_picture: imageUri },
-        { where: { user_id: id } }
-      );
-    } else {
-      return await ModelProfile.update(
-        { cover_photo: imageUri },
-        { where: { user_id: id } }
-      );
+    console.log("Recieve data in repo==>", user, imageUri, data)
+    if(user.role === "user"){
+      if(data){
+        console.log("User's if condition")
+        await User.update({
+          avatar: imageUri}, 
+          {where: {id: user.userId}
+        })
+        return imageUri
+      }
+      else {
+        console.log("User's else condition")
+        await User.update({
+          cover_photo: imageUri},
+          {where: {id: user.userId}
+        })
+        return imageUri
+      }
+    }
+    else {
+      if (data) {
+        await ModelProfile.update(
+          { profile_picture: imageUri },
+          { where: { user_id: user.userId } }
+        );
+        return imageUri
+      } else {
+        await ModelProfile.update(
+          { cover_photo: imageUri },
+          { where: { user_id: user.userId } }
+        );
+        return imageUri
+      }
     }
   }
 }

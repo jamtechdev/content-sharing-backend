@@ -39,7 +39,7 @@ class ModelProfileController {
       "post",
       "/upload-modal-asset",
       authenticate,
-      authorize(["model"]),
+      authorize(["user","model"]),
       upload.single("image"),
       TryCatch(this.uploadModalAsset.bind(this))
     );
@@ -94,15 +94,16 @@ class ModelProfileController {
         .status(400)
         .json({ code: 400, success: false, message: "No image uploaded" });
     }
-    const uploadModalPhoto = await ProfileService.uploadModalPhoto(
-      user?.userId,
-      file,
-      body
-    );
-
+  
+      const uploadModalPhoto = await ProfileService.uploadModalPhoto(
+        user,
+        file,
+        body
+      );
     return res.status(200).json({
       code: 200,
       message: "Modal photo uploaded successfully",
+      data: uploadModalPhoto
     });
   }
 

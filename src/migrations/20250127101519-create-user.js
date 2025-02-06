@@ -75,6 +75,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
+      cover_photo: {
+        type: Sequelize.TEXT,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -92,6 +96,10 @@ module.exports = {
     //   type: Sequelize.BOOLEAN,
     //   allowNull: true,
     // });
+    // await queryInterface.addColumn("users", "cover_photo", {
+    //   type: Sequelize.STRING,
+    //   allowNull: true,
+    // })
   },
 
   async down(queryInterface, Sequelize) {
