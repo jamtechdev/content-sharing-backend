@@ -27,7 +27,7 @@ module.exports = {
         allowNull: false,
         defaultValue: "sent",
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
@@ -43,7 +43,7 @@ module.exports = {
     await queryInterface.addIndex("Messages", ["sender_id"]);
     await queryInterface.addIndex("Messages", ["receiver_id"]);
     await queryInterface.addIndex("Messages", ["status"]);
-    await queryInterface.addIndex("Messages", ["created_at"]);
+    await queryInterface.addIndex("Messages", ["createdAt"]);
   },
 
   async down(queryInterface, Sequelize) {

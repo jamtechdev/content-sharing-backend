@@ -1965,3 +1965,105 @@
     at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:86:43)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T05:20:07.625Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-06T05:20:07.627Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\2025\backend-typescript\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\2025\backend-typescript\src\controllers\User\AuthController.js:69:29)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:42:17.189Z [ERROR]: Error in bound createModalProfile: Profile already exists
+2025-02-06T05:42:17.191Z [ERROR]: Error: Profile already exists
+    at ProfileService.createModalProfile (D:\2025\backend-typescript\src\services\ProfileService.js:26:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.createModalProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:51:32)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:42:58.479Z [ERROR]: Error in bound createContent: Unknown column 'content_visibility' in 'field list'
+2025-02-06T05:42:58.480Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Content.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\2025\backend-typescript\src\repositories\ContentRepository.js:10:12)
+    at async ContentService.createContent (D:\2025\backend-typescript\src\services\ContentService.js:6:22)
+    at async ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:74:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:45:55.920Z [ERROR]: Error in bound createContent: Unknown column 'createdAt' in 'field list'
+2025-02-06T05:45:55.922Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Content.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\2025\backend-typescript\src\repositories\ContentRepository.js:10:12)
+    at async ContentService.createContent (D:\2025\backend-typescript\src\services\ContentService.js:6:22)
+    at async ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:74:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:47:18.458Z [ERROR]: Error in bound createContent: Unknown column 'createdAt' in 'field list'
+2025-02-06T05:47:18.462Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Content.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\2025\backend-typescript\src\repositories\ContentRepository.js:10:12)
+    at async ContentService.createContent (D:\2025\backend-typescript\src\services\ContentService.js:6:22)
+    at async ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:74:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:51:10.522Z [ERROR]: Error in bound createContent: Incorrect integer value: '[2]' for column 'region_id' at row 1
+2025-02-06T05:51:10.523Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Content.save (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.create (D:\2025\backend-typescript\src\repositories\ContentRepository.js:10:12)
+    at async ContentService.createContent (D:\2025\backend-typescript\src\services\ContentService.js:6:22)
+    at async ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:74:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T05:58:00.893Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T05:58:00.896Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:05:59.306Z [ERROR]: Error in bound updateContent: No content found
+2025-02-06T06:05:59.308Z [ERROR]: Error: No content found
+    at ContentService.findById (D:\2025\backend-typescript\src\services\ContentService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.updateContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:107:21)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:19:15.838Z [ERROR]: Error in bound getContent: UserService is not defined
+2025-02-06T06:19:15.842Z [ERROR]: ReferenceError: UserService is not defined
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:13:27)
+    at ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:20:06.947Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T06:20:06.950Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:20:36.256Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T06:20:36.257Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:21:19.175Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T06:21:19.177Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:18:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T06:22:10.680Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T06:22:10.685Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:86:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

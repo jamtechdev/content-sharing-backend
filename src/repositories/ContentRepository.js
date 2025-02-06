@@ -32,7 +32,6 @@ class ContentRepository {
   async findById(contentId, userId) {
     return await Content.findOne({ where: { id: contentId, user_id: userId } });
   }
-
   async update(
     {
       status,
@@ -42,6 +41,7 @@ class ContentRepository {
       media_url,
       content_type,
       contentId,
+      region_id
     },
     userId
   ) {
@@ -54,6 +54,7 @@ class ContentRepository {
         media_url,
         content_type,
         contentId,
+        region_id
       },
       { where: { id: contentId, user_id: userId } }
     );

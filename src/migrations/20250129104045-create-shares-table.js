@@ -34,7 +34,7 @@ module.exports = {
         allowNull: false,
         comment: "Can store user_id, email, or social platform name",
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),

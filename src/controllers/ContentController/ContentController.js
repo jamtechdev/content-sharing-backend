@@ -24,7 +24,7 @@ class ContentController {
       "get",
       "/get-content",
       authenticate,
-      authorize(["model"]),
+      authorize(["user"]),
       TryCatch(this.getContent.bind(this))
     );
     this.router.addRoute(
@@ -68,7 +68,7 @@ class ContentController {
       content_type: mediaFileUrl.resourceType,
       category_id,
       user_id: userId,
-      region_id: JSON.stringify([region_id]) ?? modal_region_id,
+      region_id: modal_region_id ?? JSON.stringify([region_id]),
       media_url: mediaFileUrl.secureUrl,
     };
     const response = await ContentService.createContent(data);
@@ -95,8 +95,15 @@ class ContentController {
   async updateContent(req, res) {
     const { userId } = req?.user;
     const mediaFile = req.file;
-    const { status, title, description, content_type, category_id, contentId } =
-      req?.body;
+    const {
+      status,
+      title,
+      description,
+      content_type,
+      category_id,
+      contentId,
+      region_id,
+    } = req?.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
         code: 400,
@@ -105,12 +112,10 @@ class ContentController {
       });
     }
     const content = await ContentService.findById(contentId, userId);
-
     let mediaFileUrl;
     if (mediaFile) {
       mediaFileUrl = await cloudinaryImageUpload(mediaFile?.path);
     }
-
     const response = await ContentService.updateContent(
       {
         status,
@@ -122,17 +127,16 @@ class ContentController {
         category_id,
         media_url: mediaFile ? mediaFileUrl.secureUrl : content.media_url,
         contentId,
+        region_id,
       },
       userId
     );
 
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "Content updated successfully",
-      });
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Content updated successfully",
+    });
   }
 
   async deleteContent(req, res) {
@@ -144,13 +148,11 @@ class ContentController {
     }
     await ContentService.findById(contentId);
     await ContentService.deleteContent(contentId);
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "Content removed successfully",
-      });
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Content removed successfully",
+    });
   }
 
   getRouter() {
