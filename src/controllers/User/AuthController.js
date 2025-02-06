@@ -30,7 +30,7 @@ class AuthController {
   }
   async register(req, res) {
     const newUser = await AuthService.register(req.body);
-    console.log(newUser?.role_id)
+    console.log(newUser?.role_id);
     const tokenPayload = { userId: newUser.id, role_id: newUser.role_id };
     const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, {
       expiresIn: "15d",
@@ -84,6 +84,7 @@ class AuthController {
         email: user.email,
         avatar: user.avatar,
         region: user.region ? user.region.name : null,
+        region_id: user.region_id,
         role: user.role ? user.role.name : null,
         guard_name: user.role ? user.role.guard_name : null,
       },

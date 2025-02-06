@@ -13,7 +13,6 @@ class ProfileRepository {
     return await ModelProfile.findOne({ where: { user_id: id } });
   }
   async findProfileById(id) {
-    console.log(id, ">--------------<");
     return await ModelProfile.findOne({
       where: { user_id: id },
       include: [
@@ -35,8 +34,6 @@ class ProfileRepository {
           attributes: ["name"],
         },
       ],
-      raw: true,
-      nest: false,
     });
   }
 

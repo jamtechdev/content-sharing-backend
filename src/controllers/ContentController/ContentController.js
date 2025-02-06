@@ -24,8 +24,15 @@ class ContentController {
       "get",
       "/get-content",
       authenticate,
-      authorize(["user"]),
+      authorize(["user", "model"]),
       TryCatch(this.getContent.bind(this))
+    );
+    this.router.addRoute(
+      "get",
+      "/get-content-by-id",
+      authenticate,
+      authorize(["model"]),
+      TryCatch(this.getContentByModelId.bind(this))
     );
     this.router.addRoute(
       "put",
@@ -68,7 +75,8 @@ class ContentController {
       content_type: mediaFileUrl.resourceType,
       category_id,
       user_id: userId,
-      region_id: modal_region_id ?? JSON.stringify([region_id]),
+      // region_id: modal_region_id ?? JSON.stringify([region_id]),
+      region_id: modal_region_id ?? JSON.stringify([1, 2, 3, 4, 5, 6, 7]),
       media_url: mediaFileUrl.secureUrl,
     };
     const response = await ContentService.createContent(data);
@@ -152,6 +160,18 @@ class ContentController {
       code: 200,
       success: true,
       message: "Content removed successfully",
+    });
+  }
+
+  // get content by modelId
+  async getContentByModelId(req, res) {
+    const { userId } = req?.user;
+    const response = await ContentService.findAllContentById(userId);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Content fetched successfully",
+      data: response,
     });
   }
 
