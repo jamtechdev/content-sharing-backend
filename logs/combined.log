@@ -2220,3 +2220,15 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-06T12:18:01.503Z [ERROR]: Error in bound uploadModalAsset: file.originalname.splice is not a function
+2025-02-06T12:18:01.506Z [ERROR]: TypeError: file.originalname.splice is not a function
+    at ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:98:39)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:45:7)
+    at indicateDone (D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:49:68)
+    at D:\Content Sharing\content-sharing-backend\node_modules\multer\lib\make-middleware.js:155:11
+    at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
+    at WriteStream.emit (node:events:531:35)
+    at WriteStream.emit (node:domain:488:12)

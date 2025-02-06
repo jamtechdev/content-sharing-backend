@@ -39,7 +39,7 @@ class ModelProfileController {
       "post",
       "/upload-modal-asset",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       upload.single("image"),
       TryCatch(this.uploadModalAsset.bind(this))
     );
@@ -91,19 +91,29 @@ class ModelProfileController {
     const { user, file, body } = req;
     if (!file) {
       return res
-        .status(400)
-        .json({ code: 400, success: false, message: "No image uploaded" });
+      .status(400)
+      .json({ code: 400, success: false, message: "No image uploaded" });
     }
-  
-      const uploadModalPhoto = await ProfileService.uploadModalPhoto(
-        user,
-        file,
-        body
-      );
+    const fileExt = ["image/jpg", "image/jpeg", "image/png", "image/webp"];
+    if (!fileExt.includes(file.mimetype)) {
+      return res
+        .status(400)
+        .json({
+          code: 400,
+          success: false,
+          message: "Supported file formats: .jpg, .jpeg, .png, .webp,",
+        });
+    }
+
+    const uploadModalPhoto = await ProfileService.uploadModalPhoto(
+      user,
+      file,
+      body
+    );
     return res.status(200).json({
       code: 200,
       message: "Modal photo uploaded successfully",
-      data: uploadModalPhoto
+      data: uploadModalPhoto,
     });
   }
 
