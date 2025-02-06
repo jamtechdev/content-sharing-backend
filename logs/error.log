@@ -2146,6 +2146,7 @@
     at ProfileRepository.updateModelProfileAndCoverPhoto (D:\Content Sharing\content-sharing-backend\src\repositories\ProfileRepository.js:65:27)
     at ProfileService.uploadModalPhoto (D:\Content Sharing\content-sharing-backend\src\services\ProfileService.js:80:51)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+<<<<<<< HEAD
     at async ModelProfileController.uploadModalAsset (D:\Content Sharing\content-sharing-backend\src\controllers\ModalController\ModelProfileController.js:107:32)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
 2025-02-06T10:55:09.884Z [ERROR]: Error in bound uploadModalAsset: Missing where attribute in the options parameter
@@ -2232,3 +2233,179 @@
     at WriteStream.<anonymous> (D:\Content Sharing\content-sharing-backend\node_modules\multer\storage\disk.js:43:9)
     at WriteStream.emit (node:events:531:35)
     at WriteStream.emit (node:domain:488:12)
+=======
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:15:20.370Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:15:20.373Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:15:27.106Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:15:27.107Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:39.803Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:39.804Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:41.072Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:41.072Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:16:45.910Z [ERROR]: Error in bound getContent: Not content found
+2025-02-06T11:16:45.911Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:20:02.060Z [ERROR]: Error in bound createContent: Cannot read properties of undefined (reading 'path')
+2025-02-06T11:20:02.061Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
+    at ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:71:64)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:46:49.968Z [ERROR]: Error in bound me: sequelize is not defined
+2025-02-06T11:46:49.971Z [ERROR]: ReferenceError: sequelize is not defined
+    at ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:36:14)
+    at ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:45)
+    at UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:44:56)
+    at D:\2025\backend-typescript\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at D:\2025\backend-typescript\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\2025\backend-typescript\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\2025\backend-typescript\node_modules\express\lib\router\route.js:149:13)
+    at D:\2025\backend-typescript\src\middleware\AuthMiddleware.js:19:5
+2025-02-06T11:46:58.180Z [ERROR]: Error in bound me: Unknown column 'region.region.name' in 'field list'
+2025-02-06T11:46:58.182Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:17:12)
+    at async ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:21)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:44:35)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:51:54.317Z [ERROR]: Error in bound me: Roles is not associated to ModelProfile!
+2025-02-06T11:51:54.325Z [ERROR]: SequelizeEagerLoadingError: Roles is not associated to ModelProfile!
+    at Function._getIncludedAssociation (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:646:53)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:16:12)
+    at async ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:21)
+2025-02-06T11:54:09.635Z [ERROR]: Error in bound me: Unknown column 'user.role' in 'field list'
+2025-02-06T11:54:09.637Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:16:12)
+    at async ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:21)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:44:35)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T11:56:26.166Z [ERROR]: Error in bound me: Roles is not associated to ModelProfile!
+2025-02-06T11:56:26.171Z [ERROR]: SequelizeEagerLoadingError: Roles is not associated to ModelProfile!
+    at Function._getIncludedAssociation (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:646:53)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:16:12)
+    at async ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:21)
+2025-02-06T11:59:57.377Z [ERROR]: Error in bound getModelProfile: Profile not found
+2025-02-06T11:59:57.381Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:64:33)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:02:51.513Z [ERROR]: Error in bound me: profile is not defined
+2025-02-06T12:02:51.516Z [ERROR]: ReferenceError: profile is not defined
+    at ProfileRepository.findProfileById (D:\2025\backend-typescript\src\repositories\ProfileRepository.js:46:5)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:54:21)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:44:35)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:14:28.855Z [ERROR]: Error in bound getModelProfile: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+2025-02-06T12:14:28.858Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\2025\backend-typescript\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\2025\backend-typescript\node_modules\express\lib\response.js:271:14)
+    at ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:68:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:14:31.760Z [ERROR]: Error in bound getModelProfile: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+2025-02-06T12:14:31.761Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\2025\backend-typescript\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\2025\backend-typescript\node_modules\express\lib\response.js:271:14)
+    at ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:68:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:14:36.326Z [ERROR]: Error in bound getModelProfile: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+2025-02-06T12:14:36.327Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\2025\backend-typescript\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\2025\backend-typescript\node_modules\express\lib\response.js:271:14)
+    at ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:68:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T12:14:36.632Z [ERROR]: Error in bound getModelProfile: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+2025-02-06T12:14:36.632Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'include' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    --- property 'parent' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\2025\backend-typescript\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\2025\backend-typescript\node_modules\express\lib\response.js:271:14)
+    at ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:68:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+>>>>>>> dd6f216fc720816e1a99714280014baccb360f0c

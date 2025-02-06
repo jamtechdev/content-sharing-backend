@@ -27,6 +27,13 @@ class ProfileRepository {
             "phone_number",
             "birthdate",
           ],
+          include: [
+            {
+              model: db.Roles,
+              as: "role",
+              attributes: ["name", "guard_name"],
+            },
+          ],
         },
         {
           model: Region,
