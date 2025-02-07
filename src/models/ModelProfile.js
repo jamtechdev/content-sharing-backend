@@ -48,16 +48,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         unique: true,
       },
-      bio: DataTypes.TEXT,
-      profile_picture: DataTypes.STRING,
-      cover_photo: DataTypes.STRING,
+      
       website_url: DataTypes.STRING,
       social_links: DataTypes.JSON,
-      location: DataTypes.STRING,
-      birthdate: {
-        type: DataTypes.DATEONLY,
-        allowNull: false,
-      },
+      location: DataTypes.STRING, 
       gender: {
         type: DataTypes.ENUM("Male", "Female", "Non-Binary", "Other"),
         allowNull: false,

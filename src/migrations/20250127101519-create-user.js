@@ -75,10 +75,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
       },
-      cover_photo: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

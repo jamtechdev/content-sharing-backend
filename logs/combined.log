@@ -2409,3 +2409,91 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
 >>>>>>> dd6f216fc720816e1a99714280014baccb360f0c
+2025-02-06T13:11:58.780Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:11:58.781Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:12:02.907Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:12:02.908Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:51:00.229Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:51:00.231Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:51:03.668Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:51:03.668Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:51:22.000Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:51:22.000Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:51:27.357Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:51:27.357Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:52:10.892Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:52:10.892Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-06T13:52:11.356Z [ERROR]: Error in bound getContent: Unknown column 'user.cover_photo' in 'field list'
+2025-02-06T13:52:11.356Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:16:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
