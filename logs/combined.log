@@ -2266,6 +2266,7 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+<<<<<<< HEAD
 2025-02-06T11:20:02.060Z [ERROR]: Error in bound createContent: Cannot read properties of undefined (reading 'path')
 2025-02-06T11:20:02.061Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'path')
     at ContentController.createContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:71:64)
@@ -2497,3 +2498,5 @@
     at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+=======
+>>>>>>> 1f61f94787fbe656f0a3ac4caa371ab3d0509440

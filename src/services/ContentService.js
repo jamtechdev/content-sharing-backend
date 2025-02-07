@@ -61,5 +61,51 @@ class ContentService {
   async findAllContentById(id) {
     return await ContentRepository.findAll(id);
   }
+
+  async addLike(data) {
+    const response = await ContentRepository.addLike(data);
+    if (!response) {
+      throw new HttpError(400, "Content not created");
+    }
+    return response;
+  }
+  async getLikeByContentUserId(contentId, userId) {
+    const response = await ContentRepository.getLikeByContentUserId(
+      contentId, userId
+    );
+    // if (!response) {
+    //   throw new HttpError(400, "Content not created");
+    // }
+    return response;
+  }
+
+  async updateLikeByUsercontentId(data){
+    return await ContentRepository.updateLikeByUsercontentId(data)
+  }
+  async getLikeByContentId(contentId) {
+    const response = await ContentRepository.getLikeByContentId(
+      contentId
+    );
+    if (!response) {
+      throw new HttpError(400, "Content not created");
+    }
+    return response;
+  }
+  async getLikeByUserId(userId) {
+    const response = await ContentRepository.getLikeByUserId(userId);
+    if (!response) {
+      throw new HttpError(400, "Content not created");
+    }
+    return response;
+  }
+  async destroyLikeByContentUserId(contentId, userId) {
+    const response = await ContentRepository.destroyLikeByContentUserId(
+      contentId, userId
+    );
+    if (!response) {
+      throw new HttpError(400, "Content not created");
+    }
+    return response;
+  }
 }
 module.exports = new ContentService();
