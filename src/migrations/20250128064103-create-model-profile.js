@@ -21,18 +21,6 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      bio: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      profile_picture: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      cover_photo: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
       website_url: {
         type: Sequelize.STRING,
         allowNull: true,
@@ -44,10 +32,6 @@ module.exports = {
       location: {
         type: Sequelize.STRING,
         allowNull: true,
-      },
-      birthdate: {
-        type: Sequelize.DATEONLY,
-        allowNull: false,
       },
       gender: {
         type: Sequelize.ENUM("Male", "Female", "Non-Binary", "Other"),
