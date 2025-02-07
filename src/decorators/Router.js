@@ -9,9 +9,9 @@ class Router {
     this.router[method](path, ...handlers);
   }
 
-  getRouter() {
-    return this.router;
-  }
+    getRouter() {
+      return this.router;
+    }
 }
 
 module.exports = Router;

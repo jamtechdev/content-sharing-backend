@@ -22,7 +22,9 @@ class ContentRepository {
         { model: User, as: "user" },
         { model: Region, as: "region" },
       ],
+      order: [["createdAt", "DESC"]],
     });
+
     content = content.filter((item) => {
       let itemRegionIds;
       try {

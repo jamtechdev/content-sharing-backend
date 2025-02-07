@@ -20,19 +20,26 @@ class UserController {
       TryCatch(this.me.bind(this))
     );
     this.router.addRoute(
-      "post",
-      "/upload-avatar",
-      authenticate,
-      authorize(["user", "model"]),
-      upload.single("avatar"),
-      TryCatch(this.uploadAvatar.bind(this))
-    );
-    this.router.addRoute(
       "put",
       "/my-profile-update",
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.updateUser.bind(this))
+    );
+    this.router.addRoute(
+      "put",
+      "/update-profile",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.updateProfile.bind(this))
+    );
+    this.router.addRoute(
+      "post",
+      "/upload-modal-asset",
+      authenticate,
+      authorize(["user", "model"]),
+      upload.single("image"),
+      TryCatch(this.uploadAsset.bind(this))
     );
   }
   //   get-user-profile
@@ -57,7 +64,8 @@ class UserController {
           id: newUser.id,
           name: newUser.name,
           email: newUser.email,
-          profile_picture: newUser.avatar,
+          avatar: newUser.avatar,
+          cover_photo: newUser.cover_photo,
           address: newUser.address,
           phone_number: newUser.phone_number,
           birthdate: newUser.birthdate,
@@ -71,26 +79,35 @@ class UserController {
     }
   }
   //   update-user-profile
-  async uploadAvatar(req, res) {
-    const user = req?.user;
-    const avatar = req?.file;
-    console.log(avatar);
-
-    if (!avatar) {
+  async uploadAsset(req, res) {
+    const { user, file, body } = req;
+    if (!file) {
+      return res
+        .status(400)
+        .json({ code: 400, success: false, message: "No image uploaded" });
+    }
+    const fileExt = ["image/jpg", "image/jpeg", "image/png", "image/webp"];
+    if (!fileExt.includes(file.mimetype)) {
       return res.status(400).json({
         code: 400,
         success: false,
-        message: "No file uploaded",
+        message: "Supported file formats: .jpg, .jpeg, .png, .webp,",
       });
     }
-    await UserService.getUserById(user?.userId);
-    const updateUser = await UserService.updateUserAvatar(user?.userId, avatar);
 
+    const uploadModalPhoto = await ProfileService.uploadModalPhoto(
+      user,
+      file,
+      body
+    );
     return res.status(200).json({
       code: 200,
-      data: updateUser,
+      message: "Modal photo uploaded successfully",
+      data: uploadModalPhoto,
     });
   }
+
+  // need to remove this
   async updateUser(req, res) {
     const user = req?.user;
     const formData = req.body;
@@ -108,6 +125,45 @@ class UserController {
     return res.status(200).json({
       code: 200,
       message: "User details updated successfully.",
+    });
+  }
+
+  async updateProfile(req, res) {
+    const user = req?.user;
+    const formData = req?.body;
+    if (Object.keys(req.body).length === 0) {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Data fields required to update modal profile",
+      });
+    }
+
+    // check some fields for updating a user table
+    const allowedFields = [
+      "name",
+      "address",
+      "phone_number",
+      "birthdate",
+      "bio",
+    ];
+    const updateUserData = Object.fromEntries(
+      Object.entries(formData).filter(
+        ([key, value]) => allowedFields.includes(key) && value?.trim()
+      )
+    );
+    if (Object.keys(updateUserData).length) {
+      await UserService.updateUserbyId(user?.userId, updateUserData);
+    }
+
+    const updateModalProfile = await ProfileService.updateModalProfileById(
+      user?.userId,
+      formData
+    );
+
+    return res.status(200).json({
+      code: 200,
+      message: "profile updated successfully",
     });
   }
   getRouter() {
