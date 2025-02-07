@@ -2,7 +2,8 @@ const db = require("../models/index");
 const Content = db.Content;
 const User = db.users;
 const Region = db.Regions;
-const Likes = db.Likes
+const Likes = db.Likes;
+const Comment = db.comment;
 
 const { Op, where } = require("sequelize");
 
@@ -92,23 +93,97 @@ class ContentRepository {
   }
 
   async getLikeByContentId(contentId) {
-    return await Likes.findAll({ where: { content_id: contentId } });
-  }
-  
-  async getLikeByUserId(userId){
-    return await Likes.findAll({ where: { user_id: userId } });
+    return await Likes.findAll({
+      where: { content_id: contentId },
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "contentId",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
+    });
   }
 
-  async updateLikeByUsercontentId(data){
-    return await Likes.update({is_like:data?.is_like},{
-      where: { content_id: data?.content_id, user_id: data?.user_id },
+  async getLikeByUserId(userId) {
+    return await Likes.findAll({
+      where: { user_id: userId, is_like: 1 },
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "contentId",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
     });
+  }
+
+  async updateLikeByUsercontentId(data) {
+    return await Likes.update(
+      { is_like: data?.is_like },
+      {
+        where: { content_id: data?.content_id, user_id: data?.user_id },
+      }
+    );
   }
 
   async destroyLikeByContentUserId(contentId, userId) {
     return await Likes.destroy({
       where: { content_id: contentId, user_id: userId },
     });
+  }
+
+  async addComment(data) {
+    return await Comment.create(data);
+  }
+
+  async getComment() {
+    return await Comment.findAll({
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "content",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
+      attributes: ["comment_text", "status"],
+    });
+  }
+
+  async getCommentById(commnetId) {
+    return await Comment.findOne(
+      { where: { id: commnetId },include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "content",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
+      attributes: ["comment_text", "status"], },
+      // {
+        
+      // }
+    );
   }
 }
 

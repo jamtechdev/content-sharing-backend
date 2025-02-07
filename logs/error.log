@@ -2266,3 +2266,39 @@
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:94:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T06:26:56.843Z [ERROR]: Error in bound addComment: Table 'content_sharing_db.comments' doesn't exist
+2025-02-07T06:26:56.845Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Comment.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.addComment (D:\content-sharing-backend\src\repositories\ContentRepository.js:147:12)
+    at async ContentService.addComment (D:\content-sharing-backend\src\services\ContentService.js:112:22)
+    at async ContentController.addComment (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:273:23)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T06:30:07.779Z [ERROR]: Error in bound addComment: Unknown column 'updatedAt' in 'field list'
+2025-02-07T06:30:07.781Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Comment.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ContentRepository.addComment (D:\content-sharing-backend\src\repositories\ContentRepository.js:147:12)
+    at async ContentService.addComment (D:\content-sharing-backend\src\services\ContentService.js:112:22)
+    at async ContentController.addComment (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:273:23)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T06:37:34.204Z [ERROR]: Error in bound getComment: Content is associated to comment using an alias. You've included an alias (contentId), but it does not match the alias(es) defined in your association (content).
+2025-02-07T06:37:34.212Z [ERROR]: SequelizeEagerLoadingError: Content is associated to comment using an alias. You've included an alias (contentId), but it does not match the alias(es) defined in your association (content).
+    at Function._getIncludedAssociation (D:\content-sharing-backend\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (D:\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.getComment (D:\content-sharing-backend\src\repositories\ContentRepository.js:151:12)
+    at async ContentService.getComment (D:\content-sharing-backend\src\services\ContentService.js:116:22)
+    at async ContentController.getComment (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:290:22)

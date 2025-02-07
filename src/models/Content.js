@@ -37,6 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         as: "region",
         onDelete: "SET NULL",
       });
+      
     }
   }
   Content.init(
