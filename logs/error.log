@@ -2594,3 +2594,15 @@
     at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T09:57:56.846Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T09:57:56.848Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T09:58:00.243Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T09:58:00.244Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
