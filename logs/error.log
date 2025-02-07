@@ -2527,3 +2527,70 @@
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
 =======
 >>>>>>> 23df7d78580671c8eef4877903222c8e0048aa55
+2025-02-07T07:33:48.785Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T07:33:48.788Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T07:33:51.614Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T07:33:51.615Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T07:34:15.198Z [ERROR]: SyntaxError: Expected double-quoted property name in JSON at position 72
+    at JSON.parse (<anonymous>)
+    at parse (D:\2025\backend-typescript\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\2025\backend-typescript\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (D:\2025\backend-typescript\node_modules\raw-body\index.js:238:16)
+    at done (D:\2025\backend-typescript\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\2025\backend-typescript\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:514:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+2025-02-07T07:36:53.016Z [ERROR]: Error in bound updateModelProfile: Validation error
+2025-02-07T07:36:53.018Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:141:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async ModelProfileController.updateModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:100:7)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T07:37:37.229Z [ERROR]: SyntaxError: Expected double-quoted property name in JSON at position 41
+    at JSON.parse (<anonymous>)
+    at parse (D:\2025\backend-typescript\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\2025\backend-typescript\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (D:\2025\backend-typescript\node_modules\raw-body\index.js:238:16)
+    at done (D:\2025\backend-typescript\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\2025\backend-typescript\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:514:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1408:12)
+2025-02-07T07:45:16.594Z [ERROR]: Error in bound updateProfile: Validation error
+2025-02-07T07:45:16.595Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:3352:28)
+    at async UserRepository.updateUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:141:12)
+    at async userService.updateUserbyId (D:\2025\backend-typescript\src\services\UserService.js:29:24)
+    at async UserController.updateProfile (D:\2025\backend-typescript\src\controllers\User\UserController.js:164:7)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T09:34:49.713Z [ERROR]: Error in bound getContent: Unknown column 'Content.created_at' in 'order clause'
+2025-02-07T09:34:49.717Z [ERROR]: Error
+    at Query.run (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\2025\backend-typescript\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\2025\backend-typescript\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getContent (D:\2025\backend-typescript\src\repositories\ContentRepository.js:18:19)
+    at async ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

@@ -20,7 +20,9 @@ class ContentRepository {
         { model: User, as: "user" },
         { model: Region, as: "region" },
       ],
+      order: [["createdAt", "DESC"]],
     });
+
     content = content.filter((item) => {
       let itemRegionIds;
       try {
@@ -167,21 +169,24 @@ class ContentRepository {
 
   async getCommentById(commnetId) {
     return await Comment.findOne(
-      { where: { id: commnetId },include: [
-        {
-          model: User, // Assuming your Users model is imported
-          as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
-        },
-        {
-          model: Content, // Assuming your Content model is imported
-          as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
-        },
-      ],
-      attributes: ["comment_text", "status"], },
+      {
+        where: { id: commnetId },
+        include: [
+          {
+            model: User, // Assuming your Users model is imported
+            as: "user",
+            attributes: ["name", "email"], // Adjust attributes as needed
+          },
+          {
+            model: Content, // Assuming your Content model is imported
+            as: "content",
+            attributes: ["title", "description"], // Adjust attributes as needed
+          },
+        ],
+        attributes: ["comment_text", "status"],
+      }
       // {
-        
+
       // }
     );
   }
