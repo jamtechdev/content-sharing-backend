@@ -17,9 +17,9 @@ class ContentRepository {
 
     let content = await Content.findAll({
       include: [
-        { model: User, as: "user" },
-        { model: Region, as: "region" },
+        {model: User, as: "user" }
       ],
+      
     });
     content = content.filter((item) => {
       let itemRegionIds;
@@ -33,6 +33,13 @@ class ContentRepository {
         itemRegionIds.some((id) => regionArray.includes(id))
       );
     });
+   
+    for (const item of content) {
+      const likesCount = await Likes.count({
+        where: { content_id: item.id, is_like: true },
+      });
+      item.dataValues.likesCount = likesCount; // Add likesCount to the result
+    }
     return content;
   }
 

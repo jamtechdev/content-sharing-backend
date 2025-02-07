@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       //   as: "category"
       // })
 
+      Content.hasMany(models.Likes, {
+        foreignKey: "content_id",
+        as: "likes"
+      })
+
       // Content belongs to a user
       Content.belongsTo(models.users, {
         foreignKey: "user_id",

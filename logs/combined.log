@@ -2527,3 +2527,163 @@
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
 =======
 >>>>>>> 23df7d78580671c8eef4877903222c8e0048aa55
+2025-02-07T07:40:26.198Z [ERROR]: Error in bound contentLike: Unknown column 'is_like' in 'field list'
+2025-02-07T07:40:26.199Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:90:12)
+    at async ContentService.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:235:18)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T07:47:12.846Z [ERROR]: Error in bound contentLike: Unknown column 'is_like' in 'field list'
+2025-02-07T07:47:12.846Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:90:12)
+    at async ContentService.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:235:18)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T07:47:35.533Z [ERROR]: Error in bound contentLike: Unknown column 'is_like' in 'field list'
+2025-02-07T07:47:35.537Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:90:12)
+    at async ContentService.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:235:18)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T07:49:43.080Z [ERROR]: Error in bound contentLike: Unknown column 'updatedAt' in 'field list'
+2025-02-07T07:49:43.084Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ContentRepository.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:90:12)
+    at async ContentService.getLikeByContentUserId (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:73:22)
+    at async ContentController.contentLike (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:235:18)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T07:59:09.002Z [ERROR]: Error in bound getContent: Likes is not associated to Content!
+2025-02-07T07:59:09.008Z [ERROR]: SequelizeEagerLoadingError: Likes is not associated to Content!
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:19)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+2025-02-07T07:59:42.931Z [ERROR]: Error in bound getContent: Likes is not associated to Content!
+2025-02-07T07:59:42.932Z [ERROR]: SequelizeEagerLoadingError: Likes is not associated to Content!
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:19)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+2025-02-07T08:14:35.139Z [ERROR]: Error in bound getContent: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'parent' -> object with constructor 'Object'
+    --- property 'include' closes the circle
+2025-02-07T08:14:35.142Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'parent' -> object with constructor 'Object'
+    --- property 'include' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\response.js:271:14)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:142:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:14:42.289Z [ERROR]: Error in bound getContent: item is not iterable
+2025-02-07T08:14:42.292Z [ERROR]: TypeError: item is not iterable
+    at D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:38:29
+    at Array.map (<anonymous>)
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:36:23)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:15:30.578Z [ERROR]: Error in bound getContent: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'parent' -> object with constructor 'Object'
+    --- property 'include' closes the circle
+2025-02-07T08:15:30.581Z [ERROR]: TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Array'
+    |     index 0 -> object with constructor 'Object'
+    |     property 'parent' -> object with constructor 'Object'
+    --- property 'include' closes the circle
+    at JSON.stringify (<anonymous>)
+    at stringify (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\response.js:1160:12)
+    at ServerResponse.json (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\response.js:271:14)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:142:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:23:09.035Z [ERROR]: Error in bound getContent: sequelize is not defined
+2025-02-07T08:23:09.038Z [ERROR]: ReferenceError: sequelize is not defined
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:26:12)
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:46)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:23:29.726Z [ERROR]: Error in bound getContent: Cannot read properties of undefined (reading 'fn')
+2025-02-07T08:23:29.729Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'fn')
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:26:22)
+    at ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:46)
+    at ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:25:44.893Z [ERROR]: Error in bound getContent: Cannot set properties of undefined (setting 'totalLikes')
+2025-02-07T08:25:44.895Z [ERROR]: TypeError: Cannot set properties of undefined (setting 'totalLikes')
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:39:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:30:08.893Z [ERROR]: Error in bound getContent: Cannot set properties of undefined (setting 'totalLikes')
+2025-02-07T08:30:08.897Z [ERROR]: TypeError: Cannot set properties of undefined (setting 'totalLikes')
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:40:34)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T08:30:37.427Z [ERROR]: Error in bound getContent: Cannot read properties of undefined (reading 'length')
+2025-02-07T08:30:37.431Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:40:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T09:37:17.400Z [ERROR]: Error in bound getContent: Cannot read properties of undefined (reading 'getTableName')
+2025-02-07T09:37:17.442Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'getTableName')
+    at MySQLQueryGenerator.generateThroughJoin (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1955:40)
+    at MySQLQueryGenerator.generateInclude (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1711:24)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1328:34)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentRepository.getContent (D:\Content Sharing\content-sharing-backend\src\repositories\ContentRepository.js:18:19)
+    at async ContentService.getContent (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:17:22)
+    at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:141:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
