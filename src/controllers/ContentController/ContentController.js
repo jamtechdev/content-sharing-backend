@@ -57,6 +57,45 @@ class ContentController {
       authorize(["user"]),
       TryCatch(this.contentLike.bind(this))
     );
+
+    this.router.addRoute(
+      "get",
+      "/get-like-by-user",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getLikeByUserId.bind(this))
+    );
+
+    this.router.addRoute(
+      "get",
+      "/get-like-by-content",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getLikeByContentId.bind(this))
+    );
+
+    this.router.addRoute(
+      "post",
+      "/comment",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.addComment.bind(this))
+    );
+
+    this.router.addRoute(
+      "get",
+      "/comment",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getComment.bind(this))
+    );
+    this.router.addRoute(
+      "get",
+      "/comment/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getCommentById.bind(this))
+    );
   }
 
   async createContent(req, res) {
@@ -184,7 +223,8 @@ class ContentController {
   }
 
   async contentLike(req, res) {
-    const { contentId, userId } = req?.body;
+    const { contentId } = req?.body;
+    const { userId } = req?.user;
     if (!contentId && !userId) {
       return res.status(400).json({
         code: 400,
@@ -203,7 +243,7 @@ class ContentController {
       return res.status(200).json({
         code: 200,
         success: true,
-        message: `You ${data?.is_like ?"Unliked":"Liked"} this Content`,
+        message: `You ${data?.is_like ? "Unliked" : "Liked"} this Content`,
       });
     }
     await ContentService.addLike({ content_id: contentId, user_id: userId });
@@ -211,6 +251,64 @@ class ContentController {
       code: 200,
       success: true,
       message: "You liked this Content",
+    });
+  }
+
+  async getLikeByUserId(req, res) {
+    const { userId } = req?.user;
+    const data = await ContentService.getLikeByUserId(userId);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: data,
+    });
+  }
+
+  async getLikeByContentId(req, res) {
+    const { contentId } = req?.body;
+    const data = await ContentService.getLikeByContentId(contentId);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: data,
+    });
+  }
+
+  async addComment(req, res) {
+    const { userId } = req?.user;
+    const data = req?.body;
+    if (Object.keys(req.body).length === 0) {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Comment text is required to add comment",
+      });
+    }
+    data["user_id"] = userId;
+    const response = await ContentService.addComment(data);
+    return res.status(201).json({
+      code: 201,
+      success: true,
+      message: "Comment added successfully",
+    });
+  }
+
+  async getComment(req, res) {
+    const response = await ContentService.getComment();
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: response,
+    });
+  }
+
+  async getCommentById(req, res) {
+    const { id } = req?.params;
+    const response = await ContentService.getCommentById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: response,
     });
   }
 

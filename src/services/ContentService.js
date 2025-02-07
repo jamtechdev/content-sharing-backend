@@ -107,5 +107,18 @@ class ContentService {
     }
     return response;
   }
+
+  async addComment(data){
+    const response = await ContentRepository.addComment(data)
+    return response
+  }
+  async getComment(){
+    const response = await ContentRepository.getComment()
+    return response
+  }
+
+  async getCommentById(commnetId){
+    return await ContentRepository.getCommentById(commnetId)
+  }
 }
 module.exports = new ContentService();
