@@ -120,5 +120,31 @@ class ContentService {
   async getCommentById(commnetId){
     return await ContentRepository.getCommentById(commnetId)
   }
+
+  async deleteCommentById(commnetId){
+    return await ContentRepository.deleteComment(commnetId)
+  }
+
+  async updateComment(data){
+    return await ContentRepository.updateComment(data)
+  }
+
+  async replyComment(data){
+    return await ContentRepository.replyComment(data)
+  }
+
+  async getReplyCommentByCommnet(commentId){
+    return await ContentRepository.getReplyCommentByCommnet(commentId)
+  }
+
+  async updateReplyComment(data){
+    return await ContentRepository.updateReplyComment(data)
+  }
+
+  
+  async deleteReplyComment(data){
+    return await ContentRepository.deleteReplyComment(data)
+  }
+
 }
 module.exports = new ContentService();

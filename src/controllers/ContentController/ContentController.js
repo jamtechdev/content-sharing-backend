@@ -96,6 +96,52 @@ class ContentController {
       authorize(["user", "model"]),
       TryCatch(this.getCommentById.bind(this))
     );
+    this.router.addRoute(
+      "delete",
+      "/comment/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.deleteComment.bind(this))
+    );
+    this.router.addRoute(
+      "put",
+      "/comment",
+      authenticate,
+      authorize(["user"]),
+      TryCatch(this.updateComment.bind(this))
+    );
+
+    this.router.addRoute(
+      "post",
+      "/comment/reply",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.replyComment.bind(this))
+    );
+
+    this.router.addRoute(
+      "get",
+      "/comment/reply/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getReplyCommentByCommnet.bind(this))
+    );
+
+    this.router.addRoute(
+      "put",
+      "/comment/reply",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.updateReplyComment.bind(this))
+    );
+
+    this.router.addRoute(
+      "delete",
+      "/comment/reply/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.deleteReplyComment.bind(this))
+    );
   }
 
   async createContent(req, res) {
@@ -312,6 +358,77 @@ class ContentController {
     });
   }
 
+  async deleteComment(req, res) {
+    const { id } = req?.params;
+    const response = await ContentService.deleteCommentById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Comment deleted successfully.",
+    });
+  }
+
+  async updateComment(req, res) {
+    const data = req?.body;
+    const response = await ContentService.updateComment(data);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Comment updated successfully",
+    });
+  }
+
+  async replyComment(req, res) {
+    const data = req?.body;
+    const { userId } = req?.user;
+    data["user_id"] = userId;
+    const response = await ContentService.replyComment(data);
+    return res.status(201).json({
+      code: 201,
+      success: true,
+      message: "Replied on comment",
+    });
+  }
+
+  async getReplyCommentByCommnet(req, res) {
+    const { id } = req?.params;
+    const response = await ContentService.getReplyCommentByCommnet(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: response,
+    });
+  }
+
+  async updateReplyComment(req, res) {
+    const data = req?.body;
+    const { userId } = req?.user;
+    data["user_id"] = userId;
+
+    const response = await ContentService.updateReplyComment(data);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Comment updated successfully.",
+    });
+  }
+
+  async deleteReplyComment(req, res) {
+    const { id } = req?.params;
+    const { userId } = req?.user;
+    const data = {
+      id: id,
+      user_id: userId,
+    };
+    const response = await ContentService.deleteReplyComment(data);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Comment deleted successfully.",
+    });
+  }
+
+ 
   getRouter() {
     return this.router.getRouter();
   }

@@ -21,6 +21,12 @@ module.exports = (sequelize, DataTypes) => {
         as: "content",
         onDelete: "CASCADE",
       });
+
+      Comment.hasMany(models.ReplyComment, {
+        foreignKey: "comment_id",
+        as: "comment",
+        onDelete: "CASCADE",
+      });
     }
   }
   Comment.init(
