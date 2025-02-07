@@ -2500,3 +2500,27 @@
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
 =======
 >>>>>>> 1f61f94787fbe656f0a3ac4caa371ab3d0509440
+2025-02-07T06:05:46.202Z [ERROR]: Error in bound getModelProfile: Profile not found
+2025-02-07T06:05:46.204Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ModelProfileController.getModelProfile (D:\2025\backend-typescript\src\controllers\ModalController\ModelProfileController.js:64:33)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T06:07:36.373Z [ERROR]: Error in bound me: Profile not found
+2025-02-07T06:07:36.374Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\2025\backend-typescript\src\services\ProfileService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.me (D:\2025\backend-typescript\src\controllers\User\UserController.js:43:35)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T07:24:07.418Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T07:24:07.420Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:102:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
+2025-02-07T07:24:11.818Z [ERROR]: Error in bound getContent: Not content found
+2025-02-07T07:24:11.819Z [ERROR]: Error: Not content found
+    at ContentService.getContent (D:\2025\backend-typescript\src\services\ContentService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:102:22)
+    at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7

@@ -26,6 +26,9 @@ class ProfileRepository {
             "address",
             "phone_number",
             "birthdate",
+            "bio",
+            "avatar",
+            "cover_photo",
           ],
           include: [
             {
@@ -55,39 +58,24 @@ class ProfileRepository {
 
   async updateModelProfileAndCoverPhoto(user, imageUri, data) {
     // console.log(data,imageUri,id);
-    console.log("Recieve data in repo==>", user, imageUri, data)
-    if(user.role === "user"){
-      if(data){
-        console.log("User's if condition")
-        await User.update({
-          avatar: imageUri}, 
-          {where: {id: user.userId}
-        })
-        return imageUri
-      }
-      else {
-        console.log("User's else condition")
-        await User.update({
-          cover_photo: imageUri},
-          {where: {id: user.userId}
-        })
-        return imageUri
-      }
-    }
-    else {
-      if (data) {
-        await ModelProfile.update(
-          { profile_picture: imageUri },
-          { where: { user_id: user.userId } }
-        );
-        return imageUri
-      } else {
-        await ModelProfile.update(
-          { cover_photo: imageUri },
-          { where: { user_id: user.userId } }
-        );
-        return imageUri
-      }
+
+    if (data) {
+      await User.update(
+        {
+          avatar: imageUri,
+        },
+        { where: { id: user.userId } }
+      );
+      return imageUri;
+    } else {
+      console.log("User's else condition");
+      await User.update(
+        {
+          cover_photo: imageUri,
+        },
+        { where: { id: user.userId } }
+      );
+      return imageUri;
     }
   }
 }
