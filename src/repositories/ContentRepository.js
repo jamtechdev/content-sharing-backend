@@ -4,6 +4,8 @@ const User = db.users;
 const Region = db.Regions;
 const Likes = db.Likes;
 const Comment = db.comment;
+const ReplyComment = db.ReplyComment;
+const Bookmarks = db.Bookmarks;
 
 const { Op, where } = require("sequelize");
 
@@ -168,27 +170,71 @@ class ContentRepository {
   }
 
   async getCommentById(commnetId) {
-    return await Comment.findOne(
-      {
-        where: { id: commnetId },
-        include: [
-          {
-            model: User, // Assuming your Users model is imported
-            as: "user",
-            attributes: ["name", "email"], // Adjust attributes as needed
-          },
-          {
-            model: Content, // Assuming your Content model is imported
-            as: "content",
-            attributes: ["title", "description"], // Adjust attributes as needed
-          },
-        ],
-        attributes: ["comment_text", "status"],
-      }
-      // {
+    return await Comment.findOne({
+      where: { id: commnetId },
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "content",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
+      attributes: ["comment_text", "status"],
+    });
+  }
 
-      // }
+  async deleteComment(commnetId) {
+    return await Comment.destroy({ where: { id: commnetId } });
+  }
+
+  async updateComment(data) {
+    return await Comment.update(
+      { comment_text: data?.comment_text },
+      { where: { id: data?.id } }
     );
+  }
+
+  async replyComment(data) {
+    return await ReplyComment.create(data);
+  }
+
+  async getReplyCommentByCommnet(commentId) {
+    return await ReplyComment.findAll({
+      where: { comment_id: commentId },
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Comment, // Assuming your Content model is imported
+          as: "comment",
+          attributes: ["comment_text"], // Adjust attributes as needed
+        },
+      ],
+      attributes: ["id", "reply_text"],
+    });
+  }
+
+  async updateReplyComment(data) {
+    return await ReplyComment.update(
+      { reply_text: data?.reply_text },
+      {
+        where: { id: data?.id, user_id: data?.user_id },
+      }
+    );
+  }
+
+  async deleteReplyComment(data) {
+    return await ReplyComment.destroy({
+      where: { id: data?.id, user_id: data?.user_id },
+    });
   }
 }
 
