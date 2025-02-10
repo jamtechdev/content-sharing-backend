@@ -19,8 +19,8 @@ module.exports = {
         // onDelete: "CASCADE",
       },
       name: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.ENUM("basic", "premium"),
+        allowNull: true,
       },
       price: {
         type: Sequelize.DECIMAL(10, 2),
@@ -39,7 +39,7 @@ module.exports = {
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      updated_at: {
+      updatedAt: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal(
           "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"

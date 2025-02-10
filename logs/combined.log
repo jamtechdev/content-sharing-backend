@@ -2757,3 +2757,341 @@
     at async ContentController.getContent (D:\2025\backend-typescript\src\controllers\ContentController\ContentController.js:141:22)
     at async D:\2025\backend-typescript\src\decorators\TryCatch.js:5:7
 >>>>>>> 8e4dc17458f6af4032bc4dde2fdc2b08d86e47c2
+2025-02-07T12:31:17.520Z [ERROR]: Error in bound createPlan: Unknown column 'updatedAt' in 'field list'
+2025-02-07T12:31:17.521Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Plan.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async PlanRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\PlanRepository.js:7:12)
+    at async PlanService.createPlan (D:\Content Sharing\content-sharing-backend\src\services\PlanService.js:6:12)
+    at async PlanController.createPlan (D:\Content Sharing\content-sharing-backend\src\controllers\PlanController\PlanController.js:52:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-07T13:46:13.511Z [ERROR]: Error in bound createSubscription: plan_id is not defined
+2025-02-07T13:46:13.514Z [ERROR]: ReferenceError: plan_id is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:47)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:48:29.647Z [ERROR]: Error in bound createSubscription: status is not defined
+2025-02-07T13:48:29.650Z [ERROR]: ReferenceError: status is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:5)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:48:33.795Z [ERROR]: Error in bound createSubscription: status is not defined
+2025-02-07T13:48:33.795Z [ERROR]: ReferenceError: status is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:5)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:48:55.151Z [ERROR]: Error in bound createSubscription: status is not defined
+2025-02-07T13:48:55.151Z [ERROR]: ReferenceError: status is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:5)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:49:05.617Z [ERROR]: Error in bound createSubscription: status is not defined
+2025-02-07T13:49:05.617Z [ERROR]: ReferenceError: status is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:5)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:49:06.506Z [ERROR]: Error in bound createSubscription: status is not defined
+2025-02-07T13:49:06.506Z [ERROR]: ReferenceError: status is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:9:5)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-07T13:57:16.587Z [ERROR]: Error in bound createSubscription: WHERE parameter "subscriber_id" has invalid "undefined" value
+2025-02-07T13:57:16.596Z [ERROR]: Error: WHERE parameter "subscriber_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-10T04:37:35.247Z [ERROR]: Error in bound createSubscription: WHERE parameter "subscriber_id" has invalid "undefined" value
+2025-02-10T04:37:35.283Z [ERROR]: Error: WHERE parameter "subscriber_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-10T04:44:12.844Z [ERROR]: Error in bound createSubscription: WHERE parameter "subscriber_id" has invalid "undefined" value
+2025-02-10T04:44:12.844Z [ERROR]: Error: WHERE parameter "subscriber_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-10T04:49:17.038Z [ERROR]: Error in bound createSubscription: req is not defined
+2025-02-10T04:49:17.042Z [ERROR]: ReferenceError: req is not defined
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:86)
+    at SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-10T04:53:01.334Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T04:53:01.337Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:53:27.824Z [ERROR]: Error in bound createSubscription: Cannot read properties of null (reading 'status')
+2025-02-10T04:53:27.826Z [ERROR]: TypeError: Cannot read properties of null (reading 'status')
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:14:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:54:09.432Z [ERROR]: Error in bound createSubscription: Cannot read properties of null (reading 'status')
+2025-02-10T04:54:09.435Z [ERROR]: TypeError: Cannot read properties of null (reading 'status')
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:14:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:54:11.388Z [ERROR]: Error in bound createSubscription: Cannot read properties of null (reading 'status')
+2025-02-10T04:54:11.388Z [ERROR]: TypeError: Cannot read properties of null (reading 'status')
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:14:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:55:48.088Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T04:55:48.090Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:56:01.516Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T04:56:01.519Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:56:25.558Z [ERROR]: Error in bound createSubscription: Cannot read properties of null (reading 'status')
+2025-02-10T04:56:25.559Z [ERROR]: TypeError: Cannot read properties of null (reading 'status')
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:15:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:58:53.540Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T04:58:53.542Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T04:59:14.174Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T04:59:14.174Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:08:24.976Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:08:24.979Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:14:31.575Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:14:31.577Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:15:46.441Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:15:46.443Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:16:06.654Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:16:06.657Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:16:25.742Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:16:25.744Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:16:39.809Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:16:39.811Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:23:04.352Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:23:04.354Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T05:23:28.147Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T05:23:28.149Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:55:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:13:26.802Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T06:13:26.805Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:14:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:40:23.479Z [ERROR]: Error in bound createPlan: notNull Violation: Plan.model_id cannot be null
+2025-02-10T06:40:23.505Z [ERROR]: SequelizeValidationError: notNull Violation: Plan.model_id cannot be null
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Plan.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async PlanRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\PlanRepository.js:7:12)
+    at async PlanService.createPlan (D:\Content Sharing\content-sharing-backend\src\services\PlanService.js:6:12)
+    at async PlanController.createPlan (D:\Content Sharing\content-sharing-backend\src\controllers\PlanController\PlanController.js:52:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:47:52.103Z [ERROR]: Error in bound createPlan: notNull Violation: Plan.price cannot be null,
+notNull Violation: Plan.duration cannot be null
+2025-02-10T06:47:52.109Z [ERROR]: SequelizeValidationError: notNull Violation: Plan.price cannot be null,
+notNull Violation: Plan.duration cannot be null
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Plan.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async PlanRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\PlanRepository.js:7:12)
+    at async PlanService.createPlan (D:\Content Sharing\content-sharing-backend\src\services\PlanService.js:6:12)
+    at async PlanController.createPlan (D:\Content Sharing\content-sharing-backend\src\controllers\PlanController\PlanController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:55:22.888Z [ERROR]: Error in bound createSubscription: WHERE parameter "model_id" has invalid "undefined" value
+2025-02-10T06:55:22.916Z [ERROR]: Error: WHERE parameter "model_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-10T06:55:33.799Z [ERROR]: Error in bound createSubscription: Cannot read properties of null (reading 'duration')
+2025-02-10T06:55:33.800Z [ERROR]: TypeError: Cannot read properties of null (reading 'duration')
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:18:43)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:57:06.788Z [ERROR]: Error in bound createSubscription: No subscription exist for the given details
+2025-02-10T06:57:06.790Z [ERROR]: Error: No subscription exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:57:16.930Z [ERROR]: Error in bound createSubscription: No subscription plan exist for the given details
+2025-02-10T06:57:16.932Z [ERROR]: Error: No subscription plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:57:51.125Z [ERROR]: Error in bound createSubscription: No subscription plan exist for the given details
+2025-02-10T06:57:51.126Z [ERROR]: Error: No subscription plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T06:57:53.706Z [ERROR]: Error in bound createSubscription: No subscription plan exist for the given details
+2025-02-10T06:57:53.706Z [ERROR]: Error: No subscription plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T07:04:43.953Z [ERROR]: Error in bound createSubscription: No subscription plan exist for the given details
+2025-02-10T07:04:43.954Z [ERROR]: Error: No subscription plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T07:16:25.081Z [ERROR]: Error in bound createSubscription: No such plan exist for the given details
+2025-02-10T07:16:25.083Z [ERROR]: Error: No such plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T07:16:32.863Z [ERROR]: Error in bound createSubscription: No such plan exist for the given details
+2025-02-10T07:16:32.863Z [ERROR]: Error: No such plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T07:16:38.175Z [ERROR]: Error in bound createSubscription: No such plan exist for the given details
+2025-02-10T07:16:38.176Z [ERROR]: Error: No such plan exist for the given details
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-10T07:17:28.800Z [ERROR]: Error in bound createSubscription: Subscription is already active
+2025-02-10T07:17:28.801Z [ERROR]: Error: Subscription is already active
+    at SubscriptionService.createSubscription (D:\Content Sharing\content-sharing-backend\src\services\SubscriptionService.js:18:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async SubscriptionController.createSubscription (D:\Content Sharing\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:56:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
