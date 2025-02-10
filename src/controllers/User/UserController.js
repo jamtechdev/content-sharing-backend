@@ -72,6 +72,7 @@ class UserController {
           social: newUser.social,
           bio: newUser.bio,
           platform_type: newUser.platform_type,
+          region_id: newUser.region_id,
           region: newUser.region?.regionName,
           role: newUser.role?.roleName,
         },
@@ -146,6 +147,7 @@ class UserController {
       "phone_number",
       "birthdate",
       "bio",
+      "region_id",
     ];
     const updateUserData = Object.fromEntries(
       Object.entries(formData).filter(
