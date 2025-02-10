@@ -18,6 +18,7 @@ class ContentRepository {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
 
     let content = await Content.findAll({
+      where: { plan_id: null },
       include: [
         { model: User, as: "user" },
         { model: Region, as: "region" },

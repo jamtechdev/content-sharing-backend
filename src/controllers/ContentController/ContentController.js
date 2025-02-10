@@ -428,7 +428,6 @@ class ContentController {
     });
   }
 
- 
   getRouter() {
     return this.router.getRouter();
   }
