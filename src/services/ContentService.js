@@ -71,7 +71,8 @@ class ContentService {
   }
   async getLikeByContentUserId(contentId, userId) {
     const response = await ContentRepository.getLikeByContentUserId(
-      contentId, userId
+      contentId,
+      userId
     );
     // if (!response) {
     //   throw new HttpError(400, "Content not created");
@@ -79,13 +80,11 @@ class ContentService {
     return response;
   }
 
-  async updateLikeByUsercontentId(data){
-    return await ContentRepository.updateLikeByUsercontentId(data)
+  async updateLikeByUsercontentId(data) {
+    return await ContentRepository.updateLikeByUsercontentId(data);
   }
   async getLikeByContentId(contentId) {
-    const response = await ContentRepository.getLikeByContentId(
-      contentId
-    );
+    const response = await ContentRepository.getLikeByContentId(contentId);
     if (!response) {
       throw new HttpError(400, "Content not created");
     }
@@ -100,7 +99,8 @@ class ContentService {
   }
   async destroyLikeByContentUserId(contentId, userId) {
     const response = await ContentRepository.destroyLikeByContentUserId(
-      contentId, userId
+      contentId,
+      userId
     );
     if (!response) {
       throw new HttpError(400, "Content not created");
@@ -108,43 +108,44 @@ class ContentService {
     return response;
   }
 
-  async addComment(data){
-    const response = await ContentRepository.addComment(data)
-    return response
+  async addComment(data) {
+    const response = await ContentRepository.addComment(data);
+    return response;
   }
-  async getComment(){
-    const response = await ContentRepository.getComment()
-    return response
-  }
-
-  async getCommentById(commnetId){
-    return await ContentRepository.getCommentById(commnetId)
+  async getComment() {
+    const response = await ContentRepository.getComment();
+    return response;
   }
 
-  async deleteCommentById(commnetId){
-    return await ContentRepository.deleteComment(commnetId)
+  async getCommentById(commnetId) {
+    return await ContentRepository.getCommentById(commnetId);
   }
 
-  async updateComment(data){
-    return await ContentRepository.updateComment(data)
+  async getCommentByContentId(contentId) {
+    return await ContentRepository.getCommentByContentId(contentId);
+  }
+  async deleteCommentById(commnetId) {
+    return await ContentRepository.deleteComment(commnetId);
   }
 
-  async replyComment(data){
-    return await ContentRepository.replyComment(data)
+  async updateComment(data) {
+    return await ContentRepository.updateComment(data);
   }
 
-  async getReplyCommentByCommnet(commentId){
-    return await ContentRepository.getReplyCommentByCommnet(commentId)
+  async replyComment(data) {
+    return await ContentRepository.replyComment(data);
   }
 
-  async updateReplyComment(data){
-    return await ContentRepository.updateReplyComment(data)
+  async getReplyCommentByCommnet(commentId) {
+    return await ContentRepository.getReplyCommentByCommnet(commentId);
   }
 
-  
-  async deleteReplyComment(data){
-    return await ContentRepository.deleteReplyComment(data)
+  async updateReplyComment(data) {
+    return await ContentRepository.updateReplyComment(data);
   }
 
+  async deleteReplyComment(data) {
+    return await ContentRepository.deleteReplyComment(data);
+  }
 }
 module.exports = new ContentService();

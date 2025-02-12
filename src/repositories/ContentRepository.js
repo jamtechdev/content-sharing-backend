@@ -195,6 +195,25 @@ class ContentRepository {
     });
   }
 
+  async getCommentByContentId(contentId){
+    return await Comment.findOne({
+      where: { content_id: contentId },
+      include: [
+        {
+          model: User, // Assuming your Users model is imported
+          as: "user",
+          attributes: ["name", "email"], // Adjust attributes as needed
+        },
+        {
+          model: Content, // Assuming your Content model is imported
+          as: "content",
+          attributes: ["title", "description"], // Adjust attributes as needed
+        },
+      ],
+      attributes: ["comment_text", "status"],
+    });
+  }
+
   async deleteComment(commnetId) {
     return await Comment.destroy({ where: { id: commnetId } });
   }
