@@ -20,7 +20,12 @@ module.exports = (sequelize, DataTypes) => {
         // onDelete: "CASCADE",
       });
 
-      // this.belongsTo(models.users, { 
+      this.hasMany(models.Subscription, {
+        foreignKey: "model_id",
+        as: "subscriptions",
+      });
+
+      // this.belongsTo(models.users, {
       //   foreignKey: "user_id",
       // });
       // this.belongsTo(models.Regions, {
@@ -48,10 +53,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         unique: true,
       },
-      
+
       website_url: DataTypes.STRING,
       social_links: DataTypes.JSON,
-      location: DataTypes.STRING, 
+      location: DataTypes.STRING,
       gender: {
         type: DataTypes.ENUM("Male", "Female", "Non-Binary", "Other"),
         allowNull: false,

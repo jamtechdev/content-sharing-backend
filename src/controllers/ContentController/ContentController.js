@@ -67,10 +67,9 @@ class ContentController {
     );
 
     this.router.addRoute(
-      "get",
+      "post",
       "/get-like-by-content",
-      authenticate,
-      authorize(["user", "model"]),
+
       TryCatch(this.getLikeByContentId.bind(this))
     );
 
@@ -183,8 +182,8 @@ class ContentController {
 
   async getContent(req, res) {
     const { userId } = req?.user;
-    const { region_id } = await UserService.getUserById(userId);
-    const response = await ContentService.getContent(region_id);
+    const { region_id, id } = await UserService.getUserById(userId);
+    const response = await ContentService.getContent(region_id, id);
     return res.status(200).json({
       code: 200,
       success: true,

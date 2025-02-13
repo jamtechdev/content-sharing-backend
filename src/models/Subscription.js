@@ -6,23 +6,23 @@ module.exports = (sequelize, DataTypes) => {
   class Subscription extends Model {
     static associate(models) {
       // Subscription belongs to a user (subscriber)
-      // Subscription.belongsTo(models.User, {
-      //   foreignKey: 'subscriber_id',
-      //   as: 'subscriber',
-      //   onDelete: 'CASCADE'
-      // });
-      // // Subscription is linked to a model
-      // Subscription.belongsTo(models.ModelProfile, {
-      //   foreignKey: 'model_id',
-      //   as: 'model',
-      //   onDelete: 'CASCADE'
-      // });
-      // // Subscription is linked to a plan
-      // Subscription.belongsTo(models.Plan, {
-      //   foreignKey: 'plan_id',
-      //   as: 'plan',
-      //   onDelete: 'CASCADE'
-      // });
+      Subscription.belongsTo(models.users, {
+        foreignKey: "id",
+        as: "subscriber",
+        onDelete: "CASCADE",
+      });
+      // Subscription is linked to a model
+      Subscription.belongsTo(models.ModelProfile, {
+        foreignKey: "model_id",
+        as: "model",
+        onDelete: "CASCADE",
+      });
+      // Subscription is linked to a plan
+      Subscription.belongsTo(models.Plan, {
+        foreignKey: "plan_id",
+        as: "plan",
+        onDelete: "CASCADE",
+      });
     }
   }
 
@@ -37,10 +37,6 @@ module.exports = (sequelize, DataTypes) => {
       subscriber_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-          model: "users",
-          key: "id",
-        },
       },
       model_id: {
         type: DataTypes.INTEGER,

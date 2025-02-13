@@ -14,14 +14,18 @@ class ContentRepository {
     return await Content.create(data);
   }
 
-  async getContent(regionId) {
+  async getContent(regionId, id) {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
+
+    // check to  check user have which type subscription
+    const subscription = await db.Subscription.findOne({
+      where: { subscriber_id: id },
+    });
+    console.log(subscription, "hellowww");
 
     let content = await Content.findAll({
       where: { plan_id: null },
-      include: [
-        {model: User, as: "user" }
-      ],
+      include: [{ model: User, as: "user" }],
       order: [["createdAt", "DESC"]],
     });
 
@@ -37,7 +41,7 @@ class ContentRepository {
         itemRegionIds.some((id) => regionArray.includes(id))
       );
     });
-   
+
     for (const item of content) {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },

@@ -22,7 +22,11 @@ module.exports = (sequelize, DataTypes) => {
       User.hasOne(models.Content, {
         foreignKey: "user_id",
         as: "user",
-      })
+      });
+      User.hasMany(models.Subscription, {
+        foreignKey: "subscriber_id",
+        as: "subscriptions",
+      });
     }
   }
   User.init(

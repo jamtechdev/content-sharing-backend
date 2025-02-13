@@ -93,6 +93,7 @@ class UserRepository {
   }
   // get user by id
   async getUserById(id) {
+    
     return await User.findOne({
       where: { id },
       attributes: [
