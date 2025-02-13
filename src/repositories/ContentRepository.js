@@ -17,28 +17,26 @@ class ContentRepository {
   async getContent(regionId, id) {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
 
-    // check to  check user have which type subscription
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
-    console.log(subscription, "hellowww");
-
     let content = await Content.findAll({
-      where: { plan_id: null },
-      include: [{ model: User, as: "user" }],
+      include: [
+        { model: User, as: "user", attributes: ["name", "email", "avatar"] },
+        { model: Region, as: "region" },
+      ],
       order: [["createdAt", "DESC"]],
     });
-
     content = content.filter((item) => {
       let itemRegionIds;
       try {
-        itemRegionIds = JSON.parse(item.region_id); // Parse stringified array
+        itemRegionIds = JSON.parse(item.region_id);
       } catch (error) {
-        itemRegionIds = []; // If parsing fails, treat as an empty array
+        itemRegionIds = [];
       }
       return (
         Array.isArray(itemRegionIds) &&
-        itemRegionIds.some((id) => regionArray.includes(id))
+        itemRegionIds.some((region) => regionArray.includes(region))
       );
     });
 
@@ -46,8 +44,13 @@ class ContentRepository {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },
       });
-      item.dataValues.likesCount = likesCount; // Add likesCount to the result
+      item.dataValues.likesCount = likesCount;
+      if (!subscription && !item.noplan_id) {
+        item.dataValues.type = "locked";
+        delete item.dataValues.media_url;
+      }
     }
+
     return content;
   }
 
@@ -199,14 +202,14 @@ class ContentRepository {
     });
   }
 
-  async getCommentByContentId(contentId){
+  async getCommentByContentId(contentId) {
     return await Comment.findAll({
       where: { content_id: contentId },
       include: [
         {
           model: User, // Assuming your Users model is imported
           as: "user",
-          attributes: ["id","name", "email"], // Adjust attributes as needed
+          attributes: ["id", "name", "email"], // Adjust attributes as needed
         },
         {
           model: Content, // Assuming your Content model is imported
@@ -214,7 +217,7 @@ class ContentRepository {
           attributes: ["title", "description"], // Adjust attributes as needed
         },
       ],
-      attributes: ["id","comment_text", "status"],
+      attributes: ["id", "comment_text", "status"],
     });
   }
 

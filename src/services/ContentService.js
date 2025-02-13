@@ -107,7 +107,6 @@ class ContentService {
     }
     return response;
   }
-
   async addComment(data) {
     const response = await ContentRepository.addComment(data);
     return response;
@@ -116,34 +115,27 @@ class ContentService {
     const response = await ContentRepository.getComment();
     return response;
   }
-
   async getCommentById(commnetId) {
     return await ContentRepository.getCommentById(commnetId);
   }
-
   async getCommentByContentId(contentId) {
     return await ContentRepository.getCommentByContentId(contentId);
   }
   async deleteCommentById(commnetId) {
     return await ContentRepository.deleteComment(commnetId);
   }
-
   async updateComment(data) {
     return await ContentRepository.updateComment(data);
   }
-
   async replyComment(data) {
     return await ContentRepository.replyComment(data);
   }
-
   async getReplyCommentByCommnet(commentId) {
     return await ContentRepository.getReplyCommentByCommnet(commentId);
   }
-
   async updateReplyComment(data) {
     return await ContentRepository.updateReplyComment(data);
   }
-
   async deleteReplyComment(data) {
     return await ContentRepository.deleteReplyComment(data);
   }
