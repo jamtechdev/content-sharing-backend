@@ -14,21 +14,21 @@ class BookmarkController {
       "post",
       "/",
       authenticate,
-      authorize(["user"]),
+      authorize(["user","modal"]),
       TryCatch(this.addBookmarks.bind(this))
     );
     this.router.addRoute(
       "get",
       "/",
       authenticate,
-      authorize(["user"]),
+      authorize(["user","modal"]),
       TryCatch(this.getBookmarkByUser.bind(this))
     );
     this.router.addRoute(
       "delete",
       "/:id",
       authenticate,
-      authorize(["user"]),
+      authorize(["user","modal"]),
       TryCatch(this.removeBookmark.bind(this))
     );
   }
