@@ -121,6 +121,9 @@ class ContentService {
     return await ContentRepository.getCommentById(commnetId);
   }
 
+  async getCommentByContentId(contentId) {
+    return await ContentRepository.getCommentByContentId(contentId);
+  }
   async deleteCommentById(commnetId) {
     return await ContentRepository.deleteComment(commnetId);
   }

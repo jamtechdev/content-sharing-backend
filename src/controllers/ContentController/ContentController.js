@@ -96,6 +96,13 @@ class ContentController {
       TryCatch(this.getCommentById.bind(this))
     );
     this.router.addRoute(
+      "get",
+      "/comment/content/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getCommentByContentId.bind(this))
+    );
+    this.router.addRoute(
       "delete",
       "/comment/:id",
       authenticate,
@@ -350,6 +357,16 @@ class ContentController {
   async getCommentById(req, res) {
     const { id } = req?.params;
     const response = await ContentService.getCommentById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      data: response,
+    });
+  }
+
+  async getCommentByContentId(req, res){
+    const { id } = req?.params;
+    const response = await ContentService.getCommentByContentId(id);
     return res.status(200).json({
       code: 200,
       success: true,
