@@ -3146,3 +3146,15 @@ notNull Violation: Plan.duration cannot be null
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ContentController.getContent (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:187:22)
     at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-13T04:57:20.399Z [ERROR]: Error in bound login: connect ECONNREFUSED 127.0.0.1:3306
+2025-02-13T04:57:20.451Z [ERROR]: SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)

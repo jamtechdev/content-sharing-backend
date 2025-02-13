@@ -196,13 +196,13 @@ class ContentRepository {
   }
 
   async getCommentByContentId(contentId){
-    return await Comment.findOne({
+    return await Comment.findAll({
       where: { content_id: contentId },
       include: [
         {
           model: User, // Assuming your Users model is imported
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["id","name", "email"], // Adjust attributes as needed
         },
         {
           model: Content, // Assuming your Content model is imported
@@ -210,7 +210,7 @@ class ContentRepository {
           attributes: ["title", "description"], // Adjust attributes as needed
         },
       ],
-      attributes: ["comment_text", "status"],
+      attributes: ["id","comment_text", "status"],
     });
   }
 
