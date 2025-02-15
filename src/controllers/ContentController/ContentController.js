@@ -44,7 +44,7 @@ class ContentController {
     );
     this.router.addRoute(
       "delete",
-      "/delete-content",
+      "/delete-content/:id",
       authenticate,
       authorize(["model"]),
       TryCatch(this.deleteContent.bind(this))
@@ -189,14 +189,26 @@ class ContentController {
 
   async getContent(req, res) {
     const { userId } = req?.user;
-    const { region_id, id } = await UserService.getUserById(userId);
-    const response = await ContentService.getContent(region_id, id);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Content fetched successfully",
-      data: response,
-    });
+
+    if (req.user.role === "model") {
+      const response = await ContentService.findAllContentById(userId);
+
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Content fetched successfully",
+        data: response,
+      });
+    } else {
+      const { region_id, id } = await UserService.getUserById(userId);
+      const response = await ContentService.getContent(region_id, id);
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Content fetched successfully",
+        data: response,
+      });
+    }
   }
 
   async updateContent(req, res) {
@@ -247,14 +259,14 @@ class ContentController {
   }
 
   async deleteContent(req, res) {
-    const { contentId } = req.body;
-    if (!contentId) {
+    const { id } = req?.params;
+    if (!id) {
       return res
         .status(400)
         .json({ code: 400, success: false, message: "Content id is required" });
     }
-    await ContentService.findById(contentId);
-    await ContentService.deleteContent(contentId);
+    await ContentService.deleteContent(id);
+    console.log(id);
     return res.status(200).json({
       code: 200,
       success: true,
@@ -338,11 +350,22 @@ class ContentController {
     }
     data["user_id"] = userId;
     const response = await ContentService.addComment(data);
-    return res.status(201).json({
-      code: 201,
-      success: true,
-      message: "Comment added successfully",
-    });
+    if (response) {
+      const content = await ContentService.getCommentByContentId(
+        data.content_id
+      );
+      return res.status(201).json({
+        code: 201,
+        success: true,
+        data: content,
+      });
+    } else {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Something went wrong",
+      });
+    }
   }
 
   async getComment(req, res) {
@@ -364,7 +387,7 @@ class ContentController {
     });
   }
 
-  async getCommentByContentId(req, res){
+  async getCommentByContentId(req, res) {
     const { id } = req?.params;
     const response = await ContentService.getCommentByContentId(id);
     return res.status(200).json({
@@ -386,63 +409,82 @@ class ContentController {
 
   async updateComment(req, res) {
     const data = req?.body;
+
     const response = await ContentService.updateComment(data);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Comment updated successfully",
-    });
+    if (!response) {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Something went wrong",
+      });
+    }
+
+    if (response) {
+      const { userId } = req?.user;
+      const content = await ContentService.getCommentByUserId(userId);
+      return res.status(201).json({
+        code: 201,
+        success: true,
+        data: content,
+      });
+    } else {
+      return res.status(400).json({
+        code: 400,
+        success: false,
+        message: "Something went wrong",
+      });
+    }
   }
 
-  async replyComment(req, res) {
-    const data = req?.body;
-    const { userId } = req?.user;
-    data["user_id"] = userId;
-    const response = await ContentService.replyComment(data);
-    return res.status(201).json({
-      code: 201,
-      success: true,
-      message: "Replied on comment",
-    });
-  }
+  // async replyComment(req, res) {
+  //   const data = req?.body;
+  //   const { userId } = req?.user;
+  //   data["user_id"] = userId;
+  //   const response = await ContentService.replyComment(data);
+  //   return res.status(201).json({
+  //     code: 201,
+  //     success: true,
+  //     message: "Replied on comment",
+  //   });
+  // }
 
-  async getReplyCommentByCommnet(req, res) {
-    const { id } = req?.params;
-    const response = await ContentService.getReplyCommentByCommnet(id);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      data: response,
-    });
-  }
+  // async getReplyCommentByCommnet(req, res) {
+  //   const { id } = req?.params;
+  //   const response = await ContentService.getReplyCommentByCommnet(id);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     data: response,
+  //   });
+  // }
 
-  async updateReplyComment(req, res) {
-    const data = req?.body;
-    const { userId } = req?.user;
-    data["user_id"] = userId;
+  // async updateReplyComment(req, res) {
+  //   const data = req?.body;
+  //   const { userId } = req?.user;
+  //   data["user_id"] = userId;
 
-    const response = await ContentService.updateReplyComment(data);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Comment updated successfully.",
-    });
-  }
+  //   const response = await ContentService.updateReplyComment(data);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Comment updated successfully.",
+  //   });
+  // }
 
-  async deleteReplyComment(req, res) {
-    const { id } = req?.params;
-    const { userId } = req?.user;
-    const data = {
-      id: id,
-      user_id: userId,
-    };
-    const response = await ContentService.deleteReplyComment(data);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Comment deleted successfully.",
-    });
-  }
+  // async deleteReplyComment(req, res) {
+  //   const { id } = req?.params;
+  //   const { userId } = req?.user;
+  //   const data = {
+  //     id: id,
+  //     user_id: userId,
+  //   };
+  //   const response = await ContentService.deleteReplyComment(data);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Comment deleted successfully.",
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

@@ -64,6 +64,8 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: "Regions",
       tableName: "regions",
+      // createdAt: "created_at",
+      // updatedAt: "updated_at",
     }
   );
   return Regions;
