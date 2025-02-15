@@ -16,11 +16,13 @@ class ContentRepository {
 
   async getContent(regionId, id) {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
-
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
     let content = await Content.findAll({
+      where: {
+        [Op.or]: [{ plan_id: null }, { premium_access: true }],
+      },
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
@@ -39,7 +41,6 @@ class ContentRepository {
         itemRegionIds.some((region) => regionArray.includes(region))
       );
     });
-
     for (const item of content) {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },
@@ -97,7 +98,10 @@ class ContentRepository {
   }
 
   async findAll(id) {
-    return await Content.findAll({ where: { user_id: id } });
+    return await Content.findAll({
+      where: { user_id: id },
+      order: [["createdAt", "DESC"]],
+    });
   }
 
   async addLike(data) {
@@ -133,14 +137,14 @@ class ContentRepository {
       where: { user_id: userId, is_like: 1 },
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "contentId",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
     });
@@ -169,14 +173,14 @@ class ContentRepository {
     return await Comment.findAll({
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
       attributes: ["comment_text", "status"],
@@ -184,37 +188,75 @@ class ContentRepository {
   }
 
   async getCommentById(commnetId) {
-    return await Comment.findOne({
-      where: { id: commnetId },
+    return await Comment.findAll({
+      where: { id: commnetId, parent_comment_id: null },
       include: [
         {
-          model: User, // Assuming your Users model is imported
-          as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          model: Comment,
+          as: "replies",
+          attributes: ["id", "comment_text", "status"],
+          include: [
+            {
+              model: Comment,
+              as: "replies",
+              attributes: ["id", "comment_text", "status"],
+              include: [
+                {
+                  model: User,
+                  as: "user",
+                  attributes: ["id", "name", "email", "avatar"],
+                },
+              ],
+            },
+            {
+              model: User,
+              as: "user",
+              attributes: ["id", "name", "email", "avatar"],
+            },
+          ],
         },
         {
-          model: Content, // Assuming your Content model is imported
-          as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          model: User,
+          as: "user",
+          attributes: ["id", "name", "email", "avatar"],
         },
       ],
-      attributes: ["comment_text", "status"],
+      attributes: ["id", "comment_text", "status"],
     });
   }
 
   async getCommentByContentId(contentId) {
     return await Comment.findAll({
-      where: { content_id: contentId },
+      where: { content_id: contentId, parent_comment_id: null },
       include: [
         {
-          model: User, // Assuming your Users model is imported
-          as: "user",
-          attributes: ["id", "name", "email"], // Adjust attributes as needed
+          model: Comment,
+          as: "replies",
+          attributes: ["id", "comment_text", "status"],
+          include: [
+            {
+              model: Comment,
+              as: "replies",
+              attributes: ["id", "comment_text", "status"],
+              include: [
+                {
+                  model: User,
+                  as: "user",
+                  attributes: ["id", "name", "email", "avatar"],
+                },
+              ],
+            },
+            {
+              model: User,
+              as: "user",
+              attributes: ["id", "name", "email", "avatar"],
+            },
+          ],
         },
         {
-          model: Content, // Assuming your Content model is imported
-          as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          model: User,
+          as: "user",
+          attributes: ["id", "name", "email", "avatar"],
         },
       ],
       attributes: ["id", "comment_text", "status"],
@@ -230,6 +272,44 @@ class ContentRepository {
       { comment_text: data?.comment_text },
       { where: { id: data?.id } }
     );
+  }
+
+  async getCommentByUserId(userId) {
+    return await Comment.findAll({
+      where: { user_id: userId, parent_comment_id: null , order: [["createdAt", "DESC"]]},
+      include: [
+        {
+          model: Comment,
+          as: "replies",
+          attributes: ["id", "comment_text", "status"],
+          include: [
+            {
+              model: Comment,
+              as: "replies",
+              attributes: ["id", "comment_text", "status"],
+              include: [
+                {
+                  model: User,
+                  as: "user",
+                  attributes: ["id", "name", "email", "avatar"],
+                },
+              ],
+            },
+            {
+              model: User,
+              as: "user",
+              attributes: ["id", "name", "email", "avatar"],
+            },
+          ],
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: ["id", "name", "email", "avatar"],
+        },
+      ],
+      attributes: ["id", "comment_text", "status"],
+    });
   }
 
   async replyComment(data) {

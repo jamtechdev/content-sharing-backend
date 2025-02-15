@@ -27,6 +27,18 @@ module.exports = (sequelize, DataTypes) => {
         as: "comment",
         onDelete: "CASCADE",
       });
+
+      Comment.belongsTo(models.comment, {
+        // Parent comment
+        foreignKey: "parent_comment_id",
+        as: "parentComment",
+      });
+
+      Comment.hasMany(models.comment, {
+        // Child replies
+        foreignKey: "parent_comment_id",
+        as: "replies",
+      });
     }
   }
   Comment.init(
@@ -45,6 +57,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+      parent_comment_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
       comment_text: {
         type: DataTypes.TEXT,
         allowNull: false,
@@ -58,6 +74,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "comment",
+      createdAt: "created_at",
+      updatedAt: "updated_at",
       tableName: "comment",
     }
   );

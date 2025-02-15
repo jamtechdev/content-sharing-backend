@@ -116,7 +116,10 @@ class ContentService {
     return response;
   }
   async getCommentById(commnetId) {
-    return await ContentRepository.getCommentById(commnetId);
+    return await ContentRepository.getCommentById(commnetId); 
+  }
+  async getCommentByUserId(userId) {
+    return await ContentRepository.getCommentByUserId(userId);
   }
   async getCommentByContentId(contentId) {
     return await ContentRepository.getCommentByContentId(contentId);
