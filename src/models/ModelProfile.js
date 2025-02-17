@@ -98,11 +98,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ENUM("pending", "approved", "suspended"),
         defaultValue: "pending",
       },
-      createdAt: {
+      created_at: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
       },
-      updatedAt: {
+      updated_at: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
       },

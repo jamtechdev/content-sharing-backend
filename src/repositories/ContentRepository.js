@@ -1,5 +1,5 @@
 const db = require("../models/index");
-const Content = db.contents;
+const Content = db.Content;
 const User = db.users;
 const Region = db.Regions;
 const Likes = db.Likes;
