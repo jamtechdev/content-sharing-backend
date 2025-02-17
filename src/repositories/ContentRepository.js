@@ -29,28 +29,28 @@ class ContentRepository {
       ],
       order: [["createdAt", "DESC"]],
     });
-    content = content.filter((item) => {
-      let itemRegionIds;
-      try {
-        itemRegionIds = JSON.parse(item.region_id);
-      } catch (error) {
-        itemRegionIds = [];
-      }
-      return (
-        Array.isArray(itemRegionIds) &&
-        itemRegionIds.some((region) => regionArray.includes(region))
-      );
-    });
-    for (const item of content) {
-      const likesCount = await Likes.count({
-        where: { content_id: item.id, is_like: true },
-      });
-      item.dataValues.likesCount = likesCount;
-      if (!subscription && !item.noplan_id) {
-        item.dataValues.type = "locked";
-        delete item.dataValues.media_url;
-      }
-    }
+    // content = content.filter((item) => {
+    //   let itemRegionIds;
+    //   try {
+    //     itemRegionIds = JSON.parse(item.region_id);
+    //   } catch (error) {
+    //     itemRegionIds = [];
+    //   }
+    //   return (
+    //     Array.isArray(itemRegionIds) &&
+    //     itemRegionIds.some((region) => regionArray.includes(region))
+    //   );
+    // });
+    // for (const item of content) {
+    //   const likesCount = await Likes.count({
+    //     where: { content_id: item.id, is_like: true },
+    //   });
+    //   item.dataValues.likesCount = likesCount;
+    //   if (!subscription && !item.noplan_id) {
+    //     item.dataValues.type = "locked";
+    //     delete item.dataValues.media_url;
+    //   }
+    // }
 
     return content;
   }
