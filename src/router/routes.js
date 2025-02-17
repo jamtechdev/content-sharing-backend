@@ -6,7 +6,7 @@ const PlanController = require('../controllers/PlanController/PlanController')
 const SubscriptionController = require('../controllers/SubscriptionController/SubscriptionController')
 const ContentController = require("../controllers/ContentController/ContentController");
 const BookmarkController = require("../controllers/BookmarkController/BookmarkController");
-const regionController = require("../controllers/RegionController/regionController");
+const regionController = require("../controllers/RegionController/RegionController");
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
