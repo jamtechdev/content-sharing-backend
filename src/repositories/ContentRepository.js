@@ -100,6 +100,10 @@ class ContentRepository {
   async findAll(id) {
     return await Content.findAll({
       where: { user_id: id },
+      include: [
+        { model: User, as: "user", attributes: ["name", "email", "avatar"] },
+        { model: Region, as: "region" },
+      ],
       order: [["createdAt", "DESC"]],
     });
   }
@@ -276,7 +280,11 @@ class ContentRepository {
 
   async getCommentByUserId(userId) {
     return await Comment.findAll({
-      where: { user_id: userId, parent_comment_id: null , order: [["createdAt", "DESC"]]},
+      where: {
+        user_id: userId,
+        parent_comment_id: null,
+        order: [["createdAt", "DESC"]],
+      },
       include: [
         {
           model: Comment,
