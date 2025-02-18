@@ -14,43 +14,78 @@ class ContentRepository {
     return await Content.create(data);
   }
 
+  // async getContent(regionId, id) {
+  //   const subscription = await db.Subscription.findOne({
+  //     where: { subscriber_id: id },
+  //   });
+  //   let content = await Content.findAll({
+  //     where: {
+  //       [Op.or]: [{ plan_id: null }, { premium_access: true }],
+  //     },
+  //     include: [
+  //       { model: User, as: "user", attributes: ["name", "email", "avatar"] },
+  //       { model: Region, as: "region" },
+  //     ],
+  //     order: [["createdAt", "DESC"]],
+  //   });
+  // content = content.filter((item) => {
+  //   let itemRegionIds;
+  //   try {
+  //     itemRegionIds = JSON.parse(item.region_id);
+  //   } catch (error) {
+  //     itemRegionIds = [];
+  //   }
+  //   return (
+  //     Array.isArray(itemRegionIds) &&
+  //     itemRegionIds.some((region) => regionArray.includes(region))
+  //   );
+  // });
+  // for (const item of content) {
+  //   const likesCount = await Likes.count({
+  //     where: { content_id: item.id, is_like: true },
+  //   });
+  //   item.dataValues.likesCount = likesCount;
+  //   if (!subscription && !item.noplan_id) {
+  //     item.dataValues.type = "locked";
+  //     delete item.dataValues.media_url;
+  //   }
+  // }
+
+  // return content;
+  // }
+
   async getContent(regionId, id) {
-    const regionArray = Array.isArray(regionId) ? regionId : [regionId];
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
+
     let content = await Content.findAll({
       where: {
-        [Op.or]: [{ plan_id: null }, { premium_access: true }],
+        region_id: {
+          [db.Sequelize.Op.like]: `%${regionId}%`,
+        },
+        // [Op.or]: [{ plan_id: null }, { premium_access: false }],
       },
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
+        // {
+        //   model: db.Likes.count({ where: { content_id:content.id } }),
+        //   as: "likes",
+        // },
       ],
       order: [["createdAt", "DESC"]],
     });
-    // content = content.filter((item) => {
-    //   let itemRegionIds;
-    //   try {
-    //     itemRegionIds = JSON.parse(item.region_id);
-    //   } catch (error) {
-    //     itemRegionIds = [];
-    //   }
-    //   return (
-    //     Array.isArray(itemRegionIds) &&
-    //     itemRegionIds.some((region) => regionArray.includes(region))
-    //   );
-    // });
-    // for (const item of content) {
-    //   const likesCount = await Likes.count({
-    //     where: { content_id: item.id, is_like: true },
-    //   });
-    //   item.dataValues.likesCount = likesCount;
-    //   if (!subscription && !item.noplan_id) {
-    //     item.dataValues.type = "locked";
-    //     delete item.dataValues.media_url;
-    //   }
-    // }
+    for (let item of content) {
+      const likeCount = await db.Likes.count({
+        where: { content_id: item.id },
+      });
+      const commentCount = await Comment.count({
+        where: { content_id: item.id },
+      });
+      item.dataValues.likeCount = likeCount;
+      item.dataValues.commentCount = commentCount;
+    }
 
     return content;
   }
