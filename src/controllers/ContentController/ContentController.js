@@ -162,6 +162,7 @@ class ContentController {
 
     if (req.user.role === "model") {
       const response = await ContentService.findAllContentById(userId);
+      console.log(response);
 
       return res.status(200).json({
         code: 200,

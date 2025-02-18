@@ -8,6 +8,7 @@ const ContentController = require("../controllers/ContentController/ContentContr
 const BookmarkController = require("../controllers/BookmarkController/BookmarkController");
 const regionController = require("../controllers/RegionController/RegionController");
 const StripeController  = require("../controllers/StripeController/StripeController")
+const NotificatioController = require("../controllers/NotificatioinController/NotificatioinController")
  
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -20,6 +21,7 @@ router.use("/bookmarks", BookmarkController.getRouter());
 router.use("/model",ModelProfileController.getRouter());
 router.use("/region", regionController.getRouter());
 router.use("/stripe", StripeController.getRouter())
+router.use("/notification", NotificatioController.getRouter())
 
 
 module.exports = router;

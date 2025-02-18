@@ -4690,3 +4690,105 @@ notNull Violation: Plan.duration cannot be null
     at async ContentService.getLikeByUserId (D:\content-sharing-backend\src\services\ContentService.js:94:22)
     at async ContentController.getLikeByUserId (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:293:18)
     at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T12:14:03.500Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:14:03.505Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:10:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:28:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:14:57.899Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:14:57.902Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:10:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:28:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:14:59.678Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:14:59.679Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:10:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:28:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:15:00.732Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:15:00.733Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:10:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:28:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:15:13.957Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:15:13.962Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:10:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:28:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:18:26.267Z [ERROR]: Error in bound addToken: Cannot read properties of undefined (reading 'findOne')
+2025-02-18T12:18:26.272Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'findOne')
+    at NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:11:25)
+    at NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:29:52)
+    at D:\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-18T12:20:26.461Z [ERROR]: Error in bound addToken: Table 'content_sharing_db.devicetokens' doesn't exist
+2025-02-18T12:20:26.467Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:12:12)
+    at async NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:16)
+    at async NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:29:26)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T12:21:45.489Z [ERROR]: Error in bound addToken: NotificationRepository.addToken is not a function
+2025-02-18T12:21:45.492Z [ERROR]: TypeError: NotificationRepository.addToken is not a function
+    at NotificationService.addToken (D:\content-sharing-backend\src\services\NotificationService.js:5:45)
+    at NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:41:48)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T12:22:21.962Z [ERROR]: Error in bound addToken: notNull Violation: DeviceToken.is_loggedin cannot be null
+2025-02-18T12:22:21.984Z [ERROR]: SequelizeValidationError: notNull Violation: DeviceToken.is_loggedin cannot be null
+    at InstanceValidator._validate (D:\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async DeviceToken.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async NotificationRepository.addToken (D:\content-sharing-backend\src\repositories\NotificationRepository.js:7:12)
+    at async NotificationService.addToken (D:\content-sharing-backend\src\services\NotificationService.js:5:16)
+    at async NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:41:22)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7

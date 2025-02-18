@@ -8,15 +8,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // Content.belongsTo(models.ContentCategory, {  
+      // Content.belongsTo(models.ContentCategory, {
       //   foreignKey: "category_id",
       //   as: "category"
       // })
 
       Content.hasMany(models.Likes, {
         foreignKey: "content_id",
-        as: "likes"
-      })
+        as: "likes",
+      });
 
       // Content belongs to a user
       Content.belongsTo(models.users, {
@@ -24,6 +24,14 @@ module.exports = (sequelize, DataTypes) => {
         as: "user",
         onDelete: "CASCADE",
       });
+      // for comment
+
+      Content.hasMany(models.comment, {
+        foreignKey: "content_id",
+        as: "comments",
+        onDelete: "CASCADE",
+      });
+
       // // Content belongs to a category
       // Content.belongsTo(models.ContentCategory, {
       //   foreignKey: "category_id",
@@ -42,7 +50,6 @@ module.exports = (sequelize, DataTypes) => {
         as: "region",
         onDelete: "SET NULL",
       });
-      
     }
   }
   Content.init(
@@ -97,12 +104,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ENUM("active", "inactive"),
         defaultValue: "active",
       },
-      
     },
     {
       sequelize,
       modelName: "Content",
-      
+      tableName: "contents",
     }
   );
   return Content;
