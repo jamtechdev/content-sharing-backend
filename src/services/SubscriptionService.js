@@ -1,78 +1,86 @@
 const SubscriptionRepository = require("../repositories/SubscriptionRepository");
-const PlanRepository = require('../repositories/PlanRepository')
+const PlanRepository = require("../repositories/PlanRepository");
 const HttpError = require("../decorators/HttpError");
-const cron = require('node-cron')
-
+// const cron = require("node-cron");
 
 class SubscriptionService {
   async createSubscription(userId, data) {
-    const {subscriber_id, model_id, plan_id} = data
+    const { model_id, plan_id } = data;
 
-    const plan = await PlanRepository.getByPlanIdAndModelId(plan_id, model_id)
-    if(!plan){
-      throw new HttpError(404, "No such plan exist for the given details")
+    const plan = await PlanRepository.getPlanByIdAndModelId(plan_id, model_id);
+    if (!plan) {
+      throw new HttpError(404, "No such plan exist");
     }
-    const subscription_exist = await SubscriptionRepository.getSubscriptionByPlanIdAndModel(userId, model_id, plan_id)
-
-    if(subscription_exist && subscription_exist?.status === "active"){
-      throw new HttpError(400, "Subscription is already active")
+    const endDate = Date.now() + plan.duration * 24 * 60 * 60 * 1000;
+    const subscription = await SubscriptionRepository.getSpecificSubscription(
+      userId,
+      model_id,
+      plan_id
+    );
+    if (subscription) {
+      if(subscription.status !== "active"){
+        await SubscriptionRepository.updateSubscription(
+          subscription.id,
+          {
+            status: "active",
+            start_date: Date.now(),
+            end_date: endDate,
+          }
+        );
+      }
+      else {
+        throw new HttpError(409, "You already have this plan active")
+      }
     }
-    
-    let endDate = new Date().setDate(plan.duration)
-    console.log("Here is your end date===========>", endDate)
-
-    const result = {
-      subscriber_id: userId,
-      model_id: plan.model_id,
-      plan_id,
-      status: "active",
-      start_date: Date.now(),
-      end_date: endDate
+    else {
+      const result = {
+        subscriber_id: userId,
+        model_id: plan.model_id,
+        plan_id,
+        status: "active",
+        start_date: Date.now(),
+        end_date: endDate,
+      };
+      return await SubscriptionRepository.createSubscription(result);
     }
-    return await SubscriptionRepository.create(result);
   }
-  async cronJobUpdateSubscriptionStatus(subscriberId, planId){
-    const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(subscriberId, planId)
-    console.log("By cron subscription==========>", subscription)
-    if(subscription?.status === "active" && subscription.end_date < Date.now()){
-      console.log("Inside if")
-     return await SubscriptionRepository.update(planId, {status: "expired"})
-    }
-    return "Your subscription is active"
-  }
-  // cronJobExpiryCheck();
 
   async getSubscriptionById(id) {
-    const subscription = await SubscriptionRepository.getById(id);
-    if (!subscription) {
-        throw new HttpError(404, "Subscription not found");
-    }
-    return subscription; 
+    return await SubscriptionRepository.getSubscriptionById(id);
   }
 
-  async getAllSubscriptions() {
-    const subscription = await SubscriptionRepository.getAll()
-    if(subscription.length === 0){
-        throw new HttpError(404, "Subscriptions not found")
-    }
-    return subscription
+  async getSubscriptionsByUserId(subscriber_id) {
+    return await SubscriptionRepository.getSubscriptionsByUserId(subscriber_id);
+  }
+
+  async getSubscriptionsByModelId(model_id) {
+    return await SubscriptionRepository.getSubscriptionsByModelId(model_id);
+  }
+
+  async getSubscriptionsByPlanId(plan_id) {
+    return await SubscriptionRepository.getSubscriptionsByPlanId(plan_id);
+  }
+
+  async getSpecificSubscription(subscriber_id, model_id, plan_id) {
+    return await SubscriptionRepository.getSpecificSubscription(subscriber_id, model_id, plan_id);
   }
 
   async updateSubscription(id, data) {
-    const subscription = await SubscriptionRepository.getById(id);
-    if (!subscription) {
-      throw new HttpError(404, "Subscription not found");
-    }
-    return await SubscriptionRepository.update(id, data);
+    return await SubscriptionRepository.updateSubscription(id, data);
   }
 
   async deleteSubscription(id) {
-    const subscription = await SubscriptionRepository.getById(id);
-    if (!subscription) {
-      throw new HttpError(404, "Subscription not found or already deleted");
-    }
-    return await SubscriptionRepository.delete(id);
+    return await SubscriptionRepository.deleteSubscription(id);
   }
+
+  async deleteSubscriptionsByUserId(subscriber_id) {
+    return await SubscriptionRepository.deleteSubscriptionsByUserId(subscriber_id);
+  }
+
+  async deleteSubscriptionsByModelId(model_id) {
+    return await SubscriptionRepository.deleteSubscriptionsByModelId(model_id);
+  }
+ 
 }
 
 module.exports = new SubscriptionService();

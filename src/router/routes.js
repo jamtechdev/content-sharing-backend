@@ -7,6 +7,18 @@ const SubscriptionController = require('../controllers/SubscriptionController/Su
 const ContentController = require("../controllers/ContentController/ContentController");
 const BookmarkController = require("../controllers/BookmarkController/BookmarkController");
 const regionController = require("../controllers/RegionController/regionController");
+const ProductController = require("../controllers/ProductController/ProductController");
+const ProductCategoryController = require('../controllers/ProductController/ProductCategoryController')
+const ProductMediaController = require("../controllers/ProductController/ProductMediaController");
+const ProductAttributeController = require("../controllers/ProductController/ProductAttributeController");
+const ProductDiscountController = require("../controllers/ProductController/ProductDiscountController");
+const ProductOfferController = require('../controllers/ProductController/ProductOfferController')
+const ProductWithCouponController = require('../controllers/ProductController/ProductWithCouponController')
+const UserCoupon = require('../controllers/ProductController/UserCouponController')
+
+
+
+
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -18,6 +30,14 @@ router.use("/content", ContentController.getRouter());
 router.use("/bookmarks", BookmarkController.getRouter());
 router.use("/model",ModelProfileController.getRouter());
 router.use("/region", regionController.getRouter());
+router.use("/product", ProductController.getRouter());
+router.use("/category", ProductCategoryController.getRouter());
+router.use("/attribute", ProductAttributeController.getRouter());
+router.use("/media", ProductMediaController.getRouter());
+router.use("/discount", ProductDiscountController.getRouter());
+router.use("/offer", ProductOfferController.getRouter());
+router.use("/product-with-coupon", ProductWithCouponController.getRouter());
+router.use("/coupon", UserCoupon.getRouter());
 
 
 module.exports = router;

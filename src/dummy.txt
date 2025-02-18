@@ -4,7 +4,6 @@ role user login
     "email":"neet@gmail.com",
     "password":"Hellosir@123",
     "role_id":3
-
 }
 
 role_admin
@@ -18,3 +17,6 @@ role_admin
 }
 
 
+if plan == gold, then content [gold, premium, basic], Ques => for the same model or different models also,
+
+if no plan = then content [All free content] Ques => all free content without seeing any model

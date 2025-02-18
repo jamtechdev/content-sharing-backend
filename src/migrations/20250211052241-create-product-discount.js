@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('product_attributes', {
+    await queryInterface.createTable('product_discounts', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,21 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       product_id: {
-        type: Sequelize.INTEGER,
-        // references: {
-        //   model: 'Products',  // References Product table
-        //   key: 'id',          // The column in Products to reference
-        // },
-        // allowNull: false,
+        type: Sequelize.INTEGER
       },
-      key: {
-        type: Sequelize.STRING
+      discount_type: {
+        type: Sequelize.ENUM('flat', 'percent')
       },
-      value: {
-        type: Sequelize.STRING
+      discount_value: {
+        type: Sequelize.DECIMAL
       },
-      is_active: {
-        type: Sequelize.BOOLEAN
+      start_date: {
+        type: Sequelize.DATE
+      },
+      end_date: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -35,8 +33,9 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex("product_discounts", ["product_id"])
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('product_attributes');
+    await queryInterface.dropTable('product_discounts');
   }
 };

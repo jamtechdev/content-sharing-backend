@@ -6,13 +6,15 @@ const SubscriptionService = require("../../services/SubscriptionService");
 // const db = require('../../models/index')
 // const Subscription = db.Subscription
 
-const cron = require('node-cron')
+const cron = require("node-cron");
+
 class SubscriptionController {
   constructor() {
     this.router = new Router();
+
     this.router.addRoute(
       "post",
-      "/create-subscription",
+      "/create",
       authenticate,
       authorize(["user"]),
       TryCatch(this.createSubscription.bind(this))
@@ -20,23 +22,22 @@ class SubscriptionController {
 
     this.router.addRoute(
       "get",
-      "/get-subscription-by-id/:subscriptionId",
-      authenticate,
-      authorize(["user"]),
-      TryCatch(this.getSubscriptionById.bind(this))
-    );
-
-    this.router.addRoute(
-      "get",
-      "/get-subscriptions/",
+      "/",
       authenticate,
       authorize(["user"]),
       TryCatch(this.getAllSubscriptions.bind(this))
     );
 
     this.router.addRoute(
+      "get",
+      "/:id",
+      authenticate,
+      TryCatch(this.getSubscriptionById.bind(this))
+    );
+
+    this.router.addRoute(
       "put",
-      "/update-subscription/",
+      "/:id",
       authenticate,
       authorize(["user"]),
       TryCatch(this.updateSubscription.bind(this))
@@ -44,93 +45,74 @@ class SubscriptionController {
 
     this.router.addRoute(
       "delete",
-      "/delete-subscription/",
+      "/:id",
       authenticate,
       authorize(["user"]),
       TryCatch(this.deleteSubscription.bind(this))
     );
   }
+
   async createSubscription(req, res) {
     const {userId} = req?.user
-    const data = req?.body;
-    const response = await SubscriptionService.createSubscription(userId, data);
+    const data = req.body;
+    const newSubscription = await SubscriptionService.createSubscription(userId, data);
     return res.status(201).json({
       code: 201,
       success: true,
       message: "Subscription created successfully",
-      data: response,
+      data: newSubscription,
+    });
+  }
+
+  async getAllSubscriptions(req, res) {
+    const subscriptions = await SubscriptionService.getAllSubscriptions();
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "All subscriptions fetched successfully",
+      data: subscriptions,
     });
   }
 
   async getSubscriptionById(req, res) {
-    const { subscriptionId } = req?.params;
-    const response = await SubscriptionService.getSubscriptionById(
-      subscriptionId
-    );
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "User subscription fetched successfully",
-        data: response,
-      });
-  }
-
-  async getAllSubscriptions(req, res) {
-    const response = await SubscriptionService.getAllSubscriptions();
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "Subscription fetched successfully",
-        data: response,
-      });
+    const id = req.params.id;
+    const subscription = await SubscriptionService.getSubscriptionById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Subscription fetched successfully",
+      data: subscription,
+    });
   }
 
   async updateSubscription(req, res) {
-    const data = req?.body;
-    if (!data) {
-      return res.status(400).json({
-        code: 400,
-        success: false,
-        message: "Field required to update subscription",
-      });
-    }
-    await SubscriptionService.updateSubscription(data.subscriptionId, data);
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "Subscription updated successfully",
-      });
+    const id = req.params.id;
+    const data = req.body;
+    const updatedSubscription = await SubscriptionService.updateSubscription(
+      id,
+      data
+    );
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Subscription updated successfully",
+      data: updatedSubscription,
+    });
   }
 
   async deleteSubscription(req, res) {
-    const { subscriptionId } = req?.params;
-    await SubscriptionService.deleteSubscription({
-      where: { id: subscriptionId },
+    const id = req.params.id;
+    await SubscriptionService.deleteSubscription(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Subscription deleted successfully",
     });
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "Subscription deleted successfully",
-      });
-  }
-  async cronJob(subscriberId, planId){
-    cron.schedule("* * * * *", async ()=>{
-        console.log("cron is running")
-        const response = await SubscriptionService.cronJobUpdateSubscriptionStatus(4, 1)
-        console.log(response)
-    })
   }
 
-  getRouter(){
-    return this.router.getRouter()
+  getRouter() {
+    return this.router.getRouter();
   }
 }
+
 module.exports = new SubscriptionController();

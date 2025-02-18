@@ -6,6 +6,7 @@ const Likes = db.Likes;
 const Comment = db.comment;
 const ReplyComment = db.ReplyComment;
 const Bookmarks = db.Bookmarks;
+const Plan = db.Plan;
 
 const { Op, where } = require("sequelize");
 
@@ -18,32 +19,102 @@ class ContentRepository {
     const regionArray = Array.isArray(regionId) ? regionId : [regionId];
 
     let content = await Content.findAll({
-      include: [
-        {model: User, as: "user" }
-      ],
+      include: [{ model: User, as: "user" }],
       order: [["createdAt", "DESC"]],
     });
 
     content = content.filter((item) => {
       let itemRegionIds;
       try {
-        itemRegionIds = JSON.parse(item.region_id); // Parse stringified array
+        itemRegionIds = JSON.parse(item.region_id);
       } catch (error) {
-        itemRegionIds = []; // If parsing fails, treat as an empty array
+        itemRegionIds = [];
       }
       return (
         Array.isArray(itemRegionIds) &&
         itemRegionIds.some((id) => regionArray.includes(id))
       );
     });
-   
+
     for (const item of content) {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },
       });
-      item.dataValues.likesCount = likesCount; // Add likesCount to the result
+      item.dataValues.likesCount = likesCount;
     }
     return content;
+  }
+
+  // async getContentByModelIdAndPlanIdWithRegion(userId, planId, regionId) {
+  //   let response = await Content.findAll({
+  //     where: {
+  //       region_id: {
+  //         [db.Sequelize.Op.like]: `%${regionId}%`,
+  //       },
+  //       user_id: userId,
+  //       // [db.Sequelize.Op.or]: [
+  //       // plan_id: planId, // Content for the user's subscription plan
+  //         // { plan_id: 0 },      // Free content (plan_id = 0)
+  //       // ],
+  //     },
+  //     include: [{model: Plan, as: "userPlan"}]
+  //   });
+
+  //   return response
+  // }
+
+  // async getContentByModelIdAndPlanIdWithRegion(regionId, userSubscription) {
+  //   let response = await Content.findAll({
+  //     where: {
+  //       region_id: {
+  //         [db.Sequelize.Op.like]: `%${regionId}%`,
+  //       },
+  //     },
+  //     include: [{model: Plan, as: "userPlan"}]
+  //   });
+  //   return response
+  // }
+
+
+
+  async getContentByRegionAndPlans(regionId, planIds) {
+    const content = await Content.findAll({
+      where: {
+        region_id: {
+          [db.Sequelize.Op.like]: `%${regionId}%`,
+        },
+        plan_id: {
+          [db.Sequelize.Op.in]: planIds,
+        },
+      },
+    });
+    console.log(content)
+    for (const item of content) {
+      const likesCount = await Likes.count({
+        where: { content_id: item.id, is_like: true },
+      });
+      item.dataValues.likesCount = likesCount;
+    }
+    return content
+  }
+
+  async getFreeContent(regionId) {
+    const content = await Content.findAll({
+      where: {
+        plan_id: 0,
+        region_id: {
+          [db.Sequelize.Op.like]: `%${regionId}%`,
+        },
+      },
+    });
+    for (const item of content) {
+      const likesCount = await Likes.count({
+        where: { content_id: item.id, is_like: true },
+      });
+      
+      item.dataValues.likesCount = likesCount;
+    }
+    return content
   }
 
   async findById(contentId, userId) {
@@ -77,6 +148,53 @@ class ContentRepository {
     );
   }
 
+  async getByPlanId(id, userId, regionId) {
+    const data = await Content.findAll({
+      where: {
+        region_id: {
+          [Op.like]: `%${regionId}%`,
+        },
+        plan_id: id,
+        user_id: userId,
+      },
+    });
+    return data;
+  }
+
+  async getPremiumContent(regionId, modelId, isPremium) {
+    return await Content.findAll({
+      where: {
+        region_id: {
+          [Op.like]: `%${regionId}%`,
+        },
+        user_id: modelId,
+      },
+    });
+    //  let response
+    //  if(isPremium === true){
+    //   return response = await Content.findAll({
+    //     where: {
+    //       region_id: {
+    //         [Op.like]: `%${regionId}%`,
+    //       },
+    //       user_id: modelId,
+    //     },
+    //   })
+
+    //  }
+    //  else {
+    //   return response = await Content.findAll({
+    //     where: {
+    //       region_id: {
+    //         [Op.like]: `%${regionId}%`,
+    //       },
+    //       user_id: modelId,
+    //       premium_access: false,
+    //     },
+    //   });
+    //  }
+  }
+
   async delete(contentId) {
     const content = await Content.findOne({ where: { id: contentId } });
     if (!content) {
@@ -107,14 +225,14 @@ class ContentRepository {
       where: { content_id: contentId },
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "contentId",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
     });
@@ -125,14 +243,14 @@ class ContentRepository {
       where: { user_id: userId, is_like: 1 },
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "contentId",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
     });
@@ -161,14 +279,14 @@ class ContentRepository {
     return await Comment.findAll({
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
       attributes: ["comment_text", "status"],
@@ -180,14 +298,14 @@ class ContentRepository {
       where: { id: commnetId },
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Content, // Assuming your Content model is imported
+          model: Content,
           as: "content",
-          attributes: ["title", "description"], // Adjust attributes as needed
+          attributes: ["title", "description"],
         },
       ],
       attributes: ["comment_text", "status"],
@@ -214,14 +332,14 @@ class ContentRepository {
       where: { comment_id: commentId },
       include: [
         {
-          model: User, // Assuming your Users model is imported
+          model: User,
           as: "user",
-          attributes: ["name", "email"], // Adjust attributes as needed
+          attributes: ["name", "email"],
         },
         {
-          model: Comment, // Assuming your Content model is imported
+          model: Comment,
           as: "comment",
-          attributes: ["comment_text"], // Adjust attributes as needed
+          attributes: ["comment_text"],
         },
       ],
       attributes: ["id", "reply_text"],

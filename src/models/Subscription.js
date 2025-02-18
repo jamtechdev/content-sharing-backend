@@ -23,6 +23,15 @@ module.exports = (sequelize, DataTypes) => {
       //   as: 'plan',
       //   onDelete: 'CASCADE'
       // });
+      Subscription.belongsTo(models.ModelProfile, {
+        foreignKey: "model_id", 
+        as: "model"
+      })
+
+      Subscription.belongsTo(models.Plan, {
+        foreignKey: "plan_id",
+        as: "subscriptionPlan"
+      })
     }
   }
 
@@ -69,8 +78,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Subscription",
       tableName: "subscription_table",
       timestamps: true,
-      createdAt: "created_at",
-      updatedAt: "updated_at",
+      // createdAt: "created_at",
+      // updatedAt: "updated_at",
     }
   );
 

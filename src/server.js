@@ -6,7 +6,8 @@ const compression = require("compression");
 
 const routes = require("./router/routes");
 const errorHandler = require("./middleware/ErrorHandler");
-const {cronJob} = require('./controllers/SubscriptionController/SubscriptionController')
+const {cronJob} = require('./utils/cronJob')
+// const {cronJob} = require('./controllers/SubscriptionController/SubscriptionController')
 
 cronJob()
 dotenv.config();

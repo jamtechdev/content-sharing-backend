@@ -152,6 +152,8 @@ class ContentController {
       description,
       category_id,
       region_id: modal_region_id,
+      plan_id,
+      premium_access,
     } = req.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -171,6 +173,8 @@ class ContentController {
       // region_id: modal_region_id ?? JSON.stringify([region_id]),
       region_id: modal_region_id ?? JSON.stringify([1, 2, 3, 4, 5, 6, 7]),
       media_url: mediaFileUrl.secureUrl,
+      plan_id,
+      premium_access,
     };
     const response = await ContentService.createContent(data);
     return res.status(201).json({
@@ -181,16 +185,38 @@ class ContentController {
     });
   }
 
+  // async getContent(req, res) {
+  //   const { userId } = req?.user;
+  //   const { region_id } = await UserService.getUserById(userId);
+  //   const response = await ContentService.getContent(region_id, userId);
+
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Content fetched successfully",
+  //     data: response,
+  //   });
+  // }
+
   async getContent(req, res) {
     const { userId } = req?.user;
     const { region_id } = await UserService.getUserById(userId);
-    const response = await ContentService.getContent(region_id);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Content fetched successfully",
-      data: response,
-    });
+
+    if (!userId || !region_id) {
+      return res
+        .status(400)
+        .json({code: 400, success: false, message: "userId and regionId are required." });
+    }
+
+    const content = await ContentService.getContentForUser(userId, region_id);
+    return res
+      .status(200)
+      .json({
+        code: 200,
+        success: true,
+        message: "User's subscribed content fetched successfully",
+        data: content,
+      });
   }
 
   async updateContent(req, res) {
@@ -428,7 +454,6 @@ class ContentController {
     });
   }
 
- 
   getRouter() {
     return this.router.getRouter();
   }

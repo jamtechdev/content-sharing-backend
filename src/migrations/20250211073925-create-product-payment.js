@@ -10,39 +10,31 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       order_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        // references: {
-        //   model: 'Orders',  // Reference to the Orders table
-        //   key: 'id',        // Link to Order's id
-        // },
-        // onDelete: 'CASCADE',  // If the Order is deleted, delete the ProductPayment as well
+        type: Sequelize.INTEGER
       },
       transaction_id: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,  // Ensure unique transaction IDs
+        type: Sequelize.STRING
       },
       payment_method: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.STRING
       },
       amount_paid: {
-        type: Sequelize.DECIMAL(10, 2),
-        allowNull: false,
+        type: Sequelize.DECIMAL
       },
       payment_status: {
-        type: Sequelize.ENUM('completed', 'pending', 'failed'),
-        allowNull: false,
+        type: Sequelize.ENUM('completed', 'pending', 'failed')
       },
       payment_date: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.NOW,
+        type: Sequelize.DATE
       },
       payment_gateway: {
-        type: Sequelize.STRING,
-        allowNull: false,
+        type: Sequelize.STRING
+      },
+      createdAt: {
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -53,6 +45,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex("product_payments", ["order_id", "transaction_id"])
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('product_payments');

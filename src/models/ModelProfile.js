@@ -26,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
       // this.belongsTo(models.Regions, {
       //   foreignKey: "region_id",
       // });
+      ModelProfile.hasMany(models.Content, {
+        foreignKey: "user_id",
+        sourceKey: "user_id",
+        // targetKye: "user_id",
+        as: "content"
+      })
     }
   }
   ModelProfile.init(

@@ -1,0 +1,69 @@
+const ProductCouponsRepository = require("../repositories/ProductCouponsRepository");
+const HttpError = require("../decorators/HttpError");
+
+class ProductCouponService {
+  async createProductCoupon(data) {
+    if (!data.code || !data.discount_type || !data.discount_value) {
+      throw new HttpError(400, "Coupon code, discount type, and discount value are required");
+    }
+
+    const existingCoupon = await ProductCouponsRepository.getByCode(data.code);
+    if (existingCoupon) {
+      throw new HttpError(409, "A coupon with this code already exists");
+    }
+
+    return await ProductCouponsRepository.create(data);
+  }
+  
+  async getAllProductCoupons() {
+    const coupons = await ProductCouponsRepository.getAll();
+    if (coupons.length === 0) {
+      throw new HttpError(404, "No product coupons found");
+    }
+    return coupons;
+  }
+
+  async getProductCouponById(couponId) {
+    const coupon = await ProductCouponsRepository.getById(couponId);
+    if (!coupon) {
+      throw new HttpError(404, "Product coupon not found");
+    }
+    return coupon;
+  }
+
+  async getProductCouponByCode(code) {
+    const coupon = await ProductCouponsRepository.getByCode(code);
+    if (!coupon) {
+      throw new HttpError(404, "Product coupon not found");
+    }
+    return coupon;
+  }
+
+  async getActiveCoupons(currentDate = new Date()) {
+    const coupons = await ProductCouponsRepository.getActiveCoupons(currentDate);
+    if (coupons.length === 0) {
+      throw new HttpError(404, "No active coupons available");
+    }
+    return coupons;
+  }
+
+  async updateProductCoupon(couponId, data) {
+    const coupon = await ProductCouponsRepository.getById(couponId);
+    if (!coupon) {
+      throw new HttpError(404, "Product coupon not found");
+    }
+    
+    await ProductCouponsRepository.update(couponId, data);
+    return await ProductCouponsRepository.getById(couponId);
+  }
+
+  async deleteProductCoupon(couponId) {
+    const coupon = await ProductCouponsRepository.getById(couponId);
+    if (!coupon) {
+      throw new HttpError(404, "Product coupon not found");
+    }
+    return await ProductCouponsRepository.delete(couponId);
+  }
+}
+
+module.exports = new ProductCouponService();

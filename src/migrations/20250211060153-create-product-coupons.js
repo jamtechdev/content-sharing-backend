@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Coupons', {
+    await queryInterface.createTable('product_coupons', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,43 +11,34 @@ module.exports = {
       },
       code: {
         type: Sequelize.STRING,
-        allowNull: false,
-        unique: true, // Ensures coupon code is unique
+        unique: true
       },
       discount_type: {
-        type: Sequelize.ENUM('flat', 'percent'),
-        allowNull: false, // Required field
+        type: Sequelize.ENUM('flat', 'percent')
       },
       discount_value: {
-        type: Sequelize.DECIMAL,
-        allowNull: false, // Required field
+        type: Sequelize.DECIMAL
       },
       usage_limit: {
-        type: Sequelize.INTEGER,
-        allowNull: false, // Required field
+        type: Sequelize.INTEGER
       },
       start_date: {
-        type: Sequelize.DATE,
-        allowNull: false, // Required field
+        type: Sequelize.DATE
       },
       end_date: {
-        type: Sequelize.DATE,
-        allowNull: false, // Required field
+        type: Sequelize.DATE
       },
       min_order_amount: {
-        type: Sequelize.INTEGER,
-        allowNull: false, // Required field
+        type: Sequelize.DECIMAL
       },
       max_usage_per_user: {
-        type: Sequelize.INTEGER,
-        allowNull: false, // Required field
+        type: Sequelize.INTEGER
       },
       region_id: {
         type: Sequelize.INTEGER
       },
       user_type: {
-        type: Sequelize.ENUM('new_user', 'all_users'),
-        allowNull: false, // Required field
+        type: Sequelize.ENUM('new_user', 'all_users')
       },
       createdAt: {
         allowNull: false,
@@ -58,8 +49,9 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex("product_coupons", ["region_id"])
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Coupons');
+    await queryInterface.dropTable('product_coupons');
   }
 };

@@ -11,5 +11,3 @@ function TryCatch(handler) {
 }
 
 module.exports = TryCatch;
-
-

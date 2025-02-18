@@ -12,7 +12,6 @@ class RegionController {
     this.router.addRoute(
       "get",
       "/get-region",
-
       TryCatch(this.getRegion.bind(this))
     );
   }

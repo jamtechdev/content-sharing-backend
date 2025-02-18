@@ -19,7 +19,7 @@ module.exports = {
         // onDelete: "CASCADE",
       },
       name: {
-        type: Sequelize.ENUM("basic", "premium"),
+        type: Sequelize.ENUM("basic", "premium", "gold"),
         allowNull: true,
       },
       price: {

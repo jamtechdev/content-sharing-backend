@@ -1,6 +1,11 @@
 const HttpError = require("../decorators/HttpError");
 const ContentRepository = require("../repositories/ContentRepository");
+const SubscriptionRepository = require("../repositories/SubscriptionRepository");
+const PlanRepository = require("../repositories/PlanRepository");
 const UserService = require("./UserService");
+
+const db = require("../models/index");
+const ModelProfile = db.ModelProfile;
 
 class ContentService {
   async createContent(data) {
@@ -10,16 +15,123 @@ class ContentService {
     }
     return response;
   }
-  async getContent(region_id) {
-    // console.log(userId)
-    // const { region_id } = await UserService.getUserById(userId);
-    console.log(region_id);
-    const response = await ContentRepository.getContent(region_id);
-    if (response.length === 0) {
-      throw new HttpError(404, "Not content found");
+
+  // async getContent(region_id, userId) {
+  //   const userSubscription = await SubscriptionRepository.getSubscriptionsByUserId(userId);
+  //   if(userSubscription.length === 0){
+  //     throw new HttpError("Please subscribe to watch content")
+  //   }
+  //   let userIds = []
+  //   const userPlans = await Promise.all(
+  //     userSubscription.map(async (item) => {
+  //       const model = await ModelProfile.findOne({where: {id: item.model_id}})
+  //       if(model){
+  //         userIds.push(model.user_id)
+  //       }
+  //       return await PlanRepository.getPlanByIdAndModelId(
+  //         item.plan_id,
+  //         item.model_id
+  //       );
+  //     })
+  //   );
+
+  //   const uniqueUserIds = [...new Set(userIds)];
+  //   const response = (
+  //     await Promise.all(
+  //       userPlans.flatMap((item) =>
+  //         uniqueUserIds.map(async (user) => {
+  //           const data = await ContentRepository.getByPlanId(item.id, user, region_id);
+  //           return data || null;
+  //         })
+  //       )
+  //     )
+  //   ).filter(Boolean);
+
+  //   if (response.length === 0) {
+  //     throw new HttpError(404, "No content found");
+  //   }
+  //   return response;
+  // }
+  // async getContent(region_id, userId) {
+  //   const userSubscription =
+  //     await SubscriptionRepository.getSubscriptionsByUserId(userId);
+  //   let response = await Promise.all(
+  //     userSubscription.map(async (item) => {
+  //       const content =
+  //         await ContentRepository.getContentByModelIdAndPlanIdWithRegion(
+  //           item.subscriptionPlan.model.user_id,
+  //           item.plan_id,
+  //           region_id
+  //         );
+  //       return content;
+  //     })
+  //   );
+  //   response = response.flat();
+  //   const freeContent = await ContentRepository.getFreeContent(region_id);
+  //   if (freeContent.length > 0) {
+  //     response = response.concat(freeContent);
+  //   }
+
+  //   return response;
+  // }
+
+  // const freeContent = await ContentRepository.getFreeContent(region_id);
+  //     if (freeContent.length > 0) {
+  //   response = response.concat(freeContent);
+  // }
+
+  async getContentForUser(userId, regionId) {
+    const userSubscription = await SubscriptionRepository.getSubscriptionsByUserId(
+      userId
+    );
+    if (!userSubscription) {
+      return await ContentRepository.getFreeContent(regionId);
     }
-    return response;
+
+    const userPlanName = userSubscription.subscriptionPlan.name.toLowerCase();
+
+    const allPlans = await PlanRepository.getAll();
+
+    const goldPlan = allPlans.find(
+      (plan) => plan.name.toLowerCase() === "gold"
+    );
+    const premiumPlan = allPlans.find(
+      (plan) => plan.name.toLowerCase() === "premium"
+    );
+    const basicPlan = allPlans.find(
+      (plan) => plan.name.toLowerCase() === "basic"
+    );
+
+    if (!goldPlan || !premiumPlan || !basicPlan) {
+      throw new Error(404,
+        "Required plans (gold, premium, basic) are not defined in the plan table."
+      );
+    }
+
+    let eligiblePlanIds = [];
+    switch (userPlanName) {
+      case "gold":
+        eligiblePlanIds = [goldPlan.id, premiumPlan.id, basicPlan.id];
+        break;
+      case "premium":
+        eligiblePlanIds = [premiumPlan.id, basicPlan.id];
+        break;
+      case "basic":
+        eligiblePlanIds = [basicPlan.id];
+        break;
+      default:
+        throw new HttpError(400, "Invalid user plan.");
+    }
+
+    let content = await ContentRepository.getContentByRegionAndPlans(
+      regionId,
+      eligiblePlanIds
+    );
+    let freeContent = await ContentRepository.getFreeContent(regionId);
+    content = content.concat(freeContent);
+    return content;
   }
+
   async findById(contentId, userId) {
     const response = await ContentRepository.findById(contentId, userId);
     if (!response) {
@@ -54,6 +166,7 @@ class ContentService {
       userId
     );
   }
+
   async deleteContent(contentId) {
     return await ContentRepository.delete(contentId);
   }
@@ -69,9 +182,11 @@ class ContentService {
     }
     return response;
   }
+
   async getLikeByContentUserId(contentId, userId) {
     const response = await ContentRepository.getLikeByContentUserId(
-      contentId, userId
+      contentId,
+      userId
     );
     // if (!response) {
     //   throw new HttpError(400, "Content not created");
@@ -79,13 +194,11 @@ class ContentService {
     return response;
   }
 
-  async updateLikeByUsercontentId(data){
-    return await ContentRepository.updateLikeByUsercontentId(data)
+  async updateLikeByUsercontentId(data) {
+    return await ContentRepository.updateLikeByUsercontentId(data);
   }
   async getLikeByContentId(contentId) {
-    const response = await ContentRepository.getLikeByContentId(
-      contentId
-    );
+    const response = await ContentRepository.getLikeByContentId(contentId);
     if (!response) {
       throw new HttpError(400, "Content not created");
     }
@@ -100,7 +213,8 @@ class ContentService {
   }
   async destroyLikeByContentUserId(contentId, userId) {
     const response = await ContentRepository.destroyLikeByContentUserId(
-      contentId, userId
+      contentId,
+      userId
     );
     if (!response) {
       throw new HttpError(400, "Content not created");
@@ -108,43 +222,41 @@ class ContentService {
     return response;
   }
 
-  async addComment(data){
-    const response = await ContentRepository.addComment(data)
-    return response
+  async addComment(data) {
+    const response = await ContentRepository.addComment(data);
+    return response;
   }
-  async getComment(){
-    const response = await ContentRepository.getComment()
-    return response
-  }
-
-  async getCommentById(commnetId){
-    return await ContentRepository.getCommentById(commnetId)
+  async getComment() {
+    const response = await ContentRepository.getComment();
+    return response;
   }
 
-  async deleteCommentById(commnetId){
-    return await ContentRepository.deleteComment(commnetId)
+  async getCommentById(commnetId) {
+    return await ContentRepository.getCommentById(commnetId);
   }
 
-  async updateComment(data){
-    return await ContentRepository.updateComment(data)
+  async deleteCommentById(commnetId) {
+    return await ContentRepository.deleteComment(commnetId);
   }
 
-  async replyComment(data){
-    return await ContentRepository.replyComment(data)
+  async updateComment(data) {
+    return await ContentRepository.updateComment(data);
   }
 
-  async getReplyCommentByCommnet(commentId){
-    return await ContentRepository.getReplyCommentByCommnet(commentId)
+  async replyComment(data) {
+    return await ContentRepository.replyComment(data);
   }
 
-  async updateReplyComment(data){
-    return await ContentRepository.updateReplyComment(data)
+  async getReplyCommentByCommnet(commentId) {
+    return await ContentRepository.getReplyCommentByCommnet(commentId);
   }
 
-  
-  async deleteReplyComment(data){
-    return await ContentRepository.deleteReplyComment(data)
+  async updateReplyComment(data) {
+    return await ContentRepository.updateReplyComment(data);
   }
 
+  async deleteReplyComment(data) {
+    return await ContentRepository.deleteReplyComment(data);
+  }
 }
 module.exports = new ContentService();

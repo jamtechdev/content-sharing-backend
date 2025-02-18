@@ -2,18 +2,21 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('product_categories', {
+    await queryInterface.createTable('user_coupons', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      user_id: {
+        type: Sequelize.INTEGER
       },
-      description: {
-        type: Sequelize.TEXT
+      coupon_id: {
+        type: Sequelize.INTEGER
+      },
+      usage_count: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -24,8 +27,9 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex("user_coupons", ["user_id", "coupon_id"])
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('product_categories');
+    await queryInterface.dropTable('user_coupons');
   }
 };

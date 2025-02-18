@@ -10,15 +10,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       product_id: {
-        type: Sequelize.INTEGER,
-        // references: {
-        //   model: 'Products',  // References Product table
-        //   key: 'id',          // The column in Products to reference
-        // },
-        // allowNull: false,
+        type: Sequelize.INTEGER
       },
       media_type: {
-        type: Sequelize.ENUM('image', 'video', 'document')
+        type: Sequelize.ENUM('image','video','document')
       },
       file_url: {
         type: Sequelize.STRING
@@ -47,6 +42,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addIndex("product_media", ["product_id"])
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('product_media');

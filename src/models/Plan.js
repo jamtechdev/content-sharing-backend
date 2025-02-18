@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
       //   as: 'model',
       //   onDelete: 'CASCADE'
       // });
+
+      Plan.belongsTo(models.ModelProfile, {
+        foreignKey: "model_id",
+        as: "model"
+      })
     }
   }
 
@@ -31,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         // },
       },
       name: {
-        type: DataTypes.ENUM("basic", "premium"),
+        type: DataTypes.ENUM("basic", "premium", "plan"),
         allowNull: true,
       },
       price: {
