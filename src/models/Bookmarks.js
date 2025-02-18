@@ -32,11 +32,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         references: { model: "Content", key: "id" },
       },
+      created_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
+      updated_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
     },
     {
-      sequelize,
+      sequelize,  
       modelName: "Bookmarks",
-      tableName:"bookmarks",
+      tableName: "bookmarks",
       createdAt: "created_at",
       updatedAt: "updated_at",
     }
