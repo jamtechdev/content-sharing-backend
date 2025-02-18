@@ -15,19 +15,23 @@ class BookmarkRepository {
   }
 
   async getBookmarkByUser(userId) {
-    return await Bookmarks.findAll({ where: { user_id: userId },
-        include: [
-            {
-              model: Content, // Assuming your Content model is imported
-              as: "content",
-            
-            },
-          ],
-        attributes:['id'] });
+    return await Bookmarks.findAll({
+      where: { user_id: userId },
+      include: [
+        {
+          model: Content,
+          as: "content",
+          attributes: ["title", "description"], // Choose specific fields
+        },
+      ],
+      attributes: ["id"],
+      raw: true, // Returns a flat structure
+      nest: false, // Prevents Sequelize from nesting objects
+    });
   }
 
-  async removeBookmark(id){
-    return await Bookmarks.destroy({where:{id:id}})
+  async removeBookmark(id) {
+    return await Bookmarks.destroy({ where: { id: id } });
   }
 }
 
