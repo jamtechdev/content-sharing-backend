@@ -20,7 +20,7 @@ class BookmarkRepository {
             {
               model: Content, // Assuming your Content model is imported
               as: "content",
-              attributes: ["title"], // Adjust attributes as needed
+            
             },
           ],
         attributes:['id'] });
