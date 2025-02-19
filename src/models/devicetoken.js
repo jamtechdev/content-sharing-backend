@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "DeviceToken",
-      tableName: "device_tokens",
+      tableName: "devices_tokens",
       // updatedAt: "updated_at",
       // createdAt: "created_at",
     }
