@@ -115,9 +115,9 @@ class AuthController {
   async logout(req, res) {
     const { userId } = req?.user;
     const data = {
-      user_id : userId,
-      is_loggedin:false
-    }
+      user_id: userId,
+      is_loggedin: false,
+    };
 
     await NotificationService.updateToken(data);
 
@@ -152,8 +152,15 @@ class AuthController {
         name: user.name,
         email: user.email,
         avatar: user.avatar,
-        role_id: user.role_id,
-        platfrom_type: user.platform_type,
+        cover_photo: user.cover_photo ? user.cover_photo : null,
+        region: user.region ? user.region.name : null,
+        region_id: user.region_id,
+        role: user.role ? user.role.name : null,
+        birthdate: user.birthdate,
+        address: user.address,
+        phone_number: user.phone_number,
+        bio: user.bio,
+        guard_name: user.role ? user.role.guard_name : null,
       },
     });
   }
