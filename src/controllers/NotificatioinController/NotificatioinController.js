@@ -3,6 +3,7 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch.js");
 const NotificationService = require("../../services/NotificationService.js");
+const admin = require('../../firebase.js')
 
 class NotificatioinController {
   constructor() {
@@ -14,6 +15,13 @@ class NotificatioinController {
       authenticate,
       authorize(["user", "modal"]),
       TryCatch(this.addToken.bind(this))
+    );
+    this.router.addRoute(
+      "post",
+      "/send-notification",
+      authenticate,
+      authorize(["user", "modal"]),
+      TryCatch(this.sendNotification.bind(this))
     );
   }
 
@@ -43,6 +51,19 @@ class NotificatioinController {
       success: true,
       message: "Device token saved!.",
     });
+  }
+
+  async sendNotification(req, res){
+    const payload = {
+      notification: {
+        title: "Testing",
+        body: "message",
+      },
+      token: "dfkshafjkdsdfsdfsdfsdbahf8sdfkljsdklfj",
+    };
+
+    const response = await admin.messaging().send(payload);
+    console.log('Successfully sent message:', response);
   }
 
   getRouter() {
