@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       token: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       is_loggedin: {
         type: DataTypes.STRING,
