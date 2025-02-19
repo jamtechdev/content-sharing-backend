@@ -139,7 +139,7 @@ class ContentRepository {
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
       ],
-      order: [["createdAt", "DESC"]],
+      order: [["created_at", "DESC"]],
     });
   }
 
