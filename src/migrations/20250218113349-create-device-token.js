@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Device_Tokens', {
+    await queryInterface.createTable('devices_tokens', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -27,9 +27,9 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-    await queryInterface.addIndex("Device_Tokens", ["user_id"]);
+    await queryInterface.addIndex("devices_tokens", ["user_id"]);
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Device_Tokens');
+    await queryInterface.dropTable('devices_tokens');
   }
 };

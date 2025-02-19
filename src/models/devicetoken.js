@@ -30,11 +30,21 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
     },
     {
       sequelize,
       modelName: "DeviceToken",
-      tableName:"device_tokens"
+      tableName: "device_tokens",
+      // updatedAt: "updated_at",
+      // createdAt: "created_at",
     }
   );
   return DeviceToken;
