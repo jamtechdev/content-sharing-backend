@@ -4792,3 +4792,565 @@ notNull Violation: Plan.duration cannot be null
     at async NotificationService.addToken (D:\content-sharing-backend\src\services\NotificationService.js:5:16)
     at async NotificatioinController.addToken (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:41:22)
     at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T13:14:50.533Z [ERROR]: Error in bound sendNotification: Credential implementation provided to initializeApp() via the "credential" property failed to fetch a valid Google OAuth2 access token with the following error: "invalid_grant: Invalid grant: account not found". There are two likely causes: (1) your server time is not properly synced or (2) your certificate key file has been revoked. To solve (1), re-sync the time on your server. To solve (2), make sure the key ID for your key file is still present at https://console.firebase.google.com/iam-admin/serviceaccounts/project. If not, generate a new key file at https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk.
+2025-02-18T13:14:50.536Z [ERROR]: Error: Credential implementation provided to initializeApp() via the "credential" property failed to fetch a valid Google OAuth2 access token with the following error: "invalid_grant: Invalid grant: account not found". There are two likely causes: (1) your server time is not properly synced or (2) your certificate key file has been revoked. To solve (1), re-sync the time on your server. To solve (2), make sure the key ID for your key file is still present at https://console.firebase.google.com/iam-admin/serviceaccounts/project. If not, generate a new key file at https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk.
+    at D:\content-sharing-backend\node_modules\firebase-admin\lib\app\firebase-app.js:87:19
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:65:22)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T13:16:51.287Z [ERROR]: Error in bound sendNotification: The registration token is not a valid FCM registration token
+2025-02-18T13:16:51.293Z [ERROR]: Error: The registration token is not a valid FCM registration token
+    at Function.fromServerError (D:\content-sharing-backend\node_modules\firebase-admin\lib\utils\error.js:269:16)
+    at createFirebaseError (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-errors-internal.js:36:47)
+    at D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-api-request-internal.js:74:75
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:65:22)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T05:47:28.667Z [ERROR]: Error in bound sendNotification: The registration token is not a valid FCM registration token
+2025-02-19T05:47:28.671Z [ERROR]: Error: The registration token is not a valid FCM registration token
+    at Function.fromServerError (D:\content-sharing-backend\node_modules\firebase-admin\lib\utils\error.js:269:16)
+    at createFirebaseError (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-errors-internal.js:36:47)
+    at D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-api-request-internal.js:74:75
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:65:22)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T07:05:37.518Z [ERROR]: Error in bound login: Table 'contentsharing.device_tokens' doesn't exist
+2025-02-19T07:05:37.519Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:13:12)
+    at async NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:16)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:83:26)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T07:12:08.443Z [ERROR]: Error in bound login: Table 'contentsharing.device_tokens' doesn't exist
+2025-02-19T07:12:08.445Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async NotificationRepository.getTokenByUser (D:\content-sharing-backend\src\repositories\NotificationRepository.js:13:12)
+    at async NotificationService.getTokenByUser (D:\content-sharing-backend\src\services\NotificationService.js:9:16)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:83:26)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T07:24:33.932Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T07:24:33.936Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:69:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T07:25:02.771Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T07:25:02.774Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:71:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T07:43:31.326Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-19T07:43:31.351Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+2025-02-19T07:44:32.805Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-19T07:44:32.824Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-19T07:45:16.460Z [ERROR]: Error in bound login: connect ETIMEDOUT
+2025-02-19T07:45:16.475Z [ERROR]: SequelizeConnectionError: connect ETIMEDOUT
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-19T09:20:40.816Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:20:40.820Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:20:56.404Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:20:56.406Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:21:32.115Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:21:32.116Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:23:09.154Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:23:09.155Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:23:14.605Z [ERROR]: Error in bound login: t is not defined
+2025-02-19T09:23:14.606Z [ERROR]: ReferenceError: t is not defined
+    at NotificationRepository.addToken (D:\content-sharing-backend\src\repositories\NotificationRepository.js:8:59)
+    at NotificationService.addToken (D:\content-sharing-backend\src\services\NotificationService.js:5:45)
+    at AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:90:50)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:24:01.992Z [ERROR]: Error in bound login: sequelize is not defined
+2025-02-19T09:24:01.996Z [ERROR]: ReferenceError: sequelize is not defined
+    at NotificationRepository.addToken (D:\content-sharing-backend\src\repositories\NotificationRepository.js:8:15)
+    at NotificationService.addToken (D:\content-sharing-backend\src\services\NotificationService.js:5:45)
+    at AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:90:50)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:31:14.251Z [ERROR]: Error in bound login: Unknown database 'content_sharing_db'
+2025-02-19T09:31:14.311Z [ERROR]: SequelizeConnectionError: Unknown database 'content_sharing_db'
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-19T09:33:05.044Z [ERROR]: Error in bound login: Unknown database 'content_sharing_db'
+2025-02-19T09:33:05.046Z [ERROR]: SequelizeConnectionError: Unknown database 'content_sharing_db'
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-19T09:33:07.596Z [ERROR]: Error in bound login: Unknown database 'content_sharing_db'
+2025-02-19T09:33:07.597Z [ERROR]: SequelizeConnectionError: Unknown database 'content_sharing_db'
+    at ConnectionManager.connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:126:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-02-19T09:33:34.885Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:33:34.888Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T09:33:40.618Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-19T09:33:40.619Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T10:12:15.329Z [ERROR]: Error in bound register: Unknown column 'created_at' in 'field list'
+2025-02-19T10:12:15.330Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\content-sharing-backend\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\content-sharing-backend\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\content-sharing-backend\src\controllers\User\AuthController.js:33:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T10:15:08.424Z [ERROR]: Error in bound register: Unknown column 'created_at' in 'field list'
+2025-02-19T10:15:08.425Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\content-sharing-backend\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\content-sharing-backend\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\content-sharing-backend\src\controllers\User\AuthController.js:33:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T10:32:15.260Z [ERROR]: Error in bound register: Unknown column 'created_at' in 'field list'
+2025-02-19T10:32:15.261Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\content-sharing-backend\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\content-sharing-backend\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\content-sharing-backend\src\controllers\User\AuthController.js:33:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:01:59.146Z [ERROR]: Error in bound sendNotification: Sequelize is not defined
+2025-02-19T11:01:59.148Z [ERROR]: ReferenceError: Sequelize is not defined
+    at NotificationRepository.getOnlineUsers (D:\content-sharing-backend\src\repositories\NotificationRepository.js:27:10)
+    at NotificationService.getOnlineUsers (D:\content-sharing-backend\src\services\NotificationService.js:17:45)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:61:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:02:08.927Z [ERROR]: Error in bound sendNotification: FUNCTION content_sharing_db.ARRAY_AGG does not exist
+2025-02-19T11:02:08.930Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getOnlineUsers (D:\content-sharing-backend\src\repositories\NotificationRepository.js:25:12)
+    at async NotificationService.getOnlineUsers (D:\content-sharing-backend\src\services\NotificationService.js:17:16)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:61:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:02:25.457Z [ERROR]: Error in bound sendNotification: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[object Object]() AS `tokens` FROM `devices_tokens` AS `DeviceToken` WHERE `D...' at line 1
+2025-02-19T11:02:25.460Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getOnlineUsers (D:\content-sharing-backend\src\repositories\NotificationRepository.js:25:12)
+    at async NotificationService.getOnlineUsers (D:\content-sharing-backend\src\services\NotificationService.js:17:16)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:61:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:03:41.514Z [ERROR]: Error in bound sendNotification: FUNCTION content_sharing_db.array_agg does not exist
+2025-02-19T11:03:41.517Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getOnlineUsers (D:\content-sharing-backend\src\repositories\NotificationRepository.js:25:12)
+    at async NotificationService.getOnlineUsers (D:\content-sharing-backend\src\services\NotificationService.js:17:16)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:61:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:04:14.582Z [ERROR]: Error in bound sendNotification: FUNCTION content_sharing_db.array_agg does not exist
+2025-02-19T11:04:14.584Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getOnlineUsers (D:\content-sharing-backend\src\repositories\NotificationRepository.js:25:12)
+    at async NotificationService.getOnlineUsers (D:\content-sharing-backend\src\services\NotificationService.js:17:16)
+    at async NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:61:21)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:06:49.499Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:06:49.502Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:08:03.824Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:08:03.827Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:08:05.051Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:08:05.051Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:08:34.520Z [ERROR]: Error in bound sendNotification: admin.messaging(...).sendMulticast is not a function
+2025-02-19T11:08:34.525Z [ERROR]: TypeError: admin.messaging(...).sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:10:12.910Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:10:12.912Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:11:33.605Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:11:33.608Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:13:15.526Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:13:15.530Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:13:23.050Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:13:23.053Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:14:14.538Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:14:14.539Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:14:21.487Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:14:21.490Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:15:09.470Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:15:09.472Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:15:10.475Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:15:10.476Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:18:58.893Z [ERROR]: Error in bound sendNotification: messaging(...).sendMulticast is not a function
+2025-02-19T11:18:58.896Z [ERROR]: TypeError: messaging(...).sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:19:18.769Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:19:18.772Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:19:57.084Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:19:57.086Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:19:58.286Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:19:58.287Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:27.758Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:27.760Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:28.668Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:28.670Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:29.262Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:29.263Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:31.414Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:31.415Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:32.136Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:32.137Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:20:32.814Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:20:32.815Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:22:35.546Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:22:35.549Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:22:36.445Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:22:36.446Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:22:46.240Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:22:46.242Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:28:20.223Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:28:20.226Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:35:13.917Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:35:13.919Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:36:20.239Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:36:20.242Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:37:39.453Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:37:39.457Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:37:56.354Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:37:56.357Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:37:57.171Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:37:57.172Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:38:00.161Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:38:00.162Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:38:01.150Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:38:01.151Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:38:48.754Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:38:48.757Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:38:50.030Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:38:50.031Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:39:10.513Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:39:10.515Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:39:52.992Z [ERROR]: Error in bound sendNotification: admin.messaging(...).sendMulticast is not a function
+2025-02-19T11:39:52.995Z [ERROR]: TypeError: admin.messaging(...).sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:39:59.168Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:39:59.171Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:40:06.346Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:40:06.349Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:40:07.504Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:40:07.505Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:40:27.898Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:40:27.899Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:40:29.156Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:40:29.157Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:72:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:41:23.196Z [ERROR]: Error in bound sendNotification: Exactly one of topic, token or condition is required
+2025-02-19T11:41:23.199Z [ERROR]: Error: Exactly one of topic, token or condition is required
+    at validateMessage (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging-internal.js:54:15)
+    at Messaging.send (D:\content-sharing-backend\node_modules\firebase-admin\lib\messaging\messaging.js:122:50)
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:71:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:43:07.936Z [ERROR]: Error in bound sendNotification: admin.messaging(...).sendMulticast is not a function
+2025-02-19T11:43:07.938Z [ERROR]: TypeError: admin.messaging(...).sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:71:46)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:46:00.096Z [ERROR]: Error in bound sendNotification: messaging is not a function
+2025-02-19T11:46:00.100Z [ERROR]: TypeError: messaging is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:71:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T11:46:06.797Z [ERROR]: Error in bound sendNotification: messaging.sendMulticast is not a function
+2025-02-19T11:46:06.799Z [ERROR]: TypeError: messaging.sendMulticast is not a function
+    at NotificatioinController.sendNotification (D:\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:71:38)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T12:16:54.322Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-02-19T12:16:54.324Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:175:12)
+    at async ContentService.getLikeByUserId (D:\content-sharing-backend\src\services\ContentService.js:94:22)
+    at async ContentController.getLikeByUserId (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:294:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T12:16:54.384Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-02-19T12:16:54.384Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\content-sharing-backend\src\repositories\ContentRepository.js:175:12)
+    at async ContentService.getLikeByUserId (D:\content-sharing-backend\src\services\ContentService.js:94:22)
+    at async ContentController.getLikeByUserId (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:294:18)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T12:16:54.569Z [ERROR]: Error in bound getContent: Unknown column 'Content.createdAt' in 'order clause'
+2025-02-19T12:16:54.570Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.findAll (D:\content-sharing-backend\src\repositories\ContentRepository.js:136:12)
+    at async ContentService.findAllContentById (D:\content-sharing-backend\src\services\ContentService.js:62:12)
+    at async ContentController.getContent (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:164:24)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-19T12:16:54.633Z [ERROR]: Error in bound getContent: Unknown column 'Content.createdAt' in 'order clause'
+2025-02-19T12:16:54.633Z [ERROR]: Error
+    at Query.run (D:\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.findAll (D:\content-sharing-backend\src\repositories\ContentRepository.js:136:12)
+    at async ContentService.findAllContentById (D:\content-sharing-backend\src\services\ContentService.js:62:12)
+    at async ContentController.getContent (D:\content-sharing-backend\src\controllers\ContentController\ContentController.js:164:24)
+    at async D:\content-sharing-backend\src\decorators\TryCatch.js:5:7

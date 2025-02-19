@@ -12,6 +12,14 @@ class NotificationService {
     async updateToken(data){
         return await NotificationRepository.updateToken(data)
     }
+
+    async getOnlineUsers(){
+        return await NotificationRepository.getOnlineUsers()
+    }
+
+    async addNotification(data){
+        return await NotificationRepository.addNotification(data)
+    }
 }
 
 module.exports = new NotificationService();

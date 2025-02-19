@@ -19,4 +19,8 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
-module.exports = admin;
+const messaging = admin.messaging();
+
+module.exports = messaging;
+
+// module.exports = admin;

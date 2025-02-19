@@ -23,6 +23,16 @@ class NotificationRepository {
     );
   }
 
+  async getOnlineUsers(){
+    const tokens = await Tokens.findAll({
+      where: { is_loggedin: 1 },
+      attributes: ["token","user_id"],
+      raw: true, // Returns plain objects instead of model instances
+    });
+  
+    return tokens.map(token => token.token); 
+  }
+
   async addNotification(data){
     return await Notification.create(data)
   }

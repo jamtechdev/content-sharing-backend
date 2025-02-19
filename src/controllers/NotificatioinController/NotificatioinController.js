@@ -3,7 +3,7 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch.js");
 const NotificationService = require("../../services/NotificationService.js");
-const admin = require("../../firebase.js");
+const messaging = require("../../firebase.js");
 
 class NotificatioinController {
   constructor() {
@@ -13,14 +13,14 @@ class NotificatioinController {
       "post",
       "/",
       authenticate,
-      authorize(["user", "modal"]),
+      authorize(["user", "model"]),
       TryCatch(this.addToken.bind(this))
     );
     this.router.addRoute(
       "post",
       "/send-notification",
       authenticate,
-      authorize(["user", "modal"]),
+      authorize(["user", "model"]),
       TryCatch(this.sendNotification.bind(this))
     );
   }
@@ -59,16 +59,21 @@ class NotificatioinController {
       user_id: userId,
     });
 
-    console.log(deviceToken,"toeknnnnnnnnnnnnnnnn")
+    const onlineUsers = await NotificationService.getOnlineUsers();
+    console.log(onlineUsers, "toeknnnnnnnnnnnnnnnn");
+
     const payload = {
       notification: {
         title: "Testing",
         body: "message",
       },
-      token: deviceToken,
+      tokens: onlineUsers,
     };
 
-    const response = await admin.messaging().send(payload);
+    const response = await messaging.sendEachForMulticast(payload);
+    // if(response.successCount>0){
+
+    // }
     console.log("Successfully sent message:", response);
     return res.status(200).json({
       response,

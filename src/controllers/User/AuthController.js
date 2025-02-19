@@ -81,7 +81,7 @@ class AuthController {
       is_loggedin: true,
     };
     const existingUser = await NotificationService.getTokenByUser({
-      user_id: 6,
+      user_id: user.id,
     });
     if (existingUser) {
       await NotificationService.updateToken(userData);
