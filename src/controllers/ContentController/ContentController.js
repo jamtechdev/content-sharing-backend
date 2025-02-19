@@ -54,7 +54,7 @@ class ContentController {
       "post",
       "/like-content",
       authenticate,
-      authorize(["user"]),
+      authorize(["user" , "model"]),
       TryCatch(this.contentLike.bind(this))
     );
 
