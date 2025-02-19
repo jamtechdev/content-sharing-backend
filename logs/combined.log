@@ -5252,3 +5252,177 @@ string violation: tags cannot be an array or an object
     at async ContentService.getContentForUser (D:\Content Sharing\content-sharing-backend\src\services\ContentService.js:126:19)
     at async ContentController.getContent (D:\Content Sharing\content-sharing-backend\src\controllers\ContentController\ContentController.js:211:21)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T10:43:13.202Z [ERROR]: Error in bound getProductMediaById: Product media not found
+2025-02-18T10:43:13.204Z [ERROR]: Error: Product media not found
+    at ProductMediaService.getProductMediaById (D:\Content Sharing\content-sharing-backend\src\services\ProductMediaService.js:45:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductMediaController.getProductMediaById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductMediaController.js:111:19)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T10:43:54.402Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T10:43:54.403Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:116:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T10:45:44.157Z [ERROR]: Error in bound createProductCoupon: Coupon code, discount type, and discount value are required
+2025-02-18T10:45:44.159Z [ERROR]: Error: Coupon code, discount type, and discount value are required
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:7:13)
+    at ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:50)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+2025-02-18T11:13:47.419Z [ERROR]: Error in bound createProductCoupon: Assignment to constant variable.
+2025-02-18T11:13:47.421Z [ERROR]: TypeError: Assignment to constant variable.
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:10:16)
+    at ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:50)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+2025-02-18T11:17:14.015Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:17:14.018Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:17:57.437Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:17:57.440Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:18:21.380Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:18:21.382Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:18:42.985Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:18:42.987Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:19:19.025Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:19:19.027Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:21:47.134Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:21:47.139Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:22:17.319Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:22:17.321Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:22:41.905Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:22:41.907Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:24:11.656Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:24:11.660Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:26:23.204Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:26:23.208Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:27:24.842Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:27:24.844Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:27:59.175Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:27:59.178Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:28:10.470Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:28:10.473Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:28:23.018Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:28:23.020Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:28:51.159Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-18T11:28:51.162Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductCouponService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:54:34.394Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:54:34.397Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:54:48.863Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:54:48.863Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:56:40.959Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:56:40.961Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:57:09.320Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:57:09.323Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:57:32.803Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:57:32.806Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:58:11.918Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:58:11.921Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:58:33.422Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:58:33.424Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-18T11:59:02.457Z [ERROR]: Error in bound getUserCouponById: User coupon not found
+2025-02-18T11:59:02.459Z [ERROR]: Error: User coupon not found
+    at UserCouponService.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\services\UserCouponService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

@@ -1,6 +1,6 @@
-const ProductAttributeRepository = require("../repositories/ProductAttributeRepository");
-const ProductRepository = require('../repositories/ProductRepository')
-const HttpError = require("../decorators/HttpError");
+const ProductAttributeRepository = require("../../repositories/ProductRepository/ProductAttributeRepository");
+const ProductRepository = require('../../repositories/ProductRepository/ProductRepository')
+const HttpError = require("../../decorators/HttpError");
 
 class ProductAttributeService {
   async createProductAttribute(data) {

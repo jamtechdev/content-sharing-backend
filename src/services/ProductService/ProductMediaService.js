@@ -1,7 +1,7 @@
-const ProductMediaRepository = require("../repositories/ProductMediaRepository");
-const ProductRepository = require("../repositories/ProductRepository");
-const HttpError = require("../decorators/HttpError");
-const {cloudinaryImageUpload} = require('../utils/cloudinaryService');
+const ProductMediaRepository = require("../../repositories/ProductRepository/ProductMediaRepository");
+const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
+const HttpError = require("../../decorators/HttpError");
+const {cloudinaryImageUpload} = require('../../utils/cloudinaryService');
 
 
 class ProductMediaService {

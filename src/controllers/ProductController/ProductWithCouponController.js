@@ -2,7 +2,7 @@ const Router = require("../../decorators/Router");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch");
-const ProductWithCouponService = require("../../services/ProductWithCouponService");
+const ProductWithCouponService = require("../../services/ProductService/ProductWithCouponService");
 
 class ProductWithCouponController {
   constructor() {

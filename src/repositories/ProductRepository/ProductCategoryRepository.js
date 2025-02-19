@@ -1,6 +1,6 @@
-const db = require("../models/index");
+const db = require("../../models/index");
 const ProductCategory = db.product_category;
-const HttpError = require('../decorators/HttpError')
+const HttpError = require('../../decorators/HttpError')
 
 class ProductCategoryRepository {
   async create(data) {

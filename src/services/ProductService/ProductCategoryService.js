@@ -1,5 +1,5 @@
-const ProductCategoryRepository = require("../repositories/ProductCategoryRepository");
-const HttpError = require("../decorators/HttpError");
+const ProductCategoryRepository = require("../../repositories/ProductRepository/ProductCategoryRepository");
+const HttpError = require("../../decorators/HttpError");
 
 class ProductCategoryService {
   async createProductCategory(data) {

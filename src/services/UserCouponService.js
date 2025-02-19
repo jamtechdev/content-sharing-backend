@@ -2,7 +2,8 @@ const UserCouponRepository = require("../repositories/UserCouponRepository");
 const HttpError = require("../decorators/HttpError");
 
 class UserCouponService {
-  async createUserCoupon(data) {
+  async createUserCoupon(data, userId) {
+    data.user_id = userId
     return await UserCouponRepository.create(data);
   }
 

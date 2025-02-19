@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../../models");
 const ProductWithCoupon = db.product_with_coupon
 
 class ProductWithCouponRepository {

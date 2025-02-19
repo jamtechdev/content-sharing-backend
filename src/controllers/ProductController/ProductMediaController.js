@@ -2,7 +2,7 @@ const Router = require("../../decorators/Router");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch");
-const ProductMediaService = require("../../services/ProductMediaService");
+const ProductMediaService = require("../../services/ProductService/ProductMediaService");
 const {upload} = require('../../utils/MulterConfig')
 
 class ProductMediaController {

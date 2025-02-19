@@ -2,7 +2,7 @@ const Router = require("../../decorators/Router");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch");
-const UserCouponService = require("../../services/UserCouponService");
+const UserCouponService = require("../../services/ProductService/ProductCouponService");
 
 class UserCouponController {
   constructor() {
@@ -34,7 +34,7 @@ class UserCouponController {
 
     this.router.addRoute(
       "get",
-      "/user/:userId",
+      "/user/coupon",
       authenticate,
     //   authorize(["admin"]),
       TryCatch(this.getUserCouponsByUserId.bind(this))
@@ -52,7 +52,7 @@ class UserCouponController {
       "get",
       "/user/:userId/coupon/:couponId",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["user"]),
       TryCatch(this.getUserCoupon.bind(this))
     );
 
@@ -91,7 +91,8 @@ class UserCouponController {
 
   async createUserCoupon(req, res) {
     const data = req.body;
-    const newEntry = await UserCouponService.createUserCoupon(data);
+    const {userId} = req?.user
+    const newEntry = await UserCouponService.createUserCoupon(data, userId);
     return res.status(201).json({
       code: 201,
       success: true,
@@ -123,7 +124,7 @@ class UserCouponController {
   }
 
   async getUserCouponsByUserId(req, res) {
-    const userId = req.params.userId;
+    const {userId} = req?.user
     const records = await UserCouponService.getUserCouponsByUserId(userId);
     return res.status(200).json({
       code: 200,

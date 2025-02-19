@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../../models/index");
 const ProductOffer = db.product_offer
 
 class ProductOfferRepository {

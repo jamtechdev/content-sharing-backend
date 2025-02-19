@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../../models/index");
 const ProductMedia = db.product_media
 const { Op } = require("sequelize");
 

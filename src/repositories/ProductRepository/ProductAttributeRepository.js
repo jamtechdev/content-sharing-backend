@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../../models/index");
 const ProductAttribute = db.product_attribute;
 
 class ProductAttributeRepository {

@@ -1,5 +1,5 @@
-const ProductRepository = require("../repositories/ProductRepository");
-const HttpError = require("../decorators/HttpError");
+const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
+const HttpError = require("../../decorators/HttpError");
 
 class ProductService {
   async createProduct(data) {

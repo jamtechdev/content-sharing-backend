@@ -1,17 +1,21 @@
-const ProductCouponsRepository = require("../repositories/ProductCouponsRepository");
-const HttpError = require("../decorators/HttpError");
+const ProductCouponsRepository = require("../../repositories/ProductRepository/ProductCouponsRepository");
+const HttpError = require("../../decorators/HttpError");
 
 class ProductCouponService {
   async createProductCoupon(data) {
+    let {start_date, end_date} = data
     if (!data.code || !data.discount_type || !data.discount_value) {
       throw new HttpError(400, "Coupon code, discount type, and discount value are required");
     }
-
+    
     const existingCoupon = await ProductCouponsRepository.getByCode(data.code);
     if (existingCoupon) {
       throw new HttpError(409, "A coupon with this code already exists");
     }
-
+    const startDate = new Date(start_date)
+    const endDate = new Date(end_date)
+    data.start_date = startDate
+    data.end_date = endDate
     return await ProductCouponsRepository.create(data);
   }
   

@@ -1,4 +1,4 @@
-const db = require("../models/index");
+const db = require("../../models/index");
 const ProductDiscount = db.product_discount;
 const Product = db.product
 
@@ -24,8 +24,8 @@ class ProductDiscountRepository {
     return await ProductDiscount.findAll({
       where: {
         product_id: productId,
-        start_date: { [db.Sequelize.Op.lte]: currentDate }, // Discount has started
-        end_date: { [db.Sequelize.Op.gte]: currentDate },   // Discount is still active
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
     });
   }

@@ -1,5 +1,5 @@
-const ProductWithCouponRepository = require("../repositories/ProductWithCouponRepository");
-const HttpError = require("../decorators/HttpError");
+const ProductWithCouponRepository = require("../../repositories/ProductRepository/ProductWithCouponRepository");
+const HttpError = require("../../decorators/HttpError");
 
 class ProductWithCouponService {
   async createProductWithCoupon(data) {
