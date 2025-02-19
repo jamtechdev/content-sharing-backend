@@ -4,6 +4,7 @@ const Router = require("../../decorators/Router");
 const jwt = require("jsonwebtoken");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
+const NotificationService = require("../../services/NotificationService");
 
 class AuthController {
   constructor() {
@@ -64,7 +65,7 @@ class AuthController {
    * Login an existing user
    */
   async login(req, res) {
-    const { email, password } = req.body;
+    const { email, password, device_token } = req.body;
     // AuthService.login is expected to return an object { token, user }
     const { token, user } = await AuthService.login(email, password);
     // Set token as an HTTP-only cookie
@@ -73,6 +74,21 @@ class AuthController {
       maxAge: 15 * 24 * 60 * 60 * 1000,
       path: "/",
     });
+
+    const userData = {
+      token: device_token,
+      user_id: user.id,
+      is_loggedin: true,
+    };
+    const existingUser = await NotificationService.getTokenByUser({
+      user_id: user.id,
+    });
+    if (existingUser) {
+      await NotificationService.updateToken(userData);
+    }
+
+    await NotificationService.addToken(userData);
+
     // Return a structured JSON response for login
     return res.status(200).json({
       code: 200,
@@ -97,6 +113,14 @@ class AuthController {
   }
   // logout
   async logout(req, res) {
+    const { userId } = req?.user;
+    const data = {
+      user_id : userId,
+      is_loggedin:false
+    }
+
+    await NotificationService.updateToken(data);
+
     res.clearCookie("token");
     return res.status(200).json({
       code: 200,
