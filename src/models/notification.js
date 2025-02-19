@@ -32,24 +32,38 @@ module.exports = (sequelize, DataTypes) => {
       receiver_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: "Users", key: "id" },
+        references: { model: "users", key: "id" },
       },
       sender_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: "Users", key: "id" },
+        references: { model: "users", key: "id" },
       },
       item_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
       type: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM(
+          "content",
+          "likes",
+          "comments",
+          "products",
+          "stream"
+        ),
         allowNull: false,
       },
       is_read: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
+      },
+      created_at: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: DataTypes.DATE,
       },
     },
     {
@@ -58,7 +72,6 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: true,
       createdAt: "created_at",
       updatedAt: "updated_at",
-
     }
   );
   return Notification;

@@ -1,10 +1,14 @@
 const db = require("../models/index.js");
 
 const Tokens = db.DeviceToken;
+const Notification = db.Notification
 
 class NotificationRepository {
   async addToken(data) {
-    return await Tokens.create(data);
+    const t = await db.sequelize.transaction();
+    const res =  await Tokens.create(data, { transaction: t });
+    await t.commit(); 
+    return res
   }
 
   async getTokenByUser(data) {
@@ -17,6 +21,10 @@ class NotificationRepository {
       data,
       { where: { user_id: data?.user_id } }
     );
+  }
+
+  async addNotification(data){
+    return await Notification.create(data)
   }
 }
 

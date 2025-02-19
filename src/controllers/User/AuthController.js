@@ -81,13 +81,13 @@ class AuthController {
       is_loggedin: true,
     };
     const existingUser = await NotificationService.getTokenByUser({
-      user_id: user.id,
+      user_id: 6,
     });
     if (existingUser) {
       await NotificationService.updateToken(userData);
+    } else {
+      await NotificationService.addToken(userData);
     }
-
-    await NotificationService.addToken(userData);
 
     // Return a structured JSON response for login
     return res.status(200).json({
@@ -115,9 +115,9 @@ class AuthController {
   async logout(req, res) {
     const { userId } = req?.user;
     const data = {
-      user_id : userId,
-      is_loggedin:false
-    }
+      user_id: userId,
+      is_loggedin: false,
+    };
 
     await NotificationService.updateToken(data);
 
