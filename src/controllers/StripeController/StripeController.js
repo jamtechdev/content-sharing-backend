@@ -3,7 +3,7 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const Stripe = require("stripe");
 const TryCatch = require("../../decorators/TryCatch.js");
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY); // Use secret key on the backend
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // Use secret key on the backend
 
 class StripeController {
   constructor() {
