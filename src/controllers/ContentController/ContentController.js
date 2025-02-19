@@ -128,6 +128,7 @@ class ContentController {
       description,
       category_id,
       region_id: modal_region_id,
+      premium_access
     } = req.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -141,6 +142,7 @@ class ContentController {
     const data = {
       title,
       description,
+      premium_access,
       content_type: mediaFileUrl.resourceType,
       category_id,
       user_id: userId,
