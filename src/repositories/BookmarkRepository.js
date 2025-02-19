@@ -21,12 +21,12 @@ class BookmarkRepository {
         {
           model: Content,
           as: "content",
-          attributes: ["title", "description"], // Choose specific fields
+        
         },
       ],
       attributes: ["id"],
-      raw: true, // Returns a flat structure
-      nest: false, // Prevents Sequelize from nesting objects
+      // raw: true, // Returns a flat structure
+      // nest: false, // Prevents Sequelize from nesting objects
     });
   }
 

@@ -317,9 +317,9 @@ class ContentRepository {
     return await Comment.findAll({
       where: {
         user_id: userId,
-        parent_comment_id: null,
-        order: [["createdAt", "DESC"]],
+        parent_comment_id: null
       },
+      // order: [["updated_at", "DESC"]],
       include: [
         {
           model: Comment,

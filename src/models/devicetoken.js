@@ -24,17 +24,27 @@ module.exports = (sequelize, DataTypes) => {
       },
       token: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       is_loggedin: {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
     },
     {
       sequelize,
       modelName: "DeviceToken",
-      tableName:"device_tokens"
+      tableName: "devices_tokens",
+      // updatedAt: "updated_at",
+      // createdAt: "created_at",
     }
   );
   return DeviceToken;
