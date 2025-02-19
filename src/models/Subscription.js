@@ -59,14 +59,22 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: "active",
         allowNull: false,
       },
+      created_at: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: DataTypes.DATE,
+        allowNull: false,
+      },
     },
     {
       sequelize,
       modelName: "Subscription",
       tableName: "subscription_table",
       timestamps: true,
-      // createdAt: "created_at",
-      // updatedAt: "updated_at",
+      createdAt: "created_at",
+      updatedAt: "updated_at",
     }
   );
 

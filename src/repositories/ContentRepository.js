@@ -74,7 +74,7 @@ class ContentRepository {
         //   as: "likes",
         // },
       ],
-      order: [["createdAt", "DESC"]],
+      order: [["created_at", "DESC"]],
     });
     for (let item of content) {
       const likeCount = await db.Likes.count({
