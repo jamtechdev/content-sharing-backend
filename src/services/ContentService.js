@@ -20,6 +20,11 @@ class ContentService {
     }
     return response;
   }
+
+  async getContentById(contentId){
+    return await ContentRepository.getContentById(contentId)
+  }
+
   async findById(contentId, userId) {
     const response = await ContentRepository.findById(contentId, userId);
     if (!response) {

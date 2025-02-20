@@ -55,29 +55,60 @@ class NotificatioinController {
 
   async sendNotification(req, res) {
     const { userId } = req?.user;
-    const deviceToken = await NotificationService.getTokenByUser({
-      user_id: userId,
-    });
-
+    const { title, message, type } = req?.body;
+    const item_id = req?.body?.item_id || 0;
     const onlineUsers = await NotificationService.getOnlineUsers();
-    console.log(onlineUsers, "toeknnnnnnnnnnnnnnnn");
+
+    const filteredUsers = onlineUsers.filter((user) => user.user_id !== 3);
+    const devicesToken = filteredUsers.map((user) => user.token);
+
+    if (devicesToken.length === 0) {
+      return res
+        .status(200)
+        .json({
+          success: false,
+          message: "No users available for notification.",
+        });
+    }
 
     const payload = {
       notification: {
-        title: "Testing",
-        body: "message",
+        title: title,
+        body: message,
       },
-      tokens: onlineUsers,
+      data: {
+        type: type,
+        item_id: `${item_id}`,
+        sender_id: `${userId}`,
+      },
+
+      tokens: devicesToken,
     };
 
     const response = await messaging.sendEachForMulticast(payload);
-    // if(response.successCount>0){
+    const notificationsToSave = response.responses
+      .map((res, index) => {
+        if (res.success && userId !== filteredUsers[index].user_id) {
+          return {
+            title: title,
+            message: message,
+            sender_id: userId,
+            receiver_id: filteredUsers[index].user_id,
+            is_read: false,
+            type: item_id,
+          };
+        }
+        return null;
+      })
+      .filter(Boolean); // Remove null values
 
-    // }
-    console.log("Successfully sent message:", response);
-    return res.status(200).json({
-      response,
-    });
+    if (notificationsToSave.length > 0) {
+      await NotificationService.addNotification(notificationsToSave);
+    }
+
+    return res
+      .status(200)
+      .json({ success: true, message: "Notifications sent successfully." });
   }
 
   getRouter() {

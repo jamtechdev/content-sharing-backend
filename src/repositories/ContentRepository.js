@@ -90,6 +90,14 @@ class ContentRepository {
     return content;
   }
 
+  async getContentById(contentId){
+    return await Content.findOne({where:{id:contentId},
+      include: [
+        { model: User, as: "user", attributes: ["name",] },
+      ],
+    })
+  }
+
   async findById(contentId, userId) {
     return await Content.findOne({ where: { id: contentId, user_id: userId } });
   }

@@ -7,6 +7,7 @@ const { upload } = require("../../utils/MulterConfig.js");
 const { cloudinaryImageUpload } = require("../../utils/cloudinaryService.js");
 const ContentService = require("../../services/ContentService.js");
 const UserService = require("../../services/UserService.js");
+const pushNotification = require("../../_helper/pushNotification.js");
 
 class ContentController {
   constructor() {
@@ -54,7 +55,7 @@ class ContentController {
       "post",
       "/like-content",
       authenticate,
-      authorize(["user" , "model"]),
+      authorize(["user", "model"]),
       TryCatch(this.contentLike.bind(this))
     );
 
@@ -116,8 +117,6 @@ class ContentController {
       authorize(["user"]),
       TryCatch(this.updateComment.bind(this))
     );
-
-
   }
 
   async createContent(req, res) {
@@ -128,7 +127,7 @@ class ContentController {
       description,
       category_id,
       region_id: modal_region_id,
-      premium_access
+      premium_access,
     } = req.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -151,6 +150,16 @@ class ContentController {
       media_url: mediaFileUrl.secureUrl,
     };
     const response = await ContentService.createContent(data);
+    const payload = {
+      title: `Post Notification`,
+      message: `Model added post for you.`,
+      sender_id: userId,
+      type: "subscription",
+      item_id: response?.id,
+    };
+
+    await pushNotification(payload);
+    
     return res.status(201).json({
       code: 201,
       success: true,
@@ -164,8 +173,6 @@ class ContentController {
 
     if (req.user.role === "model") {
       const response = await ContentService.findAllContentById(userId);
-      console.log(response);
-
       return res.status(200).json({
         code: 200,
         success: true,
@@ -174,6 +181,7 @@ class ContentController {
       });
     } else {
       const { region_id, id } = await UserService.getUserById(userId);
+      console.log(region_id,id)
       const response = await ContentService.getContent(region_id, id);
       return res.status(200).json({
         code: 200,
@@ -262,6 +270,17 @@ class ContentController {
   async contentLike(req, res) {
     const { contentId } = req?.body;
     const { userId } = req?.user;
+    const user = await UserService.getUserById(userId);
+    const getContent = await ContentService.getContentById(contentId);
+    const payload = {
+      title: `Notification from ${getContent.user.name}`,
+      message: `${user?.name} likes ${getContent.user.name}'s post.`,
+      sender_id: userId,
+      type: "like",
+      item_id: contentId,
+    };
+
+    // await pushNotification(payload);
     if (!contentId && !userId) {
       return res.status(400).json({
         code: 400,
@@ -277,6 +296,10 @@ class ContentController {
         user_id: userId,
         is_like: data?.is_like ? 0 : 1,
       });
+      if(data?.is_like !=1){
+        await pushNotification(payload);
+      }
+  
       return res.status(200).json({
         code: 200,
         success: true,
@@ -327,6 +350,16 @@ class ContentController {
       const content = await ContentService.getCommentByContentId(
         data.content_id
       );
+
+      const payload = {
+        title: `Notification`,
+        message: `${content[0].user?.name} commented on a post.`,
+        sender_id: userId,
+        type: "comment",
+        item_id: data.content_id,
+      };
+  
+      await pushNotification(payload);
       return res.status(201).json({
         code: 201,
         success: true,
