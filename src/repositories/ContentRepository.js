@@ -111,6 +111,7 @@ class ContentRepository {
       content_type,
       contentId,
       region_id,
+      price
     },
     userId
   ) {
@@ -124,6 +125,7 @@ class ContentRepository {
         content_type,
         contentId,
         region_id,
+        price
       },
       { where: { id: contentId, user_id: userId } }
     );
