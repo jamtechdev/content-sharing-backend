@@ -17,6 +17,7 @@ const ProductCouponController = require("../controllers/ProductController/Produc
 const ProductWithCouponController = require("../controllers/ProductController/ProductWithCouponController");
 const UserCoupon = require("../controllers/ProductController/UserCouponController");
 const ProductOrderController = require("../controllers/ProductController/ProductOrderController");
+const MessageController = require('../controllers/MessageController/MessageController')
 
 const router = express.Router();
 
@@ -40,5 +41,7 @@ router.use("/coupon", ProductCouponController.getRouter());
 router.use("/product-with-coupon", ProductWithCouponController.getRouter());
 router.use("/user-coupon", UserCoupon.getRouter());
 router.use("/order", ProductOrderController.getRouter());
+
+router.use('/message', MessageController.getRouter())
 
 module.exports = router;

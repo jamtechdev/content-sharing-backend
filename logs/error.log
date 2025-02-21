@@ -5426,3 +5426,148 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async UserCouponController.getUserCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:117:20)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T07:12:08.004Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-21T07:12:08.006Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T07:12:15.096Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-21T07:12:15.097Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T07:19:03.574Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-21T07:19:03.575Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T07:48:01.497Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-21T07:48:01.499Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:25:24.380Z [ERROR]: Error in bound deleteMessageById: Message not found
+2025-02-21T09:25:24.382Z [ERROR]: Error: Message not found
+    at MessageService.deleteMessage (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:20:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteMessageById (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:43:04.446Z [ERROR]: Error in bound deleteChatBySenderAndReceiver: MessageService.deleteAllChatByUser is not a function
+2025-02-21T09:43:04.450Z [ERROR]: TypeError: MessageService.deleteAllChatByUser is not a function
+    at MessageController.deleteChatBySenderAndReceiver (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:52:43)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-02-21T09:44:05.825Z [ERROR]: Error in bound deleteChatBySenderAndReceiver: MessageRepository.getChatBySenderAndReceiver is not a function
+2025-02-21T09:44:05.827Z [ERROR]: TypeError: MessageRepository.getChatBySenderAndReceiver is not a function
+    at MessageService.deleteChatBySenderAndReceiver (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:50)
+    at MessageController.deleteChatBySenderAndReceiver (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:52:43)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-21T09:44:57.093Z [ERROR]: Error in bound deleteChatBySenderAndReceiver: WHERE parameter "senderId" has invalid "undefined" value
+2025-02-21T09:44:57.111Z [ERROR]: Error: WHERE parameter "senderId" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2583:20)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2509:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+2025-02-21T09:53:41.828Z [ERROR]: Error in bound deleteSpecificChat: messages.destroy is not a function
+2025-02-21T09:53:41.831Z [ERROR]: TypeError: messages.destroy is not a function
+    at MessageRepository.deleteChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:47:27)
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:19:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:55:15.889Z [ERROR]: Error in bound deleteSpecificChat: Cannot read properties of undefined (reading 'length')
+2025-02-21T09:55:15.891Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:16:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:55:51.324Z [ERROR]: Error in bound deleteSpecificChat: Cannot read properties of undefined (reading 'length')
+2025-02-21T09:55:51.326Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:16:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:56:43.491Z [ERROR]: Error in bound deleteSpecificChat: Cannot read properties of undefined (reading 'length')
+2025-02-21T09:56:43.493Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:16:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T09:58:20.260Z [ERROR]: Error in bound deleteSpecificChat: Cannot read properties of undefined (reading 'length')
+2025-02-21T09:58:20.262Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'length')
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:16:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:05:10.402Z [ERROR]: Error in bound deleteSpecificChat: Support for `{where: 'raw query'}` has been removed.
+2025-02-21T10:05:10.406Z [ERROR]: Error: Support for `{where: 'raw query'}` has been removed.
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2429:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2574:30
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereGroupBind (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2573:21)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2509:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+2025-02-21T10:07:48.595Z [ERROR]: Error in bound deleteSpecificChat: messages.destroy is not a function
+2025-02-21T10:07:48.598Z [ERROR]: TypeError: messages.destroy is not a function
+    at MessageRepository.deleteChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:56:27)
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:19:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:08:11.427Z [ERROR]: Error in bound deleteSpecificChat: messages.destroy is not a function
+2025-02-21T10:08:11.430Z [ERROR]: TypeError: messages.destroy is not a function
+    at MessageRepository.deleteChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:57:27)
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:19:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:08:22.280Z [ERROR]: Error in bound deleteSpecificChat: messages.destroy is not a function
+2025-02-21T10:08:22.283Z [ERROR]: TypeError: messages.destroy is not a function
+    at MessageRepository.deleteChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:57:27)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:19:16)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:13:09.829Z [ERROR]: Error in bound deleteSpecificChat: Chat messages not found
+2025-02-21T10:13:09.832Z [ERROR]: Error: Chat messages not found
+    at MessageService.deleteChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:16:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:53:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:18:44.202Z [ERROR]: Error in bound getChatBySpecificUser: Chat messages not found
+2025-02-21T10:18:44.204Z [ERROR]: Error: Chat messages not found
+    at MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:12:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:43:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:19:07.153Z [ERROR]: Error in bound getChatBySpecificUser: Chat messages not found
+2025-02-21T10:19:07.154Z [ERROR]: Error: Chat messages not found
+    at MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:12:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:43:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
