@@ -153,7 +153,7 @@ class AuthController {
         email: user.email,
         avatar: user.avatar,
         cover_photo: user.cover_photo ? user.cover_photo : null,
-        region: user.region ? user.region.name : null,
+        region: user.region ? user.region.name : 1,
         region_id: user.region_id,
         role: user.role ? user.role.name : null,
         birthdate: user.birthdate,
