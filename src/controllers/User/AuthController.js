@@ -155,7 +155,7 @@ class AuthController {
         cover_photo: user.cover_photo ? user.cover_photo : null,
         region: user.region ? user.region.name : 1,
         region_id: user.region_id,
-        role: user.role ? user.role.name : null,
+        role: user.role ? user.role.name : 3,
         birthdate: user.birthdate,
         address: user.address,
         phone_number: user.phone_number,
