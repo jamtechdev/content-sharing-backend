@@ -45,6 +45,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
+      price: {
+        type: Sequelize.DECIMAL,
+        allowNull: true,
+      },
       status: {
         type: Sequelize.ENUM("active", "inactive"),
         defaultValue: "active",

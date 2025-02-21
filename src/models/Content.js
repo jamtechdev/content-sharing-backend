@@ -100,6 +100,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ENUM("all", "subscribers_only", "premium_only"),
         defaultValue: "all",
       },
+      price: {
+        type: DataTypes.DECIMAL,
+        allowNull: true,
+      },
       status: {
         type: DataTypes.ENUM("active", "inactive"),
         defaultValue: "active",
