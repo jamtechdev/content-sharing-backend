@@ -14,6 +14,7 @@ module.exports = {
       },
       token: {
         type: Sequelize.STRING
+        
       },
       is_loggedin: {
         type: Sequelize.BOOLEAN

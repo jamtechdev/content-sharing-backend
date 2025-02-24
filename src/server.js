@@ -16,12 +16,21 @@ cronJob();
 dotenv.config();
 const app = express();
 
-app.use(express.json());
+
+
 app.use(cors());
 app.use(helmet());
 app.use(compression());
-app.use(bodyParser.json());
-
+// app.use(bodyParser.json());
+app.use("/api/stripe/webhook", express.raw({ type: "application/json" }));
+app.use(express.json());
+app.use(express.json({
+  verify: (req, res, buf) => {
+    if (req.originalUrl.startsWith('/api/stripe/webhook')) {
+      req.rawBody = buf.toString();
+    }
+  },
+   }));
 app.use("/api", routes);
 
 // remove this code after 10 days start

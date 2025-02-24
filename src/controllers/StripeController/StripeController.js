@@ -1,42 +1,36 @@
-const Router = require("../../decorators/Router");
-const authenticate = require("../../middleware/AuthMiddleware");
-const authorize = require("../../middleware/RoleMiddleware");
-const Stripe = require("stripe");
-const TryCatch = require("../../decorators/TryCatch.js");
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // Use secret key on the backend
+const express = require("express");
+const StripeService = require("../../services/StripeService.js");
 
 class StripeController {
   constructor() {
-    this.router = new Router();
+    this.router = express.Router();
+    this.setupRoutes();
+  }
 
-    this.router.addRoute(
-      "post",
-      "/create-payment-intent",
-      authenticate,
-      authorize(["user", "model"]),
-      TryCatch(this.handler.bind(this))
+  setupRoutes() {
+    this.router.post(
+      "/webhook",
+      express.raw({ type: "application/json" }),
+      this.handleWebhook.bind(this)
     );
   }
-  async handler(req, res) {
-    if (req.method !== "POST") {
-      return res.status(405).json({ error: "Method not allowed" });
-    }
+
+  async handleWebhook(req, res) {
+    const signature = req.headers["stripe-signature"];
 
     try {
-      const { amount, currency } = req.body; // Get amount and currency from request
-
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount,
-        currency,
-      });
-
-      res.status(200).json({ clientSecret: paymentIntent.client_secret });
+      const event = await StripeService.processWebhookEvent(
+        req.body,
+        signature
+      );
+      res.status(200).json({ received: true, eventType: event.type });
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(400).send(error.message);
     }
   }
+
   getRouter() {
-    return this.router.getRouter();
+    return this.router;
   }
 }
 
