@@ -23,6 +23,13 @@ class NotificatioinController {
       authorize(["user", "model"]),
       TryCatch(this.sendNotification.bind(this))
     );
+    this.router.addRoute(
+      "get",
+      "/user-notifications",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getNotificationByRecieverId.bind(this))
+    )
   }
 
   async addToken(req, res) {
@@ -63,12 +70,10 @@ class NotificatioinController {
     const devicesToken = filteredUsers.map((user) => user.token);
 
     if (devicesToken.length === 0) {
-      return res
-        .status(200)
-        .json({
-          success: false,
-          message: "No users available for notification.",
-        });
+      return res.status(200).json({
+        success: false,
+        message: "No users available for notification.",
+      });
     }
 
     const payload = {
@@ -109,6 +114,16 @@ class NotificatioinController {
     return res
       .status(200)
       .json({ success: true, message: "Notifications sent successfully." });
+  }
+
+  async getNotificationByRecieverId(req, res) {
+    const { userId } = req?.user;
+    const data =  await NotificationService.getNotificationByRecieverId(userId);
+    res.status(200).json({
+      status:true,
+      message:"Notification get successfully",
+      data
+    })
   }
 
   getRouter() {

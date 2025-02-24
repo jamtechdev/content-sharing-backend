@@ -1,5 +1,5 @@
 const db = require("../models/index.js");
-
+const User = db.users;
 const Tokens = db.DeviceToken;
 const Notification = db.Notification;
 
@@ -30,6 +30,13 @@ class NotificationRepository {
 
   async addNotification(data) {
     return await Notification.bulkCreate(data);
+  }
+
+  async getNotificationByRecieverId(user_id){
+    return await Notification.findAll({where:{receiver_id : user_id},
+    include:[
+      {model:User, as:"Sender", attributes:["name", "email", "avatar"]}
+    ]})
   }
 }
 

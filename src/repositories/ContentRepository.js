@@ -90,12 +90,11 @@ class ContentRepository {
     return content;
   }
 
-  async getContentById(contentId){
-    return await Content.findOne({where:{id:contentId},
-      include: [
-        { model: User, as: "user", attributes: ["name",] },
-      ],
-    })
+  async getContentById(contentId) {
+    return await Content.findOne({
+      where: { id: contentId },
+      include: [{ model: User, as: "user", attributes: ["name"] }],
+    });
   }
 
   async findById(contentId, userId) {
@@ -111,7 +110,8 @@ class ContentRepository {
       content_type,
       contentId,
       region_id,
-      price
+      premium_access,
+      price,
     },
     userId
   ) {
@@ -125,7 +125,8 @@ class ContentRepository {
         content_type,
         contentId,
         region_id,
-        price
+        premium_access,
+        price,
       },
       { where: { id: contentId, user_id: userId } }
     );
@@ -327,7 +328,7 @@ class ContentRepository {
     return await Comment.findAll({
       where: {
         user_id: userId,
-        parent_comment_id: null
+        parent_comment_id: null,
       },
       // order: [["updated_at", "DESC"]],
       include: [

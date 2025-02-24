@@ -129,12 +129,12 @@ class AuthController {
   }
   // Login with Google
   async loginWithGoogle(req, res) {
-    const { accessToken, email, name, photoURL } = req.body;
+    const { accessToken, email, name, photoURL, region_id } = req.body;
     const { token, user } = await AuthService.loginWithGoogle({
       accessToken,
       email,
       name,
-      photoURL,
+      photoURL,region_id
     });
 
     // Set token in HTTP-only cookie (15 days)

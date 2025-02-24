@@ -42,6 +42,8 @@ class ContentService {
       content_type,
       contentId,
       region_id,
+      premium_access,
+      price
     },
     userId
   ) {
@@ -55,6 +57,8 @@ class ContentService {
         content_type,
         contentId,
         region_id: region_id,
+        premium_access,
+        price
       },
       userId
     );

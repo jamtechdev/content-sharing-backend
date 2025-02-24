@@ -20,6 +20,10 @@ class NotificationService {
     async addNotification(data){
         return await NotificationRepository.addNotification(data)
     }
+
+    async getNotificationByRecieverId(userId){
+        return await NotificationRepository.getNotificationByRecieverId(userId)
+    }
 }
 
 module.exports = new NotificationService();

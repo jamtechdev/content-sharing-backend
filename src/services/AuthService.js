@@ -51,7 +51,7 @@ class AuthService {
     return { token, user };
   }
 
-  async loginWithGoogle({ accessToken, email, name, photoURL }) {
+  async loginWithGoogle({ accessToken, email, name, photoURL,region_id }) {
     // Try to find an existing user by email
     let user = await UserRepository.findByEmail(email);
     if (user) {
@@ -75,7 +75,7 @@ class AuthService {
         access_token: accessToken,
         role_id: 3, // default role for Google sign-in users
         password: defaultPassword,
-        platform_type: "google",
+        platform_type: "google",region_id
       });
       const token = jwt.sign(
         { userId: newUser.id, role_id: newUser.role_id },

@@ -8,6 +8,7 @@ const { cloudinaryImageUpload } = require("../../utils/cloudinaryService.js");
 const ContentService = require("../../services/ContentService.js");
 const UserService = require("../../services/UserService.js");
 const pushNotification = require("../../_helper/pushNotification.js");
+const ProfileService = require("../../services/ProfileService.js");
 
 class ContentController {
   constructor() {
@@ -128,7 +129,7 @@ class ContentController {
       category_id,
       region_id: modal_region_id,
       premium_access,
-      price
+      price,
     } = req.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -151,17 +152,21 @@ class ContentController {
       region_id: modal_region_id ?? JSON.stringify([1, 2, 3, 4, 5, 6, 7]),
       media_url: mediaFileUrl.secureUrl,
     };
+    const getModelProfileData = await ProfileService.getProfileByUserId(userId);
+    // console.log(getModelProfileData);
+    // return res.status(200).json(getModelProfileData?.user?.name);
     const response = await ContentService.createContent(data);
+
     const payload = {
       title: `Post Notification`,
-      message: `Model added post for you.`,
+      message: `${getModelProfileData?.user?.name} added post for you.`,
       sender_id: userId,
       type: "subscription",
       item_id: response?.id,
     };
 
     await pushNotification(payload);
-    
+
     return res.status(201).json({
       code: 201,
       success: true,
@@ -183,7 +188,7 @@ class ContentController {
       });
     } else {
       const { region_id, id } = await UserService.getUserById(userId);
-      console.log(region_id,id)
+      console.log(region_id, id);
       const response = await ContentService.getContent(region_id, id);
       return res.status(200).json({
         code: 200,
@@ -197,6 +202,7 @@ class ContentController {
   async updateContent(req, res) {
     const { userId } = req?.user;
     const mediaFile = req.file;
+    console.log(req.body, "update-----------------------------");
     const {
       status,
       title,
@@ -205,6 +211,8 @@ class ContentController {
       category_id,
       contentId,
       region_id,
+      premium_access,
+      price,
     } = req?.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -230,6 +238,8 @@ class ContentController {
         media_url: mediaFile ? mediaFileUrl.secureUrl : content.media_url,
         contentId,
         region_id,
+        premium_access,
+        price,
       },
       userId
     );
@@ -298,10 +308,10 @@ class ContentController {
         user_id: userId,
         is_like: data?.is_like ? 0 : 1,
       });
-      if(data?.is_like !=1){
+      if (data?.is_like != 1) {
         await pushNotification(payload);
       }
-  
+
       return res.status(200).json({
         code: 200,
         success: true,
@@ -360,7 +370,7 @@ class ContentController {
         type: "comment",
         item_id: data.content_id,
       };
-  
+
       await pushNotification(payload);
       return res.status(201).json({
         code: 201,
