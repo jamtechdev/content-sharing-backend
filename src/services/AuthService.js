@@ -75,7 +75,8 @@ class AuthService {
         access_token: accessToken,
         role_id: 3, // default role for Google sign-in users
         password: defaultPassword,
-        platform_type: "google",region_id
+        platform_type: "google",
+        region_id: 1, // default region
       });
       const token = jwt.sign(
         { userId: newUser.id, role_id: newUser.role_id },
