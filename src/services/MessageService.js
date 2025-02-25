@@ -10,8 +10,8 @@ class MessageService {
     return await MessageRepository.addMedia(to, from, data);
   }
 
-  async getChat(senderId, receiverId) {
-    const userChat = await MessageRepository.getChat(senderId, receiverId);
+  async getChat(senderId, receiverId, page, limit) {
+    const userChat = await MessageRepository.getChat(senderId, receiverId, page, limit);
     if (userChat.length === 0) {
       throw new HttpError(404, "Chat messages not found");
     }

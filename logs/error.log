@@ -5646,3 +5646,75 @@ string violation: tags cannot be an array or an object
     at MessageController.addMediaFile (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:64:7)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-25T10:59:47.072Z [ERROR]: Error in bound getChatBySpecificUser: req is not defined
+2025-02-25T10:59:47.074Z [ERROR]: ReferenceError: req is not defined
+    at MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:38:29)
+    at MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:46)
+    at MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:75:43)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-02-25T11:01:22.771Z [ERROR]: Error in bound getChatBySpecificUser: Undeclared variable: NaN
+2025-02-25T11:01:22.772Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Promise.all (index 1)
+    at async Function.findAndCountAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2183:27)
+    at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
+    at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)
+2025-02-25T11:01:55.814Z [ERROR]: Error in bound getChatBySpecificUser: Undeclared variable: NaN
+2025-02-25T11:01:55.814Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Promise.all (index 1)
+    at async Function.findAndCountAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2183:27)
+    at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
+    at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)
+2025-02-25T11:02:02.696Z [ERROR]: Error in bound getChatBySpecificUser: Undeclared variable: NaN
+2025-02-25T11:02:02.700Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Promise.all (index 1)
+    at async Function.findAndCountAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2183:27)
+    at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
+    at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)
+2025-02-25T11:08:52.240Z [ERROR]: Error in bound getChatBySpecificUser: Undeclared variable: NaN
+2025-02-25T11:08:52.243Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Promise.all (index 1)
+    at async Function.findAndCountAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2183:27)
+    at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
+    at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)
+2025-02-25T11:09:00.312Z [ERROR]: Error in bound getChatBySpecificUser: Undeclared variable: NaN
+2025-02-25T11:09:00.314Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Promise.all (index 1)
+    at async Function.findAndCountAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2183:27)
+    at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
+    at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
+    at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)

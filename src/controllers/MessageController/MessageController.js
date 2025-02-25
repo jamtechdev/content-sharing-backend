@@ -29,7 +29,7 @@ class MessageController {
 
     this.router.addRoute(
       "get",
-      "/sender/:senderId/receiver/:receiverId",
+      "/sender/:senderId/receiver/:receiverId/data",
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.getChatBySpecificUser.bind(this))
@@ -72,7 +72,9 @@ class MessageController {
 
   async getChatBySpecificUser(req, res) {
     const { senderId, receiverId } = req?.params;
-    const response = await MessageService.getChat(senderId, receiverId);
+    const { page, limit } = req?.query;
+    console.log(page, limit)
+    const response = await MessageService.getChat(senderId, receiverId, page, limit);
     return res.status(200).json({ code: 200, success: true, data: response });
   }
 
