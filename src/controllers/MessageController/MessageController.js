@@ -63,11 +63,11 @@ class MessageController {
       resourceType,
       size: mediaFile.size,
     };
-    if (mediaFile) {
-      await MessageService.addMedia(to, from, data);
-    }
+    // if (mediaFile) {
+      const response = await MessageService.addMedia(to, from, data);
+    // }
 
-    return res.status(201).json({ code: 201, success: true, data: data });
+    return res.status(201).json({ code: 201, success: true, data: response });
   }
 
   async getChatBySpecificUser(req, res) {

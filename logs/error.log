@@ -5718,3 +5718,8 @@ string violation: tags cannot be an array or an object
     at async MessageRepository.getChat (D:\Content Sharing\content-sharing-backend\src\repositories\MessageRepository.js:42:29)
     at async MessageService.getChat (D:\Content Sharing\content-sharing-backend\src\services\MessageService.js:14:22)
     at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:76:22)
+2025-02-25T11:52:12.677Z [ERROR]: Error in bound addMediaFile: MessageService.addMedia is not a function
+2025-02-25T11:52:12.679Z [ERROR]: TypeError: MessageService.addMedia is not a function
+    at MessageController.addMediaFile (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:67:28)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

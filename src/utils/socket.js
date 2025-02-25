@@ -117,6 +117,7 @@ const socketHandler = (io) =>{
   
       try {
         if(!file){
+          
           await createChat({ message, senderId, receiverId: to, mediaType: "text" })
         }
         // const savedMessage = await Message.create({ message, senderId, receiverId: to });
