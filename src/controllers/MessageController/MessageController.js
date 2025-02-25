@@ -29,7 +29,7 @@ class MessageController {
 
     this.router.addRoute(
       "get",
-      "/sender/:senderId/receiver/:receiverId/data",
+      "/sender/:senderId/receiver/:receiverId",
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.getChatBySpecificUser.bind(this))
