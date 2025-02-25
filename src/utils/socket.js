@@ -138,6 +138,9 @@ const socketHandler = (io) => {
             file,
             to: to,
             timestamp,
+            mediaUrl,
+            mediaSize,
+            mediaType: mediaType=== "image"? "image": "video",
           });
           console.log(`Message sent to ${to}: ${message}`);
         } catch (error) {
