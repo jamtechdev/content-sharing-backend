@@ -35,8 +35,8 @@ class MessageRepository {
   }
 
   async getChat(senderId, receiverId, page, limit) {
-    const parsedLimit = parseInt(limit) || 4
-    const parsedPage = parseInt(page) || 4
+    const parsedLimit = parseInt(limit) || 10
+    const parsedPage = parseInt(page) || 1
     const offset = (parsedPage-1)*parsedLimit
 
     const { count, rows } = await Message.findAndCountAll({
