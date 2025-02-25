@@ -1,5 +1,7 @@
+const { where } = require("sequelize");
 const db = require("../models/index.js");
 const { cloudinaryImageUpload } = require("../utils/cloudinaryService.js");
+const { Op } = require("sequelize");
 const User = db.users;
 
 class UserRepository {
@@ -93,7 +95,6 @@ class UserRepository {
   }
   // get user by id
   async getUserById(id) {
-    
     return await User.findOne({
       where: { id },
       attributes: [
@@ -107,7 +108,7 @@ class UserRepository {
         "birthdate",
         "social_links",
         "bio",
-        "region_id"
+        "region_id",
       ],
       include: [
         {
@@ -135,16 +136,22 @@ class UserRepository {
         message: uploadedAvatar?.error,
       });
     }
-    return await User.update({ avatar: uploadedAvatar.secureUrl }, { where: { id: id } });
+    return await User.update(
+      { avatar: uploadedAvatar.secureUrl },
+      { where: { id: id } }
+    );
   }
 
   async updateUserById(id, query) {
-    return await User.update(query, { 
+    return await User.update(query, {
       where: {
         id: id,
       },
     });
-    
+  }
+
+  async getUsersByRole(role) {
+    return await User.findAll({ where: { role_id: role }, limit: 3 });
   }
 }
 
