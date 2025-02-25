@@ -44,11 +44,6 @@ class ProfileRepository {
           as: "region",
           attributes: ["name"],
         },
-        {
-          model: Subscription,
-          as: "subscription",
-          // attributes: ["id", "name"],
-        },
       ],
     });
   }
