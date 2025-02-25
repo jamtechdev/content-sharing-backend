@@ -1,3 +1,83 @@
+// const path = require('path');
+// const fs = require('fs');
+// const { v4: uuidv4 } = require('uuid');
+// const jwt = require('jsonwebtoken')
+// const {createChat} = require('../repositories/MessageRepository')
+
+// const users = {}
+// const JWT_SECRET = "38a8a2573cd39c6f22dd2c40fb803888"
+
+// const socketHandler = (io) => {
+//   io.on('connection', (socket) => {
+//     console.log('A user connected:', socket.id);
+
+//     socket.on('authenticate', (token) => {
+//       try {
+//         const decoded = jwt.verify(token, JWT_SECRET);
+//         users[decoded.userId] = socket.id;
+//         socket.userId = decoded.userId;
+//         console.log(`User registered: ${decoded.userId}`);
+//         console.log('Current users:', users);
+//       } catch (error) {
+//         console.log('Authentication error:', error);
+//         socket.disconnect();
+//       }
+//     });
+
+//     socket.on('sendMessage', async ({ to, message, file }) => {
+//       const senderId = socket.userId;
+//       console.log(`Sending message from ${senderId} to ${to}: ${message}`);
+
+//       if (!users[to]) {
+//         console.log(`User ${to} is offline.`);
+//         return;
+//       }
+
+//       try {
+//         let fileData = null;
+//         if (file) {
+//           console.log("File ===>", file)
+//           const { originalName, buffer } = file;
+//           const fileExt = path.extname(originalName);
+//           const fileName = `${uuidv4()}${fileExt}`;
+//           const filePath = path.join(__dirname, '../uploads', fileName);
+        
+//           fs.writeFileSync(filePath, Buffer.from(buffer)); // Convert buffer to a Node.js Buffer
+//           fileData = { fileName, originalName, filePath };
+//           console.log("File data =>>",fileData);
+//         }
+        
+
+//         await createChat({ message, senderId, receiverId: to });
+//         io.to(users[to]).emit('receiveMessage', { from: senderId, message, file: fileData });
+//         console.log(`Message sent to ${to}: ${message}`);
+//       } catch (error) {
+//         console.error('Error saving message:', error);
+//       }
+//     });
+
+//     socket.on('disconnect', () => {
+//       console.log('User disconnected:', socket.id);
+//       for (let userId in users) {
+//         if (users[userId] === socket.id) {
+//           delete users[userId];
+//           console.log(`User ${userId} logged out.`);
+//           break;
+//         }
+//       }
+//     });
+//   });
+// };
+
+// module.exports = socketHandler;
+
+
+
+
+
+
+// --------------------- Working Code for Chat Text Only 25/02/2025 -----------------------
+
 // const db = require('../models/index')
 // const Message = db.Message
 const jwt = require('jsonwebtoken')
@@ -26,7 +106,7 @@ const socketHandler = (io) =>{
       }
     });
   
-    socket.on('sendMessage', async ({ to, message }) => {
+    socket.on('sendMessage', async ({ to, message, file }) => {
       const senderId = socket.userId;
       console.log(`Sending message from ${senderId} to ${to}: ${message}`);
   
@@ -36,11 +116,13 @@ const socketHandler = (io) =>{
       }
   
       try {
-        await createChat({ message, senderId, receiverId: to })
+        if(!file){
+          await createChat({ message, senderId, receiverId: to, mediaType: "text" })
+        }
         // const savedMessage = await Message.create({ message, senderId, receiverId: to });
         // console.log('Message saved to DB:');
   
-        io.to(users[to]).emit('receiveMessage', { from: senderId, message });
+        io.to(users[to]).emit('receiveMessage', { from: senderId, message, file });
         console.log(`Message sent to ${to}: ${message}`);
       } catch (error) {
         console.error('Error saving message:', error);
@@ -61,10 +143,6 @@ const socketHandler = (io) =>{
 } 
 
 module.exports = socketHandler
-
-
-
-
 
 
 

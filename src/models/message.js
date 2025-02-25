@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Message extends Model {
     /**
@@ -13,13 +11,28 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Message.init({
-    message: DataTypes.STRING,
-    senderId: DataTypes.INTEGER,
-    receiverId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Message',
-  });
+  Message.init(
+    {
+      message: DataTypes.STRING,
+      senderId: DataTypes.INTEGER,
+      receiverId: DataTypes.INTEGER,
+      mediaUrl: DataTypes.TEXT("long"),
+      mediaType: DataTypes.STRING,
+      mediaSize: DataTypes.FLOAT,
+      status: DataTypes.ENUM("sent", "pending", "delivered", "seen"),
+      isDeletedBySender: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+      isDeletedByReceiver: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+    },
+    {
+      sequelize,
+      modelName: "Message",
+    }
+  );
   return Message;
 };

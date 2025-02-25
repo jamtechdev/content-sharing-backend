@@ -78,6 +78,7 @@ class AuthController {
       code: 200,
       message: "User logged in successfully",
       token,
+      userId:user.id,
       data: {
         id: user.id,
         name: user.name,

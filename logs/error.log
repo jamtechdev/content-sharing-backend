@@ -5571,3 +5571,78 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async MessageController.getChatBySpecificUser (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:43:22)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-21T10:43:43.721Z [ERROR]: Error in bound register: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
+2025-02-21T10:43:43.727Z [ERROR]: Error: Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character.
+    at AuthService.register (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:18:13)
+    at AuthController.register (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:32:39)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:280:10)
+2025-02-24T10:06:22.311Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-24T10:06:22.314Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-24T13:05:47.941Z [ERROR]: Error in bound createUserCoupon: UserCouponService.createUserCoupon is not a function
+2025-02-24T13:05:47.944Z [ERROR]: TypeError: UserCouponService.createUserCoupon is not a function
+    at UserCouponController.createUserCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:95:46)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+2025-02-24T13:07:16.850Z [ERROR]: Error in bound createUserCoupon: Coupon code, discount type, and discount value are required
+2025-02-24T13:07:16.853Z [ERROR]: Error: Coupon code, discount type, and discount value are required
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:8:13)
+    at UserCouponController.createUserCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:95:46)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+2025-02-24T13:15:36.545Z [ERROR]: Error in bound createUserCoupon: Coupon code, discount type, and discount value are required
+2025-02-24T13:15:36.546Z [ERROR]: Error: Coupon code, discount type, and discount value are required
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:8:13)
+    at UserCouponController.createUserCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\UserCouponController.js:95:46)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+2025-02-25T07:14:20.561Z [ERROR]: Error in bound login: Email and password are required
+2025-02-25T07:14:20.564Z [ERROR]: Error: Email and password are required
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:39:13)
+    at AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:47)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\index.js:280:10)
+2025-02-25T07:29:11.980Z [ERROR]: Error in bound login: Invalid credentials
+2025-02-25T07:29:11.982Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-25T09:40:07.786Z [ERROR]: Error in bound addMediaFile: size is not defined
+2025-02-25T09:40:07.790Z [ERROR]: ReferenceError: size is not defined
+    at MessageController.addMediaFile (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:64:7)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

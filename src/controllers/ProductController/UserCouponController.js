@@ -92,7 +92,7 @@ class UserCouponController {
   async createUserCoupon(req, res) {
     const data = req.body;
     const {userId} = req?.user
-    const newEntry = await UserCouponService.createUserCoupon(data, userId);
+    const newEntry = await UserCouponService.createProductCoupon(data, userId);
     return res.status(201).json({
       code: 201,
       success: true,
