@@ -119,11 +119,6 @@ class UserRepository {
           as: "role",
           attributes: [["name", "roleName"]],
         },
-        {
-          model: db.subscription_table,
-          as: "subscriber",
-          attributes: ["id", "status", "start_date", "end_date"],
-        },
       ],
       raw: true,
       nest: true,
