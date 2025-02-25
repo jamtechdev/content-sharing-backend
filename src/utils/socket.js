@@ -106,7 +106,7 @@ const socketHandler = (io) =>{
       }
     });
   
-    socket.on('sendMessage', async ({ to, message, file }) => {
+    socket.on('sendMessage', async ({ to, message, file, from, timestamp }) => {
       const senderId = socket.userId;
       console.log(`Sending message from ${senderId} to ${to}: ${message}`);
   
@@ -122,7 +122,7 @@ const socketHandler = (io) =>{
         // const savedMessage = await Message.create({ message, senderId, receiverId: to });
         // console.log('Message saved to DB:');
   
-        io.to(users[to]).emit('receiveMessage', { from: senderId, message, file });
+        io.to(users[to]).emit('receiveMessage', { from: senderId, message, file, to, timestamp });
         console.log(`Message sent to ${to}: ${message}`);
       } catch (error) {
         console.error('Error saving message:', error);
