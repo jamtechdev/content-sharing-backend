@@ -32,6 +32,10 @@ class userService {
     }
     return updateUser;
   }
+
+  async getUsersByRole(role){
+    return await UserRepository.getUsersByRole(role)
+  }
 }
 
 module.exports = new userService(UserRepository);

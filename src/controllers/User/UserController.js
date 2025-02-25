@@ -41,6 +41,13 @@ class UserController {
       upload.single("image"),
       TryCatch(this.uploadAsset.bind(this))
     );
+    this.router.addRoute(
+      "get",
+      "/get-user-by-role",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getUsersByRole.bind(this))
+    )
   }
   //   get-user-profile
   async me(req, res) {
@@ -167,6 +174,18 @@ class UserController {
       code: 200,
       message: "profile updated successfully",
     });
+  }
+
+  async getUsersByRole(req, res) {
+    const user = req?.user;
+    console.log(user,"user----------------")
+    const response = await UserService.getUsersByRole(user.role =="model" ? 3 :2);
+    return res.status(200).json({
+      status:true,
+      code:200,
+      message:"Data fetched successfully.",
+      data: response
+    })
   }
   getRouter() {
     return this.router.getRouter();
