@@ -29,7 +29,7 @@ class MessageController {
 
     this.router.addRoute(
       "get",
-      "/sender/:senderId/receiver/:receiverId",
+      "/sender/:senderId/receiver/:receiverId/data",
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.getChatBySpecificUser.bind(this))
@@ -63,16 +63,18 @@ class MessageController {
       resourceType,
       size: mediaFile.size,
     };
-    if (mediaFile) {
-      await MessageService.addMedia(to, from, data);
-    }
+    // if (mediaFile) {
+      const response = await MessageService.addMedia(to, from, data);
+    // }
 
-    return res.status(201).json({ code: 201, success: true, data: data });
+    return res.status(201).json({ code: 201, success: true, data: response });
   }
 
   async getChatBySpecificUser(req, res) {
     const { senderId, receiverId } = req?.params;
-    const response = await MessageService.getChat(senderId, receiverId);
+    const { page, limit } = req?.query;
+    console.log(page, limit)
+    const response = await MessageService.getChat(senderId, receiverId, page, limit);
     return res.status(200).json({ code: 200, success: true, data: response });
   }
 

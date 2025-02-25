@@ -21,21 +21,25 @@ class MessageRepository {
 
   async addMedia(to, from, data) {
     const { secureUrl, resourceType, size } = data;
-    return await Message.create({
+    return {
       senderId: from,
       receiverId: to,
       mediaUrl: secureUrl,
       mediaType: resourceType,
       mediaSize: size,
-    });
+    };
   }
 
   async getById(id) {
     return await Message.findOne({ where: { id } });
   }
 
-  async getChat(senderId, receiverId) {
-    const data = await Message.findAll({
+  async getChat(senderId, receiverId, page, limit) {
+    const parsedLimit = parseInt(limit) || 4
+    const parsedPage = parseInt(page) || 4
+    const offset = (parsedPage-1)*parsedLimit
+
+    const { count, rows } = await Message.findAndCountAll({
       where: {
         [db.Sequelize.Op.or]: [
           { senderId, receiverId },
@@ -45,7 +49,18 @@ class MessageRepository {
           },
         ],
       },
+      limit: parsedLimit,
+      offset
     });
+    const totalPages = Math.ceil(count/parsedLimit)
+    const data = {
+      rows,
+      pagination: {
+        totalDocs: count,
+        totalPages,
+        currentPage: parsedPage
+      }
+    }
     return data;
   }
 
