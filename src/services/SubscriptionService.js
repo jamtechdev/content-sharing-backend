@@ -118,15 +118,15 @@ class SubscriptionService {
   async stripeWebhook(req, res) {
     console.log("Webhook received!");
     const sig = req.headers["stripe-signature"];
-    const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET
+    const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
     let event;
     try {
-        event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
-        console.log("✅ Webhook verified:", event.type);
+      event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
+      console.log("✅ Webhook verified:", event.type);
     } catch (err) {
-        console.error("❌ Webhook signature verification failed:", err.message);
-        return res.status(400).send(`Webhook Error: ${err.message}`);
+      console.error("❌ Webhook signature verification failed:", err.message);
+      return res.status(400).send(`Webhook Error: ${err.message}`);
     }
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
