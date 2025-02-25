@@ -18,6 +18,26 @@ module.exports = {
       receiverId: {
         type: Sequelize.INTEGER
       },
+      mediaUrl: {
+        type: Sequelize.TEXT('long')
+      },
+      mediaType: {
+        type: Sequelize.STRING,
+      },
+      mediaSize: {
+        type: Sequelize.FLOAT,
+      },
+      status: {
+        type: Sequelize.ENUM("sent", "pending", "delivered", "seen"),
+      },
+      isDeletedBySender: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      isDeletedByReceiver: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

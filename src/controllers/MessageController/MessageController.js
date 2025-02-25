@@ -3,6 +3,8 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const Router = require("../../decorators/Router");
 const TryCatch = require("../../decorators/TryCatch");
+const { upload } = require("../../utils/MulterConfig");
+const { cloudinaryImageUpload } = require("../../utils/cloudinaryService");
 
 class MessageController {
   constructor() {
@@ -15,6 +17,15 @@ class MessageController {
     //   authorize(["user", "model"]),
     //   TryCatch(this.createChat.bind(this))
     // );
+
+    this.router.addRoute(
+      "post",
+      "/add/media",
+      authenticate,
+      authorize(["user", "model"]),
+      upload.single("mediaFile"),
+      TryCatch(this.addMediaFile.bind(this))
+    );
 
     this.router.addRoute(
       "get",
@@ -40,7 +51,25 @@ class MessageController {
       TryCatch(this.deleteMessageById.bind(this))
     );
   }
-  
+
+  async addMediaFile(req, res) {
+    const { to, from } = req?.body;
+    const mediaFile = req?.file;
+    const { secureUrl, resourceType } = await cloudinaryImageUpload(
+      mediaFile.path
+    );
+    const data = {
+      secureUrl,
+      resourceType,
+      size: mediaFile.size,
+    };
+    if (mediaFile) {
+      await MessageService.addMedia(to, from, data);
+    }
+
+    return res.status(201).json({ code: 201, success: true, data: data });
+  }
+
   async getChatBySpecificUser(req, res) {
     const { senderId, receiverId } = req?.params;
     const response = await MessageService.getChat(senderId, receiverId);
@@ -51,25 +80,21 @@ class MessageController {
     const { senderId, receiverId } = req?.params;
     console.log(senderId, receiverId);
     const response = await MessageService.deleteChat(senderId, receiverId);
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "User's chat deleted successfully",
-      });
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "User's chat deleted successfully",
+    });
   }
 
   async deleteMessageById(req, res) {
     const { id } = req?.params;
     await MessageService.deleteMessage(id);
-    return res
-      .status(200)
-      .json({
-        code: 200,
-        success: true,
-        message: "User's chat deleted successfully",
-      });
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "User's chat deleted successfully",
+    });
   }
 
   getRouter() {

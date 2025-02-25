@@ -19,6 +19,17 @@ class MessageRepository {
   //   });
   // }
 
+  async addMedia(to, from, data) {
+    const { secureUrl, resourceType, size } = data;
+    return await Message.create({
+      senderId: from,
+      receiverId: to,
+      mediaUrl: secureUrl,
+      mediaType: resourceType,
+      mediaSize: size,
+    });
+  }
+
   async getById(id) {
     return await Message.findOne({ where: { id } });
   }
@@ -43,7 +54,10 @@ class MessageRepository {
       where: {
         [db.Sequelize.Op.or]: [
           { senderId, receiverId },
-          { senderId: receiverId, receiverId: senderId },
+          {
+            senderId: receiverId,
+            receiverId: senderId,
+          },
         ],
       },
     });
