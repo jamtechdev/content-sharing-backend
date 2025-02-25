@@ -5,14 +5,15 @@ const cron = require("node-cron");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-class SubscriptionService {
-  async createSubscription(userId, data) {
-    const { subscriber_id, model_id, plan_id } = data;
 
-    if (!userId || !data?.email) {
+
+class SubscriptionService {
+  async createSubscription(priceId, data) {
+    const { subscriber_id, model_id, plan_id } = data;
+    if (!priceId || !data?.email) {
       return res.status(400).json({ error: "Missing required parameters" });
     }
-    const getPlanById = await PlanRepository.getById(userId);
+    const getPlanById = await PlanRepository.getById(priceId);
     // console.log("Here is your data===========>", getPlanById);
     const priceInDollars = parseFloat(getPlanById?.price); // Convert string to number
     const unitAmount = Math.round(priceInDollars * 100);
@@ -36,7 +37,9 @@ class SubscriptionService {
       cancel_url: `http://localhost:3000/cancel`,
       customer_email: data.email,
       metadata: {
-        user_id: data.id, // Store user ID for reference
+        subscriber_id: data?.id,
+        plan_id: priceId,
+        model_id: 5,
       },
       allow_promotion_codes: true,
       billing_address_collection: "required",
@@ -104,55 +107,20 @@ class SubscriptionService {
       ? await stripe.subscriptions.retrieve(session.subscription)
       : null;
     return {
-      session_id: session.id,
-      customer_email: session.customer_details?.email,
-      customer_name: session.customer_details?.name,
-      amount_total: session.amount_total,
-      currency: session.currency,
-      // plan_name: subscription?.items.data[0]?.plan.nickname || "Premium Plan",
-      subscription_id: subscription?.id,
-      status: session.payment_status,
+      session: session,
+      subscription: subscription,
     };
-  }
+    // return {
+    //   session_id: session.id,
+    //   customer_email: session.customer_details?.email,
+    //   customer_name: session.customer_details?.name,
+    //   amount_total: session.amount_total,
+    //   currency: session.currency,
 
-  async stripeWebhook(req, res) {
-    console.log("Webhook received!");
-    const sig = req.headers["stripe-signature"];
-    const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
-    let event;
-    try {
-      event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
-      console.log("✅ Webhook verified:", event.type);
-    } catch (err) {
-      console.error("❌ Webhook signature verification failed:", err.message);
-      return res.status(400).send(`Webhook Error: ${err.message}`);
-    }
-    if (event.type === "checkout.session.completed") {
-      const session = event.data.object;
-
-      console.log("✅ Payment Successful. Storing in DB...");
-
-      // Extract relevant data
-      // const newSubscription = {
-      //   subscriber_id: session.metadata.user_id, // User ID from metadata
-      //   plan_id: session.metadata.plan_id, // Plan ID from metadata
-      //   status: "active",
-      //   start_date: new Date(),
-      //   end_date: new Date(new Date().setMonth(new Date().getMonth() + 1)), // Example: 1-month subscription
-      //   stripe_subscription_id: session.id,
-      //   amount: session.amount_total / 100, // Convert cents to dollars
-      //   email: session.customer_email,
-      // };
-
-      // Save subscription in database
-      // await SubscriptionRepository.create(newSubscription);
-
-      console.log("✅ Subscription stored successfully!", session);
-      return session;
-    }
-
-    // res.status(200).json({ received: true });
+    //   // plan_name: subscription?.items.data[0]?.plan.nickname || "Premium Plan",
+    //   subscription_id: subscription?.id,
+    //   status: session.payment_status,
+    // };
   }
 }
 

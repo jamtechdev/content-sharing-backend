@@ -93,7 +93,6 @@ class UserRepository {
   }
   // get user by id
   async getUserById(id) {
-    
     return await User.findOne({
       where: { id },
       attributes: [
@@ -107,7 +106,7 @@ class UserRepository {
         "birthdate",
         "social_links",
         "bio",
-        "region_id"
+        "region_id",
       ],
       include: [
         {
@@ -119,6 +118,11 @@ class UserRepository {
           model: db.Roles,
           as: "role",
           attributes: [["name", "roleName"]],
+        },
+        {
+          model: db.subscription_table,
+          as: "subscriber",
+          attributes: ["id", "status", "start_date", "end_date"],
         },
       ],
       raw: true,
@@ -135,16 +139,18 @@ class UserRepository {
         message: uploadedAvatar?.error,
       });
     }
-    return await User.update({ avatar: uploadedAvatar.secureUrl }, { where: { id: id } });
+    return await User.update(
+      { avatar: uploadedAvatar.secureUrl },
+      { where: { id: id } }
+    );
   }
 
   async updateUserById(id, query) {
-    return await User.update(query, { 
+    return await User.update(query, {
       where: {
         id: id,
       },
     });
-    
   }
 }
 

@@ -57,7 +57,7 @@ class UserController {
       });
     } else {
       const newUser = await UserService.getUserById(user?.userId);
-
+      return newUser;
       return res.status(200).json({
         code: 200,
         data: {

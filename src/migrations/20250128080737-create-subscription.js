@@ -55,6 +55,7 @@ module.exports = {
     await queryInterface.addIndex("subscription_table", ["subscriber_id"]);
     await queryInterface.addIndex("subscription_table", ["model_id"]);
     await queryInterface.addIndex("subscription_table", ["plan_id"]);
+    
   },
 
   async down(queryInterface, Sequelize) {

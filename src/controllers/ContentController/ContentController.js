@@ -26,7 +26,7 @@ class ContentController {
       "get",
       "/get-content",
       authenticate,
-      authorize(["user", "model"]),
+      // authorize(["user", "model"]),
       TryCatch(this.getContent.bind(this))
     );
     this.router.addRoute(

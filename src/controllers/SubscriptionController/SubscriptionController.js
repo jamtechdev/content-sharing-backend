@@ -59,12 +59,13 @@ class SubscriptionController {
   
   }
   async createSubscription(req, res) {
-    const { userId } = req?.user;
+    // const { userId } = req?.user;
     const data = req?.body;
+   
 
-    const { id, userData } = data;
+    const { priceId, userData } = data;
 
-    const response = await SubscriptionService.createSubscription(id, userData);
+    const response = await SubscriptionService.createSubscription(priceId, userData);
     return res.status(201).json({
       code: 201,
       success: true,

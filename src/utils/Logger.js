@@ -13,10 +13,15 @@ const logger = winston.createLogger({
   level: "info",
   format: logFormat,
   transports: [
-    new winston.transports.Console({ level: "info"}),
-    new winston.transports.File({ filename: path.join(__dirname, "../../logs/error.log"), level: "error" }),
-    new winston.transports.File({ filename: path.join(__dirname, "../../logs/combined.log") })
-  ]
+    new winston.transports.Console({ level: "info" }),
+    new winston.transports.File({
+      filename: path.join(__dirname, "../../logs/error.log"),
+      level: "error",
+    }),
+    new winston.transports.File({
+      filename: path.join(__dirname, "../../logs/combined.log"),
+    }),
+  ],
 });
 
 module.exports = logger;

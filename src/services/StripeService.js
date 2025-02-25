@@ -1,6 +1,11 @@
 const Stripe = require("stripe");
 const StripeRepository = require("../repositories/StripeRepository");
 const Logger = require("../utils/Logger");
+const logger = require("../utils/Logger");
+const { Json } = require("sequelize/lib/utils");
+const SubscriptionService = require("./SubscriptionService");
+const PlanRepository = require("../repositories/PlanRepository");
+const getSubscriptionDates = require("../utils/subscriptionDates");
 
 class StripeService {
   constructor() {
@@ -9,24 +14,46 @@ class StripeService {
 
   async processWebhookEvent(rawBody, signature) {
     try {
-      const webhookSecret = "whsec_9b95ef1a71ad110f9b464b4f756bf867691d00c215c1dd02e1635b7c51901a03";
-
-      // ✅ Ensure Stripe receives raw body (Buffer) instead of JSON
+      const webhookSecret =
+        "whsec_9b95ef1a71ad110f9b464b4f756bf867691d00c215c1dd02e1635b7c51901a03";
       const event = this.stripe.webhooks.constructEvent(
         rawBody,
         signature,
         webhookSecret
       );
-      console.log("========================>webhook event", event);
+      // await StripeRepository.saveSession(session);
+      if (event.type === "checkout.session.completed") {
+        const session = event.data.object;
+        logger.info("✅ Webhook verified:", JSON.stringify(session));
 
-      Logger.info(`✅ Webhook received: ${event.type}`);
-
-      // Save event to DB
-    //   await StripeRepository.saveEvent(event.id, event.type, event.data);
-
+        const PlanDetails = await PlanRepository.getById(
+          Number(session.metadata.plan_id)
+        );
+        const expiresDate = getSubscriptionDates(
+          session.created,
+          PlanDetails?.duration
+        );
+        console.log("expiresDate", expiresDate);
+        const saveSessionData = {
+          stripe_session_id: session.id,
+          subscriber_id: session.metadata.subscriber_id || null,
+          model_id: 5,
+          plan_id: session.metadata.plan_id || null,
+          plan_type: PlanDetails?.name,
+          status: session?.status === "complete" ? "active" : session?.status,
+          payment_mode: null,
+          start_date: expiresDate.start_date,
+          end_date: expiresDate.end_date,
+          stripe_raw_data: session,
+        };
+        await StripeRepository.saveSession(saveSessionData);
+      }
       return event;
     } catch (error) {
-        console.log("========================>Webhook signature verification failed", error);
+      console.log(
+        "========================>Webhook signature verification failed",
+        error
+      );
       Logger.error(
         `❌ Webhook signature verification failed: ${error.message}`
       );
