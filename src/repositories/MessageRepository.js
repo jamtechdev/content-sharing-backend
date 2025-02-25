@@ -49,7 +49,7 @@ class MessageRepository {
           },
         ],
       },
-      order: [["createdAt", "DESC"]],
+      order: [["createdAt", "ASC"]],
       limit: parsedLimit,
       offset
     });
