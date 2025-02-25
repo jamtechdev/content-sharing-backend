@@ -135,7 +135,6 @@ const socketHandler = (io) => {
           io.to(users[to]).emit("receiveMessage", {
             from: senderId,
             message,
-            file,
             to: to,
             timestamp,
             mediaUrl,
