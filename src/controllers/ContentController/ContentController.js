@@ -116,7 +116,7 @@ class ContentController {
       "put",
       "/comment",
       authenticate,
-      authorize(["user"]),
+      authorize(["user",'model']),
       TryCatch(this.updateComment.bind(this))
     );
   }
