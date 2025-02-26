@@ -8,21 +8,22 @@ module.exports = (sequelize, DataTypes) => {
       // Subscription belongs to a user (subscriber)
       Subscription.belongsTo(models.users, {
         foreignKey: "id",
-        as: "subscriber",
-        onDelete: "CASCADE",
+        as: "user",
+        // onDelete: "CASCADE",
       });
       // Subscription is linked to a model
       Subscription.belongsTo(models.ModelProfile, {
         foreignKey: "model_id",
         as: "model",
-        onDelete: "CASCADE",
+        // onDelete: "CASCADE",
       });
       // Subscription is linked to a plan
       Subscription.belongsTo(models.Plan, {
         foreignKey: "plan_id",
         as: "plan",
-        onDelete: "CASCADE",
+        // onDelete: "CASCADE",
       });
+     
     }
   }
 
@@ -50,6 +51,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
+
       end_date: {
         type: DataTypes.DATE,
         allowNull: false,
@@ -58,6 +60,22 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.ENUM("active", "expired", "canceled"),
         defaultValue: "active",
         allowNull: false,
+      },
+      stripe_session_id: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      payment_mode: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      plan_type: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      stripe_raw_data: {
+        type: DataTypes.JSON,
+        allowNull: true,
       },
       created_at: {
         type: DataTypes.DATE,

@@ -111,8 +111,8 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: "ModelProfile",
       tableName: "model_profiles",
-      // createdAt: "created_at",
-      // updatedAt: "updated_at",
+      createdAt: "created_at",
+      updatedAt: "updated_at",
     }
   );
   return ModelProfile;

@@ -3,6 +3,7 @@ const { cloudinaryImageUpload } = require("../utils/cloudinaryService.js");
 const User = db.users;
 const Region = db.Regions;
 const ModelProfile = db.ModelProfile;
+const Subscription = db.Subscription;
 // const Content = db.contents
 
 class ProfileRepository {

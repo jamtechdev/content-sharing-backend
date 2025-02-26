@@ -149,7 +149,8 @@ class ContentController {
       category_id,
       user_id: userId,
       // region_id: modal_region_id ?? JSON.stringify([region_id]),
-      region_id: modal_region_id ?? JSON.stringify([1, 2, 3, 4, 5, 6, 7]),
+      // region_id: modal_region_id ?? '[1, 2, 3, 4, 5, 6, 7]',
+      region_id:null,
       media_url: mediaFileUrl.secureUrl,
     };
     const getModelProfileData = await ProfileService.getProfileByUserId(userId);
