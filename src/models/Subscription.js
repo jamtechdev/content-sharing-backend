@@ -78,8 +78,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Subscription",
       tableName: "subscription_table",
       timestamps: true,
-      // createdAt: "created_at",
-      // updatedAt: "updated_at",
+      createdAt: "created_at",
+      updatedAt: "updated_at",
     }
   );
 

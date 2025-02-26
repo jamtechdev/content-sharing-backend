@@ -118,17 +118,18 @@ const socketHandler = (io) => {
         }
 
         try {
-          if (mediaType === "text") {
-            await createChat({ message, senderId, receiverId: to, mediaType });
-          } else{
+          // if (mediaType === "text") {
+          //   await createChat({ message, senderId, receiverId: to, mediaType });
+          // } else{
             await createChat({
               senderId,
               receiverId: to,
               mediaUrl,
               mediaSize,
-              mediaType: mediaType=== "image"? "image": "video",
+              mediaType,
+              message
             });
-          }
+          // }
           // const savedMessage = await Message.create({ message, senderId, receiverId: to });
           // console.log('Message saved to DB:');
 
@@ -139,7 +140,7 @@ const socketHandler = (io) => {
             timestamp,
             mediaUrl,
             mediaSize,
-            mediaType: mediaType=== "image"? "image": "video",
+            mediaType,
           });
           console.log(`Message sent to ${to}: ${message}`);
         } catch (error) {
