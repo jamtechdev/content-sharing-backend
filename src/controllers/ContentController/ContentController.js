@@ -211,6 +211,7 @@ class ContentController {
   async updateContent(req, res) {
     const { userId } = req?.user;
     const mediaFile = req.file;
+    const defaultRegion = "1,2,3,4,5,6,7";
     console.log(req.body, "update-----------------------------");
     const {
       status,
@@ -219,7 +220,7 @@ class ContentController {
       content_type,
       category_id,
       contentId,
-      region_id,
+      region_id: modal_region_id,
       premium_access,
       price,
     } = req?.body;
@@ -230,6 +231,13 @@ class ContentController {
         message: "Data fields required to update content",
       });
     }
+
+    const region_id = JSON.stringify(
+      modal_region_id
+        ? modal_region_id.split(",").map(Number)
+        : defaultRegion.split(",").map(Number)
+    );
+
     const content = await ContentService.findById(contentId, userId);
     let mediaFileUrl;
     if (mediaFile) {
