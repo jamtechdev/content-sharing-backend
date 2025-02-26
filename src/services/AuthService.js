@@ -58,7 +58,7 @@ class AuthService {
     if (user) {
       // If user exists, generate a token
       const token = jwt.sign(
-        { userId: user.id, role_id: user.role_id },
+        { userId: user.id, role_id: user.role?.name },
         process.env.JWT_SECRET,
         {
           expiresIn: "15d",
@@ -80,7 +80,7 @@ class AuthService {
         region_id: 1, // default region
       });
       const token = jwt.sign(
-        { userId: newUser.id, role_id: newUser.role_id },
+        { userId: newUser.id, role_id: "user" },
         process.env.JWT_SECRET,
         {
           expiresIn: "15d",
