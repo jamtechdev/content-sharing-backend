@@ -12,6 +12,11 @@ class ProductDiscountRepository {
     const currentDate = new Date()
     console.log(currentDate)
     return await ProductDiscount.findAll({
+      where: {
+        end_date: {
+          [db.Sequelize.Op.gt]: currentDate, 
+        },
+      },
       attributes: {exclude: ["createdAt", "updatedAt"]},
       include: [
         {
