@@ -20,7 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       mediaType: DataTypes.STRING,
       mediaSize: DataTypes.FLOAT,
       status: DataTypes.ENUM("sent", "pending", "delivered", "seen"),
-      deletedBy: DataTypes.INTEGER
+      deletedBy: {
+        type: DataTypes.INTEGER,
+        defaultValue: null,
+      }
     },
     {
       sequelize,

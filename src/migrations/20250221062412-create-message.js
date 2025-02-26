@@ -30,13 +30,9 @@ module.exports = {
       status: {
         type: Sequelize.ENUM("sent", "pending", "delivered", "seen"),
       },
-      isDeletedBySender: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false
-      },
-      isDeletedByReceiver: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: false
+      deletedBy: {
+        type: Sequelize.INTEGER,
+        defaultValue: null,
       },
       createdAt: {
         allowNull: false,
