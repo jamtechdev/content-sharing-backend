@@ -148,7 +148,7 @@ class ContentController {
         title,
         description,
         premium_access,
-        price,
+        price: price ? parseFloat(price) : null,
         content_type: mediaFileUrl.resourceType,
         category_id,
         user_id: userId,
@@ -256,7 +256,7 @@ class ContentController {
         contentId,
         region_id,
         premium_access,
-        price,
+        price: price ? parseFloat(price) : null,
       },
       userId
     );
