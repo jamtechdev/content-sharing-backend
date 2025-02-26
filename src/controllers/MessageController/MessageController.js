@@ -36,8 +36,8 @@ class MessageController {
     );
 
     this.router.addRoute(
-      "delete",
-      "/sender/:senderId/receiver/:receiverId",
+      "put",
+      "/",
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.deleteSpecificChat.bind(this))
@@ -64,7 +64,7 @@ class MessageController {
       size: mediaFile.size,
     };
     // if (mediaFile) {
-      const response = await MessageService.addMedia(to, from, data);
+    const response = await MessageService.addMedia(to, from, data);
     // }
 
     return res.status(201).json({ code: 201, success: true, data: response });
@@ -73,15 +73,25 @@ class MessageController {
   async getChatBySpecificUser(req, res) {
     const { senderId, receiverId } = req?.params;
     const { page, limit } = req?.query;
-    console.log(page, limit)
-    const response = await MessageService.getChat(senderId, receiverId, page, limit);
+    const { userId } = req?.user;
+    const response = await MessageService.getChat(
+      senderId,
+      receiverId,
+      userId,
+      page,
+      limit
+    );
     return res.status(200).json({ code: 200, success: true, data: response });
   }
 
   async deleteSpecificChat(req, res) {
-    const { senderId, receiverId } = req?.params;
-    console.log(senderId, receiverId);
-    const response = await MessageService.deleteChat(senderId, receiverId);
+    const { senderId, receiverId } = req?.body;
+    const deletedBy = req?.user?.userId;
+    const response = await MessageService.deleteChat(
+      senderId,
+      receiverId,
+      deletedBy
+    );
     return res.status(200).json({
       code: 200,
       success: true,

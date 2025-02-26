@@ -10,20 +10,30 @@ class MessageService {
     return await MessageRepository.addMedia(to, from, data);
   }
 
-  async getChat(senderId, receiverId, page, limit) {
-    const userChat = await MessageRepository.getChat(senderId, receiverId, page, limit);
+  async getChat(senderId, receiverId, userId, page, limit) {
+    const userChat = await MessageRepository.getChat(
+      senderId,
+      receiverId,
+      userId,
+      page,
+      limit
+    );
     if (userChat.length === 0) {
       throw new HttpError(404, "Chat messages not found");
     }
     return userChat;
   }
 
-  async deleteChat(senderId, receiverId) {
-    const userChat = await MessageRepository.getChat(senderId, receiverId);
-    if (userChat.length === 0) {
+  async deleteChat(senderId, receiverId, deletedBy) {
+    const userChat = await MessageRepository.getChat(
+      senderId,
+      receiverId,
+      deletedBy
+    );
+    if (userChat.rows.length === 0) {
       throw new HttpError(404, "Chat messages not found");
     }
-    return await MessageRepository.deleteChat(senderId, receiverId);
+    return await MessageRepository.deleteChat(senderId, receiverId, deletedBy);
   }
 
   async deleteMessage(id) {
