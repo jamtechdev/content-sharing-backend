@@ -97,7 +97,7 @@ const socketHandler = (io) => {
         socket.disconnect();
       }
     });
-
+    
     socket.on(
       "sendMessage",
       async ({

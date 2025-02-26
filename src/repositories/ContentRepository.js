@@ -75,8 +75,6 @@ class ContentRepository {
   //   return response
   // }
 
-
-
   async getContentByRegionAndPlans(regionId, planIds) {
     const content = await Content.findAll({
       where: {
@@ -88,14 +86,14 @@ class ContentRepository {
         },
       },
     });
-    console.log(content)
+    console.log(content);
     for (const item of content) {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },
       });
       item.dataValues.likesCount = likesCount;
     }
-    return content
+    return content;
   }
 
   async getFreeContent(regionId) {
@@ -111,10 +109,10 @@ class ContentRepository {
       const likesCount = await Likes.count({
         where: { content_id: item.id, is_like: true },
       });
-      
+
       item.dataValues.likesCount = likesCount;
     }
-    return content
+    return content;
   }
 
   async findById(contentId, userId) {
@@ -170,6 +168,7 @@ class ContentRepository {
         user_id: modelId,
       },
     });
+
     //  let response
     //  if(isPremium === true){
     //   return response = await Content.findAll({

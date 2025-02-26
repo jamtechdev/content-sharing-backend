@@ -1,5 +1,7 @@
 const db = require("../../models/index");
 const ProductAttribute = db.product_attribute;
+const Product = db.product;
+const ProductCategory = db.product_category;
 
 class ProductAttributeRepository {
   async create(data) {
@@ -11,15 +13,62 @@ class ProductAttributeRepository {
   }
 
   async getAll() {
-    return await ProductAttribute.findAll();
+    return await ProductAttribute.findAll({
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getById(attributeId) {
-    return await ProductAttribute.findOne({ where: { id: attributeId } });
+    return await ProductAttribute.findOne({
+      where: { id: attributeId },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getByProductId(productId) {
-    return await ProductAttribute.findAll({ where: { product_id: productId } });
+    return await ProductAttribute.findAll({
+      where: { product_id: productId },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async update(attributeId, data) {

@@ -1,14 +1,54 @@
 const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
 const HttpError = require("../../decorators/HttpError");
-
+const {generateSlug} = require('../../utils/generateSlug')
 class ProductService {
   async createProduct(data) {
-    const slug_exist = await ProductRepository.getBySlug(data.slug);
-    if (slug_exist) {
-      throw new HttpError(409, "Slug is already exists");
+    const {
+      category_id,
+      name,
+      description,
+      short_description,
+      price,
+      sale_price,
+      sku,
+      slug,
+      type,
+      unique,
+      stock_quantity,
+      is_featured,
+      status,
+      attributes,
+      tags,
+      region_id,
+    } = data
+    let uniqueSlug = generateSlug(name)
+    let slug_exist = await ProductRepository.getBySlug(uniqueSlug);
+    let counter = 1
+
+    while(slug_exist){
+      uniqueSlug = `${uniqueSlug}${counter}`
+      slug_exist = await ProductRepository.getBySlug(uniqueSlug)
+      counter++;
     }
-    console.log('data', data)
-    return await ProductRepository.create(data)
+    
+    return await ProductRepository.create({
+      category_id,
+      name,
+      description,
+      short_description,
+      price,
+      sale_price,
+      sku,
+      slug: uniqueSlug,
+      type,
+      unique,
+      stock_quantity,
+      is_featured,
+      status,
+      attributes: JSON.stringify(attributes),
+      tags: JSON.stringify(tags),
+      region_id,
+    })
   }
 
   async getAllPublishedProducts() {

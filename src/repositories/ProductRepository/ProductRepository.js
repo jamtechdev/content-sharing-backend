@@ -1,66 +1,76 @@
 const db = require("../../models/index");
-const Product = db.product
+const Product = db.product;
+const Category = db.product_category;
 const { Op } = require("sequelize");
-
 
 class ProductRepository {
   async create(data) {
-    const {
-        category_id,
-        name,
-        description,
-        short_description,
-        price,
-        sale_price,
-        sku,
-        slug,
-        type,
-        unique,
-        stock_quantity,
-        is_featured,
-        status,
-        attributes,
-        tags,
-        region_id,
-      } = data
-    return await Product.create({
-        category_id,
-        name,
-        description,
-        short_description,
-        price,
-        sale_price,
-        sku,
-        slug,
-        type,
-        unique,
-        stock_quantity,
-        is_featured,
-        status,
-        attributes: JSON.stringify(attributes),
-        tags: JSON.stringify(tags),
-        region_id,
-    })
+    return await Product.create(data);
   }
 
   async getAll() {
-    return await Product.findAll({ status: "published" });
+    return await Product.findAll({
+      status: "published",
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getById(productId) {
-    return await Product.findOne({ where: { id: productId } });
+    return await Product.findOne({
+      where: { id: productId },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getBySlug(slugId) {
-    return await Product.findOne({ where: { slug: slugId } });
+    return await Product.findOne({
+      where: { slug: slugId },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getByRegionId(regionId) {
-    return await Product.findAll({ where: { region_id: regionId } });
+    return await Product.findAll({
+      where: { region_id: regionId },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getByCategoryId(categoryId) {
-    return await Product.findAll({ where: { category_id: categoryId } });
+    return await Product.findAll({
+      where: { category_id: categoryId },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getByTag(tag) {
@@ -70,6 +80,13 @@ class ProductRepository {
           [Op.like]: `%${tag}%`,
         },
       },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
     });
   }
 
@@ -80,6 +97,13 @@ class ProductRepository {
           [Op.like]: `%${name}%`,
         },
       },
+      include: [
+        {
+          model: Category,
+          as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
     });
   }
 

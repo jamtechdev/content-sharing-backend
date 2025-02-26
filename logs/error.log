@@ -5997,3 +5997,123 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async MessageController.deleteSpecificChat (D:\Content Sharing\content-sharing-backend\src\controllers\MessageController\MessageController.js:90:22)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T10:26:28.891Z [ERROR]: Error in bound createProduct: Slug is already exists
+2025-02-26T10:26:28.893Z [ERROR]: Error: Slug is already exists
+    at ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:8:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T10:34:47.127Z [ERROR]: Error in bound getProductCategoryByName: Product category not found
+2025-02-26T10:34:47.129Z [ERROR]: Error: Product category not found
+    at ProductCategoryService.getProductCategoryByName (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:59:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getProductCategoryByName (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:115:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T10:45:18.838Z [ERROR]: Error in bound getProductBySlug: Product not found
+2025-02-26T10:45:18.841Z [ERROR]: Error: Product not found
+    at ProductService.getProductBySlug (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductBySlug (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:125:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T10:46:36.134Z [ERROR]: Error in bound getProductById: Product not found
+2025-02-26T10:46:36.136Z [ERROR]: Error: Product not found
+    at ProductService.getProductById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:114:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T10:46:42.387Z [ERROR]: Error in bound getProductById: Product not found
+2025-02-26T10:46:42.387Z [ERROR]: Error: Product not found
+    at ProductService.getProductById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:114:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:04:19.681Z [ERROR]: Error in bound getProductAttributeById: Product attribute not found
+2025-02-26T11:04:19.685Z [ERROR]: Error: Product attribute not found
+    at ProductAttributeService.getProductAttributeById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:34:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.getProductAttributeById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:110:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:04:32.059Z [ERROR]: Error in bound getProductAttributeById: Product attribute not found
+2025-02-26T11:04:32.060Z [ERROR]: Error: Product attribute not found
+    at ProductAttributeService.getProductAttributeById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:34:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.getProductAttributeById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:110:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:05:38.454Z [ERROR]: Error in bound getProductAttributesByProductId: No attributes found for this product
+2025-02-26T11:05:38.455Z [ERROR]: Error: No attributes found for this product
+    at ProductAttributeService.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:42:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:121:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:05:44.820Z [ERROR]: Error in bound getProductAttributesByProductId: No attributes found for this product
+2025-02-26T11:05:44.820Z [ERROR]: Error: No attributes found for this product
+    at ProductAttributeService.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:42:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:121:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:05:48.717Z [ERROR]: Error in bound getProductAttributesByProductId: No attributes found for this product
+2025-02-26T11:05:48.717Z [ERROR]: Error: No attributes found for this product
+    at ProductAttributeService.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:42:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.getProductAttributesByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:121:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T11:28:25.581Z [ERROR]: Error in bound getAllProductMedia: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-02-26T11:28:25.595Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+    at Function._injectScope (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3413:10)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1777:10)
+    at ProductMediaRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductMediaRepository.js:12:31)
+    at ProductMediaService.getAllProductMedia (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductMediaService.js:37:48)
+2025-02-26T11:28:35.832Z [ERROR]: Error in bound getAllProductMedia: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-02-26T11:28:35.839Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+    at Function._injectScope (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3413:10)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1777:10)
+    at ProductMediaRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductMediaRepository.js:12:31)
+    at ProductMediaService.getAllProductMedia (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductMediaService.js:37:48)
+2025-02-26T12:18:19.650Z [ERROR]: Error in bound createProduct: str is not defined
+2025-02-26T12:18:19.653Z [ERROR]: ReferenceError: str is not defined
+    at module.exports.generateSlug (D:\Content Sharing\content-sharing-backend\src\utils\generateSlug.js:4:3)
+    at ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:24:12)
+    at ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:45)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+2025-02-26T12:18:38.984Z [ERROR]: Error in bound createProduct: Assignment to constant variable.
+2025-02-26T12:18:38.987Z [ERROR]: TypeError: Assignment to constant variable.
+    at ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:24:10)
+    at ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:45)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+2025-02-26T12:19:15.755Z [ERROR]: Error in bound createProduct: Slug is already exists
+2025-02-26T12:19:15.758Z [ERROR]: Error: Slug is already exists
+    at ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:27:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T12:53:16.027Z [ERROR]: Error in bound createProduct: Assignment to constant variable.
+2025-02-26T12:53:16.030Z [ERROR]: TypeError: Assignment to constant variable.
+    at ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:31:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

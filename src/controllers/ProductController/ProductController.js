@@ -11,7 +11,7 @@ class ProductController {
       "post",
       "/create-product",
       authenticate,
-      authorize(["model"]),
+      // authorize(["model"]),
       TryCatch(this.createProduct.bind(this))
     );
 
@@ -19,7 +19,7 @@ class ProductController {
       "get",
       "/",
       authenticate,
-      authorize(['model']),
+      // authorize(['model']),
       TryCatch(this.getAllPublishedProducts.bind(this))
     );
 
@@ -27,7 +27,7 @@ class ProductController {
       "get",
       "/:id",
       authenticate,
-      authorize(['model']),
+      // authorize(['model']),
       TryCatch(this.getProductById.bind(this))
     );
 

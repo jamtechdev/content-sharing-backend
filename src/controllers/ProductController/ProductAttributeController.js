@@ -50,7 +50,7 @@ class ProductAttributeController {
 
     this.router.addRoute(
       "put",
-      "/:id",
+      "/",
       authenticate,
       // authorize(["admin"]),
       TryCatch(this.updateProductAttribute.bind(this))
@@ -128,9 +128,8 @@ class ProductAttributeController {
   }
 
   async updateProductAttribute(req, res) {
-    const attributeId = req.params.id;
     const updateData = req.body;
-    await ProductAttributeService.updateProductAttribute(attributeId, updateData);
+    await ProductAttributeService.updateProductAttribute(updateData.attributeId, updateData);
     return res.status(200).json({
       code: 200,
       success: true,

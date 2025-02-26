@@ -2,6 +2,7 @@ const ProductMediaRepository = require("../../repositories/ProductRepository/Pro
 const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
 const HttpError = require("../../decorators/HttpError");
 const {cloudinaryImageUpload} = require('../../utils/cloudinaryService');
+const path = require('path')
 
 
 class ProductMediaService {
@@ -25,7 +26,8 @@ class ProductMediaService {
       file_url: secureUrl,
       file_name: file.filename,
       file_size: file.size,
-      file_extension: "."+(file.mimetype).split("/")[1],
+      file_extension: path.extname(file.filename),
+      // file_extension: "."+(file.mimetype).split("/")[1],
       is_main,
       is_gallery,
     });
@@ -91,7 +93,8 @@ class ProductMediaService {
       file_url: secureUrl,
       file_name: file.filename,
       file_size: file.size,
-      file_extension: "."+(file.mimetype).split("/")[1],
+      file_extension: path.extname(file.filename),
+      // file_extension: "."+(file.mimetype).split("/")[1],
       is_main,
       is_gallery,
     });
