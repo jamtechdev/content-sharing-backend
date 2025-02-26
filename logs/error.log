@@ -6117,3 +6117,117 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:14:42.916Z [ERROR]: Error in bound getProductDiscountById: Product discount not found
+2025-02-26T13:14:42.918Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:99:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:14:47.583Z [ERROR]: Error in bound getProductDiscountById: Product discount not found
+2025-02-26T13:14:47.584Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:99:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:19:40.211Z [ERROR]: Error in bound getProductDiscountsByProductId: No discounts found for this product
+2025-02-26T13:19:40.213Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.getProductDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getProductDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:110:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:19:51.201Z [ERROR]: Error in bound getProductDiscountsByProductId: No discounts found for this product
+2025-02-26T13:19:51.202Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.getProductDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getProductDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:110:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:26:54.403Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:26:54.406Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:27:30.378Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:27:30.380Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:27:32.593Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:27:32.594Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:28:04.432Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:28:04.434Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:29:37.583Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:29:37.586Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:30:53.831Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:30:53.832Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:33:01.200Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:33:01.201Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:34:04.877Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:34:04.879Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:34:31.320Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:34:31.322Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:40:28.449Z [ERROR]: Error in bound getAllProductDiscounts: Op is not defined
+2025-02-26T13:40:28.452Z [ERROR]: ReferenceError: Op is not defined
+    at ProductDiscountRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductDiscountRepository.js:16:10)
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:15:55)
+    at ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:52)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+2025-02-26T13:40:48.735Z [ERROR]: Error in bound getAllProductDiscounts: Op is not defined
+2025-02-26T13:40:48.737Z [ERROR]: ReferenceError: Op is not defined
+    at ProductDiscountRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductDiscountRepository.js:16:10)
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:15:55)
+    at ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:52)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+2025-02-26T13:41:01.766Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:41:01.768Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:41:50.655Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:41:50.657Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

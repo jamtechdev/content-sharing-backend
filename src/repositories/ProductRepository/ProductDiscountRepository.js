@@ -1,6 +1,7 @@
 const db = require("../../models/index");
 const ProductDiscount = db.product_discount;
-const Product = db.product
+const Product = db.product;
+const ProductCategory = db.product_category;
 
 class ProductDiscountRepository {
   async create(data) {
@@ -8,15 +9,65 @@ class ProductDiscountRepository {
   }
 
   async getAll() {
-    return await ProductDiscount.findAll({include: [{model: Product, as: "product"}]});
+    const currentDate = new Date()
+    console.log(currentDate)
+    return await ProductDiscount.findAll({
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getById(discountId) {
-    return await ProductDiscount.findOne({ where: { id: discountId } });
-  }
+    return await ProductDiscount.findOne({ where: { id: discountId },  
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+      {
+        model: Product,
+        as: "product",
+        attributes: { exclude: ["createdAt", "updatedAt"] },
+        include: [
+          {
+            model: ProductCategory,
+            as: "category",
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
+        ],
+      },
+    ], 
+  });
+}
 
   async getByProductId(productId) {
-    return await ProductDiscount.findAll({ where: { product_id: productId } });
+    return await ProductDiscount.findAll({ where: { product_id: productId },
+      attributes: {exclude: ["createdAt", "updatedAt"]}, 
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getActiveDiscounts(productId) {
@@ -27,6 +78,21 @@ class ProductDiscountRepository {
         start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
     });
   }
 
