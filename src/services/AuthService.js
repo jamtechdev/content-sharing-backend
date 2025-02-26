@@ -55,10 +55,11 @@ class AuthService {
   async loginWithGoogle({ accessToken, email, name, photoURL,region_id }) {
     // Try to find an existing user by email
     let user = await UserRepository.findByEmail(email);
-    if (user) {
+    // console.log(user ,"------================----------------");
+    if (user?.role) {
       // If user exists, generate a token
       const token = jwt.sign(
-        { userId: user.id, role_id: user.role?.name },
+        { userId: user.id, role: user.role?.name },
         process.env.JWT_SECRET,
         {
           expiresIn: "15d",
@@ -80,7 +81,7 @@ class AuthService {
         region_id: 1, // default region
       });
       const token = jwt.sign(
-        { userId: newUser.id, role_id: "user" },
+        { userId: newUser.id, role: "user" },
         process.env.JWT_SECRET,
         {
           expiresIn: "15d",
