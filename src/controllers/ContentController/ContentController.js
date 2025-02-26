@@ -9,6 +9,7 @@ const ContentService = require("../../services/ContentService.js");
 const UserService = require("../../services/UserService.js");
 const pushNotification = require("../../_helper/pushNotification.js");
 const ProfileService = require("../../services/ProfileService.js");
+const { uploadToS3 } = require("../../config/S3upload.js");
 
 class ContentController {
   constructor() {
@@ -115,67 +116,74 @@ class ContentController {
       "put",
       "/comment",
       authenticate,
-      authorize(["user"]),
+      authorize(["user",'model']),
       TryCatch(this.updateComment.bind(this))
     );
   }
 
   async createContent(req, res) {
-    const { userId } = req?.user;
-    const mediaFile = req?.file;
-    const {
-      title,
-      description,
-      category_id,
-      region_id: modal_region_id,
-      premium_access,
-      price,
-    } = req.body;
-    if (Object.keys(req.body).length === 0) {
-      return res.status(400).json({
-        code: 400,
+    try {
+      const { userId } = req?.user;
+      const mediaFile = req?.file;
+      const defaultRegion = "1,2,3,4,5,6,7";
+
+      // Extract body params
+      const {
+        title,
+        description,
+        category_id,
+        region_id: modal_region_id,
+        premium_access,
+        price,
+      } = req.body;
+
+      // Ensure region_id is correctly formatted as JSON array
+      const region_id = JSON.stringify(
+        modal_region_id
+          ? modal_region_id.split(",").map(Number)
+          : defaultRegion.split(",").map(Number)
+      );
+      const mediaFileUrl = await uploadToS3(mediaFile.path, req.file.filename);
+      const data = {
+        title,
+        description,
+        premium_access,
+        price,
+        content_type: mediaFileUrl.resourceType,
+        category_id,
+        user_id: userId,
+        region_id,
+        media_url: mediaFileUrl.secureUrl,
+      };
+      const getModelProfileData = await ProfileService.getProfileByUserId(
+        userId
+      );
+      const response = await ContentService.createContent(data);
+
+      const payload = {
+        title: `Post Notification`,
+        message: `${getModelProfileData?.user?.name} added post for you.`,
+        sender_id: userId,
+        type: "subscription",
+        item_id: response?.id,
+      };
+      await pushNotification(payload);
+      return res.status(201).json({
+        code: 201,
+        success: true,
+        message: "Content created successfully",
+        data: response,
+      });
+    } catch (error) {
+      console.error("Error creating content:", error);
+      return res.status(500).json({
+        code: 500,
         success: false,
-        message: "Data is required to create content",
+        message: "Internal Server Error",
+        error: error.message,
       });
     }
-    const { region_id } = await UserService.getUserById(userId);
-    const mediaFileUrl = await cloudinaryImageUpload(mediaFile.path);
-    const data = {
-      title,
-      description,
-      premium_access,
-      price,
-      content_type: mediaFileUrl.resourceType,
-      category_id,
-      user_id: userId,
-      // region_id: modal_region_id ?? JSON.stringify([region_id]),
-      // region_id: modal_region_id ?? '[1, 2, 3, 4, 5, 6, 7]',
-      region_id:null,
-      media_url: mediaFileUrl.secureUrl,
-    };
-    const getModelProfileData = await ProfileService.getProfileByUserId(userId);
-    // console.log(getModelProfileData);
-    // return res.status(200).json(getModelProfileData?.user?.name);
-    const response = await ContentService.createContent(data);
-
-    const payload = {
-      title: `Post Notification`,
-      message: `${getModelProfileData?.user?.name} added post for you.`,
-      sender_id: userId,
-      type: "subscription",
-      item_id: response?.id,
-    };
-
-    await pushNotification(payload);
-
-    return res.status(201).json({
-      code: 201,
-      success: true,
-      message: "Content created successfully",
-      data: response,
-    });
   }
-
   async getContent(req, res) {
     const { userId } = req?.user;
 
@@ -203,6 +211,7 @@ class ContentController {
   async updateContent(req, res) {
     const { userId } = req?.user;
     const mediaFile = req.file;
+    const defaultRegion = "1,2,3,4,5,6,7";
     console.log(req.body, "update-----------------------------");
     const {
       status,
@@ -211,7 +220,7 @@ class ContentController {
       content_type,
       category_id,
       contentId,
-      region_id,
+      region_id: modal_region_id,
       premium_access,
       price,
     } = req?.body;
@@ -222,6 +231,13 @@ class ContentController {
         message: "Data fields required to update content",
       });
     }
+
+    const region_id = JSON.stringify(
+      modal_region_id
+        ? modal_region_id.split(",").map(Number)
+        : defaultRegion.split(",").map(Number)
+    );
+
     const content = await ContentService.findById(contentId, userId);
     let mediaFileUrl;
     if (mediaFile) {

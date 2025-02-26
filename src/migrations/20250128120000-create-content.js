@@ -75,7 +75,6 @@ module.exports = {
       type: Sequelize.ENUM("all", "subscribers_only", "premium_only"), // Adjust as needed
       defaultValue: "all", // Set a default value if needed
     });
-    
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable("contents");

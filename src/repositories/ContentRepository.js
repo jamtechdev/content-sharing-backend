@@ -144,7 +144,7 @@ class ContentRepository {
   }
 
   async findAll(id) {
-    return await Content.findAll({
+    let content = await Content.findAll({
       where: { user_id: id },
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
@@ -152,6 +152,18 @@ class ContentRepository {
       ],
       order: [["created_at", "DESC"]],
     });
+    for (let item of content) {
+      const likeCount = await db.Likes.count({
+        where: { content_id: item.id },
+      });
+      const commentCount = await Comment.count({
+        where: { content_id: item.id },
+      });
+      item.dataValues.likeCount = likeCount;
+      item.dataValues.commentCount = commentCount;
+    }
+
+    return content;
   }
 
   async addLike(data) {
