@@ -31,7 +31,7 @@ class BookmarkRepository {
   }
 
   async removeBookmark(id) {
-    return await Bookmarks.destroy({ where: { id: id } });
+    return await Bookmarks.destroy({ where: { content_id: id } });
   }
 }
 
