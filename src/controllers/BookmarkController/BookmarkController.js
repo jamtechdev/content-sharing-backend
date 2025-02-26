@@ -14,21 +14,21 @@ class BookmarkController {
       "post",
       "/",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       TryCatch(this.addBookmarks.bind(this))
     );
     this.router.addRoute(
       "get",
       "/",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       TryCatch(this.getBookmarkByUser.bind(this))
     );
     this.router.addRoute(
       "delete",
       "/:id",
       authenticate,
-      authorize(["user","model"]),
+      authorize(["user", "model"]),
       TryCatch(this.removeBookmark.bind(this))
     );
   }
@@ -58,25 +58,25 @@ class BookmarkController {
     });
   }
 
-  async getBookmarkByUser(req, res){
+  async getBookmarkByUser(req, res) {
     const { userId } = req?.user;
 
-    const response = await BookmarkService.getBookmarkbyUser(userId)
+    const response = await BookmarkService.getBookmarkbyUser(userId);
     return res.status(200).json({
-        code: 200,
-        success: true,
-        data:response
-      });
+      code: 200,
+      success: true,
+      data: response,
+    });
   }
 
-  async removeBookmark(req, res){
-    const {id} = req?.params
-    const response = await BookmarkService.removeBookmark(id)
+  async removeBookmark(req, res) {
+    const { id } = req?.params;
+    const response = await BookmarkService.removeBookmark(id);
     return res.status(200).json({
-        code: 200,
-        success: true,
-        message :"Bookmark removed"
-      });
+      code: 200,
+      success: true,
+      message: "Bookmark removed",
+    });
   }
   getRouter() {
     return this.router.getRouter();

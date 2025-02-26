@@ -116,7 +116,7 @@ class ContentController {
       "put",
       "/comment",
       authenticate,
-      authorize(["user",'model']),
+      authorize(["user", "model"]),
       TryCatch(this.updateComment.bind(this))
     );
   }
@@ -164,7 +164,7 @@ class ContentController {
         title: `Post Notification`,
         message: `${getModelProfileData?.user?.name} added post for you.`,
         sender_id: userId,
-        type: "subscription",
+        type: "content",
         item_id: response?.id,
       };
       await pushNotification(payload);
@@ -212,7 +212,7 @@ class ContentController {
     const { userId } = req?.user;
     const mediaFile = req.file;
     const defaultRegion = "1,2,3,4,5,6,7";
-    console.log(req.body, "update-----------------------------");
+    console.log(req.body, "update---------------------------->");
     const {
       status,
       title,
