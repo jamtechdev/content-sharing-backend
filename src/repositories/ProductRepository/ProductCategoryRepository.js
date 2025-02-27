@@ -1,5 +1,6 @@
 const db = require("../../models/index");
 const ProductCategory = db.product_category;
+const Product = db.product;
 const HttpError = require('../../decorators/HttpError')
 
 class ProductCategoryRepository {
@@ -9,7 +10,12 @@ class ProductCategoryRepository {
   }
 
   async getAll() {
-    const productCategories = await ProductCategory.findAll();
+    const productCategories = await ProductCategory.findAll({
+      include: [{
+        model: Product,
+        as: "product"
+      }]
+    });
     return productCategories;
   }
 

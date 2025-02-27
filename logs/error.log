@@ -6231,3 +6231,279 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-26T13:59:40.800Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-26T13:59:40.802Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T04:41:52.404Z [ERROR]: Error in bound getAllProductDiscounts: connect ECONNREFUSED 127.0.0.1:3306
+2025-02-27T04:41:52.451Z [ERROR]: SequelizeConnectionRefusedError: connect ECONNREFUSED 127.0.0.1:3306
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\connection-manager.js:116:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductDiscountRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductDiscountRepository.js:14:12)
+    at async ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:15:23)
+2025-02-27T04:49:43.859Z [ERROR]: Error in bound getProductDiscountById: Product discount not found
+2025-02-27T04:49:43.864Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getProductDiscountById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:99:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T04:56:40.202Z [ERROR]: Error in bound updateProductDiscount: Product discount not found
+2025-02-27T04:56:40.208Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:133:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T04:58:04.051Z [ERROR]: Error in bound updateProductDiscount: Product discount not found
+2025-02-27T04:58:04.053Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:132:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T04:58:28.846Z [ERROR]: Error in bound updateProductDiscount: Product discount not found
+2025-02-27T04:58:28.846Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:132:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T04:58:54.694Z [ERROR]: Error in bound updateProductDiscount: Product discount not found
+2025-02-27T04:58:54.695Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:132:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:04:23.566Z [ERROR]: Error in bound deleteProductDiscount: Product discount not found
+2025-02-27T05:04:23.572Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.deleteProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:58:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:142:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:04:30.943Z [ERROR]: Error in bound deleteProductDiscount: Product discount not found
+2025-02-27T05:04:30.944Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.deleteProductDiscount (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:58:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteProductDiscount (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:142:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:04:43.925Z [ERROR]: Error in bound deleteDiscountsByProductId: No discounts found for this product
+2025-02-27T05:04:43.926Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:67:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:152:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:04:56.564Z [ERROR]: Error in bound deleteDiscountsByProductId: No discounts found for this product
+2025-02-27T05:04:56.564Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:67:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:152:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:04:59.268Z [ERROR]: Error in bound deleteDiscountsByProductId: No discounts found for this product
+2025-02-27T05:04:59.269Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:67:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:152:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:05:49.380Z [ERROR]: Error in bound deleteDiscountsByProductId: No discounts found for this product
+2025-02-27T05:05:49.384Z [ERROR]: Error: No discounts found for this product
+    at ProductDiscountService.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:67:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteDiscountsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:152:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:22:25.158Z [ERROR]: Error in bound getProductOfferById: Product offer not found
+2025-02-27T05:22:25.161Z [ERROR]: Error: Product offer not found
+    at ProductOfferService.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:24:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:90:19)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:23:44.781Z [ERROR]: Error in bound getProductOffersByProductId: No offers found for this product
+2025-02-27T05:23:44.782Z [ERROR]: Error: No offers found for this product
+    at ProductOfferService.getProductOffersByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:32:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.getProductOffersByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:96:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:31:46.065Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:31:46.067Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:33:05.168Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:33:05.171Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:33:47.027Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:33:47.029Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:34:21.400Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:34:21.402Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:34:22.879Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:34:22.879Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:36:23.343Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:36:23.345Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:40:31.569Z [ERROR]: Error in bound getAllProductDiscounts: No product discounts found
+2025-02-27T05:40:31.570Z [ERROR]: Error: No product discounts found
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductDiscountService.js:17:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductDiscountController.js:88:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T05:45:07.649Z [ERROR]: Error in bound getAllProductOffers: currentDate is not defined
+2025-02-27T05:45:07.652Z [ERROR]: ReferenceError: currentDate is not defined
+    at ProductOfferRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductOfferRepository.js:12:46)
+    at ProductOfferService.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:14:49)
+    at ProductOfferController.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:84:46)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+2025-02-27T05:51:38.413Z [ERROR]: Error in bound getProductOfferById: currentDate is not defined
+2025-02-27T05:51:38.416Z [ERROR]: ReferenceError: currentDate is not defined
+    at ProductOfferRepository.getById (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductOfferRepository.js:23:46)
+    at ProductOfferService.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:22:48)
+    at ProductOfferController.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:90:45)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+2025-02-27T06:04:04.369Z [ERROR]: Error in bound updateProductOffer: Product offer not found
+2025-02-27T06:04:04.372Z [ERROR]: Error: Product offer not found
+    at ProductOfferService.updateProductOffer (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:48:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.updateProductOffer (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:113:26)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:40:53.504Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:40:53.506Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:41:03.960Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:41:03.962Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:41:16.500Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:41:16.503Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:41:23.310Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:41:23.312Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:41:33.251Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:41:33.254Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:42:20.861Z [ERROR]: Error in bound getAllProductCategories: Unknown column 'product.productCategoryId' in 'field list'
+2025-02-27T06:42:20.864Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductCategoryRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductCategoryRepository.js:13:31)
+    at async ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:20:31)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:49:39.123Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-02-27T06:49:39.129Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:125:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:194:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T06:59:41.478Z [ERROR]: Error in bound deleteOffersByProductId: No offers found for this product
+2025-02-27T06:59:41.484Z [ERROR]: Error: No offers found for this product
+    at ProductOfferService.deleteOffersByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:65:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.deleteOffersByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:134:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:01:17.971Z [ERROR]: Error in bound getAllProductOffers: No product offers found
+2025-02-27T07:01:17.971Z [ERROR]: Error: No product offers found
+    at ProductOfferService.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:86:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:01:54.650Z [ERROR]: Error in bound getAllProductOffers: No product offers found
+2025-02-27T07:01:54.652Z [ERROR]: Error: No product offers found
+    at ProductOfferService.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:16:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.getAllProductOffers (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:86:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:08:19.077Z [ERROR]: Error in bound getAllProductOffers: product_category is associated to product using an alias. You've included an alias (categorys), but it does not match the alias(es) defined in your association (category).
+2025-02-27T07:08:19.083Z [ERROR]: SequelizeEagerLoadingError: product_category is associated to product using an alias. You've included an alias (categorys), but it does not match the alias(es) defined in your association (category).
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:751:15)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:732:38)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+2025-02-27T07:15:59.078Z [ERROR]: Error in bound getProductOfferById: Product offer not found
+2025-02-27T07:15:59.082Z [ERROR]: Error: Product offer not found
+    at ProductOfferService.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOfferService.js:24:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOfferController.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:92:19)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

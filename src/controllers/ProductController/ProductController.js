@@ -196,7 +196,6 @@ class ProductController {
       code: 200,
       success: true,
       message: "Product deleted successfully",
-      data: deletedProduct,
     });
   }
 

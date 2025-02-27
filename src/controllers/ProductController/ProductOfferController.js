@@ -33,7 +33,7 @@ class ProductOfferController {
 
     this.router.addRoute(
       "get",
-      "/product/:productId/offers",
+      "/product/:productId",
       authenticate,
       TryCatch(this.getProductOffersByProductId.bind(this))
     );
@@ -47,7 +47,7 @@ class ProductOfferController {
 
     this.router.addRoute(
       "put",
-      "/:id",
+      "/",
       authenticate,
       //   authorize(["admin"]),
       TryCatch(this.updateProductOffer.bind(this))
@@ -63,7 +63,7 @@ class ProductOfferController {
 
     this.router.addRoute(
       "delete",
-      "/product/:productId/offers",
+      "/product/:productId",
       authenticate,
       //   authorize(["admin"]),
       TryCatch(this.deleteOffersByProductId.bind(this))
@@ -75,6 +75,8 @@ class ProductOfferController {
     res
       .status(201)
       .json({
+        code: 201,
+        success: true,
         message: "Product offer created successfully",
         data: productOffer,
       });
@@ -82,13 +84,13 @@ class ProductOfferController {
 
   async getAllProductOffers(req, res) {
     const offers = await ProductOfferService.getAllProductOffers();
-    res.status(200).json({ data: offers });
+    res.status(200).json({code: 200, success: true, data: offers });
   }
 
   async getProductOfferById(req, res) {
     const offerId = req.params.id;
     const offer = await ProductOfferService.getProductOfferById(offerId);
-    res.status(200).json({ data: offer });
+    res.status(200).json({code: 200, success: true, data: offer });
   }
 
   async getProductOffersByProductId(req, res) {
@@ -96,28 +98,26 @@ class ProductOfferController {
     const offers = await ProductOfferService.getProductOffersByProductId(
       productId
     );
-    res.status(200).json({ data: offers });
+    res.status(200).json({code: 200, success: true, data: offers });
   }
 
   async getActiveOffers(req, res) {
     const productId = req.params.productId;
-    const currentDate = new Date();
     const offers = await ProductOfferService.getActiveOffers(
-      productId,
-      currentDate
+      productId
     );
-    res.status(200).json({ data: offers });
+    res.status(200).json({code: 200, success: true, data: offers });
   }
 
   async updateProductOffer(req, res) {
-    const offerId = req.params.id;
     const updatedOffer = await ProductOfferService.updateProductOffer(
-      offerId,
+      req.body.offerId,
       req.body
     );
     res
       .status(200)
       .json({
+        code: 200, success: true,
         message: "Product offer updated successfully",
         data: updatedOffer,
       });
@@ -126,7 +126,7 @@ class ProductOfferController {
   async deleteProductOffer(req, res) {
     const offerId = req.params.id;
     await ProductOfferService.deleteProductOffer(offerId);
-    res.status(200).json({ message: "Product offer deleted successfully" });
+    res.status(200).json({code: 200, success: true, message: "Product offer deleted successfully" });
   }
 
   async deleteOffersByProductId(req, res) {
@@ -134,7 +134,7 @@ class ProductOfferController {
     await ProductOfferService.deleteOffersByProductId(productId);
     res
       .status(200)
-      .json({ message: "All offers for the product deleted successfully" });
+      .json({code: 200, success: true, message: "All offers for the product deleted successfully" });
   }
 
   getRouter() {

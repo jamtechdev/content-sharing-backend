@@ -9,15 +9,14 @@ class ProductDiscountRepository {
   }
 
   async getAll() {
-    const currentDate = new Date()
-    console.log(currentDate)
+    const currentDate = new Date();
+    console.log(currentDate);
     return await ProductDiscount.findAll({
       where: {
-        end_date: {
-          [db.Sequelize.Op.gt]: currentDate, 
-        },
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,
@@ -36,28 +35,40 @@ class ProductDiscountRepository {
   }
 
   async getById(discountId) {
-    return await ProductDiscount.findOne({ where: { id: discountId },  
-      attributes: {exclude: ["createdAt", "updatedAt"]},
-      include: [
-      {
-        model: Product,
-        as: "product",
-        attributes: { exclude: ["createdAt", "updatedAt"] },
-        include: [
-          {
-            model: ProductCategory,
-            as: "category",
-            attributes: { exclude: ["createdAt", "updatedAt"] },
-          },
-        ],
+    // const currentDate = new Date();
+    return await ProductDiscount.findOne({
+      where: {
+        id: discountId,
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-    ], 
-  });
-}
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
+    });
+  }
 
   async getByProductId(productId) {
-    return await ProductDiscount.findAll({ where: { product_id: productId },
-      attributes: {exclude: ["createdAt", "updatedAt"]}, 
+    // const currentDate = new Date()
+    return await ProductDiscount.findAll({
+      where: {
+        product_id: productId,
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
+      },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,
@@ -83,7 +94,7 @@ class ProductDiscountRepository {
         start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,

@@ -34,8 +34,8 @@ class ProductOfferService {
     return offers;
   }
 
-  async getActiveOffers(productId, currentDate = new Date()) {
-    const offers = await ProductOfferRepository.getActiveOffers(productId, currentDate);
+  async getActiveOffers(productId) {
+    const offers = await ProductOfferRepository.getActiveOffers(productId);
     if (offers.length === 0) {
       throw new HttpError(404, "No active offers for this product");
     }

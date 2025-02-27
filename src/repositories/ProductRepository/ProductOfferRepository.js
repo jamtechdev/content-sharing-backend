@@ -1,5 +1,7 @@
 const db = require("../../models/index");
-const ProductOffer = db.product_offer
+const ProductOffer = db.product_offer;
+const Product = db.product;
+const ProductCategory = db.product_category;
 
 class ProductOfferRepository {
   async create(data) {
@@ -7,23 +9,125 @@ class ProductOfferRepository {
   }
 
   async getAll() {
-    return await ProductOffer.findAll();
+    const currentDate = new Date();
+    return await ProductOffer.findAll({
+      where: {
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
+      },
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+        {
+          model: Product,
+          as: "freeProduct",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getById(offerId) {
-    return await ProductOffer.findByPk(offerId);
+    const currentDate = new Date();
+    return await ProductOffer.findOne({
+      where: {
+        id: offerId,
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
+      },
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+        {
+          model: Product,
+          as: "freeProduct",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+      ],
+    });
   }
 
   async getByProductId(productId) {
-    return await ProductOffer.findAll({ where: { product_id: productId } });
-  }
-
-  async getActiveOffers(productId, currentDate) {   
+    const currentDate = new Date();
     return await ProductOffer.findAll({
       where: {
         product_id: productId,
-        start_date: { $lte: currentDate },
-        end_date: { $gte: currentDate },
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
+      },
+      attributes: {exclude: ["createdAt", "updatedAt"]},
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+        {
+          model: Product,
+          as: "freeProduct",
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: {exclude: ["createdAt", "updatedAt"]}
+            },
+          ],
+        },
+      ],
+    });
+  }
+
+  async getActiveOffers(productId) {
+    const currentDate = new Date();
+    return await ProductOffer.findAll({
+      where: {
+        product_id: productId,
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
     });
   }

@@ -50,7 +50,7 @@ class ProductDiscountController {
 
     this.router.addRoute(
       "put",
-      "/:id",
+      "/",
       authenticate,
       // authorize(["admin"]),
       TryCatch(this.updateProductDiscount.bind(this))
@@ -128,9 +128,8 @@ class ProductDiscountController {
   }
 
   async updateProductDiscount(req, res) {
-    const discountId = req.params.id;
     const updateData = req.body;
-    await ProductDiscountService.updateProductDiscount(discountId, updateData);
+    await ProductDiscountService.updateProductDiscount(updateData.discountId, updateData);
     return res.status(200).json({
       code: 200,
       success: true,
