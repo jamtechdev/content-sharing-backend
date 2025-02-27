@@ -32,11 +32,16 @@ class NotificationRepository {
     return await Notification.bulkCreate(data);
   }
 
-  async getNotificationByRecieverId(user_id){
-    return await Notification.findAll({where:{receiver_id : user_id},
-    include:[
-      {model:User, as:"Sender", attributes:["name", "email", "avatar"]}
-    ]})
+  async getNotificationByRecieverId(user_id) {
+    return await Notification.findAll({
+      where: { receiver_id: user_id },
+      include: [
+        { model: User, as: "Sender", attributes: ["name", "email", "avatar"] },
+      ],
+    });
+  }
+  async deleteNotification(user_id) {
+    return await Notification.destroy({ where: { receiver_id: user_id } });
   }
 }
 

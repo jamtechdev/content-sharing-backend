@@ -24,6 +24,9 @@ class NotificationService {
     async getNotificationByRecieverId(userId){
         return await NotificationRepository.getNotificationByRecieverId(userId)
     }
+    async deleteNotification(id){
+        return await NotificationRepository.deleteNotification(id)
+    }
 }
 
 module.exports = new NotificationService();
