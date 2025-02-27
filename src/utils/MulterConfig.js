@@ -30,17 +30,24 @@ const fileFilter = (req, file, cb) => {
     "image/jpeg",
     "image/png",
     "image/webp",
-    "video/quicktime"
+    "video/quicktime",
   ];
   if (acceptedMimeTypes.includes(file.mimetype)) {
     cb(null, true);
   } else {
     cb(null, false);
-    return cb("Supported file formats: .jpg, .jpeg, .png, .webp, .mp4, .mov, .mpeg, .webm", false);
+    return cb(
+      "Supported file formats: .jpg, .jpeg, .png, .webp, .mp4, .mov, .mpeg, .webm",
+      false
+    );
   }
 };
 
-const upload = multer({ storage, fileFilter, limits: {
-  fileSize: 1024 * 1024 * 4 // 4Mb file size
-}, });
+const upload = multer({
+  storage,
+  fileFilter,
+  limits: {
+    fileSize: 1024 * 1024 * 1024,
+  },
+});
 module.exports = { upload };

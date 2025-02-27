@@ -135,6 +135,7 @@ class ContentController {
         region_id: modal_region_id,
         premium_access,
         price,
+        plan_id,
       } = req.body;
 
       // Ensure region_id is correctly formatted as JSON array
@@ -152,6 +153,7 @@ class ContentController {
         content_type: mediaFileUrl.resourceType,
         category_id,
         user_id: userId,
+        plan_id: plan_id ? parseFloat(plan_id) : null,
         region_id,
         media_url: mediaFileUrl.secureUrl,
       };
@@ -212,7 +214,6 @@ class ContentController {
     const { userId } = req?.user;
     const mediaFile = req.file;
     const defaultRegion = "1,2,3,4,5,6,7";
-    console.log(req.body, "update---------------------------->");
     const {
       status,
       title,
@@ -223,6 +224,7 @@ class ContentController {
       region_id: modal_region_id,
       premium_access,
       price,
+      plan_id,
     } = req?.body;
     if (Object.keys(req.body).length === 0) {
       return res.status(400).json({
@@ -231,7 +233,6 @@ class ContentController {
         message: "Data fields required to update content",
       });
     }
-
     const region_id = JSON.stringify(
       modal_region_id
         ? modal_region_id.split(",").map(Number)
@@ -257,6 +258,7 @@ class ContentController {
         region_id,
         premium_access,
         price: price ? parseFloat(price) : null,
+        plan_id: plan_id ? parseFloat(plan_id) : null,
       },
       userId
     );
@@ -309,7 +311,7 @@ class ContentController {
       item_id: contentId,
     };
 
-    // await pushNotification(payload);
+    await pushNotification(payload);
     if (!contentId && !userId) {
       return res.status(400).json({
         code: 400,
@@ -325,7 +327,7 @@ class ContentController {
         user_id: userId,
         is_like: data?.is_like ? 0 : 1,
       });
-      if (data?.is_like != 1) {
+      if (data?.is_like != true) {
         await pushNotification(payload);
       }
 

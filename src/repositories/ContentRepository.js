@@ -64,28 +64,34 @@ class ContentRepository {
         region_id: {
           [db.Sequelize.Op.like]: `%${regionId}%`,
         },
-        // [Op.or]: [{ plan_id: null }, { premium_access: false }],
+      },
+      attributes: {
+        include: [
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM likes 
+              WHERE likes.content_id = Content.id AND likes.is_like = 1
+            )`),
+            "likeCount",
+          ],
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM comment 
+              WHERE comment.content_id = Content.id
+            )`),
+            "commentCount",
+          ],
+        ],
       },
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
-        // {
-        //   model: db.Likes.count({ where: { content_id:content.id } }),
-        //   as: "likes",
-        // },
+       
       ],
       order: [["created_at", "DESC"]],
     });
-    for (let item of content) {
-      const likeCount = await db.Likes.count({
-        where: { content_id: item.id },
-      });
-      const commentCount = await Comment.count({
-        where: { content_id: item.id },
-      });
-      item.dataValues.likeCount = likeCount;
-      item.dataValues.commentCount = commentCount;
-    }
 
     return content;
   }
@@ -146,22 +152,34 @@ class ContentRepository {
   async findAll(id) {
     let content = await Content.findAll({
       where: { user_id: id },
+      attributes: {
+        include: [
+          // Count likes
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM likes 
+              WHERE likes.content_id = Content.id AND likes.is_like = 1
+            )`),
+            "likeCount",
+          ],
+          // Count comments
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM comment 
+              WHERE comment.content_id = Content.id
+            )`),
+            "commentCount",
+          ],
+        ],
+      },
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
       ],
       order: [["created_at", "DESC"]],
     });
-    for (let item of content) {
-      const likeCount = await db.Likes.count({
-        where: { content_id: item.id },
-      });
-      const commentCount = await Comment.count({
-        where: { content_id: item.id },
-      });
-      item.dataValues.likeCount = likeCount;
-      item.dataValues.commentCount = commentCount;
-    }
 
     return content;
   }
