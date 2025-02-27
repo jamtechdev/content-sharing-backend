@@ -21,9 +21,13 @@ const uploadToS3 = async (filePath, fileName) => {
     const fileExt = path.extname(filePath).toLowerCase();
     const contentType = getContentType(fileExt);
 
+    // Determine folder based on file type
+    const folder = contentType.startsWith("image") ? "images" : "videos";
+    const s3Key = `${folder}/${sanitizedFileName}`;
+
     const params = {
       Bucket: process.env.S3_BUCKET_NAME,
-      Key: `uploads/${sanitizedFileName}`,
+      Key: s3Key,
       Body: fileStream,
       ContentType: contentType,
       ACL: "private",
@@ -36,7 +40,7 @@ const uploadToS3 = async (filePath, fileName) => {
     fs.unlinkSync(filePath);
 
     return {
-      secureUrl: `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/uploads/${sanitizedFileName}`,
+      secureUrl: `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${s3Key}`,
       resourceType: contentType.startsWith("image") ? "image" : "video",
     };
   } catch (error) {
@@ -45,6 +49,7 @@ const uploadToS3 = async (filePath, fileName) => {
   }
 };
 
+// Function to determine Content-Type based on file extension
 const getContentType = (ext) => {
   const mimeTypes = {
     ".jpg": "image/jpeg",
