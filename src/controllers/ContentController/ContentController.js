@@ -135,6 +135,7 @@ class ContentController {
         region_id: modal_region_id,
         premium_access,
         price,
+        plan_id
       } = req.body;
 
       // Ensure region_id is correctly formatted as JSON array
@@ -152,6 +153,7 @@ class ContentController {
         content_type: mediaFileUrl.resourceType,
         category_id,
         user_id: userId,
+        plan_id,
         region_id,
         media_url: mediaFileUrl.secureUrl,
       };
@@ -309,7 +311,7 @@ class ContentController {
       item_id: contentId,
     };
 
-    // await pushNotification(payload);
+    await pushNotification(payload);
     if (!contentId && !userId) {
       return res.status(400).json({
         code: 400,
