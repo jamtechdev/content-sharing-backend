@@ -135,7 +135,7 @@ class ContentController {
         region_id: modal_region_id,
         premium_access,
         price,
-        plan_id
+        plan_id,
       } = req.body;
 
       // Ensure region_id is correctly formatted as JSON array
@@ -153,7 +153,7 @@ class ContentController {
         content_type: mediaFileUrl.resourceType,
         category_id,
         user_id: userId,
-        plan_id,
+        plan_id: plan_id ? parseFloat(plan_id) : null,
         region_id,
         media_url: mediaFileUrl.secureUrl,
       };
@@ -259,6 +259,7 @@ class ContentController {
         region_id,
         premium_access,
         price: price ? parseFloat(price) : null,
+        plan_id: plan_id ? parseFloat(plan_id) : null,
       },
       userId
     );
