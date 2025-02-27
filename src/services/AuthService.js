@@ -52,7 +52,7 @@ class AuthService {
     return { token, user };
   }
 
-  async loginWithGoogle({ accessToken, email, name, photoURL,region_id }) {
+  async loginWithGoogle({ accessToken, email, name, photoURL, region_id }) {
     // Try to find an existing user by email
     let user = await UserRepository.findByEmail(email);
     // console.log(user ,"------================----------------");

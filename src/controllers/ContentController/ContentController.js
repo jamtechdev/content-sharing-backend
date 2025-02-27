@@ -325,7 +325,7 @@ class ContentController {
         user_id: userId,
         is_like: data?.is_like ? 0 : 1,
       });
-      if (data?.is_like != 1) {
+      if (data?.is_like != true) {
         await pushNotification(payload);
       }
 
