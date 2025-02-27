@@ -21,9 +21,9 @@ class ProductRepository {
     });
   }
 
-  async getById(productId) {
+  async getById(id) {
     return await Product.findOne({
-      where: { id: productId },
+      where: { id },
       include: [
         {
           model: Category,

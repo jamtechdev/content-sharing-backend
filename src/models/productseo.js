@@ -10,7 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      ProductSEO.belongsTo(models.product, {
+        foreignKey: "product_id",
+        as: "product"
+      })
     }
   }
   ProductSEO.init({
