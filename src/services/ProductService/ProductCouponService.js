@@ -12,10 +12,10 @@ class ProductCouponService {
     if (existingCoupon) {
       throw new HttpError(409, "A coupon with this code already exists");
     }
-    const startDate = new Date(start_date)
-    const endDate = new Date(end_date)
-    data.start_date = startDate
-    data.end_date = endDate
+    // const startDate = new Date(start_date)
+    // const endDate = new Date(end_date)
+    // data.start_date = startDate
+    // data.end_date = endDate
     return await ProductCouponsRepository.create(data);
   }
   
@@ -43,8 +43,8 @@ class ProductCouponService {
     return coupon;
   }
 
-  async getActiveCoupons(currentDate = new Date()) {
-    const coupons = await ProductCouponsRepository.getActiveCoupons(currentDate);
+  async getActiveCoupons() {
+    const coupons = await ProductCouponsRepository.getActiveCoupons();
     if (coupons.length === 0) {
       throw new HttpError(404, "No active coupons available");
     }

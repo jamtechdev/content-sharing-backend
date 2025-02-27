@@ -11,18 +11,19 @@ class ProductCouponsRepository {
   }
 
   async getById(couponId) {
-    return await ProductCoupon.findByPk(couponId);
+    return await ProductCoupon.findOne({where: {id: couponId }});
   }
 
   async getByCode(code) {
     return await ProductCoupon.findOne({ where: { code } });
   }
 
-  async getActiveCoupons(currentDate) {
+  async getActiveCoupons() {
+    const currentDate = new Date()
     return await ProductCoupon.findAll({
       where: {
-        start_date: { $lte: currentDate },
-        end_date: { $gte: currentDate },
+        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
     });
   }

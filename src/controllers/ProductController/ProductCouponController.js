@@ -42,7 +42,7 @@ class ProductCouponController {
 
     this.router.addRoute(
       "get",
-      "/active",
+      "/active/all",
       authenticate,
     //   authorize(["admin"]),
       TryCatch(this.getActiveCoupons.bind(this))
@@ -50,7 +50,7 @@ class ProductCouponController {
 
     this.router.addRoute(
       "put",
-      "/:id",
+      "/",
       authenticate,
     //   authorize(["admin"]),
       TryCatch(this.updateProductCoupon.bind(this))
@@ -119,9 +119,8 @@ class ProductCouponController {
   }
 
   async updateProductCoupon(req, res) {
-    const couponId = req.params.id;
     const updateData = req.body;
-    const updatedCoupon = await ProductCouponService.updateProductCoupon(couponId, updateData);
+    const updatedCoupon = await ProductCouponService.updateProductCoupon(updateData.couponId, updateData);
     return res.status(200).json({
       code: 200,
       success: true,

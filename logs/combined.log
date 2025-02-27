@@ -6507,3 +6507,93 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductOfferController.getProductOfferById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOfferController.js:92:19)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:28:33.201Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-27T07:28:33.204Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:29:33.658Z [ERROR]: Error in bound createProductCoupon: A coupon with this code already exists
+2025-02-27T07:29:33.659Z [ERROR]: Error: A coupon with this code already exists
+    at ProductCouponService.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:13:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.createProductCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:70:23)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:31:55.469Z [ERROR]: Error in bound getAllProductCoupons: No product coupons found
+2025-02-27T07:31:55.471Z [ERROR]: Error: No product coupons found
+    at ProductCouponService.getAllProductCoupons (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getAllProductCoupons (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:80:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:33:27.380Z [ERROR]: Error in bound getAllProductCoupons: No product coupons found
+2025-02-27T07:33:27.381Z [ERROR]: Error: No product coupons found
+    at ProductCouponService.getAllProductCoupons (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:25:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getAllProductCoupons (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:80:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:34:35.887Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:34:35.891Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:36:23.758Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:36:23.759Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:36:27.734Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:36:27.735Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:36:34.672Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:36:34.672Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:36:53.747Z [ERROR]: Error in bound getProductCouponByCode: Product coupon not found
+2025-02-27T07:36:53.748Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponByCode (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:41:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponByCode (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:102:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:37:54.817Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:37:54.817Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:38:10.219Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:38:10.219Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:38:16.442Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:38:16.442Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:39:32.099Z [ERROR]: Error in bound getProductCouponById: Product coupon not found
+2025-02-27T07:39:32.102Z [ERROR]: Error: Product coupon not found
+    at ProductCouponService.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:33:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getProductCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:91:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:41:51.166Z [ERROR]: Error in bound getActiveCoupons: No active coupons available
+2025-02-27T07:41:51.168Z [ERROR]: Error: No active coupons available
+    at ProductCouponService.getActiveCoupons (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getActiveCoupons (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:112:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T07:42:17.473Z [ERROR]: Error in bound getActiveCoupons: No active coupons available
+2025-02-27T07:42:17.475Z [ERROR]: Error: No active coupons available
+    at ProductCouponService.getActiveCoupons (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCouponService.js:49:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCouponController.getActiveCoupons (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:112:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
