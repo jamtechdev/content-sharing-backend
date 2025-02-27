@@ -6597,3 +6597,249 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductCouponController.getActiveCoupons (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCouponController.js:112:21)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T08:09:52.848Z [ERROR]: Error in bound createProductWithCoupon: Product not found
+2025-02-27T08:09:52.851Z [ERROR]: Error: Product not found
+    at ProductWithCouponService.createProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:9:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.createProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:86:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T08:20:06.843Z [ERROR]: Error in bound createProductWithCoupon: Coupon not found
+2025-02-27T08:20:06.845Z [ERROR]: Error: Coupon not found
+    at ProductWithCouponService.createProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:14:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.createProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:78:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T08:22:07.733Z [ERROR]: Error in bound getProductWithCouponById: Product with coupon not found
+2025-02-27T08:22:07.734Z [ERROR]: Error: Product with coupon not found
+    at ProductWithCouponService.getProductWithCouponById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:30:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.getProductWithCouponById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:99:20)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T08:23:58.474Z [ERROR]: Error in bound getCouponsByProductId: No coupons found for this product
+2025-02-27T08:23:58.475Z [ERROR]: Error: No coupons found for this product
+    at ProductWithCouponService.getCouponsByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:46:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.getCouponsByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:121:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:30:47.961Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:30:48.000Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:31:11.595Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:31:11.609Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:31:35.838Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:31:35.850Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:33:20.031Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:33:20.044Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:34:17.608Z [ERROR]: SyntaxError: Unexpected token '}', ..."ct_id": 
+}" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at parse (D:\Content Sharing\content-sharing-backend\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\Content Sharing\content-sharing-backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (D:\Content Sharing\content-sharing-backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\Content Sharing\content-sharing-backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\Content Sharing\content-sharing-backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+2025-02-27T09:34:25.401Z [ERROR]: Error in bound updateProductWithCoupon: Coupon not found
+2025-02-27T09:34:25.402Z [ERROR]: Error: Coupon not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:60:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:42:50.645Z [ERROR]: Error in bound updateProductWithCoupon: No product with coupon exist with id 20
+2025-02-27T09:42:50.647Z [ERROR]: Error: No product with coupon exist with id 20
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:55:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:47:47.617Z [ERROR]: Error in bound updateProductWithCoupon: No product with coupon exist with id 20
+2025-02-27T09:47:47.619Z [ERROR]: Error: No product with coupon exist with id 20
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:55:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:47:58.270Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:47:58.293Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:49:03.955Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:49:03.965Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:50:21.096Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:50:21.105Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:50:59.743Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:50:59.751Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:51:18.166Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:51:18.176Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:51:42.392Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:51:42.405Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:52:20.243Z [ERROR]: Error in bound updateProductWithCoupon: WHERE parameter "id" has invalid "undefined" value
+2025-02-27T09:52:20.251Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-27T09:54:59.853Z [ERROR]: Error in bound updateProductWithCoupon: Product not found
+2025-02-27T09:54:59.856Z [ERROR]: Error: Product not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:59:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:57:28.247Z [ERROR]: Error in bound updateProductWithCoupon: Coupon not found
+2025-02-27T09:57:28.250Z [ERROR]: Error: Coupon not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:68:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:57:34.919Z [ERROR]: Error in bound updateProductWithCoupon: Product not found
+2025-02-27T09:57:34.920Z [ERROR]: Error: Product not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:62:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:57:45.743Z [ERROR]: Error in bound updateProductWithCoupon: Coupon not found
+2025-02-27T09:57:45.743Z [ERROR]: Error: Coupon not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:68:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:57:50.446Z [ERROR]: Error in bound updateProductWithCoupon: Coupon not found
+2025-02-27T09:57:50.446Z [ERROR]: Error: Coupon not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:68:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T09:58:09.758Z [ERROR]: Error in bound updateProductWithCoupon: Product not found
+2025-02-27T09:58:09.758Z [ERROR]: Error: Product not found
+    at ProductWithCouponService.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:62:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.updateProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:140:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T10:09:43.397Z [ERROR]: Error in bound deleteProductWithCouponByCouponId: No product with coupon found
+2025-02-27T10:09:43.399Z [ERROR]: Error: No product with coupon found
+    at ProductWithCouponService.deleteByCouponId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:91:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.deleteProductWithCouponByCouponId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:161:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T10:12:19.367Z [ERROR]: Error in bound deleteProductWithCoupon: Product with coupon not found
+2025-02-27T10:12:19.371Z [ERROR]: Error: Product with coupon not found
+    at ProductWithCouponService.deleteProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.deleteProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:151:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T10:12:44.476Z [ERROR]: Error in bound deleteProductWithCoupon: Product with coupon not found
+2025-02-27T10:12:44.477Z [ERROR]: Error: Product with coupon not found
+    at ProductWithCouponService.deleteProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.deleteProductWithCoupon (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:151:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-27T10:13:31.083Z [ERROR]: Error in bound deleteProductWithCouponByProductId: No product with coupon found
+2025-02-27T10:13:31.084Z [ERROR]: Error: No product with coupon found
+    at ProductWithCouponService.deleteByProductId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductWithCouponService.js:87:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductWithCouponController.deleteProductWithCouponByProductId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductWithCouponController.js:171:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

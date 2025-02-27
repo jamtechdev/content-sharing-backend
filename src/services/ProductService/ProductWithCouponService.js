@@ -1,13 +1,19 @@
 const ProductWithCouponRepository = require("../../repositories/ProductRepository/ProductWithCouponRepository");
+const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
+const ProductCouponsRepository = require("../../repositories/ProductRepository/ProductCouponsRepository");
 const HttpError = require("../../decorators/HttpError");
 
 class ProductWithCouponService {
   async createProductWithCoupon(data) {
+    const product = await ProductRepository.getById(data.product_id);
+    const coupon = await ProductCouponsRepository.getById(data.coupon_id);
+    if (!product) {
+      throw new HttpError(404, "Product not found");
+    }
+    if (!coupon) {
+      throw new HttpError(404, "Coupon not found");
+    }
     return await ProductWithCouponRepository.create(data);
-  }
-
-  async bulkCreateProductWithCoupon(dataArray) {
-    return await ProductWithCouponRepository.bulkCreate(dataArray);
   }
 
   async getAllProductsWithCoupons() {
@@ -42,12 +48,27 @@ class ProductWithCouponService {
     return coupons;
   }
 
-  async updateProductWithCoupon(id, data) {
-    const productWithCoupon = await ProductWithCouponRepository.getById(id);
-    if (!productWithCoupon) {
-      throw new HttpError(404, "Product with coupon not found");
+  async updateProductWithCoupon(data) {
+    const { product_id, coupon_id, id } = data;
+    const productWithCouponExist = await ProductWithCouponRepository.getById(
+      id
+    );
+    if (!productWithCouponExist) {
+      throw new HttpError(404, `No product with coupon exist with id ${id}`);
     }
-    await ProductWithCouponRepository.update(id, data);
+    if (product_id) {
+      const product = await ProductRepository.getById(product_id);
+      if (!product) {
+        throw new HttpError(404, "Product not found");
+      }
+    }
+    if (coupon_id) {
+      const coupon = await ProductCouponsRepository.getById(coupon_id);
+      if (!coupon) {
+        throw new HttpError(404, "Coupon not found");
+      }
+    }
+    await ProductWithCouponRepository.update(data);
     return await ProductWithCouponRepository.getById(id);
   }
 
@@ -60,10 +81,18 @@ class ProductWithCouponService {
   }
 
   async deleteByProductId(productId) {
+    const productWithCouponExist = await ProductWithCouponRepository.getByProductId(productId)
+    if(productWithCouponExist.length === 0){
+      throw new HttpError(404, "No product with coupon found")
+    }
     return await ProductWithCouponRepository.deleteByProductId(productId);
   }
 
   async deleteByCouponId(couponId) {
+    const productWithCouponExist = await ProductWithCouponRepository.getByCouponId(couponId)
+    if(productWithCouponExist.length === 0){
+      throw new HttpError(404, "No product with coupon found")
+    }
     return await ProductWithCouponRepository.deleteByCouponId(couponId);
   }
 }

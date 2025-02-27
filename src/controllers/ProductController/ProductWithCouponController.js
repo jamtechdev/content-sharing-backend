@@ -17,14 +17,6 @@ class ProductWithCouponController {
     );
 
     this.router.addRoute(
-      "post",
-      "/bulk-create",
-      authenticate,
-    //   authorize(["admin"]),
-      TryCatch(this.bulkCreateProductWithCoupon.bind(this))
-    );
-
-    this.router.addRoute(
       "get",
       "/",
       authenticate,
@@ -57,6 +49,14 @@ class ProductWithCouponController {
     );
 
     this.router.addRoute(
+      "put",
+      "/",
+      authenticate,
+    //   authorize(["admin"]),
+      TryCatch(this.updateProductWithCoupon.bind(this))
+    );
+
+    this.router.addRoute(
       "delete",
       "/:id",
       authenticate,
@@ -69,7 +69,7 @@ class ProductWithCouponController {
       "/coupon/:couponId",
       authenticate,
     //   authorize(["admin"]),
-      TryCatch(this.deleteProductsByCouponId.bind(this))
+      TryCatch(this.deleteProductWithCouponByCouponId.bind(this))
     );
 
     this.router.addRoute(
@@ -77,7 +77,7 @@ class ProductWithCouponController {
       "/product/:productId",
       authenticate,
     //   authorize(["admin"]),
-      TryCatch(this.deleteCouponsByProductId.bind(this))
+      TryCatch(this.deleteProductWithCouponByProductId.bind(this))
     );
   }
 
@@ -89,17 +89,6 @@ class ProductWithCouponController {
       success: true,
       message: "Product associated with coupon successfully",
       data: newEntry,
-    });
-  }
-
-  async bulkCreateProductWithCoupon(req, res) {
-    const data = req.body;
-    const newEntries = await ProductWithCouponService.bulkCreateProductWithCoupon(data);
-    return res.status(201).json({
-      code: 201,
-      success: true,
-      message: "Bulk products associated with coupon successfully",
-      data: newEntries,
     });
   }
 
@@ -146,6 +135,17 @@ class ProductWithCouponController {
     });
   }
 
+  async updateProductWithCoupon(req, res) {
+    const data = req.body
+    const response = await ProductWithCouponService.updateProductWithCoupon(data)
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Product with coupon updated successfully",
+      data: response
+    })
+  }
+
   async deleteProductWithCoupon(req, res) {
     const id = req.params.id;
     await ProductWithCouponService.deleteProductWithCoupon(id);
@@ -156,9 +156,9 @@ class ProductWithCouponController {
     });
   }
 
-  async deleteProductsByCouponId(req, res) {
+  async deleteProductWithCouponByCouponId(req, res) {
     const couponId = req.params.couponId;
-    await ProductWithCouponService.deleteProductsByCouponId(couponId);
+    await ProductWithCouponService.deleteByCouponId(couponId);
     return res.status(200).json({
       code: 200,
       success: true,
@@ -166,9 +166,9 @@ class ProductWithCouponController {
     });
   }
 
-  async deleteCouponsByProductId(req, res) {
+  async deleteProductWithCouponByProductId(req, res) {
     const productId = req.params.productId;
-    await ProductWithCouponService.deleteCouponsByProductId(productId);
+    await ProductWithCouponService.deleteByProductId(productId);
     return res.status(200).json({
       code: 200,
       success: true,
