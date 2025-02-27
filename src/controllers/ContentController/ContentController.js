@@ -315,7 +315,7 @@ class ContentController {
       title: `Notification from ${getContent.user.name}`,
       message: `${user?.name} likes ${getContent.user.name}'s post.`,
       sender_id: userId,
-      type: "like",
+      type: "likes",
       item_id: contentId,
     };
 
