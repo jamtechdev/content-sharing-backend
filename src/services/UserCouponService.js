@@ -1,14 +1,27 @@
 const UserCouponRepository = require("../repositories/UserCouponRepository");
+const ProductCouponsRepository = require('../repositories/ProductRepository/ProductCouponsRepository')
 const HttpError = require("../decorators/HttpError");
 
 class UserCouponService {
   async createUserCoupon(data, userId) {
     data.user_id = userId
+    const coupon = await ProductCouponsRepository.getById(data.coupon_id)
+    if(!coupon){
+      throw new HttpError(404, "Coupon not found")
+    }
+    const userCouponExist = await UserCouponRepository.getUserSpecificCoupon(userId, data.coupon_id)
+    if(userCouponExist){
+      throw new HttpError(409, "User already have this coupon")
+    }
     return await UserCouponRepository.create(data);
   }
 
-  async bulkCreateUserCoupons(dataArray) {
-    return await UserCouponRepository.bulkCreate(dataArray);
+  async getAllCoupons(){
+    const coupons = await UserCouponRepository.getAll()
+    if(coupons.length === 0){
+      throw new HttpError(404, "Coupons not found")
+    }
+    return coupons
   }
 
   async getUserCouponById(id) {
@@ -30,25 +43,25 @@ class UserCouponService {
   async getUserCouponsByCouponId(couponId) {
     const userCoupons = await UserCouponRepository.getByCouponId(couponId);
     if (userCoupons.length === 0) {
-      throw new HttpError(404, "No users found for this coupon");
+      throw new HttpError(404, "User coupon not found");
     }
     return userCoupons;
   }
 
-  async getUserCoupon(userId, couponId) {
-    const userCoupon = await UserCouponRepository.getUserCoupon(userId, couponId);
+  async getUserSpecificCoupon(userId, couponId) {
+    const userCoupon = await UserCouponRepository.getSpecificCoupon(userId, couponId);
     if (!userCoupon) {
       throw new HttpError(404, "User coupon not found");
     }
     return userCoupon;
   }
 
-  async updateUserCoupon(id, data) {
-    const userCoupon = await UserCouponRepository.getById(id);
+  async updateUserCoupon(data) {
+    const userCoupon = await UserCouponRepository.getById(data.id);
     if (!userCoupon) {
       throw new HttpError(404, "User coupon not found");
     }
-    return await UserCouponRepository.update(id, data);
+    return await UserCouponRepository.update(data);
   }
 
   async deleteUserCoupon(id) {

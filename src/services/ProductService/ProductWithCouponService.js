@@ -5,13 +5,18 @@ const HttpError = require("../../decorators/HttpError");
 
 class ProductWithCouponService {
   async createProductWithCoupon(data) {
-    const product = await ProductRepository.getById(data.product_id);
-    const coupon = await ProductCouponsRepository.getById(data.coupon_id);
+    const {product_id, coupon_id} = data
+    const product = await ProductRepository.getById(product_id);
     if (!product) {
       throw new HttpError(404, "Product not found");
     }
+    const coupon = await ProductCouponsRepository.getById(coupon_id);
     if (!coupon) {
       throw new HttpError(404, "Coupon not found");
+    }
+    const productWithCouponExist = await ProductWithCouponRepository.getByProductIdAndCouponId(product_id, coupon_id)
+    if(productWithCouponExist){
+      throw new HttpError("409", "Coupon already assigned to the product")
     }
     return await ProductWithCouponRepository.create(data);
   }

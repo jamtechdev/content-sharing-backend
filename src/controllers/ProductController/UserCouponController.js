@@ -2,7 +2,7 @@ const Router = require("../../decorators/Router");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const TryCatch = require("../../decorators/TryCatch");
-const UserCouponService = require("../../services/ProductService/ProductCouponService");
+const UserCouponService = require("../../services/UserCouponService");
 
 class UserCouponController {
   constructor() {
@@ -17,11 +17,11 @@ class UserCouponController {
     );
 
     this.router.addRoute(
-      "post",
-      "/bulk-create",
+      "get",
+      "/",
       authenticate,
     //   authorize(["admin"]),
-      TryCatch(this.bulkCreateUserCoupons.bind(this))
+      TryCatch(this.getAllCoupons.bind(this))
     );
 
     this.router.addRoute(
@@ -50,15 +50,15 @@ class UserCouponController {
 
     this.router.addRoute(
       "get",
-      "/user/:userId/coupon/:couponId",
+      "/user/coupon/:couponId",
       authenticate,
-      authorize(["user"]),
-      TryCatch(this.getUserCoupon.bind(this))
+      // authorize(["user"]),
+      TryCatch(this.getUserSpecificCoupon.bind(this))
     );
 
     this.router.addRoute(
       "put",
-      "/:id",
+      "/",
       authenticate,
     //   authorize(["admin"]),
       TryCatch(this.updateUserCoupon.bind(this))
@@ -92,7 +92,7 @@ class UserCouponController {
   async createUserCoupon(req, res) {
     const data = req.body;
     const {userId} = req?.user
-    const newEntry = await UserCouponService.createProductCoupon(data, userId);
+    const newEntry = await UserCouponService.createUserCoupon(data, userId);
     return res.status(201).json({
       code: 201,
       success: true,
@@ -101,15 +101,13 @@ class UserCouponController {
     });
   }
 
-  async bulkCreateUserCoupons(req, res) {
-    const data = req.body;
-    const newEntries = await UserCouponService.bulkCreateUserCoupons(data);
-    return res.status(201).json({
-      code: 201,
+  async getAllCoupons(req, res){
+    const response = await UserCouponService.getAllCoupons()
+    return res.status(200).json({
+      code:200,
       success: true,
-      message: "Bulk user coupons created successfully",
-      data: newEntries,
-    });
+      data: response
+    })
   }
 
   async getUserCouponById(req, res) {
@@ -145,9 +143,10 @@ class UserCouponController {
     });
   }
 
-  async getUserCoupon(req, res) {
-    const { userId, couponId } = req.params;
-    const record = await UserCouponService.getUserCoupon(userId, couponId);
+  async getUserSpecificCoupon(req, res) {
+    const { couponId } = req.params;
+    const {userId } = req?.user
+    const record = await UserCouponService.getUserSpecificCoupon(userId, couponId);
     return res.status(200).json({
       code: 200,
       success: true,
@@ -157,9 +156,8 @@ class UserCouponController {
   }
 
   async updateUserCoupon(req, res) {
-    const id = req.params.id;
     const data = req.body;
-    const updatedRecord = await UserCouponService.updateUserCoupon(id, data);
+    const updatedRecord = await UserCouponService.updateUserCoupon(data);
     return res.status(200).json({
       code: 200,
       success: true,

@@ -1,34 +1,107 @@
 const db = require("../models");
-const UserCoupon = db.user_coupon
+const UserCoupon = db.user_coupon;
+const User = db.users;
+const ProductCoupon = db.product_coupon;
 
 class UserCouponRepository {
   async create(data) {
     return await UserCoupon.create(data);
   }
 
-  async bulkCreate(dataArray) {
-    return await UserCoupon.bulkCreate(dataArray);
+  async getAll() {
+    return await UserCoupon.findAll({
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getById(id) {
-    return await UserCoupon.findByPk(id);
+    return await UserCoupon.findOne({where: {id},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getByUserId(userId) {
-    return await UserCoupon.findAll({ where: { user_id: userId } });
+    return await UserCoupon.findAll({ where: { user_id: userId },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
   async getByCouponId(couponId) {
-    return await UserCoupon.findAll({ where: { coupon_id: couponId } });
+    return await UserCoupon.findAll({ where: { coupon_id: couponId }, 
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
-  async getUserCoupon(userId, couponId) {
-    return await UserCoupon.findOne({ where: { user_id: userId, coupon_id: couponId } });
+  async getSpecificCoupon(userId, couponId) {
+    return await UserCoupon.findOne({
+      where: { user_id: userId, coupon_id: couponId },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: User,
+          as: "user",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
   }
 
-  async update(id, data) {
-    await UserCoupon.update(data, { where: { id } });
-    return await this.getById(id);
+  async update(data) {
+    await UserCoupon.update(data, { where: { id: data.id } });
+    return await this.getById(data.id);
   }
 
   async delete(id) {

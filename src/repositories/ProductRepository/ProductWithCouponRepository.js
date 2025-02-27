@@ -83,6 +83,28 @@ class ProductWithCouponRepository {
     });
   }
 
+  async getByProductIdAndCouponId(productId, couponId){
+    return await ProductWithCoupon.findOne({
+      where: {
+        product_id: productId,
+        coupon_id: couponId
+      },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    })
+  }
+
   async update(data) {
     return await ProductWithCoupon.update(data, {
       where: { id: data.id },
