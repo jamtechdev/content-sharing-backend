@@ -129,6 +129,7 @@ class ContentRepository {
         "price",
         "status",
         "content_type",
+        "created_at",
         [
           db.Sequelize.literal(`(
                     SELECT COUNT(*) 
