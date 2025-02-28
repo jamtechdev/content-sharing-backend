@@ -6,6 +6,7 @@ const productAttribute = db.product_attribute;
 const productDiscount = db.product_discount;
 const productOffer = db.product_offer;
 const productWithCoupon = db.product_with_coupon;
+const ProductCoupon = db.product_coupon;
 const { Op } = require("sequelize");
 
 class ProductRepository {
@@ -45,7 +46,11 @@ class ProductRepository {
         {
           model: productWithCoupon,
           as: "product_with_coupon",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
+          attributes: {exclude: ["createdAt", "updatedAt"]},
+          include: [{
+            model: ProductCoupon,
+            as: "coupon"
+          }]
         }
       ],
     });
