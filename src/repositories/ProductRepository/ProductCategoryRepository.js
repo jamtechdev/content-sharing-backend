@@ -45,12 +45,12 @@ class ProductCategoryRepository {
     return deleted;
   }
 
-  async getByName(name) {
-    const productCategory = await ProductCategory.findOne({
-      where: { name },
-    });
-    return productCategory;
-  }
+  // async getByName(name) {
+  //   const productCategory = await ProductCategory.findOne({
+  //     where: { name },
+  //   });
+  //   return productCategory;
+  // }
 }
 
 module.exports = new ProductCategoryRepository();

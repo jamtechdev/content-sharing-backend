@@ -16,10 +16,6 @@ class ProductAttributeService {
     return await ProductAttributeRepository.create(data);
   }
 
-  async bulkCreateProductAttributes(data) {
-    return await ProductAttributeRepository.bulkCreate(data);
-  }
-
   async getAllProductAttributes() {
     const attributes = await ProductAttributeRepository.getAll();
     if (attributes.length === 0) {
@@ -36,13 +32,13 @@ class ProductAttributeService {
     return attribute;
   }
 
-  async getProductAttributesByProductId(productId) {
-    const attributes = await ProductAttributeRepository.getByProductId(productId);
-    if (attributes.length === 0) {
-      throw new HttpError(404, "No attributes found for this product");
-    }
-    return attributes;
-  }
+  // async getProductAttributesByProductId(productId) {
+  //   const attributes = await ProductAttributeRepository.getByProductId(productId);
+  //   if (attributes.length === 0) {
+  //     throw new HttpError(404, "No attributes found for this product");
+  //   }
+  //   return attributes;
+  // }
 
   async updateProductAttribute(attributeId, data) {
     const attribute = await ProductAttributeRepository.getById(attributeId);
@@ -62,14 +58,14 @@ class ProductAttributeService {
     return { message: "Product attribute deleted successfully" };
   }
 
-  async deleteAttributesByProductId(productId) {
-    const attributes = await ProductAttributeRepository.getByProductId(productId);
-    if (attributes.length === 0) {
-      throw new HttpError(404, "No attributes found for this product");
-    }
-    await ProductAttributeRepository.deleteByProductId(productId);
-    return { message: "All product attributes deleted successfully" };
-  }
+  // async deleteAttributesByProductId(productId) {
+  //   const attributes = await ProductAttributeRepository.getByProductId(productId);
+  //   if (attributes.length === 0) {
+  //     throw new HttpError(404, "No attributes found for this product");
+  //   }
+  //   await ProductAttributeRepository.deleteByProductId(productId);
+  //   return { message: "All product attributes deleted successfully" };
+  // }
 }
 
 module.exports = new ProductAttributeService();

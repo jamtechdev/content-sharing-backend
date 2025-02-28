@@ -48,13 +48,13 @@ class ProductCategoryController {
       TryCatch(this.deleteProductCategory.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/name/:name",
-      authenticate,
-    //   authorize(["admin"]),
-      TryCatch(this.getProductCategoryByName.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/name/:name",
+    //   authenticate,
+    // //   authorize(["admin"]),
+    //   TryCatch(this.getProductCategoryByName.bind(this))
+    // );
   }
 
   async createProductCategory(req, res) {
@@ -110,16 +110,16 @@ class ProductCategoryController {
     });
   }
 
-  async getProductCategoryByName(req, res) {
-    const name = req.params.name;
-    const category = await ProductCategoryService.getProductCategoryByName(name);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product category fetched successfully",
-      data: category,
-    });
-  }
+  // async getProductCategoryByName(req, res) {
+  //   const name = req.params.name;
+  //   const category = await ProductCategoryService.getProductCategoryByName(name);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product category fetched successfully",
+  //     data: category,
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

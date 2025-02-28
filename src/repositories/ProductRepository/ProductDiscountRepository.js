@@ -35,7 +35,7 @@ class ProductDiscountRepository {
   }
 
   async getById(discountId) {
-    // const currentDate = new Date();
+    const currentDate = new Date();
     return await ProductDiscount.findOne({
       where: {
         id: discountId,
@@ -61,7 +61,7 @@ class ProductDiscountRepository {
   }
 
   async getByProductId(productId) {
-    // const currentDate = new Date()
+    const currentDate = new Date()
     return await ProductDiscount.findAll({
       where: {
         product_id: productId,
@@ -86,31 +86,31 @@ class ProductDiscountRepository {
     });
   }
 
-  async getActiveDiscounts(productId) {
-    const currentDate = new Date();
-    return await ProductDiscount.findAll({
-      where: {
-        product_id: productId,
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
-        end_date: { [db.Sequelize.Op.gte]: currentDate },
-      },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-          include: [
-            {
-              model: ProductCategory,
-              as: "category",
-              attributes: { exclude: ["createdAt", "updatedAt"] },
-            },
-          ],
-        },
-      ],
-    });
-  }
+  // async getActiveDiscounts(productId) {
+  //   const currentDate = new Date();
+  //   return await ProductDiscount.findAll({
+  //     where: {
+  //       product_id: productId,
+  //       start_date: { [db.Sequelize.Op.lte]: currentDate },
+  //       end_date: { [db.Sequelize.Op.gte]: currentDate },
+  //     },
+  //     attributes: { exclude: ["createdAt", "updatedAt"] },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //         include: [
+  //           {
+  //             model: ProductCategory,
+  //             as: "category",
+  //             attributes: { exclude: ["createdAt", "updatedAt"] },
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   });
+  // }
 
   async update(discountId, data) {
     return await ProductDiscount.update(data, { where: { id: discountId } });
@@ -120,9 +120,9 @@ class ProductDiscountRepository {
     return await ProductDiscount.destroy({ where: { id: discountId } });
   }
 
-  async deleteByProductId(productId) {
-    return await ProductDiscount.destroy({ where: { product_id: productId } });
-  }
+  // async deleteByProductId(productId) {
+  //   return await ProductDiscount.destroy({ where: { product_id: productId } });
+  // }
 }
 
 module.exports = new ProductDiscountRepository();

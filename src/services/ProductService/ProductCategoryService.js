@@ -53,13 +53,13 @@ class ProductCategoryService {
     return deleted;
   }
 
-  async getProductCategoryByName(name) {
-    const productCategory = await ProductCategoryRepository.getByName(name);
-    if (!productCategory) {
-      throw new HttpError(404, "Product category not found");
-    }
-    return productCategory;
-  }
+  // async getProductCategoryByName(name) {
+  //   const productCategory = await ProductCategoryRepository.getByName(name);
+  //   if (!productCategory) {
+  //     throw new HttpError(404, "Product category not found");
+  //   }
+  //   return productCategory;
+  // }
 }
 
 module.exports = new ProductCategoryService();

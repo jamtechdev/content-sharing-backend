@@ -55,20 +55,20 @@ class ProductController {
       TryCatch(this.getProductsByCategoryId.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/tag/:tag",
-      authenticate,
-      // authorize(['admin']),
-      TryCatch(this.getProductsByTag.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/tag/:tag",
+    //   authenticate,
+    //   // authorize(['admin']),
+    //   TryCatch(this.getProductsByTag.bind(this))
+    // );
 
     this.router.addRoute(
       "get",
-      "/search",
-      authenticate,
+      "/pro/query",
+      // authenticate,
       // authorize(['admin']),
-      TryCatch(this.searchProductsByName.bind(this))
+      TryCatch(this.searchProduct.bind(this))
     );
 
     this.router.addRoute(
@@ -153,20 +153,20 @@ class ProductController {
     });
   }
 
-  async getProductsByTag(req, res) {
-    const tag = req.params.tag;
-    const products = await ProductService.getProductsByTag(tag);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Products fetched successfully",
-      data: products,
-    });
-  }
+  // async getProductsByTag(req, res) {
+  //   const tag = req.params.tag;
+  //   const products = await ProductService.getProductsByTag(tag);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Products fetched successfully",
+  //     data: products,
+  //   });
+  // }
 
-  async searchProductsByName(req, res) {
+  async searchProduct(req, res) {
     const {search} = req.query;
-    const products = await ProductService.searchProductsByName(search);
+    const products = await ProductService.searchProduct(search);
     return res.status(200).json({
       code: 200,
       success: true,
@@ -185,7 +185,6 @@ class ProductController {
       code: 200,
       success: true,
       message: "Product updated successfully",
-      data: updatedProduct,
     });
   }
 

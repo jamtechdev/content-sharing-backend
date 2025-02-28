@@ -40,13 +40,13 @@ class ProductDiscountController {
       TryCatch(this.getProductDiscountsByProductId.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId/active",
-      authenticate,
-      // authorize(["admin"]),
-      TryCatch(this.getActiveProductDiscounts.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId/active",
+    //   authenticate,
+    //   // authorize(["admin"]),
+    //   TryCatch(this.getActiveProductDiscounts.bind(this))
+    // );
 
     this.router.addRoute(
       "put",
@@ -64,13 +64,13 @@ class ProductDiscountController {
       TryCatch(this.deleteProductDiscount.bind(this))
     );
 
-    this.router.addRoute(
-      "delete",
-      "/product/:productId",
-      authenticate,
-      // authorize(["admin"]),
-      TryCatch(this.deleteDiscountsByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/product/:productId",
+    //   authenticate,
+    //   // authorize(["admin"]),
+    //   TryCatch(this.deleteDiscountsByProductId.bind(this))
+    // );
   }
 
   async createProductDiscount(req, res) {
@@ -116,16 +116,16 @@ class ProductDiscountController {
     });
   }
 
-  async getActiveProductDiscounts(req, res) {
-    const productId = req.params.productId;
-    const discounts = await ProductDiscountService.getActiveProductDiscounts(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Active product discounts fetched successfully",
-      data: discounts,
-    });
-  }
+  // async getActiveProductDiscounts(req, res) {
+  //   const productId = req.params.productId;
+  //   const discounts = await ProductDiscountService.getActiveProductDiscounts(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Active product discounts fetched successfully",
+  //     data: discounts,
+  //   });
+  // }
 
   async updateProductDiscount(req, res) {
     const updateData = req.body;
@@ -147,15 +147,15 @@ class ProductDiscountController {
     });
   }
 
-  async deleteDiscountsByProductId(req, res) {
-    const productId = req.params.productId;
-    await ProductDiscountService.deleteDiscountsByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "All product discounts deleted successfully",
-    });
-  }
+  // async deleteDiscountsByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   await ProductDiscountService.deleteDiscountsByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "All product discounts deleted successfully",
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

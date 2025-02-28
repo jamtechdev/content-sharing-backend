@@ -33,47 +33,47 @@ class ProductMediaService {
     });
   }
 
-  async getAllProductMedia() {
-    const media = await ProductMediaRepository.getAll();
-    if (media.length === 0) {
-      throw new HttpError(404, "No product media found");
-    }
-    return media;
-  }
+  // async getAllProductMedia() {
+  //   const media = await ProductMediaRepository.getAll();
+  //   if (media.length === 0) {
+  //     throw new HttpError(404, "No product media found");
+  //   }
+  //   return media;
+  // }
 
-  async getProductMediaById(mediaId) {
-    const media = await ProductMediaRepository.getById(mediaId);
-    if (!media) {
-      throw new HttpError(404, "Product media not found");
-    }
-    return media;
-  }
+  // async getProductMediaById(mediaId) {
+  //   const media = await ProductMediaRepository.getById(mediaId);
+  //   if (!media) {
+  //     throw new HttpError(404, "Product media not found");
+  //   }
+  //   return media;
+  // }
 
-  async getProductMediaByProductId(productId) {
-    const media = await ProductMediaRepository.getByProductId(productId);
-    if (media.length === 0) {
-      throw new HttpError(404, "No media found for this product");
-    }
-    return media;
-  }
+  // async getProductMediaByProductId(productId) {
+  //   const media = await ProductMediaRepository.getByProductId(productId);
+  //   if (media.length === 0) {
+  //     throw new HttpError(404, "No media found for this product");
+  //   }
+  //   return media;
+  // }
 
-  async getMainProductMedia(productId) {
-    const media = await ProductMediaRepository.getMainMediaByProductId(
-      productId
-    );
-    if (!media) {
-      throw new HttpError(404, "Main product media not found");
-    }
-    return media;
-  }
+  // async getMainProductMedia(productId) {
+  //   const media = await ProductMediaRepository.getMainMediaByProductId(
+  //     productId
+  //   );
+  //   if (!media) {
+  //     throw new HttpError(404, "Main product media not found");
+  //   }
+  //   return media;
+  // }
 
-  async getGalleryProductMedia(productId) {
-    const media = await ProductMediaRepository.getGalleryByProductId(productId);
-    if (media.length === 0) {
-      throw new HttpError(404, "No gallery media found for this product");
-    }
-    return media;
-  }
+  // async getGalleryProductMedia(productId) {
+  //   const media = await ProductMediaRepository.getGalleryByProductId(productId);
+  //   if (media.length === 0) {
+  //     throw new HttpError(404, "No gallery media found for this product");
+  //   }
+  //   return media;
+  // }
 
   async updateProductMedia(mediaId, file, data) {
     const media = await ProductMediaRepository.getById(mediaId);
@@ -110,14 +110,14 @@ class ProductMediaService {
     return { message: "Product media deleted successfully" };
   }
 
-  async deleteMediaByProductId(productId) {
-    const media = await ProductMediaRepository.getByProductId(productId);
-    if (media.length === 0) {
-      throw new HttpError(404, "No media found for this product");
-    }
-    await ProductMediaRepository.deleteByProductId(productId);
-    return { message: "All media for the product deleted successfully" };
-  }
+  // async deleteMediaByProductId(productId) {
+  //   const media = await ProductMediaRepository.getByProductId(productId);
+  //   if (media.length === 0) {
+  //     throw new HttpError(404, "No media found for this product");
+  //   }
+  //   await ProductMediaRepository.deleteByProductId(productId);
+  //   return { message: "All media for the product deleted successfully" };
+  // }
 }
 
 module.exports = new ProductMediaService();

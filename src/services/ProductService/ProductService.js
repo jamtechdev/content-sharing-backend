@@ -91,16 +91,16 @@ class ProductService {
     return products;
   }
 
-  async getProductsByTag(tag) {
-    const products = await ProductRepository.getByTag(tag);
-    if (products.length === 0) {
-      throw new HttpError(404, "Products not found");
-    }
-    return products;
-  }
+  // async getProductsByTag(tag) {
+  //   const products = await ProductRepository.getByTag(tag);
+  //   if (products.length === 0) {
+  //     throw new HttpError(404, "Products not found");
+  //   }
+  //   return products;
+  // }
 
-  async searchProductsByName(name) {
-    const products = await ProductRepository.getByName(name);
+  async searchProduct(search) {
+    const products = await ProductRepository.searchProduct(search);
     if (products.length === 0) {
       throw new HttpError(404, "Products not found");
     }

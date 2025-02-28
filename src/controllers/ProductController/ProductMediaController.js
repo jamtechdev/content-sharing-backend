@@ -18,45 +18,45 @@ class ProductMediaController {
       TryCatch(this.createProductMedia.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.getAllProductMedia.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.getAllProductMedia.bind(this))
+    // );
 
-    this.router.addRoute(
-      "get",
-      "/:id",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.getProductMediaById.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/:id",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.getProductMediaById.bind(this))
+    // );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.getProductMediaByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.getProductMediaByProductId.bind(this))
+    // );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId/main",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.getMainProductMedia.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId/main",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.getMainProductMedia.bind(this))
+    // );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId/gallery",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.getGalleryProductMedia.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId/gallery",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.getGalleryProductMedia.bind(this))
+    // );
 
     this.router.addRoute(
       "put",
@@ -75,13 +75,13 @@ class ProductMediaController {
       TryCatch(this.deleteProductMedia.bind(this))
     );
 
-    this.router.addRoute(
-      "delete",
-      "/product/:productId",
-      authenticate,
-      // authorize("admin"),
-      TryCatch(this.deleteMediaByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/product/:productId",
+    //   authenticate,
+    //   // authorize("admin"),
+    //   TryCatch(this.deleteMediaByProductId.bind(this))
+    // );
   }
 
   async createProductMedia(req, res) {
@@ -96,59 +96,59 @@ class ProductMediaController {
     });
   }
 
-  async getAllProductMedia(req, res) {
-    const media = await ProductMediaService.getAllProductMedia();
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product media fetched successfully",
-      data: media,
-    });
-  }
+  // async getAllProductMedia(req, res) {
+  //   const media = await ProductMediaService.getAllProductMedia();
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product media fetched successfully",
+  //     data: media,
+  //   });
+  // }
 
-  async getProductMediaById(req, res) {
-    const mediaId = req.params.id;
-    const media = await ProductMediaService.getProductMediaById(mediaId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product media fetched successfully",
-      data: media,
-    });
-  }
+  // async getProductMediaById(req, res) {
+  //   const mediaId = req.params.id;
+  //   const media = await ProductMediaService.getProductMediaById(mediaId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product media fetched successfully",
+  //     data: media,
+  //   });
+  // }
 
-  async getProductMediaByProductId(req, res) {
-    const productId = req.params.productId;
-    const media = await ProductMediaService.getProductMediaByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product media fetched successfully",
-      data: media,
-    });
-  }
+  // async getProductMediaByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   const media = await ProductMediaService.getProductMediaByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product media fetched successfully",
+  //     data: media,
+  //   });
+  // }
 
-  async getMainProductMedia(req, res) {
-    const productId = req.params.productId;
-    const media = await ProductMediaService.getMainProductMedia(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Main product media fetched successfully",
-      data: media,
-    });
-  }
+  // async getMainProductMedia(req, res) {
+  //   const productId = req.params.productId;
+  //   const media = await ProductMediaService.getMainProductMedia(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Main product media fetched successfully",
+  //     data: media,
+  //   });
+  // }
 
-  async getGalleryProductMedia(req, res) {
-    const productId = req.params.productId;
-    const media = await ProductMediaService.getGalleryProductMedia(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Gallery product media fetched successfully",
-      data: media,
-    });
-  }
+  // async getGalleryProductMedia(req, res) {
+  //   const productId = req.params.productId;
+  //   const media = await ProductMediaService.getGalleryProductMedia(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Gallery product media fetched successfully",
+  //     data: media,
+  //   });
+  // }
 
   async updateProductMedia(req, res) {
     const updateData = req.body;
@@ -173,15 +173,15 @@ class ProductMediaController {
     });
   }
 
-  async deleteMediaByProductId(req, res) {
-    const productId = req.params.productId;
-    await ProductMediaService.deleteMediaByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "All media for the product deleted successfully",
-    });
-  }
+  // async deleteMediaByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   await ProductMediaService.deleteMediaByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "All media for the product deleted successfully",
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

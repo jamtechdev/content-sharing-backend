@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "category_id",
         as: "category"
       })
+      Product.hasOne(models.product_media, {
+        foreignKey: "product_id",
+        as: "media"
+      })
     }
   }
   Product.init({

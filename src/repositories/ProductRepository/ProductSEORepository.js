@@ -21,20 +21,6 @@ class ProductSEORepository {
     });
   }
 
-  async getAll(id) {
-    return await ProductSEO.findAll({
-      where: { id },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-      ],
-    });
-  }
-
   async getById(id) {
     return await ProductSEO.findOne({
       where: { id },

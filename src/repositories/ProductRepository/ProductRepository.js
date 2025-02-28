@@ -1,6 +1,7 @@
 const db = require("../../models/index");
 const Product = db.product;
 const Category = db.product_category;
+const ProductMedia = db.product_media;
 const { Op } = require("sequelize");
 
 class ProductRepository {
@@ -17,6 +18,11 @@ class ProductRepository {
           as: "category",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: ProductMedia,
+          as: "media",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -28,6 +34,11 @@ class ProductRepository {
         {
           model: Category,
           as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: ProductMedia,
+          as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
       ],
@@ -43,6 +54,11 @@ class ProductRepository {
           as: "category",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: ProductMedia,
+          as: "media",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -54,6 +70,11 @@ class ProductRepository {
         {
           model: Category,
           as: "category",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: ProductMedia,
+          as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
       ],
@@ -69,33 +90,41 @@ class ProductRepository {
           as: "category",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
-      ],
-    });
-  }
-
-  async getByTag(tag) {
-    return await Product.findAll({
-      where: {
-        tags: {
-          [Op.like]: `%${tag}%`,
-        },
-      },
-      include: [
         {
-          model: Category,
-          as: "category",
+          model: ProductMedia,
+          as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
       ],
     });
   }
 
-  async getByName(name) {
+  // async getByTag(tag) {
+  //   return await Product.findAll({
+  //     where: {
+  //       tags: {
+  //         [Op.like]: `%${tag}%`,
+  //       },
+  //     },
+  //     include: [
+  //       {
+  //         model: Category,
+  //         as: "category",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //     ],
+  //   });
+  // }
+
+  async searchProduct(search) {
     return await Product.findAll({
       where: {
-        name: {
-          [Op.like]: `%${name}%`,
-        },
+        [db.Sequelize.Op.or]: [
+          { name: { [db.Sequelize.Op.like]: `%${search}%` } },
+          { description: { [db.Sequelize.Op.like]: `%${search}%` } },
+          { short_description: { [db.Sequelize.Op.like]: `%${search}%` } },
+          { tags: { [db.Sequelize.Op.like]: `%${search}%` } },
+        ],
       },
       include: [
         {

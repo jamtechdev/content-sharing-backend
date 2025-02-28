@@ -17,14 +17,6 @@ class ProductAttributeController {
     );
 
     this.router.addRoute(
-      "post",
-      "/bulk-create",
-      authenticate,
-      // authorize(["admin"]),
-      TryCatch(this.bulkCreateProductAttributes.bind(this))
-    );
-
-    this.router.addRoute(
       "get",
       "/",
       authenticate,
@@ -40,13 +32,13 @@ class ProductAttributeController {
       TryCatch(this.getProductAttributeById.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId",
-      authenticate,
-      // authorize(["admin"]),
-      TryCatch(this.getProductAttributesByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId",
+    //   authenticate,
+    //   // authorize(["admin"]),
+    //   TryCatch(this.getProductAttributesByProductId.bind(this))
+    // );
 
     this.router.addRoute(
       "put",
@@ -64,13 +56,13 @@ class ProductAttributeController {
       TryCatch(this.deleteProductAttribute.bind(this))
     );
 
-    this.router.addRoute(
-      "delete",
-      "/product/:productId",
-      authenticate,
-      // authorize(["admin"]),
-      TryCatch(this.deleteAttributesByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/product/:productId",
+    //   authenticate,
+    //   // authorize(["admin"]),
+    //   TryCatch(this.deleteAttributesByProductId.bind(this))
+    // );
   }
 
   async createProductAttribute(req, res) {
@@ -81,17 +73,6 @@ class ProductAttributeController {
       success: true,
       message: "Product attribute created successfully",
       data: newAttribute,
-    });
-  }
-
-  async bulkCreateProductAttributes(req, res) {
-    const attributesData = req.body;
-    const newAttributes = await ProductAttributeService.bulkCreateProductAttributes(attributesData);
-    return res.status(201).json({
-      code: 201,
-      success: true,
-      message: "Product attributes created successfully",
-      data: newAttributes,
     });
   }
 
@@ -116,16 +97,16 @@ class ProductAttributeController {
     });
   }
 
-  async getProductAttributesByProductId(req, res) {
-    const productId = req.params.productId;
-    const attributes = await ProductAttributeService.getProductAttributesByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product attributes fetched successfully",
-      data: attributes,
-    });
-  }
+  // async getProductAttributesByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   const attributes = await ProductAttributeService.getProductAttributesByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product attributes fetched successfully",
+  //     data: attributes,
+  //   });
+  // }
 
   async updateProductAttribute(req, res) {
     const updateData = req.body;
@@ -147,15 +128,15 @@ class ProductAttributeController {
     });
   }
 
-  async deleteAttributesByProductId(req, res) {
-    const productId = req.params.productId;
-    await ProductAttributeService.deleteAttributesByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "All product attributes deleted successfully",
-    });
-  }
+  // async deleteAttributesByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   await ProductAttributeService.deleteAttributesByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "All product attributes deleted successfully",
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

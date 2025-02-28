@@ -35,13 +35,13 @@ class ProductDiscountService {
     return discounts;
   }
 
-  async getActiveProductDiscounts(productId) {
-    const discounts = await ProductDiscountRepository.getActiveDiscounts(productId);
-    if (discounts.length === 0) {
-      throw new HttpError(404, "No active discounts found for this product");
-    }
-    return discounts;
-  }
+  // async getActiveProductDiscounts(productId) {
+  //   const discounts = await ProductDiscountRepository.getActiveDiscounts(productId);
+  //   if (discounts.length === 0) {
+  //     throw new HttpError(404, "No active discounts found for this product");
+  //   }
+  //   return discounts;
+  // }
 
   async updateProductDiscount(discountId, data) {
     const discount = await ProductDiscountRepository.getById(discountId);
@@ -61,14 +61,14 @@ class ProductDiscountService {
     return { message: "Product discount deleted successfully" };
   }
 
-  async deleteDiscountsByProductId(productId) {
-    const discounts = await ProductDiscountRepository.getByProductId(productId);
-    if (discounts.length === 0) {
-      throw new HttpError(404, "No discounts found for this product");
-    }
-    await ProductDiscountRepository.deleteByProductId(productId);
-    return { message: "All product discounts deleted successfully" };
-  }
+  // async deleteDiscountsByProductId(productId) {
+  //   const discounts = await ProductDiscountRepository.getByProductId(productId);
+  //   if (discounts.length === 0) {
+  //     throw new HttpError(404, "No discounts found for this product");
+  //   }
+  //   await ProductDiscountRepository.deleteByProductId(productId);
+  //   return { message: "All product discounts deleted successfully" };
+  // }
 }
 
 module.exports = new ProductDiscountService();

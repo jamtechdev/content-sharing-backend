@@ -8,10 +8,6 @@ class ProductAttributeRepository {
     return await ProductAttribute.create(data);
   }
 
-  async bulkCreate(data) {
-    return await ProductAttribute.bulkCreate(data);
-  }
-
   async getAll() {
     return await ProductAttribute.findAll({
       include: [
@@ -51,25 +47,25 @@ class ProductAttributeRepository {
     });
   }
 
-  async getByProductId(productId) {
-    return await ProductAttribute.findAll({
-      where: { product_id: productId },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-          include: [
-            {
-              model: ProductCategory,
-              as: "category",
-              attributes: { exclude: ["createdAt", "updatedAt"] },
-            },
-          ],
-        },
-      ],
-    });
-  }
+  // async getByProductId(productId) {
+  //   return await ProductAttribute.findAll({
+  //     where: { product_id: productId },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //         include: [
+  //           {
+  //             model: ProductCategory,
+  //             as: "category",
+  //             attributes: { exclude: ["createdAt", "updatedAt"] },
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   });
+  // }
 
   async update(attributeId, data) {
     return await ProductAttribute.update(data, { where: { id: attributeId } });
@@ -79,9 +75,9 @@ class ProductAttributeRepository {
     return await ProductAttribute.destroy({ where: { id: attributeId } });
   }
 
-  async deleteByProductId(productId) {
-    return await ProductAttribute.destroy({ where: { product_id: productId } });
-  }
+  // async deleteByProductId(productId) {
+  //   return await ProductAttribute.destroy({ where: { product_id: productId } });
+  // }
 }
 
 module.exports = new ProductAttributeRepository();
