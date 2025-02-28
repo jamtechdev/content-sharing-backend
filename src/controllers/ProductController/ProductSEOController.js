@@ -29,20 +29,20 @@ class ProductSEOController {
       authorize(["admin"]),
       TryCatch(this.getSpecificProductSEO.bind(this))
     );
-    this.router.addRoute(
-      "get",
-      "/search/title",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.searchSEOByTitle.bind(this))
-    );
-    this.router.addRoute(
-      "get",
-      "/search/keywords",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.searchSEOByKeywords.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/search/title",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.searchSEOByTitle.bind(this))
+    // );
+    // this.router.addRoute(
+    //   "get",
+    //   "/search/keywords",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.searchSEOByKeywords.bind(this))
+    // );
     this.router.addRoute(
       "put",
       "/",
@@ -58,13 +58,13 @@ class ProductSEOController {
       authorize(["admin"]),
       TryCatch(this.deleteBySEOId.bind(this))
     );
-    this.router.addRoute(
-      "delete",
-      "/product/:productId",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.deleteSEOByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/product/:productId",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.deleteSEOByProductId.bind(this))
+    // );
   }
 
   async createProductSEO(req, res) {
@@ -96,25 +96,25 @@ class ProductSEOController {
     });
   }
 
-  async searchSEOByTitle(req, res) {
-    const { search } = req?.query;
-    const response = await ProductSEOService.searchSEOByTitle(search);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      data: response,
-    });
-  }
+  // async searchSEOByTitle(req, res) {
+  //   const { search } = req?.query;
+  //   const response = await ProductSEOService.searchSEOByTitle(search);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     data: response,
+  //   });
+  // }
 
-  async searchSEOByKeywords(req, res) {
-    const { search } = req?.query;
-    const response = await ProductSEOService.searchSEOByKeywords(search);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      data: response,
-    });
-  }
+  // async searchSEOByKeywords(req, res) {
+  //   const { search } = req?.query;
+  //   const response = await ProductSEOService.searchSEOByKeywords(search);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     data: response,
+  //   });
+  // }
 
   async updateSEOById(req, res) {
     const data = req?.body;
@@ -136,15 +136,15 @@ class ProductSEOController {
     });
   }
 
-  async deleteSEOByProductId(req, res) {
-    const { productId } = req?.params;
-    const response = await ProductSEOService.deleteSEOByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Product SEO deleted successfully",
-    });
-  }
+  // async deleteSEOByProductId(req, res) {
+  //   const { productId } = req?.params;
+  //   const response = await ProductSEOService.deleteSEOByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Product SEO deleted successfully",
+  //   });
+  // }
   getRouter(){
     return this.router.getRouter()
   }

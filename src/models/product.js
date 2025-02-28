@@ -35,7 +35,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "product_id",
         as: "product_with_coupon"
       })
-
+      Product.hasOne(models.product_seo, {
+        foreignKey: "product_id",
+        as: "product_seo"
+      })
     }
   }
   Product.init({

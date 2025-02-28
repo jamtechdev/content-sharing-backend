@@ -45,24 +45,24 @@ class ProductWithCouponRepository {
     });
   }
 
-  async getByProductId(productId) {
-    return await ProductWithCoupon.findAll({
-      where: { product_id: productId },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-        {
-          model: ProductCoupon,
-          as: "coupon",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-      ],
-    });
-  }
+  // async getByProductId(productId) {
+  //   return await ProductWithCoupon.findAll({
+  //     where: { product_id: productId },
+  //     attributes: { exclude: ["createdAt", "updatedAt"] },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //       {
+  //         model: ProductCoupon,
+  //         as: "coupon",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //     ],
+  //   });
+  // }
 
   async getByCouponId(couponId) {
     return await ProductWithCoupon.findAll({
@@ -117,17 +117,17 @@ class ProductWithCouponRepository {
     });
   }
 
-  async deleteByProductId(productId) {
-    return await ProductWithCoupon.destroy({
-      where: { product_id: productId },
-    });
-  }
+  // async deleteByProductId(productId) {
+  //   return await ProductWithCoupon.destroy({
+  //     where: { product_id: productId },
+  //   });
+  // }
 
-  async deleteByCouponId(couponId) {
-    return await ProductWithCoupon.destroy({
-      where: { coupon_id: couponId },
-    });
-  }
+  // async deleteByCouponId(couponId) {
+  //   return await ProductWithCoupon.destroy({
+  //     where: { coupon_id: couponId },
+  //   });
+  // }
 }
 
 module.exports = new ProductWithCouponRepository();

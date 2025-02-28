@@ -40,13 +40,13 @@ class ProductWithCouponController {
       TryCatch(this.getProductsByCouponId.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/product/:productId",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.getCouponsByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/product/:productId",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.getCouponsByProductId.bind(this))
+    // );
 
     this.router.addRoute(
       "put",
@@ -64,21 +64,21 @@ class ProductWithCouponController {
       TryCatch(this.deleteProductWithCoupon.bind(this))
     );
 
-    this.router.addRoute(
-      "delete",
-      "/coupon/:couponId",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.deleteProductWithCouponByCouponId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/coupon/:couponId",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.deleteProductWithCouponByCouponId.bind(this))
+    // );
 
-    this.router.addRoute(
-      "delete",
-      "/product/:productId",
-      authenticate,
-      authorize(["admin"]),
-      TryCatch(this.deleteProductWithCouponByProductId.bind(this))
-    );
+    // this.router.addRoute(
+    //   "delete",
+    //   "/product/:productId",
+    //   authenticate,
+    //   authorize(["admin"]),
+    //   TryCatch(this.deleteProductWithCouponByProductId.bind(this))
+    // );
   }
 
   async createProductWithCoupon(req, res) {
@@ -124,16 +124,16 @@ class ProductWithCouponController {
     });
   }
 
-  async getCouponsByProductId(req, res) {
-    const productId = req.params.productId;
-    const coupons = await ProductWithCouponService.getCouponsByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "Coupons linked to the product fetched successfully",
-      data: coupons,
-    });
-  }
+  // async getCouponsByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   const coupons = await ProductWithCouponService.getCouponsByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "Coupons linked to the product fetched successfully",
+  //     data: coupons,
+  //   });
+  // }
 
   async updateProductWithCoupon(req, res) {
     const data = req.body
@@ -156,25 +156,25 @@ class ProductWithCouponController {
     });
   }
 
-  async deleteProductWithCouponByCouponId(req, res) {
-    const couponId = req.params.couponId;
-    await ProductWithCouponService.deleteByCouponId(couponId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "All products linked to the coupon deleted successfully",
-    });
-  }
+  // async deleteProductWithCouponByCouponId(req, res) {
+  //   const couponId = req.params.couponId;
+  //   await ProductWithCouponService.deleteByCouponId(couponId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "All products linked to the coupon deleted successfully",
+  //   });
+  // }
 
-  async deleteProductWithCouponByProductId(req, res) {
-    const productId = req.params.productId;
-    await ProductWithCouponService.deleteByProductId(productId);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "All coupons linked to the product deleted successfully",
-    });
-  }
+  // async deleteProductWithCouponByProductId(req, res) {
+  //   const productId = req.params.productId;
+  //   await ProductWithCouponService.deleteByProductId(productId);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "All coupons linked to the product deleted successfully",
+  //   });
+  // }
 
   getRouter() {
     return this.router.getRouter();

@@ -35,55 +35,55 @@ class ProductSEORepository {
     });
   }
 
-  async getByProductId(id) {
-    return await ProductSEO.findOne({
-      where: { product_id:id },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-      ],
-    });
-  }
+  // async getByProductId(id) {
+  //   return await ProductSEO.findOne({
+  //     where: { product_id:id },
+  //     attributes: { exclude: ["createdAt", "updatedAt"] },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //     ],
+  //   });
+  // }
 
-  async searchByTitle(search) {
-    return await ProductSEO.findAll({
-      where: {
-        meta_title: {
-          [db.Sequelize.Op.like]: `%${search}%`,
-        },
-      },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-      ],
-    });
-  }
+  // async searchByTitle(search) {
+  //   return await ProductSEO.findAll({
+  //     where: {
+  //       meta_title: {
+  //         [db.Sequelize.Op.like]: `%${search}%`,
+  //       },
+  //     },
+  //     attributes: { exclude: ["createdAt", "updatedAt"] },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //     ],
+  //   });
+  // }
 
-  async searchByKeywords(search) {
-    return await ProductSEO.findAll({
-      where: {
-        meta_keywords: {
-          [db.Sequelize.Op.like]: `%${search}%`,
-        },
-      },
-      attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-        },
-      ],
-    });
-  }
+  // async searchByKeywords(search) {
+  //   return await ProductSEO.findAll({
+  //     where: {
+  //       meta_keywords: {
+  //         [db.Sequelize.Op.like]: `%${search}%`,
+  //       },
+  //     },
+  //     attributes: { exclude: ["createdAt", "updatedAt"] },
+  //     include: [
+  //       {
+  //         model: Product,
+  //         as: "product",
+  //         attributes: { exclude: ["createdAt", "updatedAt"] },
+  //       },
+  //     ],
+  //   });
+  // }
 
   async update(data) {
     return await ProductSEO.update(data, {
@@ -101,13 +101,13 @@ class ProductSEORepository {
     });
   }
 
-  async deleteByProductId(productId) {
-    return await ProductSEO.destroy({
-      where: {
-        id: productId,
-      },
-    });
-  }
+  // async deleteByProductId(productId) {
+  //   return await ProductSEO.destroy({
+  //     where: {
+  //       id: productId,
+  //     },
+  //   });
+  // }
 }
 
 module.exports = new ProductSEORepository();

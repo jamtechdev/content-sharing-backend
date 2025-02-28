@@ -45,13 +45,13 @@ class ProductWithCouponService {
     return products;
   }
 
-  async getCouponsByProductId(productId) {
-    const coupons = await ProductWithCouponRepository.getByProductId(productId);
-    if (coupons.length === 0) {
-      throw new HttpError(404, "No coupons found for this product");
-    }
-    return coupons;
-  }
+  // async getCouponsByProductId(productId) {
+  //   const coupons = await ProductWithCouponRepository.getByProductId(productId);
+  //   if (coupons.length === 0) {
+  //     throw new HttpError(404, "No coupons found for this product");
+  //   }
+  //   return coupons;
+  // }
 
   async updateProductWithCoupon(data) {
     const { product_id, coupon_id, id } = data;
@@ -85,21 +85,21 @@ class ProductWithCouponService {
     return await ProductWithCouponRepository.delete(id);
   }
 
-  async deleteByProductId(productId) {
-    const productWithCouponExist = await ProductWithCouponRepository.getByProductId(productId)
-    if(productWithCouponExist.length === 0){
-      throw new HttpError(404, "No product with coupon found")
-    }
-    return await ProductWithCouponRepository.deleteByProductId(productId);
-  }
+  // async deleteByProductId(productId) {
+  //   const productWithCouponExist = await ProductWithCouponRepository.getByProductId(productId)
+  //   if(productWithCouponExist.length === 0){
+  //     throw new HttpError(404, "No product with coupon found")
+  //   }
+  //   return await ProductWithCouponRepository.deleteByProductId(productId);
+  // }
 
-  async deleteByCouponId(couponId) {
-    const productWithCouponExist = await ProductWithCouponRepository.getByCouponId(couponId)
-    if(productWithCouponExist.length === 0){
-      throw new HttpError(404, "No product with coupon found")
-    }
-    return await ProductWithCouponRepository.deleteByCouponId(couponId);
-  }
+  // async deleteByCouponId(couponId) {
+  //   const productWithCouponExist = await ProductWithCouponRepository.getByCouponId(couponId)
+  //   if(productWithCouponExist.length === 0){
+  //     throw new HttpError(404, "No product with coupon found")
+  //   }
+  //   return await ProductWithCouponRepository.deleteByCouponId(couponId);
+  // }
 }
 
 module.exports = new ProductWithCouponService();
