@@ -96,9 +96,7 @@ class ContentRepository {
   //   return content;
   // }
 
-  async getContent(regionId, id, page = 1, limit = 5) {
-    const offset = (page - 1) * limit;
-
+  async getContent(regionId, id) {
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
@@ -116,7 +114,7 @@ class ContentRepository {
       ];
     }
 
-    const { count, rows } = await Content.findAndCountAll({
+    const rows = await Content.findAll({
       where: contentFilter,
       attributes: [
         "id",
@@ -152,8 +150,6 @@ class ContentRepository {
         { model: Region, as: "region", attributes: ["name"] },
       ],
       order: [["created_at", "DESC"]],
-      limit,
-      offset,
     });
 
     let content = rows.map((item) => {
@@ -165,12 +161,7 @@ class ContentRepository {
       return itemData;
     });
 
-    return {
-      totalItems: count,
-      totalPages: Math.ceil(count / limit),
-      currentPage: page,
-      data: content,
-    };
+    return content;
   }
 
   async getContentById(contentId) {
