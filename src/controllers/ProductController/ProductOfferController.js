@@ -12,7 +12,7 @@ class ProductOfferController {
       "post",
       "/create-offer",
       authenticate,
-      //   authorize(["admin"]),
+        authorize(["admin"]),
       TryCatch(this.createProductOffer.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductOfferController {
       "get",
       "/",
       authenticate,
-      //   authorize(["admin"]),
+        authorize(["admin"]),
       TryCatch(this.getAllProductOffers.bind(this))
     );
 
@@ -49,7 +49,7 @@ class ProductOfferController {
       "put",
       "/",
       authenticate,
-      //   authorize(["admin"]),
+        authorize(["admin"]),
       TryCatch(this.updateProductOffer.bind(this))
     );
 
@@ -57,7 +57,7 @@ class ProductOfferController {
       "delete",
       "/:id",
       authenticate,
-      //   authorize(["admin"]),
+        authorize(["admin"]),
       TryCatch(this.deleteProductOffer.bind(this))
     );
 
@@ -65,7 +65,7 @@ class ProductOfferController {
       "delete",
       "/product/:productId",
       authenticate,
-      //   authorize(["admin"]),
+        authorize(["admin"]),
       TryCatch(this.deleteOffersByProductId.bind(this))
     );
   }

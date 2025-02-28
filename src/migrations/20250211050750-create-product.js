@@ -7,7 +7,12 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        // references: {
+        //   model: "product_media",
+        //   key: "product_id"
+        // },
+        // onDelete: "CASCADE"
       },
       category_id: {
         type: Sequelize.INTEGER

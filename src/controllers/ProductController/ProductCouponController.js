@@ -12,7 +12,7 @@ class ProductCouponController {
       "post",
       "/create-coupon",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.createProductCoupon.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductCouponController {
       "get",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductCoupons.bind(this))
     );
 
@@ -28,7 +28,7 @@ class ProductCouponController {
       "get",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductCouponById.bind(this))
     );
 
@@ -36,7 +36,7 @@ class ProductCouponController {
       "get",
       "/code/:code",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductCouponByCode.bind(this))
     );
 
@@ -44,7 +44,7 @@ class ProductCouponController {
       "get",
       "/active/all",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getActiveCoupons.bind(this))
     );
 
@@ -52,7 +52,7 @@ class ProductCouponController {
       "put",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProductCoupon.bind(this))
     );
 
@@ -60,7 +60,7 @@ class ProductCouponController {
       "delete",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductCoupon.bind(this))
     );
   }

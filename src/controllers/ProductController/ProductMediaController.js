@@ -13,7 +13,7 @@ class ProductMediaController {
       "post",
       "/create-media",
       authenticate,
-      // authorize("admin"),
+      authorize(["admin"]),
       upload.single('mediaFile'),
       TryCatch(this.createProductMedia.bind(this))
     );
@@ -62,7 +62,7 @@ class ProductMediaController {
       "put",
       "/",
       authenticate,
-      // authorize("admin"),
+      authorize(["admin"]),
       upload.single("mediaFile"),
       TryCatch(this.updateProductMedia.bind(this))
     );
@@ -71,7 +71,7 @@ class ProductMediaController {
       "delete",
       "/:id",
       authenticate,
-      // authorize("admin"),
+      authorize(["admin"]),
       TryCatch(this.deleteProductMedia.bind(this))
     );
 

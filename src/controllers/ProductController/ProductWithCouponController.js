@@ -12,7 +12,7 @@ class ProductWithCouponController {
       "post",
       "/create",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.createProductWithCoupon.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductWithCouponController {
       "get",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductsWithCoupons.bind(this))
     );
 
@@ -28,7 +28,7 @@ class ProductWithCouponController {
       "get",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductWithCouponById.bind(this))
     );
 
@@ -36,7 +36,7 @@ class ProductWithCouponController {
       "get",
       "/coupon/:couponId",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductsByCouponId.bind(this))
     );
 
@@ -44,7 +44,7 @@ class ProductWithCouponController {
       "get",
       "/product/:productId",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getCouponsByProductId.bind(this))
     );
 
@@ -52,7 +52,7 @@ class ProductWithCouponController {
       "put",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProductWithCoupon.bind(this))
     );
 
@@ -60,7 +60,7 @@ class ProductWithCouponController {
       "delete",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductWithCoupon.bind(this))
     );
 
@@ -68,7 +68,7 @@ class ProductWithCouponController {
       "delete",
       "/coupon/:couponId",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductWithCouponByCouponId.bind(this))
     );
 
@@ -76,7 +76,7 @@ class ProductWithCouponController {
       "delete",
       "/product/:productId",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductWithCouponByProductId.bind(this))
     );
   }

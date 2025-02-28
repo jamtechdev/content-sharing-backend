@@ -2,6 +2,10 @@ const db = require("../../models/index");
 const Product = db.product;
 const Category = db.product_category;
 const ProductMedia = db.product_media;
+const productAttribute = db.product_attribute;
+const productDiscount = db.product_discount;
+const productOffer = db.product_offer;
+const productWithCoupon = db.product_with_coupon;
 const { Op } = require("sequelize");
 
 class ProductRepository {
@@ -23,6 +27,26 @@ class ProductRepository {
           as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        },
+        {
+          model: productDiscount,
+          as: "product_discount",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        },
+        {
+          model: productOffer,
+          as: "product_offer",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        },
+        {
+          model: productWithCoupon,
+          as: "product_with_coupon",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }
@@ -41,6 +65,11 @@ class ProductRepository {
           as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }
@@ -59,6 +88,11 @@ class ProductRepository {
           as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }
@@ -77,6 +111,11 @@ class ProductRepository {
           as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }
@@ -95,6 +134,11 @@ class ProductRepository {
           as: "media",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }
@@ -132,6 +176,21 @@ class ProductRepository {
           as: "category",
           attributes: { exclude: ["createdAt", "updatedAt"] },
         },
+        {
+          model: ProductMedia,
+          as: "media",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        },
+        {
+          model: productAttribute,
+          as: "attributes_data",
+          attributes: {exclude: ["createdAt", "updatedAt"]}
+        }
       ],
     });
   }

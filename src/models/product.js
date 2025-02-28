@@ -16,8 +16,26 @@ module.exports = (sequelize, DataTypes) => {
       })
       Product.hasOne(models.product_media, {
         foreignKey: "product_id",
-        as: "media"
+        as: "media",
+        onDelete: "CASCADE"
       })
+      Product.hasMany(models.product_attribute, {
+        foreignKey: "product_id",
+        as: "attributes_data"
+      })
+      Product.hasOne(models.product_discount, {
+        foreignKey: "product_id",
+        as: "product_discount"
+      })
+      Product.hasOne(models.product_offer, {
+        foreignKey: "product_id",
+        as: "product_offer"
+      })
+      Product.hasOne(models.product_with_coupon, {
+        foreignKey: "product_id",
+        as: "product_with_coupon"
+      })
+
     }
   }
   Product.init({

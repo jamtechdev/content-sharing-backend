@@ -7448,3 +7448,158 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductController.getProductBySlug (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:125:21)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T07:30:31.212Z [ERROR]: Error in bound getProductMediaById: ProductMediaService.getProductMediaById is not a function
+2025-02-28T07:30:31.214Z [ERROR]: TypeError: ProductMediaService.getProductMediaById is not a function
+    at ProductMediaController.getProductMediaById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductMediaController.js:111:45)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+    at Object.module.exports [as verify] (D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:101:10)
+    at authenticate (D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:13:7)
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+2025-02-28T07:31:15.630Z [ERROR]: Error in bound getProductMediaById: Product media not found
+2025-02-28T07:31:15.633Z [ERROR]: Error: Product media not found
+    at ProductMediaService.getProductMediaById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductMediaService.js:47:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductMediaController.getProductMediaById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductMediaController.js:111:19)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T07:54:05.879Z [ERROR]: Error in bound createProduct: Cannot add or update a child row: a foreign key constraint fails (`content_sharing_db`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id`) REFERENCES `product_media` (`product_id`) ON DELETE CASCADE)
+2025-02-28T07:54:05.882Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Product.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ProductRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:9:12)
+    at async ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:34:12)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T07:54:35.725Z [ERROR]: Error in bound createProduct: Cannot add or update a child row: a foreign key constraint fails (`content_sharing_db`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id`) REFERENCES `product_media` (`product_id`) ON DELETE CASCADE)
+2025-02-28T07:54:35.726Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Product.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ProductRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:9:12)
+    at async ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:34:12)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T07:55:39.303Z [ERROR]: Error in bound createProduct: Cannot add or update a child row: a foreign key constraint fails (`content_sharing_db`.`products`, CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id`) REFERENCES `product_media` (`product_id`) ON DELETE CASCADE)
+2025-02-28T07:55:39.304Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async Product.save (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async ProductRepository.create (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:9:12)
+    at async ProductService.createProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:34:12)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:02:14.815Z [ERROR]: Error in bound searchProduct: Products not found
+2025-02-28T08:02:14.820Z [ERROR]: Error: Products not found
+    at ProductService.searchProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:105:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.searchProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:169:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:02:24.616Z [ERROR]: Error in bound searchProduct: Products not found
+2025-02-28T08:02:24.617Z [ERROR]: Error: Products not found
+    at ProductService.searchProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:105:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.searchProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:169:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:02:27.335Z [ERROR]: Error in bound searchProduct: Products not found
+2025-02-28T08:02:27.336Z [ERROR]: Error: Products not found
+    at ProductService.searchProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:105:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.searchProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:169:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:02:29.718Z [ERROR]: Error in bound searchProduct: Products not found
+2025-02-28T08:02:29.719Z [ERROR]: Error: Products not found
+    at ProductService.searchProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:105:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.searchProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:169:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:10:36.409Z [ERROR]: Error in bound getProductById: Product not found
+2025-02-28T08:10:36.411Z [ERROR]: Error: Product not found
+    at ProductService.getProductById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:65:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:114:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:10:42.008Z [ERROR]: Error in bound getProductById: Product not found
+2025-02-28T08:10:42.009Z [ERROR]: Error: Product not found
+    at ProductService.getProductById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:65:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductById (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:114:21)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:11:21.407Z [ERROR]: Error in bound getProductsByCategoryId: Products not found
+2025-02-28T08:11:21.407Z [ERROR]: Error: Products not found
+    at ProductService.getProductsByCategoryId (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:89:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getProductsByCategoryId (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:147:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:12:01.470Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-02-28T08:12:01.471Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:125:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:193:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:12:15.276Z [ERROR]: Error in bound createProductCategory: ProductCategoryRepository.getByName is not a function
+2025-02-28T08:12:15.280Z [ERROR]: TypeError: ProductCategoryRepository.getByName is not a function
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:6:62)
+    at ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:54)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-02-28T08:14:18.252Z [ERROR]: Error in bound createProductCategory: Product category with this name already exists
+2025-02-28T08:14:18.255Z [ERROR]: Error: Product category with this name already exists
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:10:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:14:23.599Z [ERROR]: Error in bound createProductCategory: Product category with this name already exists
+2025-02-28T08:14:23.599Z [ERROR]: Error: Product category with this name already exists
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:10:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:14:33.545Z [ERROR]: Error in bound createProductCategory: Product category with this name already exists
+2025-02-28T08:14:33.546Z [ERROR]: Error: Product category with this name already exists
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:10:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:15:48.919Z [ERROR]: Error in bound deleteProductCategory: Product category not found
+2025-02-28T08:15:48.922Z [ERROR]: Error: Product category not found
+    at ProductCategoryService.deleteProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.deleteProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:105:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T08:16:42.798Z [ERROR]: Error in bound createProductAttribute: Product not found
+2025-02-28T08:16:42.800Z [ERROR]: Error: Product not found
+    at ProductAttributeService.createProductAttribute (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductAttributeService.js:9:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductAttributeController.createProductAttribute (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductAttributeController.js:70:26)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T09:33:30.928Z [ERROR]: Error in bound getAllPublishedProducts: Unknown column 'product_coupon.product_id' in 'field list'
+2025-02-28T09:33:30.930Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ProductRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:17:12)
+    at async ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:55:22)
+    at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

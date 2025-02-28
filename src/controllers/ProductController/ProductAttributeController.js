@@ -12,7 +12,7 @@ class ProductAttributeController {
       "post",
       "/create-attribute",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.createProductAttribute.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductAttributeController {
       "get",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductAttributes.bind(this))
     );
 
@@ -28,7 +28,7 @@ class ProductAttributeController {
       "get",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductAttributeById.bind(this))
     );
 
@@ -44,7 +44,7 @@ class ProductAttributeController {
       "put",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProductAttribute.bind(this))
     );
 
@@ -52,7 +52,7 @@ class ProductAttributeController {
       "delete",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductAttribute.bind(this))
     );
 

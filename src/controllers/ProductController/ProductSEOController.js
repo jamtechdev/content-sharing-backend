@@ -12,42 +12,42 @@ class ProductSEOController {
       "post",
       "/create",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.createProductSEO.bind(this))
     );
     this.router.addRoute(
       "get",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductSEO.bind(this))
     );
     this.router.addRoute(
       "get",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getSpecificProductSEO.bind(this))
     );
     this.router.addRoute(
       "get",
       "/search/title",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.searchSEOByTitle.bind(this))
     );
     this.router.addRoute(
       "get",
       "/search/keywords",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.searchSEOByKeywords.bind(this))
     );
     this.router.addRoute(
       "put",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateSEOById.bind(this))
     );
 
@@ -55,14 +55,14 @@ class ProductSEOController {
       "delete",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteBySEOId.bind(this))
     );
     this.router.addRoute(
       "delete",
       "/product/:productId",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteSEOByProductId.bind(this))
     );
   }

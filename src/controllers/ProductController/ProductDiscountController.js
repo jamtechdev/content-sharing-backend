@@ -12,7 +12,7 @@ class ProductDiscountController {
       "post",
       "/create-discount",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.createProductDiscount.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductDiscountController {
       "get",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductDiscounts.bind(this))
     );
 
@@ -28,7 +28,7 @@ class ProductDiscountController {
       "get",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductDiscountById.bind(this))
     );
 
@@ -36,7 +36,7 @@ class ProductDiscountController {
       "get",
       "/product/:productId",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductDiscountsByProductId.bind(this))
     );
 
@@ -52,7 +52,7 @@ class ProductDiscountController {
       "put",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProductDiscount.bind(this))
     );
 
@@ -60,7 +60,7 @@ class ProductDiscountController {
       "delete",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductDiscount.bind(this))
     );
 

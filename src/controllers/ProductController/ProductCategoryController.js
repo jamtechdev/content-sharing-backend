@@ -12,7 +12,7 @@ class ProductCategoryController {
       "post",
       "/create-category",
       authenticate,
-    //   authorize(["admin"]), 
+      authorize(["admin"]), 
       TryCatch(this.createProductCategory.bind(this))
     );
 
@@ -20,7 +20,7 @@ class ProductCategoryController {
       "get",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getAllProductCategories.bind(this))
     );
 
@@ -28,7 +28,7 @@ class ProductCategoryController {
       "get",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.getProductCategoryById.bind(this))
     );
 
@@ -36,7 +36,7 @@ class ProductCategoryController {
       "put",
       "/",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProductCategory.bind(this))
     );
 
@@ -44,7 +44,7 @@ class ProductCategoryController {
       "delete",
       "/:id",
       authenticate,
-    //   authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProductCategory.bind(this))
     );
 

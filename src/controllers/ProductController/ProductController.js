@@ -11,7 +11,7 @@ class ProductController {
       "post",
       "/create-product",
       authenticate,
-      // authorize(["model"]),
+      authorize(["admin"]),
       TryCatch(this.createProduct.bind(this))
     );
 
@@ -19,7 +19,7 @@ class ProductController {
       "get",
       "/",
       authenticate,
-      // authorize(['model']),
+      authorize(['admin']),
       TryCatch(this.getAllPublishedProducts.bind(this))
     );
 
@@ -27,7 +27,7 @@ class ProductController {
       "get",
       "/:id",
       authenticate,
-      // authorize(['model']),
+      authorize(['admin']),
       TryCatch(this.getProductById.bind(this))
     );
 
@@ -35,7 +35,7 @@ class ProductController {
       "get",
       "/slug/:slug",
       authenticate,
-      // authorize(['admin']),
+      authorize(['admin']),
       TryCatch(this.getProductBySlug.bind(this))
     );
 
@@ -43,7 +43,7 @@ class ProductController {
       "get",
       "/region/:regionId",
       authenticate,
-      // authorize(['admin']),
+      authorize(['admin']),
       TryCatch(this.getProductsByRegionId.bind(this))
     );
 
@@ -51,7 +51,7 @@ class ProductController {
       "get",
       "/category/:categoryId",
       authenticate,
-      // authorize(['admin']),
+      authorize(['admin']),
       TryCatch(this.getProductsByCategoryId.bind(this))
     );
 
@@ -66,8 +66,8 @@ class ProductController {
     this.router.addRoute(
       "get",
       "/pro/query",
-      // authenticate,
-      // authorize(['admin']),
+      authenticate,
+      authorize(['admin']),
       TryCatch(this.searchProduct.bind(this))
     );
 
@@ -75,7 +75,7 @@ class ProductController {
       "put",
       "/",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.updateProduct.bind(this))
     );
 
@@ -83,7 +83,7 @@ class ProductController {
       "delete",
       "/:id",
       authenticate,
-      // authorize(["admin"]),
+      authorize(["admin"]),
       TryCatch(this.deleteProduct.bind(this))
     );
 

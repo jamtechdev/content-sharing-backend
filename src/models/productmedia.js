@@ -12,9 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       ProductMedia.belongsTo(models.product, {
         foreignKey: "product_id",
-        as: "product"
+        as: "product",
+        // onDelete: "CASCADE"
       })
-
     }
   }
   ProductMedia.init({
