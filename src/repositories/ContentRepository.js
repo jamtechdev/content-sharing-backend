@@ -124,6 +124,10 @@ class ContentRepository {
         "description",
         "plan_id",
         "media_url",
+        "region_id",
+        "premium_access",
+        "price",
+        "status",
         "content_type",
         [
           db.Sequelize.literal(`(
