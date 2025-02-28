@@ -7,6 +7,7 @@ const authorize = require("../../middleware/RoleMiddleware");
 const UserService = require("../../services/UserService");
 const { upload } = require("../../utils/MulterConfig");
 const ProfileService = require("../../services/ProfileService");
+const { calculateTimeLeft } = require("../../utils/dateUtils");
 
 class UserController {
   constructor() {
@@ -45,7 +46,8 @@ class UserController {
   //   get-user-profile
   async me(req, res) {
     const user = req?.user;
-    console.log(user);
+
+    // console.log(user);
     if (user.role === "model") {
       const getModelProfileData = await ProfileService.getProfileByUserId(
         user?.userId
@@ -73,7 +75,10 @@ class UserController {
           platform_type: newUser.platform_type,
           region_id: newUser.region_id,
           region: newUser.region?.regionName,
-          role: newUser.role?.roleName,
+          role: newUser.role?.roleName,   
+          plan_start: newUser.subscriber?.status || null,
+          plan: newUser.subscriber?.plan?.name || null,
+          plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
         },
       });
     }

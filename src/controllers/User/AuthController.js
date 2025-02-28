@@ -108,6 +108,8 @@ class AuthController {
         phone_number: user.phone_number,
         bio: user.bio,
         guard_name: user.role ? user.role.guard_name : null,
+        plan_status: user?.subscriber?.status || null,
+        plan: user?.subscriber?.plan?.name || null,
       },
     });
   }
@@ -134,7 +136,8 @@ class AuthController {
       accessToken,
       email,
       name,
-      photoURL,region_id
+      photoURL,
+      region_id,
     });
 
     // Set token in HTTP-only cookie (15 days)

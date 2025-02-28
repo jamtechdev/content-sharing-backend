@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       Plan.hasMany(models.Subscription, {
         foreignKey: "plan_id",
         as: "subscriptions",
-        onDelete: "CASCADE",
+        // onDelete: "CASCADE",
       });
     }
   }
