@@ -119,6 +119,14 @@ class ContentController {
       authorize(["user", "model"]),
       TryCatch(this.updateComment.bind(this))
     );
+
+    this.router.addRoute(
+      "get",
+      "/get-content-by-id/:id",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getContentById.bind(this))
+    );
   }
 
   async createContent(req, res) {
@@ -307,7 +315,7 @@ class ContentController {
       title: `Notification from ${getContent.user.name}`,
       message: `${user?.name} likes ${getContent.user.name}'s post.`,
       sender_id: userId,
-      type: "like",
+      type: "likes",
       item_id: contentId,
     };
 
@@ -471,6 +479,17 @@ class ContentController {
         message: "Something went wrong",
       });
     }
+  }
+
+  async getContentById(req, res) {
+    const { id } = req?.params;
+    const response = await ContentService.getContentById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true,
+      message: "Content fetched successfully",
+      data: response,
+    });
   }
   getRouter() {
     return this.router.getRouter();

@@ -88,7 +88,6 @@ class ContentRepository {
       include: [
         { model: User, as: "user", attributes: ["name", "email", "avatar"] },
         { model: Region, as: "region" },
-       
       ],
       order: [["created_at", "DESC"]],
     });
@@ -99,6 +98,26 @@ class ContentRepository {
   async getContentById(contentId) {
     return await Content.findOne({
       where: { id: contentId },
+      attributes: {
+        include: [
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM likes 
+              WHERE likes.content_id = Content.id AND likes.is_like = 1
+            )`),
+            "likeCount",
+          ],
+          [
+            db.Sequelize.literal(`(
+              SELECT COUNT(*) 
+              FROM comment 
+              WHERE comment.content_id = Content.id
+            )`),
+            "commentCount",
+          ],
+        ],
+      },
       include: [{ model: User, as: "user", attributes: ["name"] }],
     });
   }

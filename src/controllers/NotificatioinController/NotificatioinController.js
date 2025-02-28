@@ -29,7 +29,14 @@ class NotificatioinController {
       authenticate,
       authorize(["user", "model"]),
       TryCatch(this.getNotificationByRecieverId.bind(this))
-    )
+    );
+    this.router.addRoute(
+      "get",
+      "/delete-notification",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.deleteNotification.bind(this))
+    );
   }
 
   async addToken(req, res) {
@@ -118,12 +125,22 @@ class NotificatioinController {
 
   async getNotificationByRecieverId(req, res) {
     const { userId } = req?.user;
-    const data =  await NotificationService.getNotificationByRecieverId(userId);
+    const data = await NotificationService.getNotificationByRecieverId(userId);
     res.status(200).json({
-      status:true,
-      message:"Notification get successfully",
-      data
-    })
+      status: true,
+      message: "Notification get successfully",
+      data,
+    });
+  }
+
+  async deleteNotification(req, res) {
+    const { userId } = req?.user;
+    const data = await NotificationService.deleteNotification(userId);
+    res.status(200).json({
+      status: true,
+      message: "Notification delete successfully",
+      data,
+    });
   }
 
   getRouter() {
