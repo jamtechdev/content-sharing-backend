@@ -24,13 +24,13 @@ class UserCouponController {
       TryCatch(this.getAllCoupons.bind(this))
     );
 
-    this.router.addRoute(
-      "get",
-      "/:id",
-      authenticate,
-    //   authorize(["admin"]),
-      TryCatch(this.getUserCouponById.bind(this))
-    );
+    // this.router.addRoute(
+    //   "get",
+    //   "/:id",
+    //   authenticate,
+    // //   authorize(["admin"]),
+    //   TryCatch(this.getUserCouponById.bind(this))
+    // );
 
     this.router.addRoute(
       "get",
@@ -110,16 +110,16 @@ class UserCouponController {
     })
   }
 
-  async getUserCouponById(req, res) {
-    const id = req.params.id;
-    const record = await UserCouponService.getUserCouponById(id);
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "User coupon fetched successfully",
-      data: record,
-    });
-  }
+  // async getUserCouponById(req, res) {
+  //   const id = req.params.id;
+  //   const record = await UserCouponService.getUserCouponById(id);
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "User coupon fetched successfully",
+  //     data: record,
+  //   });
+  // }
 
   async getUserCouponsByUserId(req, res) {
     const {userId} = req?.user

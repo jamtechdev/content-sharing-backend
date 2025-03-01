@@ -24,13 +24,13 @@ class UserCouponService {
     return coupons
   }
 
-  async getUserCouponById(id) {
-    const userCoupon = await UserCouponRepository.getById(id);
-    if (!userCoupon) {
-      throw new HttpError(404, "User coupon not found");
-    }
-    return userCoupon;
-  }
+  // async getUserCouponById(id) {
+  //   const userCoupon = await UserCouponRepository.getById(id);
+  //   if (!userCoupon) {
+  //     throw new HttpError(404, "User coupon not found");
+  //   }
+  //   return userCoupon;
+  // }
 
   async getUserCouponsByUserId(userId) {
     const userCoupons = await UserCouponRepository.getByUserId(userId);

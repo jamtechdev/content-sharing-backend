@@ -62,8 +62,8 @@ class UserCouponRepository {
     });
   }
 
-  async getByCouponId(couponId) {
-    return await UserCoupon.findAll({ where: { coupon_id: couponId }, 
+  async getByCouponId(couponId, userId) {
+    return await UserCoupon.findOne({ where: { coupon_id: couponId, user_id: userId }, 
       attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {

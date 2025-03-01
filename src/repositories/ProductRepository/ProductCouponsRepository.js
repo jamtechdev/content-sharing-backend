@@ -10,8 +10,8 @@ class ProductCouponsRepository {
     return await ProductCoupon.findAll();
   }
 
-  async getById(couponId) {
-    return await ProductCoupon.findOne({where: {id: couponId }});
+  async getById(id) {
+    return await ProductCoupon.findOne({where: {id }});
   }
 
   async getByCode(code) {

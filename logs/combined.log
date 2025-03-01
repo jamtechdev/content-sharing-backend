@@ -7603,3 +7603,237 @@ string violation: tags cannot be an array or an object
     at async ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:55:22)
     at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:41:48.292Z [ERROR]: Error in bound createProductOrder: Cannot destructure property 'discount_type' of 'coupon' as it is null.
+2025-02-28T12:41:48.296Z [ERROR]: TypeError: Cannot destructure property 'discount_type' of 'coupon' as it is null.
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:25:14)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:42:10.708Z [ERROR]: Error in bound createProductOrder: Coupon not found
+2025-02-28T12:42:10.710Z [ERROR]: Error: Coupon not found
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:26:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:47:02.945Z [ERROR]: Error in bound createProductOrder: Assignment to constant variable.
+2025-02-28T12:47:02.950Z [ERROR]: TypeError: Assignment to constant variable.
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:35:26)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:47:20.247Z [ERROR]: Error in bound createProductOrder: Cannot access 'start_date' before initialization
+2025-02-28T12:47:20.250Z [ERROR]: ReferenceError: Cannot access 'start_date' before initialization
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:30:59)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:51:50.982Z [ERROR]: Error in bound createProductOrder: Minimum order amount is less
+2025-02-28T12:51:50.984Z [ERROR]: Error: Minimum order amount is less
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:44:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T12:52:43.687Z [ERROR]: Error in bound createProductOrder: Coupon is expired/invalid coupon
+2025-02-28T12:52:43.688Z [ERROR]: Error: Coupon is expired/invalid coupon
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:48:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:15:59.928Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:15:59.933Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:55:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:17:56.476Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:17:56.479Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:56:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:17:58.147Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:17:58.148Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:56:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:19:48.398Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:19:48.401Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:57:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:22:03.349Z [ERROR]: Error in bound createProductOrder: WHERE parameter "user_id" has invalid "undefined" value
+2025-02-28T13:22:03.365Z [ERROR]: Error: WHERE parameter "user_id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-02-28T13:22:20.437Z [ERROR]: Error in bound createProductOrder: User don't have coupon
+2025-02-28T13:22:20.439Z [ERROR]: Error: User don't have coupon
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:60:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:23:46.406Z [ERROR]: Error in bound createProductOrder: WHERE parameter "id" has invalid "undefined" value
+2025-02-28T13:23:46.416Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.whereQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2411:24)
+    at MySQLQueryGenerator.updateQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:515:116)
+    at MySQLQueryInterface.bulkUpdate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:924:37)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3352:54)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponRepository.update (D:\Content Sharing\content-sharing-backend\src\repositories\UserCouponRepository.js:103:5)
+2025-02-28T13:24:37.320Z [ERROR]: Error in bound createProductOrder: WHERE parameter "id" has invalid "undefined" value
+2025-02-28T13:24:37.329Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.whereQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2411:24)
+    at MySQLQueryGenerator.updateQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:515:116)
+    at MySQLQueryInterface.bulkUpdate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:924:37)
+    at Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3352:54)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserCouponRepository.update (D:\Content Sharing\content-sharing-backend\src\repositories\UserCouponRepository.js:104:5)
+2025-02-28T13:25:43.767Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:25:43.769Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:58:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:30:10.878Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:30:10.881Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:68:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:34:56.119Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:34:56.124Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:69:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:35:57.303Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:35:57.307Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:69:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:36:06.277Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-02-28T13:36:06.278Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:69:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-02-28T13:40:33.836Z [ERROR]: Error in bound updateOrder: WHERE parameter "id" has invalid "undefined" value
+2025-02-28T13:40:33.859Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-03-01T04:46:39.028Z [ERROR]: Error in bound deleteOrder: Order not found
+2025-03-01T04:46:39.032Z [ERROR]: Error: Order not found
+    at ProductOrderService.deleteOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:114:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.deleteOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:101:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:47:17.797Z [ERROR]: Error in bound deleteOrder: Order not found
+2025-03-01T04:47:17.799Z [ERROR]: Error: Order not found
+    at ProductOrderService.deleteOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:114:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.deleteOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:101:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:47:21.688Z [ERROR]: Error in bound deleteOrder: Order not found
+2025-03-01T04:47:21.689Z [ERROR]: Error: Order not found
+    at ProductOrderService.deleteOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:114:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.deleteOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:101:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:47:41.872Z [ERROR]: Error in bound deleteOrder: Order not found
+2025-03-01T04:47:41.873Z [ERROR]: Error: Order not found
+    at ProductOrderService.deleteOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:114:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.deleteOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:101:5)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:49:58.814Z [ERROR]: Error in bound createProductOrder: Coupon is expired
+2025-03-01T04:49:58.816Z [ERROR]: Error: Coupon is expired
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:78:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:50:11.287Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T04:50:11.288Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:69:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:51:23.614Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T04:51:23.614Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:69:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:51:39.454Z [ERROR]: Error in bound createProductOrder: Minimum order amount is less
+2025-03-01T04:51:39.456Z [ERROR]: Error: Minimum order amount is less
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:66:23)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T04:53:38.146Z [ERROR]: Error in bound createProductOrder: Minimum order amount should be 600
+2025-03-01T04:53:38.148Z [ERROR]: Error: Minimum order amount should be 600
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:66:23)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T05:05:06.947Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T05:05:06.950Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:64:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T05:05:26.217Z [ERROR]: Error in bound createProductOrder: userCouponExist is not defined
+2025-03-01T05:05:26.218Z [ERROR]: ReferenceError: userCouponExist is not defined
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T05:06:45.209Z [ERROR]: Error in bound createProductOrder: userCouponExist is not defined
+2025-03-01T05:06:45.211Z [ERROR]: ReferenceError: userCouponExist is not defined
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:17)
+    at ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-01T05:07:09.548Z [ERROR]: Error in bound createProductOrder: Cannot read properties of undefined (reading 'usage_count')
+2025-03-01T05:07:09.552Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'usage_count')
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:78:33)
+    at ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:48)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
