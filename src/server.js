@@ -20,7 +20,6 @@ app.use(compression());
 app.use("/api/stripe/webhook", express.raw({ type: "*/*" }));
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ limit: '100mb', extended: true }));
-app.use(express.json());
 app.use(
   express.json({
     verify: (req, res, buf) => {
@@ -30,7 +29,7 @@ app.use(
     },
   })
 );
-app.use(express.raw({ type: "*/*" }));
+// app.use(express.raw({ type: "*/*" }));
 app.use("/api", routes);
 
 // remove this code after 10 days start
