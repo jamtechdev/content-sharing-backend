@@ -14,8 +14,7 @@ class StripeService {
 
   async processWebhookEvent(rawBody, signature) {
     try {
-      const webhookSecret =
-        "whsec_9b95ef1a71ad110f9b464b4f756bf867691d00c215c1dd02e1635b7c51901a03";
+      const webhookSecret =process.env.STRIPE_WEBHOOK_SECRET;
       const event = this.stripe.webhooks.constructEvent(
         rawBody,
         signature,
