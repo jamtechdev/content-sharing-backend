@@ -8,7 +8,7 @@ class StripeController {
   }
 
   setupRoutes() {
-    this.router.post(
+    this.router.get(
       "/webhook",
       express.raw({ type: "application/json" }),
       this.handleWebhook.bind(this)
@@ -19,11 +19,12 @@ class StripeController {
     const signature = req.headers["stripe-signature"];
 
     try {
-      const event = await StripeService.processWebhookEvent(
-        req.body,
-        signature
-      );
-      res.status(200).json({ received: true, eventType: event.type });
+      // const event = await StripeService.processWebhookEvent(
+      //   req.body,
+      //   signature
+      // );
+      res.status(200).json({ received: true });
+      // res.status(200).json({ received: true, eventType: event.type });
     } catch (error) {
       res.status(400).send(error.message);
     }
