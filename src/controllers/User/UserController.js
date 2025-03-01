@@ -76,6 +76,7 @@ class UserController {
           region_id: newUser.region_id,
           region: newUser.region?.regionName,
           role: newUser.role?.roleName,   
+          plan_id: newUser.subscriber?.plan_id || null,
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,
           plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
