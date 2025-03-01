@@ -18,6 +18,8 @@ app.use(helmet());
 app.use(compression());
 // app.use(bodyParser.json());
 app.use("/api/stripe/webhook", express.raw({ type: "*/*" }));
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ limit: '100mb', extended: true }));
 app.use(express.json());
 app.use(
   express.json({
