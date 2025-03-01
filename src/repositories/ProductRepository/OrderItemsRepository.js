@@ -10,6 +10,24 @@ class OrderItemsRepository {
     async getAll(){
         return await OrderItem.findAll({})
     }
+
+    async getById(id){
+        return await OrderItem.findOne({where: {id}})
+    }
+
+    async getByOrderId(id){
+        return await OrderItem.findOne({where: {order_id: id}})
+    }
+
+    async updateById(data){
+        return await OrderItem.update(data, {
+            where: {id: data.id}
+        })
+    }
+
+    async deleteById(id){
+        return await OrderItem.destroy({where: {id}})
+    }
 }
 
 module.exports = new OrderItemsRepository()

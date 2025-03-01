@@ -41,13 +41,18 @@ Product SEO Table
 ________________________________________
 Product Offer Table Structure
 The Product Offer Table is designed to manage various types of product offers. These include:
+
 •	Offer Types:
+
 o	buy_x_get_y: A promotion where customers buy a specified quantity of one product and receive a free quantity of another product.
 o	buy_x_get_discount: A promotion where customers buy a certain quantity and receive a discount on the product.
 o	discount_on_total: A promotion where a discount is applied to the total order value.
+
 •	Conditional Fields:
+
 o	get_quantity and free_product_id: These fields are used for "buy_x_get_y" offers, where the customer gets a free product when they buy a certain quantity of a specified product.
 o	discount_value: This is used for both the "buy_x_get_discount" and "discount_on_total" offers to apply a discount. For "buy_x_get_y" offers, this field should not be populated.
+
 •	Validation:
 o	For the "buy_x_get_y" offer, ensure both the get_quantity and free_product_id are valid.
 o	For the "buy_x_get_discount" offer, ensure the discount_value is populated.
@@ -71,9 +76,11 @@ Order Table
 • status (Enum: 'pending', 'shipped', 'delivered', 'canceled'): The status of the order.
 • created_at (Timestamp): Timestamp when the order was placed.
 • updated_at (Timestamp): Timestamp when the order was last updated.
-________________________________________
+
+______________________________________
 OrderItems Table
 This table stores the details of each product in the order, as an order can have multiple products.
+
 • id (Primary key): Unique identifier for the order item.
 • order_id (Foreign key): Links to the Orders table.
 • product_id (Foreign key): Links to the Products table.
@@ -82,6 +89,7 @@ This table stores the details of each product in the order, as an order can have
 • total_price (Decimal): The total price for that particular product (quantity * price).
 • created_at (Timestamp): Timestamp when the order item was added.
 • updated_at (Timestamp): Timestamp when the order item was last updated.
+
 ________________________________________
 Product Payment Table
 • id (Primary key): Unique identifier for the payment.

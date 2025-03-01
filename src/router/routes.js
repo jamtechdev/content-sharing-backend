@@ -18,6 +18,7 @@ const ProductWithCouponController = require("../controllers/ProductController/Pr
 const UserCouponController = require("../controllers/ProductController/UserCouponController");
 const ProductOrderController = require("../controllers/ProductController/ProductOrderController");
 const ProductSEOController = require('../controllers/ProductController/ProductSEOController')
+const OrderItemsController = require('../controllers/ProductController/OrderItemsController')
 const MessageController = require('../controllers/MessageController/MessageController')
 
 const router = express.Router();
@@ -43,6 +44,7 @@ router.use("/product-with-coupon", ProductWithCouponController.getRouter());
 router.use("/user-coupon", UserCouponController.getRouter());
 router.use("/seo", ProductSEOController.getRouter());
 router.use("/order", ProductOrderController.getRouter());
+router.use("/items", OrderItemsController.getRouter());
 
 router.use('/message', MessageController.getRouter())
 

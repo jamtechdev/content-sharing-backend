@@ -7837,3 +7837,123 @@ string violation: tags cannot be an array or an object
     at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
     at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-01T12:54:21.802Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T12:54:21.841Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:78:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:03:13.078Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T13:03:13.081Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:03:32.564Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T13:03:32.565Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:03:33.307Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T13:03:33.308Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:03:57.736Z [ERROR]: Error in bound createProductOrder: Coupon is expired
+2025-03-01T13:03:57.737Z [ERROR]: Error: Coupon is expired
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:86:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:04:18.519Z [ERROR]: Error in bound createProductOrder: User coupon not found/invalid coupon
+2025-03-01T13:04:18.520Z [ERROR]: Error: User coupon not found/invalid coupon
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:83:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:05:07.366Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T13:05:07.367Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:05:13.197Z [ERROR]: Error in bound createProductOrder: Minimum order amount should be 2000
+2025-03-01T13:05:13.198Z [ERROR]: Error: Minimum order amount should be 2000
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:71:23)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:05:35.658Z [ERROR]: Error in bound createProductOrder: You reached maximum coupon usage limit
+2025-03-01T13:05:35.658Z [ERROR]: Error: You reached maximum coupon usage limit
+    at ProductOrderService.createOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:77:21)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductOrderController.createProductOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductOrderController.js:58:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:43:54.979Z [ERROR]: Error in bound createOrderItems: price is not defined
+2025-03-01T13:43:54.982Z [ERROR]: ReferenceError: price is not defined
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:15:62)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:44:08.253Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:44:08.255Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:19:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:46:45.265Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:46:45.267Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:46:58.569Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:46:58.571Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:47:21.982Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:47:21.984Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:47:46.437Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:47:46.439Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:20:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:49:58.448Z [ERROR]: Error in bound createOrderItems: Order already created
+2025-03-01T13:49:58.451Z [ERROR]: Error: Order already created
+    at OrderItemsService.createOrderItems (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:23:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OrderItemsController.createOrderItems (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:50:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-01T13:51:39.102Z [ERROR]: Error in bound updateOrder: id is not defined
+2025-03-01T13:51:39.104Z [ERROR]: ReferenceError: id is not defined
+    at OrderItemsRepository.updateById (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\OrderItemsRepository.js:24:21)
+    at OrderItemsService.updateOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:47:39)
+    at OrderItemsController.updateOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:79:29)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-03-01T13:56:45.893Z [ERROR]: Error in bound updateOrder: itemPrice is not defined
+2025-03-01T13:56:45.896Z [ERROR]: ReferenceError: itemPrice is not defined
+    at OrderItemsService.updateOrder (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:56:27)
+    at OrderItemsController.updateOrder (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\OrderItemsController.js:79:29)
+    at D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12

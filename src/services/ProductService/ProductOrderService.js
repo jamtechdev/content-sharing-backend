@@ -20,7 +20,6 @@ class ProductOrderService {
       shipping_cost,
       status,
     } = data;
-
     if (coupon_id) {
       const coupon = await ProductCouponsRepository.getById(coupon_id);
       if (!coupon) {
@@ -88,6 +87,7 @@ class ProductOrderService {
         }
       }
     }
+    data.order_number = Math.round(Date.now())
     data.user_id = userId;
     const response = await ProductOrderRepository.create(data);
     return response;
