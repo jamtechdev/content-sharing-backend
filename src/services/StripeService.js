@@ -14,7 +14,7 @@ class StripeService {
 
   async processWebhookEvent(rawBody, signature) {
     try {
-      const webhookSecret =process.env.STRIPE_WEBHOOK_SECRET;
+      const webhookSecret = "whsec_Es0NyJNw8CtQWp1WwO3CXjqBgcmQ2oBX";
       const event = this.stripe.webhooks.constructEvent(
         rawBody,
         signature,
@@ -23,6 +23,7 @@ class StripeService {
       // await StripeRepository.saveSession(session);
       if (event.type === "checkout.session.completed") {
         const session = event.data.object;
+        console.log("✅ Webhook verified:")
         logger.info("✅ Webhook verified:", JSON.stringify(session));
 
         const PlanDetails = await PlanRepository.getById(
