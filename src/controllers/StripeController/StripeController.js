@@ -8,7 +8,7 @@ class StripeController {
   }
 
   setupRoutes() {
-    this.router.get(
+    this.router.post(
       "/webhook",
       express.raw({ type: "application/json" }),
       this.handleWebhook.bind(this)
