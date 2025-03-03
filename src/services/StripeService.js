@@ -6,6 +6,7 @@ const { Json } = require("sequelize/lib/utils");
 const SubscriptionService = require("./SubscriptionService");
 const PlanRepository = require("../repositories/PlanRepository");
 const getSubscriptionDates = require("../utils/subscriptionDates");
+const pushNotification = require("../_helper/pushNotification");
 
 class StripeService {
   constructor() {
@@ -23,7 +24,7 @@ class StripeService {
       // await StripeRepository.saveSession(session);
       if (event.type === "checkout.session.completed") {
         const session = event.data.object;
-        console.log("✅ Webhook verified:")
+        console.log("✅ Webhook verified:");
         logger.info("✅ Webhook verified:", JSON.stringify(session));
 
         const PlanDetails = await PlanRepository.getById(
@@ -46,6 +47,10 @@ class StripeService {
           end_date: expiresDate.end_date,
           stripe_raw_data: session,
         };
+        await pushNotification({
+          subscriber_id: session.customer_details?.name,
+          Plan_name: PlanDetails?.name,
+        });
         await StripeRepository.saveSession(saveSessionData);
       }
       return event;
