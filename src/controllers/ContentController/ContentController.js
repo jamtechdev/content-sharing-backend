@@ -318,6 +318,7 @@ class ContentController {
       sender_id: userId,
       type: "likes",
       item_id: contentId,
+      media : getContent?.media_url || ""
     };
 
     await pushNotification(payload);
