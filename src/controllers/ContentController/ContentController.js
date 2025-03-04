@@ -161,7 +161,8 @@ class ContentController {
         content_type: mediaFileUrl.resourceType,
         category_id,
         user_id: userId,
-        plan_id: plan_id ? parseFloat(plan_id) : null,
+        plan_id:
+          plan_id && parseFloat(plan_id) !== 0 ? parseFloat(plan_id) : null,
         region_id,
         media_url: mediaFileUrl.secureUrl,
       };
@@ -207,7 +208,6 @@ class ContentController {
       });
     } else {
       const { region_id, id } = await UserService.getUserById(userId);
-      console.log(region_id, id);
       const response = await ContentService.getContent(region_id, id);
       return res.status(200).json({
         code: 200,
@@ -266,7 +266,8 @@ class ContentController {
         region_id,
         premium_access,
         price: price ? parseFloat(price) : null,
-        plan_id: plan_id ? parseFloat(plan_id) : null,
+        plan_id:
+          plan_id && parseFloat(plan_id) !== 0 ? parseFloat(plan_id) : null,
       },
       userId
     );

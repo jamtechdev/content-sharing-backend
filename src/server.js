@@ -10,37 +10,37 @@ const errorHandler = require("./middleware/ErrorHandler");
 const {
   cronJob,
 } = require("./controllers/SubscriptionController/SubscriptionController");
-const bodyParser = require("body-parser");
-
 cronJob();
 dotenv.config();
 const app = express();
-
-
-
 app.use(cors());
 app.use(helmet());
 app.use(compression());
 // app.use(bodyParser.json());
-app.use("/api/stripe/webhook", express.raw({ type: "application/json" }));
-app.use(express.json());
-app.use(express.json({
-  verify: (req, res, buf) => {
-    if (req.originalUrl.startsWith('/api/stripe/webhook')) {
-      req.rawBody = buf.toString();
-    }
-  },
-   }));
+app.use("/api/stripe/webhook", express.raw({ type: "*/*" }));
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ limit: '100mb', extended: true }));
+app.use(
+  express.json({
+    verify: (req, res, buf) => {
+      if (req.originalUrl.startsWith("/api/stripe/webhook")) {
+        req.rawBody = buf.toString();
+      }
+    },
+  })
+);
+// app.use(express.raw({ type: "*/*" }));
 app.use("/api", routes);
 
 // remove this code after 10 days start
 
 // Configure PayPay SDK
+
 PAYPAY.Configure({
   clientId: "a_uEWiVpQu74_9dku",
-  clientSecret: "Nevmmudjtrnezf24YXfGu4lwqUPqkHfBpJ8YaYArw7Q",
+  clientSecret: "Nevmmudjtrnezf24YXfGu4lwqUPqkHfBpJ8YaYArw7Q=",
   merchantId: "779143648334356480",
-  productionMode: "PRODUCTION",
+  productionMode: false, // true for production, false for sandbox
 });
 
 // 🟢 API Route to create a PayPay QR code for payment
@@ -65,10 +65,12 @@ app.post("/paypay", async (req, res) => {
       console.log(response);
       if (!response || !response.BODY || !response.BODY.resultInfo) {
         console.error("Unexpected API response:", response);
-        return res.status(500).json({
-          success: false,
-          error: "Unexpected PayPay API response format.",
-        });
+        return res
+          .status(500)
+          .json({
+            success: false,
+            error: "Unexpected PayPay API response format.",
+          });
       }
 
       const { resultInfo, data } = response.BODY;
@@ -82,10 +84,12 @@ app.post("/paypay", async (req, res) => {
         });
       } else {
         console.error("PayPay API Error:", resultInfo);
-        return res.status(500).json({
-          success: false,
-          error: resultInfo.message || "Failed to generate QR Code.",
-        });
+        return res
+          .status(500)
+          .json({
+            success: false,
+            error: resultInfo.message || "Failed to generate QR Code.",
+          });
       }
     });
   } catch (error) {
@@ -106,10 +110,12 @@ app.get("/paypay/status/:paymentId", async (req, res) => {
       console.log("API Response:", response); // Log API response
 
       if (!response || !response.BODY || !response.BODY.resultInfo) {
-        return res.status(500).json({
-          success: false,
-          error: "Unexpected PayPay API response format.",
-        });
+        return res
+          .status(500)
+          .json({
+            success: false,
+            error: "Unexpected PayPay API response format.",
+          });
       }
 
       const { resultInfo, data } = response.BODY;
@@ -121,18 +127,22 @@ app.get("/paypay/status/:paymentId", async (req, res) => {
           paymentDetails: data,
         });
       } else {
-        return res.status(500).json({
-          success: false,
-          error: resultInfo.message || "Failed to fetch payment status.",
-        });
+        return res
+          .status(500)
+          .json({
+            success: false,
+            error: resultInfo.message || "Failed to fetch payment status.",
+          });
       }
     });
   } catch (error) {
     console.error("PayPay API Error:", error);
-    res.status(500).json({
-      success: false,
-      message: "Failed to fetch PayPay payment status",
-    });
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Failed to fetch PayPay payment status",
+      });
   }
 });
 

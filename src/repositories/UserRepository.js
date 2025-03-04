@@ -35,6 +35,18 @@ class UserRepository {
           as: "role",
           attributes: ["name", "guard_name"],
         },
+        {
+          model: db.Subscription,
+          as: "subscriber",
+          attributes: ["status"],
+          include: [
+            {
+              model: db.Plan,
+              as: "plan",
+              attributes: ["name"],
+            },
+          ],
+        },
       ],
     });
   }
@@ -120,6 +132,25 @@ class UserRepository {
           model: db.Roles,
           as: "role",
           attributes: [["name", "roleName"]],
+        },
+        {
+          model: db.Subscription,
+          as: "subscriber",
+          attributes: [
+            "id",
+            "model_id",
+            "plan_id",
+            "start_date",
+            "end_date",
+            "status",
+          ],
+          include: [
+            {
+              model: db.Plan,
+              as: "plan",
+              attributes: ["name", "price"],
+            },
+          ],
         },
       ],
       raw: true,

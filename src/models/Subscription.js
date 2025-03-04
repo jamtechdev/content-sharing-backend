@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // Subscription belongs to a user (subscriber)
       Subscription.belongsTo(models.users, {
-        foreignKey: "id",
-        as: "user",
+        foreignKey: "subscriber_id",
+        as: "subscriber",
         // onDelete: "CASCADE",
       });
       // Subscription is linked to a model

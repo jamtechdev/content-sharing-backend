@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         as: "user",
       });
       User.hasOne(models.Subscription, {
-        foreignKey: "id",
+        foreignKey: "subscriber_id",
         as: "subscriber",
       });
     }

@@ -54,42 +54,111 @@ class ContentRepository {
   // return content;
   // }
 
+  // async getContent(regionId, id) {
+  //   const subscription = await db.Subscription.findOne({
+  //     where: { subscriber_id: id },
+  //   });
+  //   console.log(subscription);
+
+  //   let content = await Content.findAll({
+  //     where: {
+  //       region_id: {
+  //         [db.Sequelize.Op.like]: `%${regionId}%`,
+  //       },
+  //     },
+  //     attributes: {
+  //       include: [
+  //         [
+  //           db.Sequelize.literal(`(
+  //             SELECT COUNT(*)
+  //             FROM likes
+  //             WHERE likes.content_id = Content.id AND likes.is_like = 1
+  //           )`),
+  //           "likeCount",
+  //         ],
+  //         [
+  //           db.Sequelize.literal(`(
+  //             SELECT COUNT(*)
+  //             FROM comment
+  //             WHERE comment.content_id = Content.id
+  //           )`),
+  //           "commentCount",
+  //         ],
+  //       ],
+  //     },
+  //     include: [
+  //       { model: User, as: "user", attributes: ["name", "email", "avatar"] },
+  //       { model: Region, as: "region" },
+  //     ],
+  //     order: [["created_at", "DESC"]],
+  //   });
+
+  //   return content;
+  // }
+
   async getContent(regionId, id) {
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
 
-    let content = await Content.findAll({
-      where: {
-        region_id: {
-          [db.Sequelize.Op.like]: `%${regionId}%`,
-        },
+    let contentFilter = {
+      region_id: {
+        [db.Sequelize.Op.like]: `%${regionId}%`,
       },
-      attributes: {
-        include: [
-          [
-            db.Sequelize.literal(`(
-              SELECT COUNT(*) 
-              FROM likes 
-              WHERE likes.content_id = Content.id AND likes.is_like = 1
-            )`),
-            "likeCount",
-          ],
-          [
-            db.Sequelize.literal(`(
-              SELECT COUNT(*) 
-              FROM comment 
-              WHERE comment.content_id = Content.id
-            )`),
-            "commentCount",
-          ],
+    };
+
+    if (subscription) {
+      contentFilter[db.Sequelize.Op.or] = [
+        { plan_id: null },
+        { plan_id: subscription.plan_id },
+      ];
+    }
+
+    const rows = await Content.findAll({
+      where: contentFilter,
+      attributes: [
+        "id",
+        "title",
+        "description",
+        "plan_id",
+        "media_url",
+        "region_id",
+        "premium_access",
+        "price",
+        "status",
+        "content_type",
+        "created_at",
+        [
+          db.Sequelize.literal(`(
+                    SELECT COUNT(*) 
+                    FROM likes 
+                    WHERE likes.content_id = Content.id AND likes.is_like = 1
+                )`),
+          "likeCount",
         ],
-      },
+        [
+          db.Sequelize.literal(`(
+                    SELECT COUNT(*) 
+                    FROM comment 
+                    WHERE comment.content_id = Content.id
+                )`),
+          "commentCount",
+        ],
+      ],
       include: [
-        { model: User, as: "user", attributes: ["name", "email", "avatar"] },
-        { model: Region, as: "region" },
+        { model: User, as: "user", attributes: ["name", "avatar"] },
+        { model: Region, as: "region", attributes: ["name"] },
       ],
       order: [["created_at", "DESC"]],
+    });
+
+    let content = rows.map((item) => {
+      let itemData = item.get();
+      if (!subscription && itemData.plan_id !== null) {
+        itemData.media_url = null;
+        itemData.type = "locked";
+      }
+      return itemData;
     });
 
     return content;
