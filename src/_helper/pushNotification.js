@@ -28,12 +28,16 @@ const pushNotification = async (dataPayload) => {
     }
 
     const payload = {
-      notification: { title: dataPayload?.title, body: dataPayload?.message },
+      notification: {
+        title: dataPayload?.title,
+        body: dataPayload?.message,
+        image: dataPayload?.media || "",
+      },
       data: {
         type: dataPayload?.type || "",
         item_id: dataPayload?.content_id ? `${dataPayload?.content_id}` : "0",
         sender_id: `${dataPayload?.sender_id}`,
-        url: "https://about.gitlab.com/images/press/git-cheat-sheet.pdf"
+        url: "https://about.gitlab.com/images/press/git-cheat-sheet.pdf",
       },
       tokens: devicesToken,
     };
