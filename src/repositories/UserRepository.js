@@ -1,5 +1,7 @@
+const { where } = require("sequelize");
 const db = require("../models/index.js");
 const { cloudinaryImageUpload } = require("../utils/cloudinaryService.js");
+const { Op } = require("sequelize");
 const User = db.users;
 
 class UserRepository {
@@ -177,6 +179,10 @@ class UserRepository {
         id: id,
       },
     });
+  }
+
+  async getUsersByRole(role) {
+    return await User.findAll({ where: { role_id: role }, limit: 3 });
   }
 }
 
