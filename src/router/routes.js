@@ -9,6 +9,7 @@ const BookmarkController = require("../controllers/BookmarkController/BookmarkCo
 const regionController = require("../controllers/RegionController/RegionController");
 const StripeController = require("../controllers/StripeController/StripeController");
 const NotificatioController = require("../controllers/NotificatioinController/NotificatioinController");
+const MessageController = require('../controllers/MessageController/MessageController')
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -20,6 +21,7 @@ router.use("/content", ContentController.getRouter());
 router.use("/bookmarks", BookmarkController.getRouter());
 router.use("/model", ModelProfileController.getRouter());
 router.use("/region", regionController.getRouter());
+router.use("/message", MessageController.getRouter());
 // router.post(
 //   "/stripe/webhook",
 //   express.raw({ type: "application/json" }),
