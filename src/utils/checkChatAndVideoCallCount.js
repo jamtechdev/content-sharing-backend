@@ -16,8 +16,7 @@ module.exports.checkChatAndVideoCallCount = async (userId) => {
         throw new Error("Your chat limit is exceeded, please buy a plan to continue your chat");
     }
 
-    // Deduct 1 chat count when user starts chatting
     await PlanRepository.update(plan.id, { chat_count: plan.chat_count - 1 });
 
-    return plan.chat_count - 1;  // Return remaining count
+    return plan.chat_count - 1; 
 };
