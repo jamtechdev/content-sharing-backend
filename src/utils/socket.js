@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
 
 const { createChat } = require("../repositories/MessageRepository");
-
+const {checkChatAndVideoCallCount} = require('../utils/checkChatAndVideoCallCount')
+ 
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {};
 
@@ -9,12 +10,13 @@ const socketHandler = (io) => {
   io.on("connection", (socket) => {
     console.log("A user connected:", socket.id);
 
-    socket.on("authenticate", (token) => {
+    socket.on("authenticate", async(token) => {
       try {
         const decoded = jwt.verify(token, JWT_SECRET);
         users[decoded.userId] = socket.id;
         socket.userId = decoded.userId;
         console.log(`User registered: ${decoded.userId}`);
+        await checkChatAndVideoCallCount(decoded.userId)
         console.log("Current users:", users);
       } catch (error) {
         console.log("Authentication error:", error);
@@ -87,3 +89,6 @@ const socketHandler = (io) => {
 };
 
 module.exports = socketHandler;
+
+
+

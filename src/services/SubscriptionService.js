@@ -9,7 +9,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 class SubscriptionService {
   async createSubscription(priceId, data) {
-    const { subscriber_id, model_id, plan_id } = data;
+    // const { subscriber_id, model_id, plan_id } = data;
     if (!priceId || !data?.email) {
       return res.status(400).json({ error: "Missing required parameters" });
     }

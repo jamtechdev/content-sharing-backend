@@ -53,6 +53,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      chat_count: {
+        type: DataTypes.BIGINT
+      },
+      video_call_count: {
+        type: DataTypes.BIGINT
+      }
     },
     {
       sequelize,

@@ -40,8 +40,8 @@ app.use(
   })
 );
 // app.use(express.raw({ type: "*/*" }));
-socketHandler(io)
 app.use("/api", routes);
+socketHandler(io)
 
 // remove this code after 10 days start
 
@@ -162,4 +162,4 @@ app.get("/paypay/status/:paymentId", async (req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 8083;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
