@@ -7957,3 +7957,39 @@ string violation: tags cannot be an array or an object
     at next (D:\Content Sharing\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
     at D:\Content Sharing\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-03T05:18:11.658Z [ERROR]: Error in bound getOrderById: product_order is not associated to order_items!
+2025-03-03T05:18:11.673Z [ERROR]: SequelizeEagerLoadingError: product_order is not associated to order_items!
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async OrderItemsRepository.getById (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\OrderItemsRepository.js:16:16)
+    at async OrderItemsService.getOrderById (D:\Content Sharing\content-sharing-backend\src\services\ProductService\OrderItemsService.js:34:19)
+2025-03-03T05:26:30.403Z [ERROR]: Error in bound getAllOrders: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-03-03T05:26:30.412Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+    at Function._injectScope (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3413:10)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1777:10)
+    at ProductOrderRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductOrderRepository.js:13:31)
+    at ProductOrderService.getAllOrders (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:97:51)
+2025-03-03T05:26:47.032Z [ERROR]: Error in bound getAllOrders: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-03-03T05:26:47.033Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+    at Function._injectScope (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3413:10)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1777:10)
+    at ProductOrderRepository.getAll (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductOrderRepository.js:13:31)
+    at ProductOrderService.getAllOrders (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductOrderService.js:97:51)

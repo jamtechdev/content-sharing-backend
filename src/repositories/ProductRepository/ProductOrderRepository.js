@@ -2,6 +2,7 @@ const db = require("../../models");
 
 const ProductOrder = db.product_order;
 const ProductCoupon = db.product_coupon;
+const OrderItem = db.order_items;
 
 class ProductOrderRepository {
   async create(data) {
@@ -13,18 +14,29 @@ class ProductOrderRepository {
       where: {
         user_id: userId,
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
-      include: [{
-        model: ProductCoupon,
-        as: "coupon",
-        attributes: {exclude: ["createdAt", "updatedAt"]}
-      }]
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: ProductCoupon,
+          as: "coupon",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+        { model: OrderItem, as: "orderItems" },
+      ],
     });
   }
 
   async getById(id) {
     return await ProductOrder.findOne({
-      where: { id },
+      where: {
+        id,
+        include: [
+          {
+            include: OrderItem,
+            as: "orderItems",
+          },
+        ],
+      },
     });
   }
 
