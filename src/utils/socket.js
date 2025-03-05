@@ -5,6 +5,7 @@ const {checkChatAndVideoCallCount} = require('../utils/checkChatAndVideoCallCoun
  
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {};
+const activeChats = new Set(); // Track active chat sessions
 
 const socketHandler = (io) => {
   io.on("connection", (socket) => {
@@ -16,7 +17,11 @@ const socketHandler = (io) => {
         users[decoded.userId] = socket.id;
         socket.userId = decoded.userId;
         console.log(`User registered: ${decoded.userId}`);
-        await checkChatAndVideoCallCount(decoded.userId)
+
+        await checkChatAndVideoCallCount(decoded.userId);
+        const plan = await PlanRepository.getByUserPlan(decoded.userId);
+        await PlanRepository.update(plan.id, { chat_count: plan.chat_count - 1 });
+
         console.log("Current users:", users);
       } catch (error) {
         console.log("Authentication error:", error);
@@ -24,6 +29,28 @@ const socketHandler = (io) => {
       }
     });
     
+    // socket.on('startChat', async ({to})=>{
+    //   const senderId = socket.userId;
+    //   if(!senderId || !to) return;
+
+    //   const chatKey = `${senderId}-${to}`;
+
+    //   if(!activeChats.has(chatKey)){
+    //     try {
+    //       await checkChatAndVideoCallCount(senderId);
+
+    //       const plan = await PlanRepository.getByUserPlan(senderId);
+    //       await PlanRepository.update(plan.id, { chat_count: plan.chat_count - 1 });
+
+    //       activeChats.add(chatKey);
+    //       console.log(`Chat session started between ${senderId} and ${to}, remaining chat count: ${plan.chat_count - 1}`);
+    //     } catch (error) {
+    //       console.error("Error starting chat:", error);
+    //       socket.emit("chatError", { message: error.message });
+    //     }
+    //   }
+    // })
+
     socket.on(
       "sendMessage",
       async ({
