@@ -91,7 +91,7 @@ class MessageRepository {
           },
         ],
       },
-      order: [["createdAt", "ASC"]],
+      order: [["id", "DESC"]],
       limit: parsedLimit,
       offset,
     });
