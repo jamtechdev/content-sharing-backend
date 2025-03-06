@@ -8,6 +8,7 @@ const UserService = require("../../services/UserService");
 const { upload } = require("../../utils/MulterConfig");
 const ProfileService = require("../../services/ProfileService");
 const { calculateTimeLeft } = require("../../utils/dateUtils");
+const SubscriptionRepository = require('../../repositories/SubscriptionRepository')
 
 class UserController {
   constructor() {
@@ -66,6 +67,7 @@ class UserController {
       });
     } else {
       const newUser = await UserService.getUserById(user?.userId);
+      const subscription = await SubscriptionRepository.getByUser(user?.userId)
       return res.status(200).json({
         code: 200,
         data: {
@@ -87,6 +89,7 @@ class UserController {
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,
           plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
+          chatCount: subscription?.chat_count
         },
       });
     }
