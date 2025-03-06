@@ -59,7 +59,15 @@ class ProductCategoryController {
 
   async createProductCategory(req, res) {
     const categoryData = req.body;
+    
     const newCategory = await ProductCategoryService.createProductCategory(categoryData);
+    if(newCategory.status === 409){
+      return res.status(409).json({
+        code: 409,
+        success: false,
+        message: newCategory.message,
+      });
+    }
     return res.status(201).json({
       code: 201,
       success: true,
@@ -70,6 +78,13 @@ class ProductCategoryController {
 
   async getAllProductCategories(req, res) {
     const categories = await ProductCategoryService.getAllProductCategories();
+    if(categories.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product categories not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -81,6 +96,13 @@ class ProductCategoryController {
   async getProductCategoryById(req, res) {
     const categoryId = req.params.id;
     const category = await ProductCategoryService.getProductCategoryById(categoryId);
+    if(category){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product category not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,

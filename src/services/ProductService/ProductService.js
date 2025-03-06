@@ -53,41 +53,26 @@ class ProductService {
 
   async getAllPublishedProducts() {
     const products = await ProductRepository.getAll();
-    if (products.length === 0) {
-      throw new HttpError(404, "Products not found");
-    }
     return products;
   }
 
   async getProductById(productId) {
     const product = await ProductRepository.getById(productId);
-    if (!product) {
-      throw new HttpError(404, "Product not found");
-    }
     return product;
   }
 
   async getProductBySlug(slug) {
     const product = await ProductRepository.getBySlug(slug);
-    if (!product) {
-      throw new HttpError(404, "Product not found");
-    }
     return product;
   }
 
   async getProductsByRegionId(regionId) {
     const products = await ProductRepository.getByRegionId(regionId);
-    if (products.length === 0) {
-      throw new HttpError(404, "Products not found");
-    }
     return products;
   }
 
   async getProductsByCategoryId(categoryId) {
     const products = await ProductRepository.getByCategoryId(categoryId);
-    if (products.length === 0) {
-      throw new HttpError(404, "Products not found");
-    }
     return products;
   }
 
@@ -101,9 +86,6 @@ class ProductService {
 
   async searchProduct(search) {
     const products = await ProductRepository.searchProduct(search);
-    if (products.length === 0) {
-      throw new HttpError(404, "Products not found");
-    }
     return products;
   }
 

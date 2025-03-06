@@ -8114,3 +8114,141 @@ string violation: tags cannot be an array or an object
     at async ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:115:28)
     at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:15:43.297Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-03-06T12:15:43.301Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:125:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:193:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:15:48.663Z [ERROR]: Error in bound getAllPublishedProducts: Products not found
+2025-03-06T12:15:48.663Z [ERROR]: Error: Products not found
+    at ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:15:51.227Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-03-06T12:15:51.229Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:125:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:193:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:15:54.558Z [ERROR]: Error in bound getAllPublishedProducts: Products not found
+2025-03-06T12:15:54.559Z [ERROR]: Error: Products not found
+    at ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:15:57.802Z [ERROR]: Error in bound getAllPublishedProducts: Products not found
+2025-03-06T12:15:57.802Z [ERROR]: Error: Products not found
+    at ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:16:07.825Z [ERROR]: Error in bound getAllPublishedProducts: Products not found
+2025-03-06T12:16:07.826Z [ERROR]: Error: Products not found
+    at ProductService.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.getAllPublishedProducts (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:103:22)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:16:29.824Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:16:29.825Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:16:40.538Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:16:40.539Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:21:49.850Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:21:49.851Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:23:07.238Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:23:07.239Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:25:01.283Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:25:01.283Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:25:29.537Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:25:29.538Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:28:31.201Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:28:31.203Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:31:43.994Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:31:43.996Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:32:00.161Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:32:00.163Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:33:25.792Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:33:25.795Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:33:32.366Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:33:32.367Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:33:54.030Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:33:54.032Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:34:27.781Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:34:27.785Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:34:28.185Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:34:28.189Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:34:32.610Z [ERROR]: Error in bound getAllProductCategories: No product categories found
+2025-03-06T12:34:32.611Z [ERROR]: Error: No product categories found
+    at ProductCategoryService.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:22:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.getAllProductCategories (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:72:24)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:39:17.509Z [ERROR]: Error in bound createProductCategory: Product category with this name already exists
+2025-03-06T12:39:17.514Z [ERROR]: Error: Product category with this name already exists
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:10:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:41:12.062Z [ERROR]: Error in bound createProductCategory: Product category with this name already exists
+2025-03-06T12:41:12.063Z [ERROR]: Error: Product category with this name already exists
+    at ProductCategoryService.createProductCategory (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductCategoryService.js:10:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7

@@ -7,10 +7,7 @@ class ProductCategoryService {
       data.name
     );
     if (existingCategory) {
-      throw new HttpError(
-        409,
-        "Product category with this name already exists"
-      );
+      return {status: 409, message: "Product category with this name already exists"}
     }
     const productCategory = await ProductCategoryRepository.create(data);
     return productCategory;
@@ -18,17 +15,11 @@ class ProductCategoryService {
 
   async getAllProductCategories() {
     const productCategories = await ProductCategoryRepository.getAll();
-    if (productCategories.length === 0) {
-      throw new HttpError(404, "No product categories found");
-    }
     return productCategories;
   }
 
   async getProductCategoryById(categoryId) {
     const productCategory = await ProductCategoryRepository.getById(categoryId);
-    if (!productCategory) {
-      throw new HttpError(404, "Product category not found");
-    }
     return productCategory;
   }
 

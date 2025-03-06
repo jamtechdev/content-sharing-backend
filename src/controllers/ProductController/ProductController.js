@@ -101,6 +101,13 @@ class ProductController {
 
   async getAllPublishedProducts(req, res) {
     const products = await ProductService.getAllPublishedProducts();
+    if(products.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -112,6 +119,13 @@ class ProductController {
   async getProductById(req, res) {
     const productId = req.params.id;
     const product = await ProductService.getProductById(productId);
+    if(!product){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -123,6 +137,13 @@ class ProductController {
   async getProductBySlug(req, res) {
     const slug = req.params.slug;
     const product = await ProductService.getProductBySlug(slug);
+    if(!product){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -134,6 +155,13 @@ class ProductController {
   async getProductsByRegionId(req, res) {
     const regionId = req.params.regionId;
     const products = await ProductService.getProductsByRegionId(regionId);
+    if(products.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -145,6 +173,13 @@ class ProductController {
   async getProductsByCategoryId(req, res) {
     const categoryId = req.params.categoryId;
     const products = await ProductService.getProductsByCategoryId(categoryId);
+    if(products.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -167,6 +202,13 @@ class ProductController {
   async searchProduct(req, res) {
     const {search} = req.query;
     const products = await ProductService.searchProduct(search);
+    if(products.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
