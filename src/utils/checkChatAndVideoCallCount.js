@@ -12,10 +12,8 @@ module.exports.checkChatAndVideoCallCount = async (userId) => {
         return {error : "No such plan exists"};
     }
 
-    if (plan.chat_count <= 0) {
+    if (subscription.chat_count <= 0) {
         return {error : "Your chat limit is exceeded, please buy a plan to continue your chat"};
     }
-    
     return { success: true }; 
-
 };
