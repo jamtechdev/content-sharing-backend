@@ -8,6 +8,8 @@ const UserRepository = require('../repositories/UserRepository')
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {};
 
+console.log("Online users count", users )
+
 
 const socketHandler = (io) => {
   io.on("connection", (socket) => {
