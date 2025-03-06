@@ -209,7 +209,10 @@ class ProductRepository {
   }
 
   async update(productId, data) {
-    return await Product.update(data, { where: { id: productId } });
+    if(data?.tags){
+      data.tags = JSON.stringify(data.tags)
+    }
+    return await Product.update({...data}, { where: { id: productId } });
   }
 
   async delete(productId) {

@@ -8074,3 +8074,43 @@ string violation: tags cannot be an array or an object
     at async Function.findAll (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
     at async Function.findOne (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
     at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend\src\repositories\UserRepository.js:7:12)
+2025-03-06T11:38:06.924Z [ERROR]: Error in bound updateProduct: string violation: tags cannot be an array or an object
+2025-03-06T11:38:06.957Z [ERROR]: SequelizeValidationError: string violation: tags cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3253:26)
+    at async ProductRepository.update (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:212:12)
+    at async ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:115:28)
+    at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T11:45:09.430Z [ERROR]: Error in bound updateProduct: Product not found or no changes made
+2025-03-06T11:45:09.433Z [ERROR]: Error: Product not found or no changes made
+    at ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:117:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T11:45:40.860Z [ERROR]: Error in bound updateProduct: Product not found or no changes made
+2025-03-06T11:45:40.861Z [ERROR]: Error: Product not found or no changes made
+    at ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:117:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T11:46:09.423Z [ERROR]: Error in bound updateProduct: Product not found or no changes made
+2025-03-06T11:46:09.424Z [ERROR]: Error: Product not found or no changes made
+    at ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:117:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T11:48:31.337Z [ERROR]: Error in bound updateProduct: string violation: tags cannot be an array or an object
+2025-03-06T11:48:31.348Z [ERROR]: SequelizeValidationError: string violation: tags cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async Function.update (D:\Content Sharing\content-sharing-backend\node_modules\sequelize\src\model.js:3253:26)
+    at async ProductRepository.update (D:\Content Sharing\content-sharing-backend\src\repositories\ProductRepository\ProductRepository.js:212:12)
+    at async ProductService.updateProduct (D:\Content Sharing\content-sharing-backend\src\services\ProductService\ProductService.js:115:28)
+    at async ProductController.updateProduct (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductController.js:180:28)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
