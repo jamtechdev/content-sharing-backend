@@ -27,6 +27,9 @@ app.use(compression());
 app.use("/api", routes);
 app.use(errorHandler);
 
+app.get('/test', (req, res)=>{
+    res.json("Hello")
+})
 
 socketHandler(io)
 // cronJob();

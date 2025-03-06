@@ -164,6 +164,146 @@ const socketHandler = (io) => {
 
 module.exports = socketHandler;
 
+
+
+
+
+// --------- This code have user joined, broadcast and authentication emits ----------------
+
+// const jwt = require("jsonwebtoken");
+// const { createChat } = require("../repositories/MessageRepository");
+// const { checkChatAndVideoCallCount } = require("../utils/checkChatAndVideoCallCount");
+
+// const JWT_SECRET = process.env.JWT_SECRET;
+// const users = {}; // Stores active users: { userId: socket.id }
+
+// const socketHandler = (io) => {
+//   io.on("connection", (socket) => {
+//     console.log("A user connected:", socket.id);
+
+//     // Event: Authenticate user
+//     socket.on("authenticate", (token) => {
+//       try {
+//         const decoded = jwt.verify(token, JWT_SECRET);
+//         const userId = decoded.userId;
+
+//         // Store the user's socket ID
+//         users[userId] = socket.id;
+//         socket.userId = userId;
+
+//         console.log(`User registered: ${userId}`);
+//         console.log("Current users:", users);
+
+//         // Notify other users that this user has joined
+//         socket.broadcast.emit("userJoined", {
+//           userId,
+//           socketId: socket.id,
+//           timestamp: new Date().toISOString(),
+//         });
+
+//         // Notify the current user about their successful connection
+//         socket.emit("authenticated", {
+//           message: "Authentication successful",
+//           userId,
+//           socketId: socket.id,
+//         });
+//       } catch (error) {
+//         console.log("Authentication error:", error);
+//         socket.disconnect();
+//       }
+//     });
+
+//     // Event: Send message
+//     socket.on(
+//       "sendMessage",
+//       async ({
+//         to,
+//         message,
+//         mediaType,
+//         mediaUrl,
+//         mediaSize,
+//         from,
+//         timestamp,
+//       }) => {
+//         const senderId = socket.userId;
+//         console.log(`Sending message from ${senderId} to ${to}: ${message}`);
+
+//         if (!users[to]) {
+//           console.log(`User ${to} is offline.`);
+//           return;
+//         }
+
+//         try {
+//           await createChat({
+//             senderId,
+//             receiverId: to,
+//             mediaUrl,
+//             mediaSize,
+//             mediaType,
+//             message,
+//           });
+
+//           io.to(users[to]).emit("receiveMessage", {
+//             from: senderId,
+//             message,
+//             to: to,
+//             timestamp,
+//             mediaUrl,
+//             mediaSize,
+//             mediaType,
+//           });
+//           console.log(`Message sent to ${to}: ${message}`);
+//         } catch (error) {
+//           console.error("Error saving message:", error);
+//         }
+//       }
+//     );
+
+//     // Event: User disconnects
+//     socket.on("disconnect", () => {
+//       console.log("User disconnected:", socket.id);
+
+//       // Remove the user from the active users list
+//       for (let userId in users) {
+//         if (users[userId] === socket.id) {
+//           delete users[userId];
+//           console.log(`User ${userId} logged out.`);
+
+//           // Notify other users that this user has left
+//           socket.broadcast.emit("userLeft", {
+//             userId,
+//             socketId: socket.id,
+//             timestamp: new Date().toISOString(),
+//           });
+//           break;
+//         }
+//       }
+//     });
+//   });
+// };
+
+// module.exports = socketHandler;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // App.js
 
 // import React, { useState, useEffect } from 'react';

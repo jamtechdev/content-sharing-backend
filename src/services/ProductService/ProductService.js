@@ -17,7 +17,7 @@ class ProductService {
       stock_quantity,
       is_featured,
       status,
-      attributes,
+      // attributes,
       tags,
       region_id,
     } = data
@@ -45,7 +45,7 @@ class ProductService {
       stock_quantity,
       is_featured,
       status,
-      attributes: JSON.stringify(attributes),
+      // attributes: JSON.stringify(attributes),
       tags: JSON.stringify(tags),
       region_id,
     })
