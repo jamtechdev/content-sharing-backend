@@ -24,10 +24,9 @@ class SubscriptionRepository {
   }
 
   async update(id, data) {
-    return await Subscription.update(data, { where: { plan_id:id } });
+    return await Subscription.update(data, { where: { id } });
   }
 
-  
   async delete(id) {
     return await Subscription.destroy({ where: { id } });
   }

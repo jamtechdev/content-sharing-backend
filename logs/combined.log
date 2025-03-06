@@ -748,3 +748,80 @@ notNull Violation: Subscription.end_date cannot be null
     at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
     at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-06T05:33:03.940Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:03.942Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:33:04.015Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:04.016Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:33:28.715Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:28.716Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:37:58.331Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-06T05:37:58.332Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:37:58.616Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:37:58.617Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:38:18.602Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-06T05:38:18.603Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:38:18.827Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:38:18.828Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7

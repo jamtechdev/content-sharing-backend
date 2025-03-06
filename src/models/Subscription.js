@@ -61,6 +61,12 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: "active",
         allowNull: false,
       },
+      chat_count: {
+        type: DataTypes.BIGINT
+      },
+      video_call_count: {
+        type: DataTypes.BIGINT
+      },
       stripe_session_id: {
         type: DataTypes.STRING,
         allowNull: true,

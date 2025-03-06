@@ -39,6 +39,12 @@ module.exports = {
         defaultValue: "active",
         allowNull: false,
       },
+      chat_count: {
+        type: Sequelize.BIGINT
+      },
+      video_call_count: {
+        type: Sequelize.BIGINT
+      },
       createdAt: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
