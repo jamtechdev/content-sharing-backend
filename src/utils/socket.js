@@ -7,6 +7,7 @@ const UserRepository = require('../repositories/UserRepository')
  
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {};
+const activeSessions = {}; // Store active chat sessions (user -> model)
 
 console.log("Online users count", users )
 
@@ -43,18 +44,30 @@ const socketHandler = (io) => {
         const senderId = socket.userId;
         console.log(`Sending message from ${senderId} to ${to}: ${message}`);
         
-        const getUser = await UserRepository.findById(senderId)
-        if(getUser && getUser.role_id == 3){
-          const response = await checkChatAndVideoCallCount(getUser.id);
-          if(response.error){
-            socket.emit(("error", {message: response.error}));
-            return;
-          }
-          const subscription = await SubscriptionRepository.getByUser(getUser.id);
-          if(subscription){
-            await SubscriptionRepository.update(subscription.id, { chat_count: subscription.chat_count - 1 });
-          }
-        } 
+        const getUser = await UserRepository.findById(senderId);
+      if (getUser && getUser.role_id == 3) {
+        // Store active session
+        if (!activeSessions[senderId]) {
+          activeSessions[senderId] = to;
+        }
+
+        if (!(await checkChatAndVideoCallCount(getUser.id))) {
+          socket.emit("error", { message: "Chat limit exceeded. Please buy a plan." });
+          return;
+        }
+      }
+        // const getUser = await UserRepository.findById(senderId)
+        // if(getUser && getUser.role_id == 3){
+        //   const response = await checkChatAndVideoCallCount(getUser.id);
+        //   if(response.error){
+        //     socket.emit(("error", {message: response.error}));
+        //     return;
+        //   }
+        //   const subscription = await SubscriptionRepository.getByUser(getUser.id);
+        //   if(subscription){
+        //     await SubscriptionRepository.update(subscription.id, { chat_count: subscription.chat_count - 1 });
+        //   }
+        // } 
 
 
 
@@ -95,12 +108,29 @@ const socketHandler = (io) => {
       }
     );
 
-    socket.on("disconnect", () => {
+    socket.on("disconnect", async () => {
       console.log("User disconnected:", socket.id);
       for (let userId in users) {
         if (users[userId] === socket.id) {
           delete users[userId];
           console.log(`User ${userId} logged out.`);
+
+
+           // If the user had an active chat session with a model, decrement chat count
+           if (activeSessions[userId]) {
+            console.log(`Ending chat session for ${userId}`);
+            delete activeSessions[userId];
+
+            const subscription = await SubscriptionRepository.getByUser(userId);
+            if (subscription) {
+              await SubscriptionRepository.update(subscription.id, { chat_count: subscription.chat_count - 1 });
+              console.log(`Chat count reduced for user ${userId}`);
+            }
+          }
+
+          delete users[userId];
+
+
           break;
         }
       }
