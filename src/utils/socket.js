@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const { createChat } = require("../repositories/MessageRepository");
 const {checkChatAndVideoCallCount} = require('../utils/checkChatAndVideoCallCount')
 const SubscriptionRepository = require('../repositories/SubscriptionRepository')
+const UserRepository = require('../repositories/UserRepository')
  
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {};
@@ -18,17 +19,6 @@ const socketHandler = (io) => {
         users[decoded.userId] = socket.id;
         socket.userId = decoded.userId;
         console.log(`User registered: ${decoded.userId}`);
-
-        const response = await checkChatAndVideoCallCount(decoded.userId);
-        if(response.error){
-          socket.emit(("error", {message: response.error}));
-          return;
-        }
-        const subscription = await SubscriptionRepository.getByUser(decoded.userId);
-        if(subscription){
-          await SubscriptionRepository.update(subscription.id, { chat_count: subscription.chat_count - 1 });
-        }
-
         console.log("Current users:", users);
       } catch (error) {
         console.log("Authentication error:", error);
@@ -50,6 +40,21 @@ const socketHandler = (io) => {
       }) => {
         const senderId = socket.userId;
         console.log(`Sending message from ${senderId} to ${to}: ${message}`);
+        
+        const getUser = await UserRepository.findById(senderId)
+        if(getUser && getUser.role_id == 3){
+          const response = await checkChatAndVideoCallCount(getUser.id);
+          if(response.error){
+            socket.emit(("error", {message: response.error}));
+            return;
+          }
+          const subscription = await SubscriptionRepository.getByUser(getUser.id);
+          if(subscription){
+            await SubscriptionRepository.update(subscription.id, { chat_count: subscription.chat_count - 1 });
+          }
+        } 
+
+
 
         if (!users[to]) {
           console.log(`User ${to} is offline.`);
