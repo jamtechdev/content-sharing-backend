@@ -203,7 +203,7 @@ class ContentController {
       response = response.map(item =>{
         return {
           ...item,
-          region_id: JSON.parse(region_id)
+          region_id: JSON.parse(item.region_id)
         }
       })
       return res.status(200).json({
