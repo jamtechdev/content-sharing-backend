@@ -199,7 +199,7 @@ class ContentController {
     const { userId } = req?.user;
 
     if (req.user.role === "model") {
-      const response = await ContentService.findAllContentById(userId);
+      let response = await ContentService.findAllContentById(userId);
       response = response.map(item =>{
         return {
           ...item,
@@ -213,7 +213,7 @@ class ContentController {
         data: response,
       });
     } else {
-      const { region_id, id } = await UserService.getUserById(userId);
+      let { region_id, id } = await UserService.getUserById(userId);
       region_id = JSON.parse(region_id)
       const response = await ContentService.getContent(region_id, id);
       return res.status(200).json({
