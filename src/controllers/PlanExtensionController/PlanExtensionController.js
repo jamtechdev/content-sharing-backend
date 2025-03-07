@@ -21,14 +21,14 @@ class PlanExtensionController {
             "get",
             '/',
             authenticate,
-            authorize(['model']),
+            authorize(['model', 'user']),
             TryCatch(this.getAllPlanExt.bind(this))
         )
         this.router.addRoute(
             "get",
             '/:id',
             authenticate,
-            authorize(['model']),
+            authorize(['model', 'user']),
             TryCatch(this.getPlanExtById.bind(this))
         )
     }
@@ -36,7 +36,7 @@ class PlanExtensionController {
     async createPlanExtension(req, res){
         const data = req?.body
         const {userId} = req?.user
-        
+
         const response = await PlanCountExtensionService.createPlanExtension(data, userId)
         return res.status(201).json({
             code: 201,

@@ -1,6 +1,5 @@
 const PlanCountExtensionRepository = require("../repositories/PlanCountExtensionRepository");
 const ProfileRepository = require('../repositories/ProfileRepository')
-
 const HttpError = require("../decorators/HttpError");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);

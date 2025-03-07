@@ -58,9 +58,13 @@ class SubscriptionService {
     if (!planId || !data) {
       throw new HttpError(400, "Missing required parameters");
     }
+    const subscription = await SubscriptionRepository.getByUser(data.id)
+      if(!subscription){
+        throw new HttpError(404, "You don't have any valid subscription plan");
+      }
     const extensionPlan = await PlanCountExtensionRepository.getById(planId);
     if (!extensionPlan) {
-      throw new HttpError(404, "No such plan extension exist");
+      throw new HttpError(404, "No such extension plan exist");
     }
 
     const session = await stripe.checkout.session.create({
@@ -93,7 +97,7 @@ class SubscriptionService {
         sessionId: session.id,
         publicKey: process.env.STRIPE_PUBLIC_KEY
     }
-    const subscription = await SubscriptionRepository.getByUser(data.id)
+    // const subscription = await SubscriptionRepository.getByUser(data.id)
     const updatedData = {
       chat_count: subscription.chat_count + extensionPlan.chat_count,
       video_call_count: subscription.video_call_count + extensionPlan.video_call_count
@@ -102,6 +106,9 @@ class SubscriptionService {
     return result;
   }
 
+
+
+  
   async cronJobUpdateSubscriptionStatus(subscriberId, planId) {
     const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(
       subscriberId,
