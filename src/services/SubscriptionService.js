@@ -12,7 +12,7 @@ class SubscriptionService {
   async createSubscription(priceId, data) {
     // const { subscriber_id, model_id, plan_id } = data;
     if (!priceId || !data?.email) {
-      return res.status(400).json({ error: "Missing required parameters" });
+      throw new HttpError(400, "Missing required parameters");
     }
     const getPlanById = await PlanRepository.getById(priceId);
     // console.log("Here is your data===========>", getPlanById);
