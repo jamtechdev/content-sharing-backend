@@ -19,7 +19,7 @@ class SubscriptionController {
     );
     this.router.addRoute(
       "post",
-      "/subscription/ext",
+      "/create-ext",
       authenticate,
       authorize(["user"]),
       TryCatch(this.createPlanExtSubscription.bind(this))
