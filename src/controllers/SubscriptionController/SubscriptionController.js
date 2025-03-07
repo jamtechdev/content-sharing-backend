@@ -88,7 +88,7 @@ class SubscriptionController {
     return res.status(201).json({
       code: 201,
       success: true,
-      message: "Subscription created successfully",
+      message: "ExtSubscription created successfully",
       data: response,
     });
   }

@@ -67,7 +67,7 @@ class SubscriptionService {
       throw new HttpError(404, "No such extension plan exist");
     }
 
-    const session = await stripe.checkout.session.create({
+    const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
       line_items: [
@@ -77,7 +77,7 @@ class SubscriptionService {
             product_data: {
               name: extensionPlan?.name,
             },
-            unit_amount: extensionPlan.price,
+            unit_amount: extensionPlan.price * 100,
           },
           quantity: 1,
         },
@@ -102,7 +102,7 @@ class SubscriptionService {
       chat_count: subscription.chat_count + extensionPlan.chat_count,
       video_call_count: subscription.video_call_count + extensionPlan.video_call_count
     }
-    await SubscriptionRepository.update(updatedData, subscription.id)
+    await SubscriptionRepository.update(subscription.id, updatedData)
     return result;
   }
 
