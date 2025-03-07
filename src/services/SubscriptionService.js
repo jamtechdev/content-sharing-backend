@@ -1,5 +1,6 @@
 const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 const PlanRepository = require("../repositories/PlanRepository");
+const PlanCountExtensionRepository = require('../repositories/PlanCountExtensionRepository')
 const HttpError = require("../decorators/HttpError");
 const cron = require("node-cron");
 
@@ -52,6 +53,55 @@ class SubscriptionService {
 
     return result;
   }
+
+  async createPlanExtSubscription(planId, data){
+    if (!planId || !data) {
+      throw new HttpError(400, "Missing required parameters");
+    }
+    const extensionPlan = await PlanCountExtensionRepository.getById(planId);
+    if (!extensionPlan) {
+      throw new HttpError(404, "No such plan extension exist");
+    }
+
+    const session = await stripe.checkout.session.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: [
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: extensionPlan?.name,
+            },
+            unit_amount: extensionPlan.price,
+          },
+          quantity: 1,
+        },
+      ],
+      success_url: `http://localhost:3000/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://localhost:3000/cancel`,
+      customer_email: data.email,
+      metadata: {
+        subscriber_id: extensionPlan?.subscriber_id,
+        planId,
+        model_id: extensionPlan?.model_id
+      },
+      allow_promotion_codes: true,
+      billing_address_collection: "required",
+    });
+    const result = {
+        sessionId: session.id,
+        publicKey: process.env.STRIPE_PUBLIC_KEY
+    }
+    const subscription = await SubscriptionRepository.getByUser(data.id)
+    const updatedData = {
+      chat_count: subscription.chat_count + extensionPlan.chat_count,
+      video_call_count: subscription.video_call_count + extensionPlan.video_call_count
+    }
+    await SubscriptionRepository.update(updatedData, subscription.id)
+    return result;
+  }
+
   async cronJobUpdateSubscriptionStatus(subscriberId, planId) {
     const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(
       subscriberId,

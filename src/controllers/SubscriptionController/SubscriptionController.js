@@ -17,6 +17,13 @@ class SubscriptionController {
       authorize(["user"]),
       TryCatch(this.createSubscription.bind(this))
     );
+    this.router.addRoute(
+      "post",
+      "/subscription/ext",
+      authenticate,
+      authorize(["user"]),
+      TryCatch(this.createPlanExtSubscription.bind(this))
+    );
 
     this.router.addRoute(
       "get",
@@ -66,6 +73,18 @@ class SubscriptionController {
     const { priceId, userData } = data;
 
     const response = await SubscriptionService.createSubscription(priceId, userData);
+    return res.status(201).json({
+      code: 201,
+      success: true,
+      message: "Subscription created successfully",
+      data: response,
+    });
+  }
+
+  async createPlanExtSubscription(req, res) {
+    const data = req?.body;
+    const { planId, userData } = data;
+    const response = await SubscriptionService.createPlanExtSubscription(planId, userData);
     return res.status(201).json({
       code: 201,
       success: true,

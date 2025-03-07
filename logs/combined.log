@@ -825,3 +825,140 @@ notNull Violation: Subscription.end_date cannot be null
     at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
     at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
     at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:03:59.233Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:03:59.239Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:8:47)
+    at PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:38:58)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-03-06T13:10:58.757Z [ERROR]: Error in bound createPlanExtension: ProfileRepository.getProfileByUserId is not a function
+2025-03-06T13:10:58.760Z [ERROR]: TypeError: ProfileRepository.getProfileByUserId is not a function
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:10:50)
+    at PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:58)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-06T13:12:23.790Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:23.792Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:38.352Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:38.354Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:40.028Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:40.029Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:48.569Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:48.571Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:14:28.900Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:14:28.902Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:14:39.147Z [ERROR]: Error in bound createPlanExtension: Table 'content_sharing_db.plan_count_extensions' doesn't exist
+2025-03-06T13:14:39.149Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async PlanCountExtension.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:16)
+    at async PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:12)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:14:00.972Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:14:00.974Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:14:44.099Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:14:44.100Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:15:35.713Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:15:35.715Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:16:05.921Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:16:05.923Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:16:49.748Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:16:49.749Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:01.522Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:17:01.523Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
