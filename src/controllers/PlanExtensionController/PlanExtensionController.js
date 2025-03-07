@@ -36,6 +36,7 @@ class PlanExtensionController {
     async createPlanExtension(req, res){
         const data = req?.body
         const {userId} = req?.user
+        
         const response = await PlanCountExtensionService.createPlanExtension(data, userId)
         return res.status(201).json({
             code: 201,
@@ -53,10 +54,17 @@ class PlanExtensionController {
                 message: "Plans extensions not found"
             })
         }
+        return res.status(200).json({
+            code: 200,
+            success: true,
+            data: response
+        })
     }
+
+
     async getPlanExtById(req, res){
-        const {planId} = req?.params
-        const response = await PlanCountExtensionService.getPlanExtById(planId)
+        const {id} = req?.params
+        const response = await PlanCountExtensionService.getPlanExtById(id)
         if(!response){
             return res.status(200).json({
                 code: 200,
@@ -64,6 +72,11 @@ class PlanExtensionController {
                 message: "Plans extension not found"
             })
         }
+        return res.status(200).json({
+            code: 200,
+            success: true,
+            data: response
+        })
     }
 
     getRouter(){
