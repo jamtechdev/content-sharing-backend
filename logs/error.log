@@ -8252,3 +8252,38 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductCategoryController.createProductCategory (D:\Content Sharing\content-sharing-backend\src\controllers\ProductController\ProductCategoryController.js:62:25)
     at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T12:55:58.140Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-06T12:55:58.143Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend\src\services\AuthService.js:43:13)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T06:44:12.093Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-03-07T06:44:12.124Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:107:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:235:28)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-07T06:44:12.685Z [ERROR]: Error in bound deleteProduct: Product not found or already deleted
+2025-03-07T06:44:12.686Z [ERROR]: Error: Product not found or already deleted
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:107:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:235:28)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-07T07:22:42.719Z [ERROR]: Error in bound createProductMedia: Product not found
+2025-03-07T07:22:42.743Z [ERROR]: Error: Product not found
+    at ProductMediaService.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductMediaService.js:12:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductMediaController.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductMediaController.js:90:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-07T07:24:00.167Z [ERROR]: Error in bound createProductMedia: Product not found
+2025-03-07T07:24:00.171Z [ERROR]: Error: Product not found
+    at ProductMediaService.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductMediaService.js:12:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductMediaController.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductMediaController.js:90:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-07T07:24:35.192Z [ERROR]: Error in bound createProductMedia: Media file is required
+2025-03-07T07:24:35.193Z [ERROR]: Error: Media file is required
+    at ProductMediaService.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductMediaService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductMediaController.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductMediaController.js:90:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7

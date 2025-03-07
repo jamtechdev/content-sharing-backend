@@ -26,7 +26,7 @@ class ProductService {
     let counter = 1
 
     while(slug_exist){
-      uniqueSlug = `${uniqueSlug}${counter}`
+      uniqueSlug = `${generateSlug(name)}-${counter}`
       slug_exist = await ProductRepository.getBySlug(uniqueSlug)
       counter++;
     }
@@ -93,6 +93,18 @@ class ProductService {
     const product = await ProductRepository.getById(productId);
     if (!product) {
       throw new HttpError(404, "Product not found");
+    }
+    if(data.name){
+      let uniqueSlug = generateSlug(data.name)
+      let slug_exist = await ProductRepository.getBySlug(uniqueSlug);
+      let counter = 1
+  
+      while(slug_exist){
+        uniqueSlug = `${generateSlug(data.name)}-${counter}`
+        slug_exist = await ProductRepository.getBySlug(uniqueSlug)
+        counter++;
+      }
+      data.slug = uniqueSlug
     }
     const updatedProduct = await ProductRepository.update(productId, data);
     if (!updatedProduct[0]) {
