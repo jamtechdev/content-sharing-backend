@@ -31,7 +31,7 @@ class PlanCountExtensionService {
     if(!extPlanExist){
       return {status: 404, message: "Extension plan not found"}
     }
-    return await PlanCountExtensionRepository.destroy(id)
+    return await PlanCountExtensionRepository.delete(id)
   }
 }
 

@@ -105,7 +105,7 @@ class PlanExtensionController {
 
     async deletePlanExtById(req, res){
         const {id} = req?.params
-        const response = await PlanCountExtensionService.updateById(id)
+        const response = await PlanCountExtensionService.deleteById(id)
         if(response.status == 404){
             return res.status(response.status).json({code: 404, success: false, message: response.message})
         }
