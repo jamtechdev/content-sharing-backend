@@ -17,6 +17,22 @@ class PlanCountExtensionService {
   async getPlanExtById(id){
     return await PlanCountExtensionRepository.getById(id)
   }
+
+  async updateById(data){
+    const extPlanExist = await PlanCountExtensionRepository.getById(data.id)
+    if(!extPlanExist){
+      return {status: 404, message: "Extension plan not found"}
+    }
+    return await PlanCountExtensionRepository.update(data.id, data)
+  }
+
+  async deleteById(id){
+    const extPlanExist = await PlanCountExtensionRepository.getById(id)
+    if(!extPlanExist){
+      return {status: 404, message: "Extension plan not found"}
+    }
+    return await PlanCountExtensionRepository.destroy(id)
+  }
 }
 
 

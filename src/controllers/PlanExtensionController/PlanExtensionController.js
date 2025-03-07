@@ -31,6 +31,21 @@ class PlanExtensionController {
             authorize(['model', 'user']),
             TryCatch(this.getPlanExtById.bind(this))
         )
+
+        this.router.addRoute(
+            "put",
+            '/',
+            authenticate,
+            authorize(['model']),
+            TryCatch(this.updatePlanExtById.bind(this))
+        )
+        this.router.addRoute(
+            "delete",
+            '/:id',
+            authenticate,
+            authorize(['model']),
+            TryCatch(this.deletePlanExtById.bind(this))
+        )
     }
 
     async createPlanExtension(req, res){
@@ -77,6 +92,24 @@ class PlanExtensionController {
             success: true,
             data: response
         })
+    }
+
+    async updatePlanExtById(req, res){
+        const data = req.body
+        const response = await PlanCountExtensionService.updateById(data)
+        if(response.status == 404){
+            return res.status(response.status).json({code: 404, success: false, message: response.message})
+        }
+        return res.status(200).json({code: 200, success: true, message: "Extension plan updated successfully"})
+    }
+
+    async deletePlanExtById(req, res){
+        const {id} = req?.params
+        const response = await PlanCountExtensionService.updateById(id)
+        if(response.status == 404){
+            return res.status(response.status).json({code: 404, success: false, message: response.message})
+        }
+        return res.status(200).json({code: 200, success: true, message: "Extension plan updated successfully"})
     }
 
     getRouter(){

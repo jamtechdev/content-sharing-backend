@@ -19,6 +19,16 @@ class PlanCountExtensionRepository {
         return await PlanCountExtension.findAll()
     }
 
+    async update(id, data){
+       return await PlanCountExtension.update(data, {
+        where: {id}
+       })
+    }
+    
+    async delete(id){
+      return await PlanCountExtension.destroy({where: {id}})
+    }
+
 }
 
 module.exports = new PlanCountExtensionRepository();
