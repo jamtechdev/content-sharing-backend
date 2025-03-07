@@ -77,7 +77,7 @@ class SubscriptionService {
             product_data: {
               name: extensionPlan?.name,
             },
-            unit_amount: extensionPlan.price * 100,
+            unit_amount: Math.round(extensionPlan.price * 100),
           },
           quantity: 1,
         },
