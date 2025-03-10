@@ -166,3 +166,1045 @@ notNull Violation: Subscription.end_date cannot be null
     at Function.findAll (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1777:10)
     at Function.findOne (D:\2025\backend-typescript\node_modules\sequelize\src\model.js:1998:23)
     at UserRepository.getUserById (D:\2025\backend-typescript\src\repositories\UserRepository.js:96:23)
+2025-03-05T06:30:01.938Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-05T06:30:01.941Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:30:03.340Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T06:30:03.341Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:30:03.774Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T06:30:03.774Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:30:04.192Z [ERROR]: Error in bound getAllPlans: Unknown column 'created_at' in 'field list'
+2025-03-05T06:30:04.192Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async PlanRepository.getAll (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanRepository.js:19:12)
+    at async PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:18:19)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:32:01.085Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-05T06:32:01.086Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:32:02.611Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T06:32:02.611Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:32:03.102Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T06:32:03.102Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T06:32:03.594Z [ERROR]: Error in bound getAllPlans: Unknown column 'created_at' in 'field list'
+2025-03-05T06:32:03.594Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async PlanRepository.getAll (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanRepository.js:19:12)
+    at async PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:18:19)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T08:01:39.890Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-05T08:01:39.892Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:44:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:70:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:24.683Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T09:58:24.686Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:24.803Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T09:58:24.804Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:24.922Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T09:58:24.922Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:25.037Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T09:58:25.038Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:25.172Z [ERROR]: Error in bound getAllPlans: Unknown column 'created_at' in 'field list'
+2025-03-05T09:58:25.173Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async PlanRepository.getAll (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanRepository.js:19:12)
+    at async PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:18:19)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T09:58:25.276Z [ERROR]: Error in bound getAllPlans: Unknown column 'created_at' in 'field list'
+2025-03-05T09:58:25.276Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async PlanRepository.getAll (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanRepository.js:19:12)
+    at async PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:18:19)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:34.439Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:00:34.439Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:34.493Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T10:00:34.493Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:34.547Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:00:34.547Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:37.155Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:00:37.155Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:37.215Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:00:37.216Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:39.269Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:00:39.269Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:39.325Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:00:39.326Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:51.817Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:00:51.817Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:51.870Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T10:00:51.871Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:00:51.931Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:00:51.931Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:01:17.663Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:01:17.664Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:01:17.715Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T10:01:17.716Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:01:17.773Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:01:17.773Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:03:29.025Z [ERROR]: Error in bound me: Unknown column 'ModelProfile.created_at' in 'field list'
+2025-03-05T10:03:29.025Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ProfileRepository.js:17:12)
+    at async ProfileService.getProfileByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ProfileService.js:56:21)
+    at async UserController.me (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:59:35)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:03:29.086Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:03:29.087Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:03:29.149Z [ERROR]: Error in bound me: Unknown column 'ModelProfile.created_at' in 'field list'
+2025-03-05T10:03:29.149Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async ProfileRepository.findProfileById (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ProfileRepository.js:17:12)
+    at async ProfileService.getProfileByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ProfileService.js:56:21)
+    at async UserController.me (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:59:35)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:03:29.211Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:03:29.212Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:04:54.380Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:04:54.380Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:04:54.666Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:04:54.667Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:04:54.760Z [ERROR]: Error in bound getBookmarkByUser: Table 'content_sharing_db.bookmarks' doesn't exist
+2025-03-05T10:04:54.760Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\BookmarkService.js:14:12)
+    at async BookmarkController.getBookmarkByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\BookmarkController\BookmarkController.js:64:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:04:54.869Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:04:54.869Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:06:29.453Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:06:29.453Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:06:29.519Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:06:29.520Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:06:30.476Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:06:30.476Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:06:30.677Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:06:30.678Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:01.669Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:01.670Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:01.878Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:07:01.879Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:01.974Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:01.975Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:26.917Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:07:26.918Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:27.029Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:07:27.030Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:27.814Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:27.815Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:28.026Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:28.027Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:31.946Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:31.947Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:32.134Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:32.135Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:35.444Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:07:35.444Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:35.537Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-05T10:07:35.537Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:37.695Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:37.696Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:07:37.895Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:07:37.896Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:08:32.277Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:08:32.277Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:08:32.517Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-05T10:08:32.517Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:08:32.630Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:08:32.630Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:10:02.638Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:10:02.638Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:10:02.838Z [ERROR]: Error in bound getAllPlans: Plans not found
+2025-03-05T10:10:02.838Z [ERROR]: Error: Plans not found
+    at PlanService.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanService.js:20:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanController.getAllPlans (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanController\PlanController.js:74:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-05T10:27:35.448Z [ERROR]: Error in bound createSubscription: Cannot destructure property 'subscriber_id' of 'data' as it is undefined.
+2025-03-05T10:27:35.451Z [ERROR]: TypeError: Cannot destructure property 'subscriber_id' of 'data' as it is undefined.
+    at SubscriptionService.createSubscription (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\SubscriptionService.js:12:13)
+    at SubscriptionController.createSubscription (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:68:48)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-05T10:35:28.204Z [ERROR]: Error in bound createSubscription: Cannot destructure property 'subscriber_id' of 'data' as it is undefined.
+2025-03-05T10:35:28.205Z [ERROR]: TypeError: Cannot destructure property 'subscriber_id' of 'data' as it is undefined.
+    at SubscriptionService.createSubscription (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\SubscriptionService.js:12:13)
+    at SubscriptionController.createSubscription (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\SubscriptionController\SubscriptionController.js:68:48)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-06T05:33:03.940Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:03.942Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:33:04.015Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:04.016Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:33:28.715Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:33:28.716Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:37:58.331Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-06T05:37:58.332Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:37:58.616Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:37:58.617Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:38:18.602Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-06T05:38:18.603Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:187:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T05:38:18.827Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-06T05:38:18.828Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:03:59.233Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:03:59.239Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:8:47)
+    at PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:38:58)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+2025-03-06T13:10:58.757Z [ERROR]: Error in bound createPlanExtension: ProfileRepository.getProfileByUserId is not a function
+2025-03-06T13:10:58.760Z [ERROR]: TypeError: ProfileRepository.getProfileByUserId is not a function
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:10:50)
+    at PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:58)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-06T13:12:23.790Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:23.792Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:38.352Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:38.354Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:40.028Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:40.029Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:12:48.569Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:12:48.571Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:14:28.900Z [ERROR]: Error in bound createPlanExtension: Cannot read properties of undefined (reading 'create')
+2025-03-06T13:14:28.902Z [ERROR]: TypeError: Cannot read properties of undefined (reading 'create')
+    at PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:41)
+    at PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-06T13:14:39.147Z [ERROR]: Error in bound createPlanExtension: Table 'content_sharing_db.plan_count_extensions' doesn't exist
+2025-03-06T13:14:39.149Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async PlanCountExtension.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async PlanCountExtensionRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\PlanCountExtensionRepository.js:9:16)
+    at async PlanCountExtensionService.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:12:12)
+    at async PlanExtensionController.createPlanExtension (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:39:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:14:00.972Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:14:00.974Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:14:44.099Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:14:44.100Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:15:35.713Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T05:15:35.715Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:16:05.921Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:16:05.923Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:16:49.748Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:16:49.749Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:01.522Z [ERROR]: Error in bound login: Unknown column 'updatedAt' in 'field list'
+2025-03-07T05:17:01.523Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:23.820Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:17:23.821Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:23.887Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:17:23.888Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:39.563Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:17:39.564Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:17:39.755Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:17:39.756Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:18:23.369Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:18:23.370Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:18:23.421Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:18:23.422Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:18:40.729Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:18:40.730Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:19:14.927Z [ERROR]: Error in bound getLikeByUserId: Unknown column 'Likes.created_at' in 'field list'
+2025-03-07T05:19:14.927Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\ContentRepository.js:304:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\ContentService.js:103:22)
+    at async ContentController.getLikeByUserId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\ContentController\ContentController.js:360:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:23:59.080Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-07T05:23:59.080Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:23:59.154Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-07T05:23:59.154Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:00.075Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:24:00.075Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:00.261Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:24:00.262Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:01.719Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-07T05:24:01.720Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:01.783Z [ERROR]: Error in bound getNotificationByRecieverId: Unknown column 'Notification.title' in 'field list'
+2025-03-07T05:24:01.783Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async NotificationRepository.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\NotificationRepository.js:36:12)
+    at async NotificationService.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\NotificationService.js:25:16)
+    at async NotificatioinController.getNotificationByRecieverId (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\NotificatioinController\NotificatioinController.js:128:18)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:04.840Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:24:04.841Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T05:24:05.025Z [ERROR]: Error in bound getUsersByRole: Unknown column 'created_at' in 'field list'
+2025-03-07T05:24:05.025Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async UserRepository.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\UserRepository.js:185:12)
+    at async userService.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\UserService.js:38:12)
+    at async UserController.getUsersByRole (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\UserController.js:190:22)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T06:35:51.481Z [ERROR]: Error in bound getPlanExtById: WHERE parameter "id" has invalid "undefined" value
+2025-03-07T06:35:51.499Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-03-07T06:37:05.779Z [ERROR]: Error in bound getPlanExtById: WHERE parameter "id" has invalid "undefined" value
+2025-03-07T06:37:05.780Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-03-07T06:38:20.239Z [ERROR]: Error in bound getPlanExtById: planId is not defined
+2025-03-07T06:38:20.242Z [ERROR]: ReferenceError: planId is not defined
+    at PlanExtensionController.getPlanExtById (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:66:73)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-03-07T10:29:12.222Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T10:29:12.223Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T10:29:50.417Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T10:29:50.419Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T10:30:05.364Z [ERROR]: Error in bound login: Unknown column 'created_at' in 'field list'
+2025-03-07T10:30:05.367Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+    at async SubscriptionRepository.getByUser (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\SubscriptionRepository.js:15:12)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:93:27)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-03-07T11:07:37.262Z [ERROR]: Error in bound updatePlanExtById: WHERE parameter "id" has invalid "undefined" value
+2025-03-07T11:07:37.287Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-03-07T11:08:40.610Z [ERROR]: Error in bound deletePlanExtById: WHERE parameter "id" has invalid "undefined" value
+2025-03-07T11:08:40.610Z [ERROR]: Error: WHERE parameter "id" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2451:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1466:28)
+    at MySQLQueryInterface.select (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1002:27)
+    at Function.findAll (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1998:12)
+2025-03-07T11:10:12.024Z [ERROR]: Error in bound deletePlanExtById: PlanCountExtensionRepository.destroy is not a function
+2025-03-07T11:10:12.027Z [ERROR]: TypeError: PlanCountExtensionRepository.destroy is not a function
+    at PlanCountExtensionService.deleteById (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\PlanCountExtensionService.js:34:47)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async PlanExtensionController.deletePlanExtById (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\PlanExtensionController\PlanExtensionController.js:108:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7

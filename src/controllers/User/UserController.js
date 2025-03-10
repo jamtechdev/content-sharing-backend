@@ -8,6 +8,7 @@ const UserService = require("../../services/UserService");
 const { upload } = require("../../utils/MulterConfig");
 const ProfileService = require("../../services/ProfileService");
 const { calculateTimeLeft } = require("../../utils/dateUtils");
+const SubscriptionRepository = require('../../repositories/SubscriptionRepository')
 
 class UserController {
   constructor() {
@@ -42,6 +43,13 @@ class UserController {
       upload.single("image"),
       TryCatch(this.uploadAsset.bind(this))
     );
+    this.router.addRoute(
+      "get",
+      "/get-user-by-role",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.getUsersByRole.bind(this))
+    )
   }
   //   get-user-profile
   async me(req, res) {
@@ -59,6 +67,7 @@ class UserController {
       });
     } else {
       const newUser = await UserService.getUserById(user?.userId);
+      const subscription = await SubscriptionRepository.getByUser(user?.userId)
       return res.status(200).json({
         code: 200,
         data: {
@@ -80,6 +89,7 @@ class UserController {
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,
           plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
+          chat_count: subscription?.chat_count
         },
       });
     }
@@ -172,6 +182,18 @@ class UserController {
       code: 200,
       message: "profile updated successfully",
     });
+  }
+
+  async getUsersByRole(req, res) {
+    const user = req?.user;
+    console.log(user,"user----------------")
+    const response = await UserService.getUsersByRole(user.role =="model" ? 3 :2);
+    return res.status(200).json({
+      status:true,
+      code:200,
+      message:"Data fetched successfully.",
+      data: response
+    })
   }
   getRouter() {
     return this.router.getRouter();

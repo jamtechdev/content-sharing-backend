@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const NotificationService = require("../../services/NotificationService");
+const SubscriptionRepository = require('../../repositories/SubscriptionRepository')
 
 class AuthController {
   constructor() {
@@ -89,6 +90,7 @@ class AuthController {
       await NotificationService.addToken(userData);
     }
 
+     const subscription = await SubscriptionRepository.getByUser(user?.id)
     // Return a structured JSON response for login
     return res.status(200).json({
       code: 200,
@@ -110,6 +112,7 @@ class AuthController {
         guard_name: user.role ? user.role.guard_name : null,
         plan_status: user?.subscriber?.status || null,
         plan: user?.subscriber?.plan?.name || null,
+        chat_count: subscription?.chat_count
       },
     });
   }

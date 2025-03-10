@@ -1,5 +1,6 @@
 const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 const PlanRepository = require("../repositories/PlanRepository");
+const PlanCountExtensionRepository = require('../repositories/PlanCountExtensionRepository')
 const HttpError = require("../decorators/HttpError");
 const cron = require("node-cron");
 
@@ -7,9 +8,9 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 class SubscriptionService {
   async createSubscription(priceId, data) {
-    const { subscriber_id, model_id, plan_id } = data;
+    // const { subscriber_id, model_id, plan_id } = data;
     if (!priceId || !data?.email) {
-      return res.status(400).json({ error: "Missing required parameters" });
+      throw new HttpError(400, "Missing required parameters");
     }
     const getPlanById = await PlanRepository.getById(priceId);
     // console.log("Here is your data===========>", getPlanById);
@@ -50,6 +51,62 @@ class SubscriptionService {
 
     return result;
   }
+
+  async createPlanExtSubscription(planId, data){
+    if (!planId || !data) {
+      throw new HttpError(400, "Missing required parameters");
+    }
+    const subscription = await SubscriptionRepository.getByUser(data.id)
+      if(!subscription){
+        throw new HttpError(404, "You don't have any valid subscription plan");
+      }
+    const extensionPlan = await PlanCountExtensionRepository.getById(planId);
+    if (!extensionPlan) {
+      throw new HttpError(404, "No such extension plan exist");
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+      line_items: [
+        {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: extensionPlan?.name,
+            },
+            unit_amount: Math.round(extensionPlan.price * 100),
+          },
+          quantity: 1,
+        },
+      ],
+      success_url: `http://localhost:3000/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://localhost:3000/cancel`,
+      customer_email: data.email,
+      metadata: {
+        subscriber_id: extensionPlan?.subscriber_id,
+        planId,
+        model_id: extensionPlan?.model_id
+      },
+      allow_promotion_codes: true,
+      billing_address_collection: "required",
+    });
+    const result = {
+        sessionId: session.id,
+        publicKey: process.env.STRIPE_PUBLIC_KEY
+    }
+    // const subscription = await SubscriptionRepository.getByUser(data.id)
+    const updatedData = {
+      chat_count: subscription.chat_count + extensionPlan.chat_count,
+      video_call_count: subscription.video_call_count + extensionPlan.video_call_count
+    }
+    await SubscriptionRepository.update(subscription.id, updatedData)
+    return result;
+  }
+
+
+
+  
   async cronJobUpdateSubscriptionStatus(subscriberId, planId) {
     const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(
       subscriberId,

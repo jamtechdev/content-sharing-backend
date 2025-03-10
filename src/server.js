@@ -4,9 +4,11 @@ const cors = require("cors");
 const helmet = require("helmet");
 const compression = require("compression");
 const PAYPAY = require("@paypayopa/paypayopa-sdk-node");
-
+const http = require("http");
+const socketIo = require("socket.io");
 const routes = require("./router/routes");
 const errorHandler = require("./middleware/ErrorHandler");
+const socketHandler = require('./utils/socket')
 const {
   cronJob,
 } = require("./controllers/SubscriptionController/SubscriptionController");
@@ -14,6 +16,14 @@ cronJob();
 dotenv.config();
 const app = express();
 app.use(cors());
+const server = http.createServer(app);
+const io = socketIo(server, {
+  cors: {
+      origin: "*",
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+      credentials: true,
+  },
+});
 app.use(helmet());
 app.use(compression());
 // app.use(bodyParser.json());
@@ -31,6 +41,7 @@ app.use(
 );
 // app.use(express.raw({ type: "*/*" }));
 app.use("/api", routes);
+socketHandler(io)
 
 // remove this code after 10 days start
 
@@ -151,4 +162,4 @@ app.get("/paypay/status/:paymentId", async (req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 8083;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
