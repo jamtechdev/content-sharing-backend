@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: true,
       },
       media_url: {
-        type: DataTypes.TEXT,
+        type: DataTypes.JSON,
         // allowNull: false,
       },
       content_type: {

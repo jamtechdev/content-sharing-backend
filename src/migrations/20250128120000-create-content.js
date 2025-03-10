@@ -26,7 +26,7 @@ module.exports = {
         allowNull: true,
       },
       media_url: {
-        type: Sequelize.TEXT,
+        type: Sequelize.JSON,
         allowNull: false,
       },
       content_type: {

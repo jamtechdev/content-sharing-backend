@@ -153,6 +153,7 @@ class ContentController {
           : defaultRegion.split(",").map(Number)
       );
       const mediaFileUrl = await uploadToS3(mediaFile.path, req.file.filename);
+      console.log(mediaFileUrl, "Hellow");
       const data = {
         title,
         description,
@@ -166,6 +167,9 @@ class ContentController {
         region_id,
         media_url: mediaFileUrl.secureUrl,
       };
+
+      // tomorrow working start here.
+
       const getModelProfileData = await ProfileService.getProfileByUserId(
         userId
       );

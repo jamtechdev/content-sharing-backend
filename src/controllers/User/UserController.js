@@ -75,7 +75,7 @@ class UserController {
           platform_type: newUser.platform_type,
           region_id: newUser.region_id,
           region: newUser.region?.regionName,
-          role: newUser.role?.roleName,   
+          role: newUser.role?.roleName,
           plan_id: newUser.subscriber?.plan_id || null,
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,

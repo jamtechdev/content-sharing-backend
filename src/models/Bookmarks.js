@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       Bookmarks.belongsTo(models.Content, {
         foreignKey: "content_id",
         as: "content",
+        onDelete: "CASCADE",
       });
     }
   }
