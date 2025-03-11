@@ -6,8 +6,6 @@ const cron = require("node-cron");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-
-
 class SubscriptionService {
   async createSubscription(priceId, data) {
     // const { subscriber_id, model_id, plan_id } = data;
@@ -34,8 +32,8 @@ class SubscriptionService {
           quantity: 1,
         },
       ],
-      success_url: `http://localhost:3000/my/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3000/cancel`,
+      success_url: `http://reinarancy.com/my/success/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://reinarancy.com/my/cancel`,
       customer_email: data.email,
       metadata: {
         subscriber_id: data?.id,

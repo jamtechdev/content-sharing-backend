@@ -55,10 +55,7 @@ class StripeService {
       }
       return event;
     } catch (error) {
-      console.log(
-        "========================>Webhook signature verification failed",
-        error
-      );
+      
       Logger.error(
         `❌ Webhook signature verification failed: ${error.message}`
       );
