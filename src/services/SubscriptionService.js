@@ -32,8 +32,9 @@ class SubscriptionService {
           quantity: 1,
         },
       ],
-      success_url: `http://reinarancy.com/my/success/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `http://reinarancy.com/my/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `http://reinarancy.com/my/cancel`,
+      
       customer_email: data.email,
       metadata: {
         subscriber_id: data?.id,
@@ -43,12 +44,18 @@ class SubscriptionService {
       allow_promotion_codes: true,
       billing_address_collection: "required",
     });
-    // return await SubscriptionRepository.create(result);
     const result = {
       sessionId: session.id,
       publicKey: process.env.STRIPE_PUBLIC_KEY,
     };
-
+    const subscriptionExist = await SubscriptionRepository.getByUser(data.id)
+    if(subscriptionExist && subscriptionExist.plan_id == priceId){
+      await SubscriptionRepository.update(subscriptionExist.id, data)
+    }
+    else {
+      await SubscriptionRepository.create(data);
+    }
+    
     return result;
   }
 
