@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("Plans", {
+    await queryInterface.createTable("plans", {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -40,12 +40,12 @@ module.exports = {
       video_call_count: {
         type: Sequelize.BIGINT
       },
-      createdAt: {
+      created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
         allowNull: false,
       },
-      updatedAt: {
+      updated_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.literal(
           "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
@@ -53,9 +53,9 @@ module.exports = {
         allowNull: false,
       },
     });
-    await queryInterface.addIndex("Plans", ["model_id"]);
+    await queryInterface.addIndex("plans", ["model_id"]);
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Plans");
+    await queryInterface.dropTable("plans");
   },
 };

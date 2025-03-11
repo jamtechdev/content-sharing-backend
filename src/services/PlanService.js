@@ -16,9 +16,10 @@ class PlanService {
 
   async getAllPlans() {
     const plan =  await PlanRepository.getAll();
-    if(plan.length === 0){
-        throw new HttpError(404, "Plans not found")
-    }
+    // if(plan.length === 0){
+    //     // throw new HttpError(404, "Plans not found")
+    //     return {code: 200, status: 200, success: true, message: "Plans not found"}
+    //   }
     return plan
   }
 
