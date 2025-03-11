@@ -83,7 +83,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.JSON,
         allowNull: true,
       },
-      created_at: {
+      createdAt: {
         type: DataTypes.DATE,
         allowNull: false,
       },
@@ -97,7 +97,7 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Subscription",
       tableName: "subscription_table",
       timestamps: true,
-      createdAt: "created_at",
+      // createdAt: "created_at",
       updatedAt: "updated_at",
     }
   );

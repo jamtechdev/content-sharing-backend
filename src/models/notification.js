@@ -45,11 +45,13 @@ module.exports = (sequelize, DataTypes) => {
       },
       type: {
         type: DataTypes.ENUM(
-          "content",
-          "likes",
-          "comments",
-          "products",
-          "stream"
+          "system",
+          "message",
+          "tip",
+          "subscription",
+          "like",
+          "comment",
+          "content"
         ),
         allowNull: false,
       },

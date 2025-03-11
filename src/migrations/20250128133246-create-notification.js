@@ -29,7 +29,8 @@ module.exports = {
           "tip",
           "subscription",
           "like",
-          "comment"
+          "comment",
+          "content"
         ),
         allowNull: false,
       },
