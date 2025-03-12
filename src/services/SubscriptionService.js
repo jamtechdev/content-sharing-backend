@@ -12,9 +12,9 @@ class SubscriptionService {
     if (!priceId || !data?.email) {
       throw new HttpError(400, "Missing required parameters");
     }
-    const getPlanById = await PlanRepository.getById(priceId);
-    // console.log("Here is your data===========>", getPlanById);
-    const priceInDollars = parseFloat(getPlanById?.price); // Convert string to number
+
+    const PlanDetails = await PlanRepository.getById(priceId);
+    const priceInDollars = parseFloat(PlanDetails?.price); // Convert string to number
     const unitAmount = Math.round(priceInDollars * 100);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -24,7 +24,7 @@ class SubscriptionService {
           price_data: {
             currency: "usd",
             product_data: {
-              name: getPlanById?.name,
+              name: PlanDetails?.name,
               description: "Detailed astrological compatibility analysis",
             },
             unit_amount: unitAmount, // $4.99
@@ -47,15 +47,8 @@ class SubscriptionService {
     const result = {
       sessionId: session.id,
       publicKey: process.env.STRIPE_PUBLIC_KEY,
-    };
-    const subscriptionExist = await SubscriptionRepository.getByUser(data.id)
-    if(subscriptionExist && subscriptionExist.plan_id == priceId){
-      await SubscriptionRepository.update(subscriptionExist.id, data)
-    }
-    else {
-      await SubscriptionRepository.create(data);
-    }
-    
+    }; 
+    console.log("service result================>", result)  
     return result;
   }
 

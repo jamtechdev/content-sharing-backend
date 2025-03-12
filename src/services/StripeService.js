@@ -21,6 +21,7 @@ class StripeService {
         signature,
         webhookSecret
       );
+      console.log("IN process webhook event ===============>", event)
       // await StripeRepository.saveSession(session);
       if (event.type === "checkout.session.completed") {
         const session = event.data.object;

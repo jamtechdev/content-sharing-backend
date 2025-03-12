@@ -17,6 +17,7 @@ class StripeController {
 
   async handleWebhook(req, res) {
     const signature = req.headers["stripe-signature"];
+    console.log("Checking webhook endpoiont =============================>", req.body, signature)
 
     try {
       const event = await StripeService.processWebhookEvent(
