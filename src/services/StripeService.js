@@ -31,11 +31,14 @@ class StripeService {
         const PlanDetails = await PlanRepository.getById(
           Number(session.metadata.plan_id)
         );
+        console.log("Checking duration ==============>", PlanDetails.duration, typeof PlanDetails.duration)
+        console.log("Another check =======>", parseInt(PlanDetails.duration))
         const expiresDate = getSubscriptionDates(
           session.created,
-          PlanDetails?.duration
+          parseInt(PlanDetails?.duration)
         );
-        console.log("expiresDate", expiresDate);
+
+        console.log("expiresDate ===========>", expiresDate);
         const saveSessionData = {
           stripe_session_id: session.id,
           subscriber_id: session.metadata.subscriber_id || null,
