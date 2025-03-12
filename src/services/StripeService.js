@@ -7,6 +7,7 @@ const SubscriptionService = require("./SubscriptionService");
 const PlanRepository = require("../repositories/PlanRepository");
 const getSubscriptionDates = require("../utils/subscriptionDates");
 const pushNotification = require("../_helper/pushNotification");
+const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 
 class StripeService {
   constructor() {
@@ -31,6 +32,7 @@ class StripeService {
         const PlanDetails = await PlanRepository.getById(
           Number(session.metadata.plan_id)
         );
+        const subscriptionDetails = await SubscriptionRepository.getByUser(session.metadata.subscriber_id);
         const expiresDate = getSubscriptionDates(
           session.created,
           PlanDetails?.duration
@@ -47,6 +49,8 @@ class StripeService {
           start_date: expiresDate.start_date,
           end_date: expiresDate.end_date,
           stripe_raw_data: session,
+          chat_count: subscriptionDetails.chat_count+ PlanDetails.chat_count,
+          video_call_count: subscriptionDetails.video_call_count+ PlanDetails.video_call_count
         };
         await pushNotification({
           subscriber_id: session.customer_details?.name,
