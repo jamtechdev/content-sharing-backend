@@ -33,9 +33,10 @@ class StripeService {
         );
         console.log("Checking duration ==============>", PlanDetails.duration, typeof PlanDetails.duration)
         console.log("Another check =======>", parseInt(PlanDetails.duration))
+        let duration = Number(PlanDetails?.duration)
         const expiresDate = getSubscriptionDates(
           session.created,
-          parseInt(PlanDetails?.duration)
+          duration
         );
 
         console.log("expiresDate ===========>", expiresDate);
