@@ -32,7 +32,15 @@ class StripeService {
         const PlanDetails = await PlanRepository.getById(
           Number(session.metadata.plan_id)
         );
-        const subscriptionDetails = await SubscriptionRepository.getByUser(session.metadata.subscriber_id);
+
+        const subscriberId = session?.metadata?.subscriber_id
+        const subscriptionDetails = subscriberId 
+        ? await SubscriptionRepository.getBySubscriberIdAndModelId(subscriberId, PlanDetails.model_id)
+        : null;
+
+        const chatCount = (subscriptionDetails?.chat_count || 0) + (PlanDetails?.chat_count || 0);
+        const videoCallCount = (subscriptionDetails?.video_call_count || 0) + (PlanDetails?.video_call_count || 0);
+
         const expiresDate = getSubscriptionDates(
           session.created,
           PlanDetails?.duration
@@ -49,14 +57,19 @@ class StripeService {
           start_date: expiresDate.start_date,
           end_date: expiresDate.end_date,
           stripe_raw_data: session,
-          chat_count: subscriptionDetails.chat_count+ PlanDetails.chat_count,
-          video_call_count: subscriptionDetails.video_call_count+ PlanDetails.video_call_count
+          chat_count: chatCount,
+          video_call_count: videoCallCount
         };
         await pushNotification({
           subscriber_id: session.customer_details?.name,
           Plan_name: PlanDetails?.name,
         });
-        await StripeRepository.saveSession(saveSessionData);
+        if(subscriptionDetails){
+          await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData)
+        }
+        else {
+          await StripeRepository.saveSession(saveSessionData);
+        }
       }
       return event;
     } catch (error) {

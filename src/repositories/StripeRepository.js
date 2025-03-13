@@ -23,6 +23,17 @@ class StripeRepository {
       throw error;
     }
   }
+
+ async updateSession(subscriberId, data){
+    try {
+      return await StripeSession.update(data, {
+        where: {subscriber_id: subscriberId}
+      })
+    } catch (error) {
+      Logger.error(`❌ Error updating session: ${error.message}`);
+      throw error;
+    }
+  }
 }
 
 module.exports = new StripeRepository();
