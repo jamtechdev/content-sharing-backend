@@ -390,12 +390,14 @@ class ContentController {
       });
     }
     data["user_id"] = userId;
+    console.log("Body data ======>", data)
     const response = await ContentService.addComment(data);
+    console.log("Response ===============>", response)
     if (response) {
       const content = await ContentService.getCommentByContentId(
         data.content_id
       );
-
+      console.log("Content data =====>", content)
       const payload = {
         title: `Notification`,
         message: `${content[0].user?.name} commented on a post.`,
@@ -403,7 +405,7 @@ class ContentController {
         type: "comment",
         item_id: data.content_id,
       };
-
+      console.log("Final payload =====>", payload)
       await pushNotification(payload);
       return res.status(201).json({
         code: 201,

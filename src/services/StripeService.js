@@ -22,7 +22,6 @@ class StripeService {
         signature,
         webhookSecret
       );
-      console.log("IN process webhook event ===============>", event)
       // await StripeRepository.saveSession(session);
       if (event.type === "checkout.session.completed") {
         const session = event.data.object;
@@ -34,14 +33,11 @@ class StripeService {
         );
 
         const subscriberId = session?.metadata?.subscriber_id
-        console.log("Already a subscriber======>", subscriberId)
         const subscriptionDetails = subscriberId 
         ? await SubscriptionRepository.getBySubscriberIdAndModelId(subscriberId, PlanDetails.model_id)
         : null;
-        console.log("Subscription Details ====>", subscriptionDetails.toJSON())
         const chatCount = (subscriptionDetails?.chat_count || 0) + (PlanDetails?.chat_count || 0);
         const videoCallCount = (subscriptionDetails?.video_call_count || 0) + (PlanDetails?.video_call_count || 0);
-        console.log("Chat and video call count =============>", chatCount, videoCallCount)
         const expiresDate = getSubscriptionDates(
           session.created,
           PlanDetails?.duration
@@ -61,18 +57,14 @@ class StripeService {
           chat_count: chatCount,
           video_call_count: videoCallCount
         };
-        // console.log("Save session data ===============>", saveSessionData)
         await pushNotification({
           subscriber_id: session.customer_details?.name,
           Plan_name: PlanDetails?.name,
         });
         if(subscriptionDetails){
-          console.log("Updating subscription ========>", subscriptionDetails.subscriber_id, saveSessionData)
           const result = await StripeRepository.updateSession(subscriptionDetails.subscriber_id, saveSessionData);
-          console.log("Updated result ====>", result)
         }
         else {
-          console.log("Creating new subscription ======>")
           await StripeRepository.saveSession(saveSessionData);
         }
       }
