@@ -318,11 +318,11 @@ class ContentController {
     const getContent = await ContentService.getContentById(contentId);
     const payload = {
       title: `Notification from ${getContent.user.name}`,
-      message: `${user?.name} likes ${getContent.user.name}'s post.`,
+      message: `${user?.name} liked ${getContent.user.name}'s post.`,
       sender_id: userId,
-      type: "likes",
+      type: "like",
       item_id: contentId,
-      media : getContent?.media_url || ""
+      media : getContent.content_type ==='image' ? getContent?.media_url : ""
     };
 
     await pushNotification(payload);
