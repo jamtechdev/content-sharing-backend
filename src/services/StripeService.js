@@ -41,7 +41,7 @@ class StripeService {
         console.log("Subscription Details ====>", subscriptionDetails.toJSON())
         const chatCount = (subscriptionDetails?.chat_count || 0) + (PlanDetails?.chat_count || 0);
         const videoCallCount = (subscriptionDetails?.video_call_count || 0) + (PlanDetails?.video_call_count || 0);
-
+        console.log("Chat and video call count =============>", chatCount, videoCallCount)
         const expiresDate = getSubscriptionDates(
           session.created,
           PlanDetails?.duration
@@ -61,13 +61,13 @@ class StripeService {
           chat_count: chatCount,
           video_call_count: videoCallCount
         };
-        console.log("Save session data ===============>", saveSessionData)
+        // console.log("Save session data ===============>", saveSessionData)
         await pushNotification({
           subscriber_id: session.customer_details?.name,
           Plan_name: PlanDetails?.name,
         });
         if(subscriptionDetails){
-          console.log("Updating subscription ========>")
+          console.log("Updating subscription ========>", subscriptionDetails.id, saveSessionData)
           const result = await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData);
           console.log("Updated result ====>", result)
         }
