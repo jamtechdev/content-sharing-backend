@@ -32,8 +32,8 @@ class SubscriptionService {
           quantity: 1,
         },
       ],
-      success_url: `http://reinarancy.com/my/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://reinarancy.com/my/cancel`,
+      success_url: `https://reinarancy.com/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://reinarancy.com/my/cancel`,
       
       customer_email: data.email,
       metadata: {
@@ -80,8 +80,8 @@ class SubscriptionService {
           quantity: 1,
         },
       ],
-      success_url: `http://localhost:3000/my/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `http://localhost:3000/cancel`,
+      success_url: `https://reinarancy.com/my/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `https://reinarancy.com/my/cancel`,
       customer_email: data.email,
       metadata: {
         subscriber_id: extensionPlan?.subscriber_id,

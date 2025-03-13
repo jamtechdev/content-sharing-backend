@@ -61,6 +61,7 @@ class StripeService {
           chat_count: chatCount,
           video_call_count: videoCallCount
         };
+        console.log("Save session data ===============>", saveSessionData)
         await pushNotification({
           subscriber_id: session.customer_details?.name,
           Plan_name: PlanDetails?.name,
