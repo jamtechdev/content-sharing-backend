@@ -397,10 +397,13 @@ class ContentController {
       const content = await ContentService.getCommentByContentId(
         data.content_id
       );
-      console.log("Content data =====>", content)
+      // console.log("Content data =====>", content)
+      content.forEach(item=>[
+        console.log("All users =====>", item.user)
+      ])
       const payload = {
         title: `Notification`,
-        message: `${content[0].user?.name} commented on a post.`,
+        message: `${content[0].user?.users?.name} commented on a post.`,
         sender_id: userId,
         type: "comment",
         item_id: data.content_id,
