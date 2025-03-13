@@ -34,10 +34,11 @@ class StripeService {
         );
 
         const subscriberId = session?.metadata?.subscriber_id
+        console.log("Already a subscriber======>", subscriberId)
         const subscriptionDetails = subscriberId 
         ? await SubscriptionRepository.getBySubscriberIdAndModelId(subscriberId, PlanDetails.model_id)
         : null;
-
+        console.log("Subscription Details ====>", subscriptionDetails.toJSON())
         const chatCount = (subscriptionDetails?.chat_count || 0) + (PlanDetails?.chat_count || 0);
         const videoCallCount = (subscriptionDetails?.video_call_count || 0) + (PlanDetails?.video_call_count || 0);
 
@@ -65,9 +66,11 @@ class StripeService {
           Plan_name: PlanDetails?.name,
         });
         if(subscriptionDetails){
+          console.log("Updating subscription ========>")
           await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData)
         }
         else {
+          console.log("Creating new subscription ======>")
           await StripeRepository.saveSession(saveSessionData);
         }
       }

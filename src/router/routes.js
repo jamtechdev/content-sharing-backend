@@ -11,6 +11,8 @@ const StripeController = require("../controllers/StripeController/StripeControll
 const NotificatioController = require("../controllers/NotificatioinController/NotificatioinController");
 const MessageController = require('../controllers/MessageController/MessageController')
 const PlanExtensionController = require('../controllers/PlanExtensionController/PlanExtensionController')
+const AdditionalSupportController = require('../controllers/AdditionalSupportController/AdditionalSupportController')
+const HelpAndSupportController = require('../controllers/HelpAndSupportController/HelpAndSupportController')
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -24,6 +26,8 @@ router.use("/model", ModelProfileController.getRouter());
 router.use("/region", regionController.getRouter());
 router.use("/message", MessageController.getRouter());
 router.use("/extension", PlanExtensionController.getRouter());
+router.use('/add-support', AdditionalSupportController.getRouter())
+router.use('/help-and-support', HelpAndSupportController.getRouter())
 // router.post(
 //   "/stripe/webhook",
 //   express.raw({ type: "application/json" }),
