@@ -67,8 +67,8 @@ class StripeService {
           Plan_name: PlanDetails?.name,
         });
         if(subscriptionDetails){
-          console.log("Updating subscription ========>", subscriptionDetails.id, saveSessionData)
-          const result = await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData);
+          console.log("Updating subscription ========>", subscriptionDetails.subscriber_id, saveSessionData)
+          const result = await StripeRepository.updateSession(subscriptionDetails.subscriber_id, saveSessionData);
           console.log("Updated result ====>", result)
         }
         else {
