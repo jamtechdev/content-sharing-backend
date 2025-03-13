@@ -68,7 +68,8 @@ class StripeService {
         });
         if(subscriptionDetails){
           console.log("Updating subscription ========>")
-          await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData)
+          const result = await StripeRepository.updateSession(subscriptionDetails.id, saveSessionData);
+          console.log("Updated result ====>", result)
         }
         else {
           console.log("Creating new subscription ======>")
