@@ -31,7 +31,7 @@ const pushNotification = async (dataPayload) => {
       notification: {
         title: dataPayload?.title,
         body: dataPayload?.message,
-        image: dataPayload?.media[0]?.url ? dataPayload?.media[0]?.url : "",
+        image: dataPayload?.media || "",
       },
       data: {
         type: dataPayload?.type || "",

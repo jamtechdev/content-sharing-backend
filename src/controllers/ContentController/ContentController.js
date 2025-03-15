@@ -322,10 +322,10 @@ class ContentController {
       sender_id: userId,
       type: "like",
       item_id: contentId,
-      media : getContent.content_type ==='image' ? getContent?.media_url : ""
+      media : getContent.content_type ==='image' ? getContent?.media_url[0]?.url : ""
     };
 
-    await pushNotification(payload);
+    // await pushNotification(payload);
     if (!contentId && !userId) {
       return res.status(400).json({
         code: 400,
@@ -341,7 +341,7 @@ class ContentController {
         user_id: userId,
         is_like: data?.is_like ? 0 : 1,
       });
-      if (data?.is_like != true) {
+      if (data?.is_like === false) {
         await pushNotification(payload);
       }
 
@@ -397,10 +397,8 @@ class ContentController {
       const content = await ContentService.getCommentByContentId(
         data.content_id
       );
-      // console.log("Content data =====>", content)
-      content.forEach(item=>[
-        console.log("All users =====>", item.user)
-      ])
+     
+      console.log("Content [0]", content[0]);
       const payload = {
         title: `Notification`,
         message: `${content[0].user?.users?.name} commented on a post.`,
