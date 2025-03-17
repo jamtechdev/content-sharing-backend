@@ -18,9 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     model_id: DataTypes.STRING,
     name: DataTypes.ENUM("flexy", "flexyPro", "flexyProMax"),
     price: DataTypes.FLOAT,
-    chat_count: DataTypes.NUMBER,
-    video_call_count: DataTypes.NUMBER,
-    // duration: DataTypes.NUMBER
+    coins: DataTypes.BIGINT
   }, {
     sequelize,
     modelName: 'plan_count_extension',

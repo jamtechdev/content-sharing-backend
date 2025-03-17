@@ -68,8 +68,6 @@ class SubscriptionController {
   async createSubscription(req, res) {
     // const { userId } = req?.user;
     const data = req?.body;
-   
-
     const { priceId, userData } = data;
 
     const response = await SubscriptionService.createSubscription(priceId, userData);

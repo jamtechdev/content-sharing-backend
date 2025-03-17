@@ -36,8 +36,7 @@ class StripeService {
         const subscriptionDetails = subscriberId 
         ? await SubscriptionRepository.getBySubscriberIdAndModelId(subscriberId, PlanDetails.model_id)
         : null;
-        const chatCount = (subscriptionDetails?.chat_count || 0) + (PlanDetails?.chat_count || 0);
-        const videoCallCount = (subscriptionDetails?.video_call_count || 0) + (PlanDetails?.video_call_count || 0);
+        const coins = (subscriptionDetails?.coins || 0) + (PlanDetails?.coins || 0);
         const expiresDate = getSubscriptionDates(
           session.created,
           PlanDetails?.duration
@@ -54,8 +53,7 @@ class StripeService {
           start_date: expiresDate.start_date,
           end_date: expiresDate.end_date,
           stripe_raw_data: session,
-          chat_count: chatCount,
-          video_call_count: videoCallCount
+          coins
         };
         await pushNotification({
           subscriber_id: session.customer_details?.name,

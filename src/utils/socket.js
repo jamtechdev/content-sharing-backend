@@ -4,6 +4,7 @@ const { createChat } = require("../repositories/MessageRepository");
 const { checkChatAndVideoCallCount } = require("../utils/checkChatAndVideoCallCount");
 const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 const UserRepository = require("../repositories/UserRepository");
+const {update, create} = require('../repositories/RtcTokenRepository')
 
 const JWT_SECRET = process.env.JWT_SECRET;
 const users = {}; // Stores online users (userId -> socketId)
@@ -28,9 +29,27 @@ const socketHandler = (io) => {
       }
     });
 
+
+    //  Video call events
+
+    socket.on('call-initiated', async ({ callerId, receiverId, channelName }) => {
+      io.emit(`incoming-call-${receiverId}`, { callerId, channelName });
+  });
+  
+  socket.on('call-status', async ({ callerId, receiverId, status }) => {
+      if (status === 'ended') {
+          await update({ status, endTime: new Date() }, callerId, receiverId);
+      } else {
+          await create({ callerId, receiverId, status });
+      }
+      io.emit(`call-status-${receiverId}`, { callerId, status });
+  });
+
+
     // Handle sending messages
     socket.on("sendMessage", async ({ to, message, mediaType, mediaUrl, mediaSize, from, timestamp }) => {
       const senderId = socket.userId;
+      console.log("Getting sender id=============>", senderId)
       console.log(`Sending message from ${senderId} to ${to}: ${message}`);
 
       const getUser = await UserRepository.findById(senderId);
@@ -55,6 +74,7 @@ const socketHandler = (io) => {
 
       // If recipient is offline, return early
       if (!users[to]) {
+        await createChat({ senderId, receiverId: to, mediaUrl, mediaSize, mediaType, message });
         console.log(`User ${to} is offline.`);
         return;
       }
@@ -103,7 +123,7 @@ const socketHandler = (io) => {
           const subscription = await SubscriptionRepository.getByUser(disconnectedUserId);
           if (subscription) {
             await SubscriptionRepository.update(subscription.id, {
-              chat_count: subscription.chat_count === 0 ? 0 : subscription.chat_count - 1,
+              coins: subscription.coins === 0 ? 0 : subscription.coins - 5,
             });
             console.log(`Chat count reduced for user ${disconnectedUserId}`);
           }

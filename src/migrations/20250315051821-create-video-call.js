@@ -2,45 +2,32 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('chat_messages', {
+    await queryInterface.createTable('video_calls', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      chat_session_id: {
+      caller_id: {
         type: Sequelize.INTEGER
       },
-      sender_id: {
+      receiver_id: {
         type: Sequelize.INTEGER
       },
-      sender_type: {
-        type: Sequelize.ENUM("user", "model")
-      },
-      message_type: {
-        type: Sequelize.ENUM("text", "image", "video", "audio")
-      },
-      message: {
+      channel_name: {
         type: Sequelize.STRING
       },
-      media_url: {
-        type: Sequelize.STRING
-      },
-      media_type: {
-        type: Sequelize.STRING
-      },
-      media_size: {
-        type: Sequelize.INTEGER
-      },
-      timestamp: {
+      start_time: {
         type: Sequelize.DATE
       },
-      is_deleted: {
-        type: Sequelize.BOOLEAN
+      end_time: {
+        type: Sequelize.DATE
       },
-      is_edited: {
-        type: Sequelize.BOOLEAN
+      // accepted, rejected, ended, or missed
+      status: {
+         type: Sequelize.ENUM("initiated", "noreply", "rejected", "ongoing", "ended"),
+        defaultValue: "initiated"
       },
       createdAt: {
         allowNull: false,
@@ -53,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('chat_messages');
+    await queryInterface.dropTable('video_calls');
   }
 };
