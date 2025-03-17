@@ -112,7 +112,7 @@ class AuthController {
         guard_name: user.role ? user.role.guard_name : null,
         plan_status: user?.subscriber?.status || null,
         plan: user?.subscriber?.plan?.name || null,
-        chat_count: subscription?.chat_count
+        coins: subscription?.coins
       },
     });
   }

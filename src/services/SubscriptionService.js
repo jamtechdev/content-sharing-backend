@@ -97,8 +97,7 @@ class SubscriptionService {
     }
     // const subscription = await SubscriptionRepository.getByUser(data.id)
     const updatedData = {
-      chat_count: subscription.chat_count + extensionPlan.chat_count,
-      video_call_count: subscription.video_call_count + extensionPlan.video_call_count
+      coins: subscription.coins + extensionPlan.coins
     }
     await SubscriptionRepository.update(subscription.id, updatedData)
     return result;

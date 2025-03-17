@@ -89,7 +89,7 @@ class UserController {
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,
           plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
-          chat_count: subscription?.chat_count
+          coins: subscription?.coins
         },
       });
     }
