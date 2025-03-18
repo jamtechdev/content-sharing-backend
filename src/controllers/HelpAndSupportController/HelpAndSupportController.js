@@ -27,7 +27,7 @@ class HelpAndSupportController {
     async getAllSupport(req, res){
         const response = await HelpAndSupportService.getAllHelpSupport()
         if(response.length === 0){
-            return status(200).json({code: 200, success: true, message: "Data not found"})
+            return res.status(200).json({code: 200, success: true, message: "Data not found"})
         }
         return res.status(201).json({code: 201, success:true, data: response})
       }
@@ -36,7 +36,7 @@ class HelpAndSupportController {
         const {id} = req?.params
         const response = await HelpAndSupportService.getByIdHelpSupport(id)
         if(!response){
-            return status(200).json({code: 200, success: true, message: "Data not found"})
+            return res.status(200).json({code: 200, success: true, message: "Data not found"})
         }
         return res.status(201).json({code: 201, success:true, data: response})
       }
