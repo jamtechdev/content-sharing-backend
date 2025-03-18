@@ -206,6 +206,7 @@ class ContentRepository {
       region_id,
       premium_access,
       price,
+      plan_id
     },
     userId
   ) {
@@ -221,6 +222,7 @@ class ContentRepository {
         region_id,
         premium_access,
         price,
+        plan_id
       },
       { where: { id: contentId, user_id: userId } }
     );
@@ -284,7 +286,7 @@ class ContentRepository {
 
   async getLikeByContentId(contentId) {
     return await Likes.findAll({
-      where: { content_id: contentId },
+      where: { content_id: contentId, is_like: 1 },
       include: [
         {
           model: User, // Assuming your Users model is imported
@@ -332,6 +334,9 @@ class ContentRepository {
       where: { content_id: contentId, user_id: userId },
     });
   }
+
+
+
 
   async addComment(data) {
     return await Comment.create(data);
@@ -442,6 +447,7 @@ class ContentRepository {
     );
   }
 
+
   async getCommentByUserId(userId) {
     return await Comment.findAll({
       where: {
@@ -520,6 +526,15 @@ class ContentRepository {
     return await ReplyComment.destroy({
       where: { id: data?.id, user_id: data?.user_id },
     });
+  }
+
+
+  async deleteCommentByContentId(contentId){
+    return await Comment.destroy({where: {content_id: contentId}})
+  }
+
+  async deleteLikeByContentId(contentId){
+    return await Likes.destroy({where: {content_id: contentId}})
   }
 }
 

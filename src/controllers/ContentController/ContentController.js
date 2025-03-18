@@ -7,6 +7,8 @@ const { upload } = require("../../utils/MulterConfig.js");
 const { cloudinaryImageUpload } = require("../../utils/cloudinaryService.js");
 const ContentService = require("../../services/ContentService.js");
 const UserService = require("../../services/UserService.js");
+const PlanService = require('../../services/PlanService.js');
+const BookmarkService = require('../../services/BookmarkService.js')
 const pushNotification = require("../../_helper/pushNotification.js");
 const ProfileService = require("../../services/ProfileService.js");
 const { uploadToS3 } = require("../../config/S3upload.js");
@@ -146,6 +148,12 @@ class ContentController {
         plan_id,
       } = req.body;
 
+     if(plan_id){
+      const planExist = await PlanService.getPlanById(plan_id)
+      if(!planExist){
+        return res.status(404).json({code: 404, success: false, message: "Plan not exits, choose another plan"})
+      }
+     }
       // Ensure region_id is correctly formatted as JSON array
       const region_id = JSON.stringify(
         modal_region_id
@@ -252,9 +260,12 @@ class ContentController {
     );
 
     const content = await ContentService.findById(contentId, userId);
+    if(!content){
+      return res.status(404).json({code: 404, success: false, message: "Content not found"})
+    }
     let mediaFileUrl;
     if (mediaFile) {
-      mediaFileUrl = await cloudinaryImageUpload(mediaFile?.path);
+      mediaFileUrl = await uploadToS3(mediaFile?.path, req.file.filename);
     }
     const response = await ContentService.updateContent(
       {
@@ -271,11 +282,10 @@ class ContentController {
         premium_access,
         price: price ? parseFloat(price) : null,
         plan_id:
-          plan_id && parseFloat(plan_id) !== 0 ? parseFloat(plan_id) : null,
+          plan_id && parseInt(plan_id) !== 0 ? parseInt(plan_id) : null,
       },
       userId
     );
-
     return res.status(200).json({
       code: 200,
       success: true,
@@ -291,6 +301,10 @@ class ContentController {
         .json({ code: 400, success: false, message: "Content id is required" });
     }
     await ContentService.deleteContent(id);
+    await ContentService.deleteCommentByContentId(id)
+    await ContentService.deleteLikeByContentId(id)
+    await BookmarkService.removeBookmark(id)
+
     console.log(id);
     return res.status(200).json({
       code: 200,
@@ -375,6 +389,7 @@ class ContentController {
     return res.status(200).json({
       code: 200,
       success: true,
+      likes_count: data.length,
       data: data,
     });
   }

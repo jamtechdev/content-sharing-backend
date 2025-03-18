@@ -8,9 +8,9 @@ class PlanService {
 
   async getPlanById(id) {
     const plan = await PlanRepository.getById(id);
-    if (!plan) {
-        throw new HttpError(404, "Plan not found");
-    }
+    // if (!plan) {
+    //     throw new HttpError(404, "Plan not found");
+    // }
     return plan; 
   }
 

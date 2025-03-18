@@ -27,9 +27,9 @@ class ContentService {
 
   async findById(contentId, userId) {
     const response = await ContentRepository.findById(contentId, userId);
-    if (!response) {
-      throw new HttpError(404, "No content found");
-    }
+    // if (!response) {
+    //   throw new HttpError(404, "No content found");
+    // }
     return response;
   }
   async updateContent(
@@ -43,7 +43,8 @@ class ContentService {
       contentId,
       region_id,
       premium_access,
-      price
+      price,
+      plan_id
     },
     userId
   ) {
@@ -58,7 +59,8 @@ class ContentService {
         contentId,
         region_id: region_id,
         premium_access,
-        price
+        price,
+        plan_id
       },
       userId
     );
@@ -150,6 +152,14 @@ class ContentService {
   }
   async deleteReplyComment(data) {
     return await ContentRepository.deleteReplyComment(data);
+  }
+
+  async deleteCommentByContentId(id){
+    return await ContentRepository.deleteCommentByContentId(id)
+  }
+
+  async deleteLikeByContentId(id){
+    return await ContentRepository.deleteLikeByContentId(id)
   }
 }
 module.exports = new ContentService();
