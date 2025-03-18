@@ -135,6 +135,20 @@ const uploadToS3 = async (filePath, fileName) => {
   } catch (error) {
     console.error("Error uploading to S3:", error);
     throw new Error("S3 upload failed");
+  } finally {
+    try {
+      if(filePath && fs.existsSync(filePath)){
+        fs.unlinkSync(filePath);
+        console.log("Deleted original file:", filePath);
+      }
+      if(outputPath && outputPath.fs.existsSync(outputPath)){
+        console.log("output path", outputPath)
+        fs.rmdirSync(outputPath, {recursive: true});
+        console.log("Deleted output folder:", outputPath);
+      }
+    } catch (cleanupError) {
+      console.error("Error during cleanup:", cleanupError);
+    }
   }
 };
 

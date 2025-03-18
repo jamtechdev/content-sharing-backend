@@ -62,6 +62,9 @@ class PlanController {
   async getPlanById(req, res) {
     const { planId } = req?.params;
     const response = await PlanService.getPlanById(planId);
+    if(!response){
+      return res.status(404).json({code: 404, success: false, message: "Plan not exist, choose another plan"})
+    }
     return res.status(200).json({
       code: 200,
       success: true,

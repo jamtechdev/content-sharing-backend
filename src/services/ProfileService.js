@@ -21,7 +21,6 @@ class ProfileService {
   }
 
   async createModalProfile(user, profileData) {
-    console.log(user, "userId-------------->");
     // Check if a profile already exists for the user.
     const existingProfile = await ProfileRepository.findProfileById(user);
     if (existingProfile) {
@@ -74,11 +73,10 @@ class ProfileService {
       throw new HttpError(404, "User not found");
     }
     const imageUri = await uploadToS3(file.path, file.filename);
-    console.log(imageUri);
     const updateField = formData.profile_picture ? true : false;
     const userAsset = await ProfileRepository.updateModelProfileAndCoverPhoto(
       user,
-      imageUri.secureUrl,
+      imageUri.secureUrl[0].url,
       updateField
     );
     return userAsset;
