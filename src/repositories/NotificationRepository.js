@@ -38,7 +38,8 @@ class NotificationRepository {
       include: [
         { model: User, as: "Sender", attributes: ["name", "email", "avatar"] },
       ],
-    });
+      order: [["created_at", "DESC"]]
+    },);
   }
   async deleteNotification(user_id) {
     return await Notification.destroy({ where: { receiver_id: user_id } });
