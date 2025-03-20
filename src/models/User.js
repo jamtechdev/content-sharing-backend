@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "subscriber_id",
         as: "subscriber",
       });
+      User.hasMany(models.premium_content_access, {
+        foreignKey: "buyer_id",
+        as: "premium_content"
+      })
     }
   }
   User.init(

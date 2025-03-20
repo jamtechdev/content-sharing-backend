@@ -68,6 +68,7 @@ class UserController {
     } else {
       const newUser = await UserService.getUserById(user?.userId);
       const subscription = await SubscriptionRepository.getByUser(user?.userId)
+
       return res.status(200).json({
         code: 200,
         data: {
@@ -83,13 +84,16 @@ class UserController {
           bio: newUser.bio,
           platform_type: newUser.platform_type,
           region_id: newUser.region_id,
-          region: newUser.region?.regionName,
-          role: newUser.role?.roleName,
+          region: newUser.region.toJSON()?.regionName,
+          role: newUser.role.toJSON()?.roleName,
+          // region: newUser.region?.regionName,  // earlier was this 
+          // role: newUser.role?.roleName,
           plan_id: newUser.subscriber?.plan_id || null,
           plan_start: newUser.subscriber?.status || null,
           plan: newUser.subscriber?.plan?.name || null,
           plan_expire: calculateTimeLeft(newUser.subscriber?.end_date) || null,
-          coins: subscription?.coins
+          coins: subscription?.coins,
+          premium_content: newUser.premium_content || []
         },
       });
     }

@@ -267,6 +267,8 @@ class ContentController {
     if (mediaFile) {
       mediaFileUrl = await uploadToS3(mediaFile?.path, req.file.filename);
     }
+    const planId = plan_id && !isNaN(plan_id) ? parseInt(plan_id, 10) : null;
+ 
     const response = await ContentService.updateContent(
       {
         status,
@@ -281,8 +283,8 @@ class ContentController {
         region_id,
         premium_access,
         price: price ? parseFloat(price) : null,
-        plan_id:
-          plan_id && parseInt(plan_id) !== 0 ? parseInt(plan_id) : null,
+        plan_id: planId
+          // plan_id && parseInt(plan_id) !== 0 ? parseInt(plan_id) : null,
       },
       userId
     );

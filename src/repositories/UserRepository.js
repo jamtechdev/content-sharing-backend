@@ -152,11 +152,16 @@ class UserRepository {
             },
           ],
         },
+        {
+          model: db.premium_content_access,
+          as: "premium_content",
+          attributes: ["content_id"]
+        }
       ],
-      raw: true,
-      nest: true,
+      // raw: true,
+      // nest: true,
     });
-  }
+  } 
   async updateUserAvatar(id, avatar) {
     console.log(id, avatar);
     const uploadedAvatar = await cloudinaryImageUpload(avatar?.path, "");

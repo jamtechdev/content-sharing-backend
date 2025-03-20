@@ -1,6 +1,7 @@
 const db = require("../models"); // Sequelize models
 const Logger = require("../utils/Logger");
 const StripeSession = db.Subscription;
+const PremiumContentAccessSession = db.premium_content_access;
 
 class StripeRepository {
   async saveSession(sessionData) {
@@ -34,6 +35,27 @@ class StripeRepository {
       throw error;
     }
   }
+
+  async saveSessionForPremiumContentAccess(sessionData){
+    try {
+      return await PremiumContentAccessSession.create(sessionData)
+    } catch (error) {
+      Logger.error(`❌ Error saving session: ${error.message}`);
+      throw error;
+    }
+  }
+
+  async getSessionByIdForPremiumContentAccess(sessionId){
+    try {
+      return await PremiumContentAccessSession.findOne({
+        where: {session_id: sessionId}
+      });
+    } catch (error) {
+      Logger.error(`❌ Error fetching session: ${error.message}`);
+      throw error;
+    }
+  }
+
 }
 
 module.exports = new StripeRepository();
