@@ -42,7 +42,8 @@ class PremiumContentAccessService {
 
             customer_email: data.email,
             metadata: {
-                subscriber_id: data?.id,
+                buyer_id: data?.id,
+                content_id: contentId,
                 model_id: 5
             },
             allow_promotion_codes: true,
