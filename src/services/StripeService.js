@@ -80,7 +80,7 @@ class StripeService {
             price: session.amount_total,
             // status: session?.status === "complete" ? "active" : session?.status,
             payment_mode: "card",
-            stripe_raw_data: JSON.stringify(session),
+            // stripe_raw_data: session,
           };
 
         await pushNotification({
