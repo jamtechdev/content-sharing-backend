@@ -55,19 +55,6 @@ class PremiumContentAccessService {
             publicKey: process.env.STRIPE_PUBLIC_KEY,
           }; 
           console.log("service result================>", result)  
-
-
-        //   const saveSessionData = {
-        //     // stripe_session_id: session.id,
-        //     buyer_id: data.id,
-        //     model_id: 5,
-        //     content_id: contentId,
-        //     price: 599,
-        //     // status: session?.status === "complete" ? "active" : session?.status,
-        //     payment_mode: "card",
-        //     // stripe_raw_data: session,
-        //   };
-        //     await StripeRepository.saveSessionForPremiumContentAccess(saveSessionData);
         
           return result;
     }

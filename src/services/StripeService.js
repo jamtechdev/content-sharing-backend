@@ -80,18 +80,9 @@ class StripeService {
             price: session.amount_total,
             // status: session?.status === "complete" ? "active" : session?.status,
             payment_mode: "card",
-            // stripe_raw_data: session,
+            stripe_raw_data: session,
           };
-        //     await StripeRepository.saveSessionForPremiumContentAccess(saveSessionData);
-        // const saveSessionData = {
-        //   stripe_session_id: session.id,
-        //   subscriber_id: session.metadata.subscriber_id || null,
-        //   model_id: 5,
-        //   content_id: session.metadata.content_id || null,
-        //   status: session?.status === "complete" ? "active" : session?.status,
-        //   payment_mode: null,
-        //   stripe_raw_data: session,
-        // };
+
         await pushNotification({
           buyer_id: session.customer_details?.name
         });
