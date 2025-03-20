@@ -28,7 +28,7 @@ class PremiumContentAccessService {
                         currency: "usd",
                         product_data: {
                             name: content.title,
-                            description: content.description
+                            description: "description"
                         },
                         unit_amount: unitAmount,
                     },
@@ -42,7 +42,7 @@ class PremiumContentAccessService {
 
             customer_email: data.email,
             metadata: {
-                buyer_id: data?.id,
+                subscriber_id: data?.id,
                 model_id: 5
             },
             allow_promotion_codes: true,
