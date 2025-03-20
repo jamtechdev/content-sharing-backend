@@ -28,7 +28,7 @@ class PremiumContentAccessService {
                         currency: "usd",
                         product_data: {
                             name: content.title,
-                            description: content.description
+                            description: "Premium content access"
                         },
                         unit_amount: unitAmount,
                     },
