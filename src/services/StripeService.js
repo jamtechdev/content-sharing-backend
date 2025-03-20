@@ -72,18 +72,30 @@ class StripeService {
         }
         else {
           console.log("Else condition for Premium Content purchase ============>")
-        const saveSessionData = {
-          stripe_session_id: session.id,
-          subscriber_id: session.metadata.subscriber_id || null,
-          model_id: 5,
-          content_id: session.metadata.content_id || null,
-          status: session?.status === "complete" ? "active" : session?.status,
-          payment_mode: null,
-          stripe_raw_data: session,
-        };
+             const saveSessionData = {
+            stripe_session_id: session.id,
+            buyer_id: session.metadata.buyer_id,
+            model_id: 5,
+            content_id: session.metadata.content_id,
+            price: session.amount_total,
+            // status: session?.status === "complete" ? "active" : session?.status,
+            payment_mode: "card",
+            // stripe_raw_data: session,
+          };
+        //     await StripeRepository.saveSessionForPremiumContentAccess(saveSessionData);
+        // const saveSessionData = {
+        //   stripe_session_id: session.id,
+        //   subscriber_id: session.metadata.subscriber_id || null,
+        //   model_id: 5,
+        //   content_id: session.metadata.content_id || null,
+        //   status: session?.status === "complete" ? "active" : session?.status,
+        //   payment_mode: null,
+        //   stripe_raw_data: session,
+        // };
         await pushNotification({
           buyer_id: session.customer_details?.name
         });
+        
           await StripeRepository.saveSessionForPremiumContentAccess(saveSessionData);
 
       }
