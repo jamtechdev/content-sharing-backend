@@ -187,7 +187,7 @@ class UserRepository {
   }
 
   async getUsersByRole(role) {
-    return await User.findAll({ where: { role_id: role }, limit: 3 });
+    return await User.findAll({ where: { role_id: role } });
   }
 }
 
