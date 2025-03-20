@@ -86,6 +86,14 @@ class ProductDiscountController {
 
   async getAllProductDiscounts(req, res) {
     const discounts = await ProductDiscountService.getAllProductDiscounts();
+    if(discounts.length === 0){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product discount not found",
+        data: [],
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -97,6 +105,13 @@ class ProductDiscountController {
   async getProductDiscountById(req, res) {
     const discountId = req.params.id;
     const discount = await ProductDiscountService.getProductDiscountById(discountId);
+    if(!discount){
+      return res.status(200).json({
+        code: 200,
+        success: true,
+        message: "Product discount not found"
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,

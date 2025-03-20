@@ -13,17 +13,17 @@ class ProductDiscountService {
 
   async getAllProductDiscounts() {
     const discounts = await ProductDiscountRepository.getAll();
-    if (discounts.length === 0) {
-      throw new HttpError(404, "No product discounts found");
-    }
+    // if (discounts.length === 0) {
+    //   throw new HttpError(404, "No product discounts found");
+    // }
     return discounts;
   }
 
   async getProductDiscountById(discountId) {
     const discount = await ProductDiscountRepository.getById(discountId);
-    if (!discount) {
-      throw new HttpError(404, "Product discount not found");
-    }
+    // if (!discount) {
+    //   throw new HttpError(404, "Product discount not found");
+    // }
     return discount;
   }
 
