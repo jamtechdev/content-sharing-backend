@@ -13,7 +13,8 @@ const MessageController = require('../controllers/MessageController/MessageContr
 const PlanExtensionController = require('../controllers/PlanExtensionController/PlanExtensionController')
 const AdditionalSupportController = require('../controllers/AdditionalSupportController/AdditionalSupportController')
 const HelpAndSupportController = require('../controllers/HelpAndSupportController/HelpAndSupportController')
-const RtcTokenController = require('../controllers/RtcTokenController/RtcTokenController')
+const RtcTokenController = require('../controllers/RtcTokenController/RtcTokenController');
+const PremiumContentAccessController = require("../controllers/PremiumContentAccessController/PremiumContentAccessController");
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -29,7 +30,8 @@ router.use("/message", MessageController.getRouter());
 router.use("/extension", PlanExtensionController.getRouter());
 router.use('/add-support', AdditionalSupportController.getRouter())
 router.use('/help-and-support', HelpAndSupportController.getRouter())
-router.use('/video-call', RtcTokenController.getRouter())
+router.use('/video-call', RtcTokenController.getRouter());
+router.use('/premium', PremiumContentAccessController.getRouter());
 // router.post(
 //   "/stripe/webhook",
 //   express.raw({ type: "application/json" }),

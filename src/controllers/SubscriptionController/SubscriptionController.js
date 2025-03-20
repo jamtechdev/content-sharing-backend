@@ -97,7 +97,7 @@ class SubscriptionController {
     return res.status(200).json({
       code: 200,
       success: true,
-      message: "User payement details fetched successfully",
+      message: "User payment details fetched successfully",
       data: response,
     });
   }

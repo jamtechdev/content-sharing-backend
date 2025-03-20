@@ -62,7 +62,7 @@ const uploadToS3 = async (filePath, fileName) => {
 
       const uploadVideoS3 = async (filePath, key) => {
         try {
-          const fileContent = fs.createReadStream(filePath);
+          const fileContent = fs.createReadStream(filePath);  // earlier using readFileSync instead createReadStream
           const contentType = filePath.endsWith(".m3u8")
             ? "application/vnd.apple.mpegurl"
             : "video/MP2T";
