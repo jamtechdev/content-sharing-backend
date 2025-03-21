@@ -39,6 +39,7 @@ class ProductRepository {
           model: productDiscount,
           as: "product_discount",
           attributes: { exclude: ["createdAt", "updatedAt"] },
+          required: false,
           where: {
             status: {
               [db.Sequelize.Op.or]: ["active", "upcoming"],
