@@ -32,20 +32,20 @@ class ProductDiscountRepository {
         }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-          include: [
-            {
-              model: ProductCategory,
-              as: "category",
-              attributes: { exclude: ["createdAt", "updatedAt"] },
-            },
-          ],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Product,
+      //     as: "product",
+      //     attributes: { exclude: ["createdAt", "updatedAt"] },
+      //     include: [
+      //       {
+      //         model: ProductCategory,
+      //         as: "category",
+      //         attributes: { exclude: ["createdAt", "updatedAt"] },
+      //       },
+      //     ],
+      //   },
+      // ],
     });
   }
 
@@ -61,20 +61,20 @@ class ProductDiscountRepository {
         }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-          include: [
-            {
-              model: ProductCategory,
-              as: "category",
-              attributes: { exclude: ["createdAt", "updatedAt"] },
-            },
-          ],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Product,
+      //     as: "product",
+      //     attributes: { exclude: ["createdAt", "updatedAt"] },
+      //     include: [
+      //       {
+      //         model: ProductCategory,
+      //         as: "category",
+      //         attributes: { exclude: ["createdAt", "updatedAt"] },
+      //       },
+      //     ],
+      //   },
+      // ],
     });
   }
 
@@ -85,25 +85,25 @@ class ProductDiscountRepository {
         product_id: productId,
         // start_date: { [db.Sequelize.Op.lte]: currentDate },
         // end_date: { [db.Sequelize.Op.gte]: currentDate },
-        status: {
-          [db.Sequelize.Op.ne]: "expired"
-        }
+        // status: {
+        //   [db.Sequelize.Op.ne]: "expired"
+        // }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      include: [
-        {
-          model: Product,
-          as: "product",
-          attributes: { exclude: ["createdAt", "updatedAt"] },
-          include: [
-            {
-              model: ProductCategory,
-              as: "category",
-              attributes: { exclude: ["createdAt", "updatedAt"] },
-            },
-          ],
-        },
-      ],
+      // include: [
+      //   {
+      //     model: Product,
+      //     as: "product",
+      //     attributes: { exclude: ["createdAt", "updatedAt"] },
+      //     include: [
+      //       {
+      //         model: ProductCategory,
+      //         as: "category",
+      //         attributes: { exclude: ["createdAt", "updatedAt"] },
+      //       },
+      //     ],
+      //   },
+      // ],
     });
   }
 
