@@ -32,20 +32,20 @@ class ProductDiscountRepository {
         }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      // include: [
-      //   {
-      //     model: Product,
-      //     as: "product",
-      //     attributes: { exclude: ["createdAt", "updatedAt"] },
-      //     include: [
-      //       {
-      //         model: ProductCategory,
-      //         as: "category",
-      //         attributes: { exclude: ["createdAt", "updatedAt"] },
-      //       },
-      //     ],
-      //   },
-      // ],
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
     });
   }
 
@@ -61,20 +61,20 @@ class ProductDiscountRepository {
         }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      // include: [
-      //   {
-      //     model: Product,
-      //     as: "product",
-      //     attributes: { exclude: ["createdAt", "updatedAt"] },
-      //     include: [
-      //       {
-      //         model: ProductCategory,
-      //         as: "category",
-      //         attributes: { exclude: ["createdAt", "updatedAt"] },
-      //       },
-      //     ],
-      //   },
-      // ],
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
     });
   }
 
@@ -90,20 +90,20 @@ class ProductDiscountRepository {
         // }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
-      // include: [
-      //   {
-      //     model: Product,
-      //     as: "product",
-      //     attributes: { exclude: ["createdAt", "updatedAt"] },
-      //     include: [
-      //       {
-      //         model: ProductCategory,
-      //         as: "category",
-      //         attributes: { exclude: ["createdAt", "updatedAt"] },
-      //       },
-      //     ],
-      //   },
-      // ],
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCategory,
+              as: "category",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        },
+      ],
     });
   }
 
