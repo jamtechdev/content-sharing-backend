@@ -113,18 +113,31 @@ class ProductCategoryController {
 
   async updateProductCategory(req, res) {
     const updateData = req.body;
-    const updatedCategory = await ProductCategoryService.updateProductCategory(updateData.categoryId, updateData);
+    const response = await ProductCategoryService.updateProductCategory(updateData.categoryId, updateData);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product category updated successfully",
-      data: updatedCategory,
     });
   }
 
   async deleteProductCategory(req, res) {
     const categoryId = req.params.id;
-    await ProductCategoryService.deleteProductCategory(categoryId);
+    const response = await ProductCategoryService.deleteProductCategory(categoryId);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,

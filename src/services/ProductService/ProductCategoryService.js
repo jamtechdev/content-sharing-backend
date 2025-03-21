@@ -26,7 +26,7 @@ class ProductCategoryService {
   async updateProductCategory(categoryId, data) {
     const productCategory = await ProductCategoryRepository.getById(categoryId);
     if (!productCategory) {
-      throw new HttpError(404, "Product category not found");
+      return {code: "ERR404", message: "Product category not found"}
     }
     const updatedProductCategory = await ProductCategoryRepository.update(
       categoryId,
@@ -38,7 +38,7 @@ class ProductCategoryService {
   async deleteProductCategory(categoryId) {
     const productCategory = await ProductCategoryRepository.getById(categoryId);
     if (!productCategory) {
-      throw new HttpError(404, "Product category not found");
+      return {code: "ERR404", message: "Product category not found"}
     }
     const deleted = await ProductCategoryRepository.delete(categoryId);
     return deleted;

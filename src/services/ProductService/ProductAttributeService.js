@@ -6,7 +6,7 @@ class ProductAttributeService {
   async createProductAttribute(data) {
     const product = await ProductRepository.getById(data.product_id)
     if(!product){
-      throw new HttpError(404, "Product not found")
+      return {code: "ERR404", message: "Product not found"}
     }
     // let {key, value} = data
     // if(Array.isArray(value)){
@@ -19,7 +19,7 @@ class ProductAttributeService {
   async getAllProductAttributes() {
     const attributes = await ProductAttributeRepository.getAll();
     if (attributes.length === 0) {
-      throw new HttpError(404, "No product attributes found");
+      return {code: "ERR404", message: "No product attributes found"}
     }
     return attributes;
   }
@@ -27,7 +27,7 @@ class ProductAttributeService {
   async getProductAttributeById(attributeId) {
     const attribute = await ProductAttributeRepository.getById(attributeId);
     if (!attribute) {
-      throw new HttpError(404, "Product attribute not found");
+      return {code: "ERR404", message: "No product attribute found"}
     }
     return attribute;
   }
@@ -43,7 +43,7 @@ class ProductAttributeService {
   async updateProductAttribute(attributeId, data) {
     const attribute = await ProductAttributeRepository.getById(attributeId);
     if (!attribute) {
-      throw new HttpError(404, "Product attribute not found");
+      return {code: "ERR404", message: "No product attribute found"}
     }
     await ProductAttributeRepository.update(attributeId, data);
     return { message: "Product attribute updated successfully" };
@@ -52,7 +52,7 @@ class ProductAttributeService {
   async deleteProductAttribute(attributeId) {
     const attribute = await ProductAttributeRepository.getById(attributeId);
     if (!attribute) {
-      throw new HttpError(404, "Product attribute not found");
+      return {code: "ERR404", message: "No product attribute found"}
     }
     await ProductAttributeRepository.delete(attributeId);
     return { message: "Product attribute deleted successfully" };

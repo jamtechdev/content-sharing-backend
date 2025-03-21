@@ -25,12 +25,9 @@ class ProductCategoryRepository {
   }
 
   async update(categoryId, data) {
-    const [updated] = await ProductCategory.update(data, {
+    await ProductCategory.update(data, {
       where: { id: categoryId },
     });
-    if (!updated) {
-      throw new HttpError(404, "No changes made");
-    }
     const updatedProductCategory = await ProductCategory.findByPk(categoryId);
     return updatedProductCategory;
   }
@@ -39,9 +36,6 @@ class ProductCategoryRepository {
     const deleted = await ProductCategory.destroy({
       where: { id: categoryId },
     });
-    if (!deleted) {
-      throw new Error("Product category not found");
-    }
     return deleted;
   }
 

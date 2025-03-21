@@ -67,33 +67,54 @@ class ProductAttributeController {
 
   async createProductAttribute(req, res) {
     const attributeData = req.body;
-    const newAttribute = await ProductAttributeService.createProductAttribute(attributeData);
+    const response = await ProductAttributeService.createProductAttribute(attributeData);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(201).json({
       code: 201,
       success: true,
       message: "Product attribute created successfully",
-      data: newAttribute,
+      data: response,
     });
   }
 
   async getAllProductAttributes(req, res) {
-    const attributes = await ProductAttributeService.getAllProductAttributes();
+    const response = await ProductAttributeService.getAllProductAttributes();
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product attributes fetched successfully",
-      data: attributes,
+      data: response,
     });
   }
 
   async getProductAttributeById(req, res) {
     const attributeId = req.params.id;
-    const attribute = await ProductAttributeService.getProductAttributeById(attributeId);
+    const response = await ProductAttributeService.getProductAttributeById(attributeId);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product attribute fetched successfully",
-      data: attribute,
+      data: response,
     });
   }
 
@@ -110,7 +131,14 @@ class ProductAttributeController {
 
   async updateProductAttribute(req, res) {
     const updateData = req.body;
-    await ProductAttributeService.updateProductAttribute(updateData.attributeId, updateData);
+    const response = await ProductAttributeService.updateProductAttribute(updateData.attributeId, updateData);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -120,7 +148,14 @@ class ProductAttributeController {
 
   async deleteProductAttribute(req, res) {
     const attributeId = req.params.id;
-    await ProductAttributeService.deleteProductAttribute(attributeId);
+    const response = await ProductAttributeService.deleteProductAttribute(attributeId);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: true,
+        message: response.message,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
