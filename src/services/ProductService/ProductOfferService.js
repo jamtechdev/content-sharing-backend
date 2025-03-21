@@ -28,11 +28,11 @@ class ProductOfferService {
   }
 
   async getProductOffersByProductId(productId) {
-    const offers = await ProductOfferRepository.getByProductId(productId);
-    if (offers.length === 0) {
+    const offer = await ProductOfferRepository.getByProductId(productId);
+    if (!offer) {
       throw new HttpError(404, "No offers found for this product");
     }
-    return offers;
+    return offer;
   }
 
   async getActiveOffers(productId) {
@@ -61,8 +61,8 @@ class ProductOfferService {
   }
 
   async deleteOffersByProductId(productId) {
-    const offers = await ProductOfferRepository.getByProductId(productId);
-    if (offers.length === 0) {
+    const offer = await ProductOfferRepository.getByProductId(productId);
+    if (!offer) {
       throw new HttpError(404, "No offers found for this product");
     }
     return await ProductOfferRepository.deleteByProductId(productId);
