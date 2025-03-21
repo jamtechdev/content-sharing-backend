@@ -85,7 +85,7 @@ class ProductOfferRepository {
 
   async getByProductId(productId) {
     const currentDate = new Date();
-    return await ProductOffer.findAll({
+    return await ProductOffer.findOne({
       where: {
         product_id: productId,
         // start_date: { [db.Sequelize.Op.lte]: currentDate },
