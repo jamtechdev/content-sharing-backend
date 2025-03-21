@@ -15,29 +15,29 @@ class ProductOfferRepository {
         // start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,
           as: "product",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
         {
           model: Product,
           as: "freeProduct",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
@@ -53,29 +53,29 @@ class ProductOfferRepository {
         // start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,
           as: "product",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
         {
           model: Product,
           as: "freeProduct",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
@@ -91,29 +91,29 @@ class ProductOfferRepository {
         // start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
-      attributes: {exclude: ["createdAt", "updatedAt"]},
+      attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {
           model: Product,
           as: "product",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
         {
           model: Product,
           as: "freeProduct",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
+          attributes: { exclude: ["createdAt", "updatedAt"] },
           include: [
             {
               model: ProductCategory,
               as: "category",
-              attributes: {exclude: ["createdAt", "updatedAt"]}
+              attributes: { exclude: ["createdAt", "updatedAt"] },
             },
           ],
         },
@@ -132,18 +132,24 @@ class ProductOfferRepository {
     });
   }
 
+  // async update(offerId, data) {
+  //   return await ProductOffer.update(data, { where: { id: offerId } });
+  // }
   async update(offerId, data) {
-    return await ProductOffer.update(data, { where: { id: offerId } });
+    const validData = Object.fromEntries(
+      Object.entries(data).filter(([_, v]) => v !== undefined)
+    );
+
+    return await ProductOffer.update(validData, { where: { id: offerId } });
   }
-  
+
   async deleteByProductId(productId) {
     return await ProductOffer.destroy({ where: { product_id: productId } });
   }
-  
+
   async delete(offerId) {
     return await ProductOffer.destroy({ where: { id: offerId } });
   }
-
 }
 
 module.exports = new ProductOfferRepository();
