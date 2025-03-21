@@ -50,7 +50,7 @@ class ProductOfferRepository {
     return await ProductOffer.findOne({
       where: {
         id: offerId,
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        // start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
       attributes: {exclude: ["createdAt", "updatedAt"]},
