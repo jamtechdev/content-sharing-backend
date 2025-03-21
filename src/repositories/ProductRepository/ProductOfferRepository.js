@@ -12,7 +12,7 @@ class ProductOfferRepository {
     const currentDate = new Date();
     return await ProductOffer.findAll({
       where: {
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
+        // start_date: { [db.Sequelize.Op.lte]: currentDate },
         end_date: { [db.Sequelize.Op.gte]: currentDate },
       },
       attributes: {exclude: ["createdAt", "updatedAt"]},
