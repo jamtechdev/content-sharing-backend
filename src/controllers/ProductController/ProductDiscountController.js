@@ -75,12 +75,26 @@ class ProductDiscountController {
 
   async createProductDiscount(req, res) {
     const discountData = req.body;
-    const newDiscount = await ProductDiscountService.createProductDiscount(discountData);
+    const response = await ProductDiscountService.createProductDiscount(discountData);
+    if(response.code === "ERR404"){
+      return res.status(404).json({
+        code: 404,
+        success: false,
+        message: response.message,
+      });
+    }
+    if(response.code === "ERR409"){
+      return res.status(409).json({
+        code: 409,
+        success: false,
+        message: response.message,
+      });
+    }
     return res.status(201).json({
       code: 201,
       success: true,
       message: "Product discount created successfully",
-      data: newDiscount,
+      data: response,
     });
   }
 

@@ -6,7 +6,11 @@ class ProductDiscountService {
   async createProductDiscount(data) {
     const product = await ProductRepository.getById(data.product_id)
     if(!product){
-      throw new HttpError(404, "Product not found")
+      return {code: "ERR404", message: "Product not found"}
+    }
+    const alreadyDiscountCreated = await ProductDiscountRepository.getByProductId(data.product_id)
+    if(alreadyDiscountCreated){
+      return {code: "ERR409", message: "Product discount already created"}
     }
     return await ProductDiscountRepository.create(data);
   }
@@ -29,7 +33,7 @@ class ProductDiscountService {
 
   async getProductDiscountsByProductId(productId) {
     const discounts = await ProductDiscountRepository.getByProductId(productId);
-    if (discounts.length === 0) {
+    if (!discounts) {
       throw new HttpError(404, "No discounts found for this product");
     }
     return discounts;

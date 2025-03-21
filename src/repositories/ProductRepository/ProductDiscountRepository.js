@@ -5,16 +5,31 @@ const ProductCategory = db.product_category;
 
 class ProductDiscountRepository {
   async create(data) {
+    const currentDate = new Date()
+    const startDate=  new Date(data.start_date);
+    const endDate= new Date(data.end_date);
+    if(startDate <= currentDate && endDate >= currentDate){
+      data.status = "active";
+    }
+    else if(startDate > currentDate && endDate >= startDate){
+      data.status = "upcoming"
+    }
+    else {
+      data.status = "expired"
+    }
     return await ProductDiscount.create(data);
   }
 
   async getAll() {
     const currentDate = new Date();
-    console.log(currentDate);
+    // console.log(currentDate);
     return await ProductDiscount.findAll({
       where: {
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
-        end_date: { [db.Sequelize.Op.gte]: currentDate },
+        // start_date: { [db.Sequelize.Op.lte]: currentDate },
+        // end_date: { [db.Sequelize.Op.gte]: currentDate },
+        status: {
+          [db.Sequelize.Op.or]: ["active", "upcoming"]
+        }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
@@ -39,8 +54,11 @@ class ProductDiscountRepository {
     return await ProductDiscount.findOne({
       where: {
         id: discountId,
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
-        end_date: { [db.Sequelize.Op.gte]: currentDate },
+        // start_date: { [db.Sequelize.Op.lte]: currentDate },
+        // end_date: { [db.Sequelize.Op.gte]: currentDate },
+        status: {
+          [db.Sequelize.Op.or]: ["active", "upcoming"]
+        }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
@@ -61,12 +79,15 @@ class ProductDiscountRepository {
   }
 
   async getByProductId(productId) {
-    const currentDate = new Date()
-    return await ProductDiscount.findAll({
+    // const currentDate = new Date()
+    return await ProductDiscount.findOne({
       where: {
         product_id: productId,
-        start_date: { [db.Sequelize.Op.lte]: currentDate },
-        end_date: { [db.Sequelize.Op.gte]: currentDate },
+        // start_date: { [db.Sequelize.Op.lte]: currentDate },
+        // end_date: { [db.Sequelize.Op.gte]: currentDate },
+        status: {
+          [db.Sequelize.Op.ne]: "expired"
+        }
       },
       attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [

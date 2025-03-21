@@ -99,16 +99,16 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: true,
       },
-      createdAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW(),
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW(),
-      },
+      // createdAt: {
+      //   allowNull: false,
+      //   type: DataTypes.DATE,
+      //   defaultValue: DataTypes.NOW(),
+      // },
+      // updatedAt: {
+      //   allowNull: false,
+      //   type: DataTypes.DATE,
+      //   defaultValue: DataTypes.NOW(),
+      // },
       role_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -117,6 +117,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "users",
+      createdAt: "created_at",
+      updatedAt: "updated_at"
     }
   );
   return User;

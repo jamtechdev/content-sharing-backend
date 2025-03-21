@@ -8287,3 +8287,372 @@ string violation: tags cannot be an array or an object
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async ProductMediaController.createProductMedia (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductMediaController.js:90:22)
     at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:41:18.979Z [ERROR]: Error in bound getRegion: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:19.044Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async RegionRepository.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\repositories\RegionRepository.js:6:12)
+    at async RegionService.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\services\RegionService.js:6:12)
+2025-03-20T13:41:19.801Z [ERROR]: Error in bound getRegion: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:19.802Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async RegionRepository.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\repositories\RegionRepository.js:6:12)
+    at async RegionService.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\services\RegionService.js:6:12)
+2025-03-20T13:41:20.227Z [ERROR]: Error in bound getContent: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:20.228Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.getUserById (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:96:12)
+2025-03-20T13:41:20.592Z [ERROR]: Error in bound getContent: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:20.593Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.getUserById (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:96:12)
+2025-03-20T13:41:20.943Z [ERROR]: Error in bound getLikeByUserId: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:20.946Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ContentRepository.js:241:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ContentService.js:208:22)
+2025-03-20T13:41:21.275Z [ERROR]: Error in bound getLikeByUserId: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:21.276Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ContentRepository.js:241:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ContentService.js:208:22)
+2025-03-20T13:41:21.662Z [ERROR]: Error in bound getBookmarkByUser: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:21.663Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\content-sharing-backend Staging\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\content-sharing-backend Staging\src\services\BookmarkService.js:14:12)
+2025-03-20T13:41:22.048Z [ERROR]: Error in bound getBookmarkByUser: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:22.049Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\content-sharing-backend Staging\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\content-sharing-backend Staging\src\services\BookmarkService.js:14:12)
+2025-03-20T13:41:24.140Z [ERROR]: Error in bound getRegion: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:24.141Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async RegionRepository.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\repositories\RegionRepository.js:6:12)
+    at async RegionService.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\services\RegionService.js:6:12)
+2025-03-20T13:41:24.830Z [ERROR]: Error in bound getRegion: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:24.831Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async RegionRepository.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\repositories\RegionRepository.js:6:12)
+    at async RegionService.getRegions (D:\Content Sharing\content-sharing-backend Staging\src\services\RegionService.js:6:12)
+2025-03-20T13:41:25.167Z [ERROR]: Error in bound getContent: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:25.168Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.getUserById (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:96:12)
+2025-03-20T13:41:25.535Z [ERROR]: Error in bound getContent: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:25.536Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.getUserById (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:96:12)
+2025-03-20T13:41:25.864Z [ERROR]: Error in bound getLikeByUserId: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:25.865Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ContentRepository.js:241:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ContentService.js:208:22)
+2025-03-20T13:41:26.187Z [ERROR]: Error in bound getLikeByUserId: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:26.188Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async ContentRepository.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ContentRepository.js:241:12)
+    at async ContentService.getLikeByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ContentService.js:208:22)
+2025-03-20T13:41:26.548Z [ERROR]: Error in bound getBookmarkByUser: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:26.548Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\content-sharing-backend Staging\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\content-sharing-backend Staging\src\services\BookmarkService.js:14:12)
+2025-03-20T13:41:26.981Z [ERROR]: Error in bound getBookmarkByUser: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-20T13:41:26.982Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async BookmarkRepository.getBookmarkByUser (D:\Content Sharing\content-sharing-backend Staging\src\repositories\BookmarkRepository.js:18:12)
+    at async BookmarkService.getBookmarkbyUser (D:\Content Sharing\content-sharing-backend Staging\src\services\BookmarkService.js:14:12)
+2025-03-20T13:42:18.782Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:42:18.783Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:42:42.292Z [ERROR]: Error in bound me: Profile not found
+2025-03-20T13:42:42.294Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ProfileService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.me (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\UserController.js:50:35)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:42:44.186Z [ERROR]: Error in bound me: Profile not found
+2025-03-20T13:42:44.187Z [ERROR]: Error: Profile not found
+    at ProfileService.getProfileByUserId (D:\Content Sharing\content-sharing-backend Staging\src\services\ProfileService.js:57:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UserController.me (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\UserController.js:50:35)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:43:47.496Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:43:47.498Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:44:23.362Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:44:23.365Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:45:18.221Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:45:18.224Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:46:49.253Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:46:49.256Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:47:43.648Z [ERROR]: Error in bound register: Unknown column 'createdA_at' in 'field list'
+2025-03-20T13:47:43.651Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:47:49.493Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:47:49.495Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-20T13:47:52.076Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-20T13:47:52.077Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-21T04:42:17.724Z [ERROR]: Error in bound register: Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-21T04:42:17.778Z [ERROR]: SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at ConnectionManager.connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\connection-manager.js:118:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:332:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:250:32
+    at async ConnectionManager.getConnection (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\connection-manager.js:280:7)
+    at async D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:638:26
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async UserRepository.findByEmail (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:7:12)
+2025-03-21T04:43:56.015Z [ERROR]: Error in bound register: Unknown column 'createdAt' in 'field list'
+2025-03-21T04:43:56.016Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at async MySQLQueryInterface.insert (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:795:21)
+    at async User.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4154:35)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async UserRepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\UserRepository.js:73:12)
+    at async AuthService.register (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:30:21)
+    at async AuthController.register (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:32:21)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-21T04:46:33.698Z [ERROR]: Error in bound createProduct: Table 'content_sharing_db.products' doesn't exist
+2025-03-21T04:46:33.700Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async ProductRepository.getBySlug (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductRepository.js:91:12)
+    at async ProductService.createProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:25:22)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-21T04:55:19.831Z [ERROR]: Error in bound createProduct: Table 'content_sharing_db.product_categories' doesn't exist
+2025-03-21T04:55:19.832Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1824:21)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async ProductRepository.getBySlug (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductRepository.js:91:12)
+    at async ProductService.createProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:25:22)
+    at async ProductController.createProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:93:24)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-21T05:03:23.721Z [ERROR]: Error in bound deleteProductDiscount: Product discount not found
+2025-03-21T05:03:23.724Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.deleteProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:58:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.deleteProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductDiscountController.js:157:5)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-21T06:25:25.304Z [ERROR]: Error in bound getAllProductDiscounts: product is not associated to product_discount!
+2025-03-21T06:25:25.318Z [ERROR]: SequelizeEagerLoadingError: product is not associated to product_discount!
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountRepository.getAll (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductDiscountRepository.js:26:12)
+    at async ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:19:23)
+    at async ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductDiscountController.js:102:23)
+2025-03-21T06:26:47.201Z [ERROR]: Error in bound createProductDiscount: product is not associated to product_discount!
+2025-03-21T06:26:47.212Z [ERROR]: SequelizeEagerLoadingError: product is not associated to product_discount!
+    at Function._getIncludedAssociation (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:742:13)
+    at Function._validateIncludedElement (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:646:53)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:542:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:537:39)
+    at Function.findAll (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1794:12)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
+    at async ProductDiscountRepository.getByProductId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductDiscountRepository.js:81:12)
+    at async ProductDiscountService.createProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:11:36)

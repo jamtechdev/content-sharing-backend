@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     product_id: DataTypes.INTEGER,
     discount_type: DataTypes.ENUM('flat', 'percent'),
     discount_value: DataTypes.DECIMAL,
+    status: DataTypes.ENUM("active", "expired", "upcoming"),
     start_date: DataTypes.DATE,
     end_date: DataTypes.DATE
   }, {

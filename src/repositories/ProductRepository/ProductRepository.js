@@ -7,9 +7,9 @@ const productDiscount = db.product_discount;
 const productOffer = db.product_offer;
 const productWithCoupon = db.product_with_coupon;
 const ProductCoupon = db.product_coupon;
-const ProductSEO = db.product_seo
+const ProductSEO = db.product_seo;
 
-const { Op } = require("sequelize");
+const { Op, where } = require("sequelize");
 
 class ProductRepository {
   async create(data) {
@@ -33,33 +33,40 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
+          attributes: { exclude: ["createdAt", "updatedAt"] },
         },
         {
           model: productDiscount,
           as: "product_discount",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          where: {
+            status: {
+              [db.Sequelize.Op.or]: ["active", "upcoming"],
+            },
+          },
         },
         {
           model: productOffer,
           as: "product_offer",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
+          attributes: { exclude: ["createdAt", "updatedAt"] },
         },
         {
           model: productWithCoupon,
           as: "product_with_coupon",
-          attributes: {exclude: ["createdAt", "updatedAt"]},
-          include: [{
-            model: ProductCoupon,
-            as: "coupon",
-            attributes: {exclude: ["createdAt", "updatedAt"]}
-          }]
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+          include: [
+            {
+              model: ProductCoupon,
+              as: "coupon",
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
         },
         {
           model: ProductSEO,
           as: "product_seo",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -81,8 +88,8 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -104,8 +111,8 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -127,8 +134,8 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -150,8 +157,8 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
@@ -197,22 +204,22 @@ class ProductRepository {
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
+          attributes: { exclude: ["createdAt", "updatedAt"] },
         },
         {
           model: productAttribute,
           as: "attributes_data",
-          attributes: {exclude: ["createdAt", "updatedAt"]}
-        }
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
       ],
     });
   }
 
   async update(productId, data) {
-    if(data?.tags){
-      data.tags = JSON.stringify(data.tags)
+    if (data?.tags) {
+      data.tags = JSON.stringify(data.tags);
     }
-    return await Product.update({...data}, { where: { id: productId } });
+    return await Product.update({ ...data }, { where: { id: productId } });
   }
 
   async delete(productId) {
