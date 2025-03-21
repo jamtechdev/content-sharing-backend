@@ -71,6 +71,10 @@ class ProductAttributeRepository {
     return await ProductAttribute.update(data, { where: { id: attributeId } });
   }
 
+  async deleteByProductId(id){
+    return await ProductAttribute.destroy({where: {product_id: id}})
+  }
+
   async delete(attributeId) {
     return await ProductAttribute.destroy({ where: { id: attributeId } });
   }

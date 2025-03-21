@@ -21,7 +21,7 @@ class ProductDiscountRepository {
   }
 
   async getAll() {
-    const currentDate = new Date();
+    // const currentDate = new Date();
     // console.log(currentDate);
     return await ProductDiscount.findAll({
       where: {
@@ -50,7 +50,7 @@ class ProductDiscountRepository {
   }
 
   async getById(discountId) {
-    const currentDate = new Date();
+    // const currentDate = new Date();
     return await ProductDiscount.findOne({
       where: {
         id: discountId,
@@ -137,6 +137,9 @@ class ProductDiscountRepository {
     return await ProductDiscount.update(data, { where: { id: discountId } });
   }
 
+  async deleteByProductId(id){
+    return await ProductDiscount.destroy({where: {product_id: id}})
+  }
   async delete(discountId) {
     return await ProductDiscount.destroy({ where: { id: discountId } });
   }

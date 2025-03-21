@@ -93,6 +93,13 @@ class ProductSEORepository {
     });
   }
 
+  async deleteByProductId(id) {
+    return await ProductSEO.destroy({
+      where: {
+        product_id: id
+      },
+    });
+  }
   async deleteById(id) {
     return await ProductSEO.destroy({
       where: {

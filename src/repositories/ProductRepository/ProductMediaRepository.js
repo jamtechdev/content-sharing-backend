@@ -112,13 +112,13 @@ class ProductMediaRepository {
     return await ProductMedia.update(data, { where: { id: mediaId } });
   }
 
+  async deleteByProductId(productId) {
+    return await ProductMedia.destroy({ where: { product_id: productId } });
+  }
   async delete(mediaId) {
     return await ProductMedia.destroy({ where: { id: mediaId } });
   }
-
-  // async deleteByProductId(productId) {
-  //   return await ProductMedia.destroy({ where: { product_id: productId } });
-  // }
+  
 }
 
 module.exports = new ProductMediaRepository();

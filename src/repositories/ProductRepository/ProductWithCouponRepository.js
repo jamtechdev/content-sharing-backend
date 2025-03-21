@@ -117,11 +117,11 @@ class ProductWithCouponRepository {
     });
   }
 
-  // async deleteByProductId(productId) {
-  //   return await ProductWithCoupon.destroy({
-  //     where: { product_id: productId },
-  //   });
-  // }
+  async deleteByProductId(productId) {
+    return await ProductWithCoupon.destroy({
+      where: { product_id: productId },
+    });
+  }
 
   // async deleteByCouponId(couponId) {
   //   return await ProductWithCoupon.destroy({

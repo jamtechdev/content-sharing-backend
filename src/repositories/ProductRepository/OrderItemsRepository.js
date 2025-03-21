@@ -25,6 +25,10 @@ class OrderItemsRepository {
         })
     }
 
+    async deleteByProductId(id){
+        return await OrderItem.destroy({where: {product_id: id}})
+    }
+
     async deleteById(id){
         return await OrderItem.destroy({where: {id}})
     }

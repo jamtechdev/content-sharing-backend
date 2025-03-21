@@ -1,5 +1,13 @@
 const ProductRepository = require("../../repositories/ProductRepository/ProductRepository");
 const HttpError = require("../../decorators/HttpError");
+const ProductAttributeRepository = require('../../repositories/ProductRepository/ProductAttributeRepository')
+const ProductDiscountRepository = require('../../repositories/ProductRepository/ProductDiscountRepository')
+const ProductMediaRepository = require('../../repositories/ProductRepository/ProductMediaRepository')
+const ProductOffersRepository = require('../../repositories/ProductRepository/ProductOfferRepository')
+const ProductSEORepository = require('../../repositories/ProductRepository/ProductSEORepository')
+const ProductWithCouponRepository = require('../../repositories/ProductRepository/ProductWithCouponRepository');
+const OrderItemsRepository = require('../../repositories/ProductRepository/OrderItemsRepository')
+const db = require('../../models/index')
 const {generateSlug} = require('../../utils/generateSlug')
 class ProductService {
   async createProduct(data) {
@@ -114,16 +122,33 @@ class ProductService {
   }
 
   async deleteProduct(productId) {
+    try {
+      const transaction = await db.sequelize.transaction();
     const product = await ProductRepository.getById(productId);
     if (!product) {
-      throw new HttpError(404, "Product not found or already deleted");
+      return {code: "ERR404", message: "Product not found or already deleted"}
     }
     const deletedProduct = await ProductRepository.delete(productId);
     if (!deletedProduct) {
-      throw new Error("Product not found");
+      return {code: "ERR404", message: "Product not found"}
     }
-    return deletedProduct;
-  }
-}
+    await ProductAttributeRepository.deleteByProductId(productId, {transaction});
+    await ProductDiscountRepository.deleteByProductId(productId, {transaction});
+    await ProductMediaRepository.deleteByProductId(productId, {transaction});
+    await ProductOffersRepository.deleteByProductId(productId, {transaction});
+    await ProductSEORepository.deleteByProductId(productId, {transaction});
+    await ProductWithCouponRepository.deleteByProductId(productId, {transaction});
+    await OrderItemsRepository.deleteByProductId(productId, {transaction});
+    
+    // Commit the transaction
+    await transaction.commit();
 
+    return deletedProduct;
+  }catch (error) {
+      // If any error occurs, rollback the transaction
+    await transaction.rollback();
+    throw error;
+    }
+}
+}
 module.exports = new ProductService();

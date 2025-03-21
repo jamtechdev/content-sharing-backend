@@ -8668,3 +8668,39 @@ string violation: tags cannot be an array or an object
     at async Function.findOne (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:1998:12)
     at async ProductDiscountRepository.getByProductId (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductDiscountRepository.js:83:12)
     at async ProductDiscountService.createProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:11:36)
+2025-03-21T07:47:52.922Z [ERROR]: Error in bound deleteProduct: transaction is not defined
+2025-03-21T07:47:52.925Z [ERROR]: ReferenceError: transaction is not defined
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:149:5)
+    at ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:235:43)
+    at D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-21T07:48:08.588Z [ERROR]: Error in bound deleteProduct: transaction is not defined
+2025-03-21T07:48:08.592Z [ERROR]: ReferenceError: transaction is not defined
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:149:5)
+    at ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:235:43)
+    at D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-21T07:48:30.813Z [ERROR]: Error in bound deleteProduct: transaction is not defined
+2025-03-21T07:48:30.816Z [ERROR]: ReferenceError: transaction is not defined
+    at ProductService.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductService.js:149:5)
+    at ProductController.deleteProduct (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductController.js:235:43)
+    at D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\jsonwebtoken\verify.js:261:12

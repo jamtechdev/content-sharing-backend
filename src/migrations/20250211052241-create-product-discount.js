@@ -10,7 +10,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       product_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       discount_type: {
         type: Sequelize.ENUM('flat', 'percent')
