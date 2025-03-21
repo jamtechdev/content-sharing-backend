@@ -3,8 +3,9 @@ const HttpError = require("../../decorators/HttpError");
 
 class ProductOfferService {
   async createProductOffer(data) {
-    if (!data.product_id || !data.offer_type) {
-      throw new HttpError(400, "Product ID and Offer Type are required");
+    const offerExist = await ProductOfferRepository.getByProductId(data.product_id);
+    if(offerExist){
+      return {code: "ERR409", message: "Offer already created for the product"}
     }
     const productOffer = await ProductOfferRepository.create(data);
     return productOffer;
@@ -21,7 +22,7 @@ class ProductOfferService {
   async getProductOfferById(offerId) {
     const offer = await ProductOfferRepository.getById(offerId);
     if (!offer) {
-      throw new HttpError(404, "Product offer not found");
+      return {code: "ERR404", message: "Product offer not found"}
     }
     return offer;
   }
@@ -45,7 +46,7 @@ class ProductOfferService {
   async updateProductOffer(offerId, data) {
     const offer = await ProductOfferRepository.getById(offerId);
     if (!offer) {
-      throw new HttpError(404, "Product offer not found");
+      return {code: "ERR404", message: "Product offer not found"}
     }
     const updatedOffer = await ProductOfferRepository.update(offerId, data);
     return updatedOffer;

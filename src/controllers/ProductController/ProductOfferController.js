@@ -71,14 +71,32 @@ class ProductOfferController {
   }
 
   async createProductOffer(req, res) {
-    const productOffer = await ProductOfferService.createProductOffer(req.body);
-    res
+    if (!req.body.product_id || !req.body.offer_type) {
+      return res
+      .status(400)
+      .json({
+        code: 400,
+        success: false,
+        message: "Missing required fields",
+      });
+    }
+    const response = await ProductOfferService.createProductOffer(req.body);
+    if(response.code=== "ERR409"){
+      return res
+      .status(409)
+      .json({
+        code: 409,
+        success: false,
+        message: response.message
+      });
+    }
+    return res
       .status(201)
       .json({
         code: 201,
         success: true,
         message: "Product offer created successfully",
-        data: productOffer,
+        data: response,
       });
   }
 
@@ -89,8 +107,11 @@ class ProductOfferController {
 
   async getProductOfferById(req, res) {
     const offerId = req.params.id;
-    const offer = await ProductOfferService.getProductOfferById(offerId);
-    res.status(200).json({code: 200, success: true, data: offer });
+    const response = await ProductOfferService.getProductOfferById(offerId);
+    if(response.code === "ERR404"){
+      return res.status(200).json({code: 200, success: true, message: response.message })
+    }
+    return res.status(200).json({code: 200, success: true, data: response });
   }
 
   async getProductOffersByProductId(req, res) {
@@ -110,16 +131,23 @@ class ProductOfferController {
   }
 
   async updateProductOffer(req, res) {
-    const updatedOffer = await ProductOfferService.updateProductOffer(
+    const response = await ProductOfferService.updateProductOffer(
       req.body.offerId,
       req.body
     );
-    res
+    if(response.code === "ERR404"){
+      return res
+      .status(404)
+      .json({
+        code: 404, success: false,
+        message: response.message,
+      });
+    }
+    return res
       .status(200)
       .json({
         code: 200, success: true,
         message: "Product offer updated successfully",
-        data: updatedOffer,
       });
   }
 
