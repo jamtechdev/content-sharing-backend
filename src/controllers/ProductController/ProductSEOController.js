@@ -70,6 +70,12 @@ class ProductSEOController {
   async createProductSEO(req, res) {
     const data = req.body;
     const response = await ProductSEOService.createProductSEO(data);
+    if(response.code=== 404 || response.code=== 409){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+      });
+    }
     return res.status(201).json({
       code: 201,
       success: true,
@@ -79,6 +85,12 @@ class ProductSEOController {
 
   async getAllProductSEO(req, res) {
     const response = await ProductSEOService.getAllSEO();
+    if(response.code=== 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -89,6 +101,12 @@ class ProductSEOController {
   async getSpecificProductSEO(req, res) {
     const { id } = req?.params;
     const response = await ProductSEOService.getSEOById(id);
+    if(response.code=== 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -119,6 +137,12 @@ class ProductSEOController {
   async updateSEOById(req, res) {
     const data = req?.body;
     const response = await ProductSEOService.updateSEOById(data);
+    if(response.code=== 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
@@ -129,6 +153,12 @@ class ProductSEOController {
   async deleteBySEOId(req, res) {
     const { id } = req?.params;
     const response = await ProductSEOService.deleteBySEOId(id);
+    if(response.code=== 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
