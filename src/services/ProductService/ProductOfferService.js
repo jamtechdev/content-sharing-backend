@@ -14,7 +14,7 @@ class ProductOfferService {
   async getAllProductOffers() {
     const offers = await ProductOfferRepository.getAll();
     if (offers.length === 0) {
-      throw new HttpError(404, "No product offers found");
+      return {code: 200, message: "No product offers found"};
     }
     return offers;
   }
@@ -30,7 +30,7 @@ class ProductOfferService {
   async getProductOffersByProductId(productId) {
     const offer = await ProductOfferRepository.getByProductId(productId);
     if (!offer) {
-      throw new HttpError(404, "No offers found for this product");
+      return {code: 404, message: "No offers found for this product"};
     }
     return offer;
   }
@@ -38,7 +38,7 @@ class ProductOfferService {
   async getActiveOffers(productId) {
     const offers = await ProductOfferRepository.getActiveOffers(productId);
     if (offers.length === 0) {
-      throw new HttpError(404, "No active offers for this product");
+      return {code: 404, message: "No active offers for this product"};
     }
     return offers;
   }
@@ -88,7 +88,7 @@ console.log(data, "Product offer")
   async deleteProductOffer(offerId) {
     const offer = await ProductOfferRepository.getById(offerId);
     if (!offer) {
-      throw new HttpError(404, "Product offer not found");
+      return {code: 404, message: "Product offer not found"};
     }
     return await ProductOfferRepository.delete(offerId);
   }
@@ -96,7 +96,7 @@ console.log(data, "Product offer")
   async deleteOffersByProductId(productId) {
     const offer = await ProductOfferRepository.getByProductId(productId);
     if (!offer) {
-      throw new HttpError(404, "No offers found for this product");
+      return {code: 404, code: "No offers found for this product"};
     }
     return await ProductOfferRepository.deleteByProductId(productId);
   }
