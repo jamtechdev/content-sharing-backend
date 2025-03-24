@@ -35,19 +35,19 @@ class ProductSEORepository {
     });
   }
 
-  // async getByProductId(id) {
-  //   return await ProductSEO.findOne({
-  //     where: { product_id:id },
-  //     attributes: { exclude: ["createdAt", "updatedAt"] },
-  //     include: [
-  //       {
-  //         model: Product,
-  //         as: "product",
-  //         attributes: { exclude: ["createdAt", "updatedAt"] },
-  //       },
-  //     ],
-  //   });
-  // }
+  async getByProductId(id) {
+    return await ProductSEO.findOne({
+      where: { product_id:id },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
+  }
 
   // async searchByTitle(search) {
   //   return await ProductSEO.findAll({

@@ -135,11 +135,11 @@ class ProductOfferController {
       req.body.offerId,
       req.body
     );
-    if(response.code === 404){
+    if(response.code === 404 || response.code === 404){
       return res
-      .status(404)
+      .status(response.code)
       .json({
-        code: 404, success: false,
+        code: response.code, success: false,
         message: response.message,
       });
     }
@@ -154,13 +154,13 @@ class ProductOfferController {
   async deleteProductOffer(req, res) {
     const offerId = req.params.id;
     await ProductOfferService.deleteProductOffer(offerId);
-    res.status(200).json({code: 200, success: true, message: "Product offer deleted successfully" });
+    return res.status(200).json({code: 200, success: true, message: "Product offer deleted successfully" });
   }
 
   async deleteOffersByProductId(req, res) {
     const productId = req.params.productId;
     await ProductOfferService.deleteOffersByProductId(productId);
-    res
+    return res
       .status(200)
       .json({code: 200, success: true, message: "All offers for the product deleted successfully" });
   }

@@ -43,14 +43,47 @@ class ProductOfferService {
     return offers;
   }
 
+  // async updateProductOffer(offerId, data) {
+  //   const offer = await ProductOfferRepository.getById(offerId);
+  //   if (!offer) {
+  //     return {code: 404, message: "Product offer not found"}
+  //   }
+  //   const updatedOffer = await ProductOfferRepository.update(offerId, data);
+  //   return updatedOffer;
+  // }
+
+
   async updateProductOffer(offerId, data) {
-    const offer = await ProductOfferRepository.getById(offerId);
-    if (!offer) {
-      return {code: 404, message: "Product offer not found"}
-    }
-    const updatedOffer = await ProductOfferRepository.update(offerId, data);
-    return updatedOffer;
+  const offer = await ProductOfferRepository.getById(offerId);
+  if (!offer) {
+    return { code: 404, message: "Product offer not found" };
   }
+console.log(data, "Product offer")
+  // Validate required fields based on `offer_type`
+  if (data.offer_type === "buy_x_get_y") {
+    if (!data.buy_quantity || !data.get_quantity || !data.free_product_id) {
+      return { code: 400, message: "Missing required fields for 'buy_x_get_y'" };
+    }
+    data.discount_value = null; // Not needed for this offer type
+  } else if (data.offer_type === "buy_x_get_discount") {
+    if (!data.buy_quantity || !data.discount_value) {
+      return { code: 400, message: "Missing required fields for 'buy_x_get_discount'" };
+    }
+    data.get_quantity = null;
+    data.free_product_id = null;
+  } else if (data.offer_type === "discount_on_total") {
+    if (!data.discount_value) {
+      return { code: 400, message: "Missing required fields for 'discount_on_total'" };
+    }
+    data.buy_quantity = null;
+    data.get_quantity = null;
+    data.free_product_id = null;
+  }
+
+  const updatedOffer = await ProductOfferRepository.update(offerId, data);
+  return updatedOffer;
+}
+
 
   async deleteProductOffer(offerId) {
     const offer = await ProductOfferRepository.getById(offerId);
