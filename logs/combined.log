@@ -8716,3 +8716,101 @@ string violation: tags cannot be an array or an object
     at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
     at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
+2025-03-24T07:46:17.361Z [ERROR]: Error in bound updateProductDiscount: Product discount not found
+2025-03-24T07:46:17.368Z [ERROR]: Error: Product discount not found
+    at ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:56:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductDiscountController.js:154:5)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T07:48:21.665Z [ERROR]: Error in bound updateProductDiscount: Validation error
+2025-03-24T07:48:21.666Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.bulkUpdate (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\dialects\abstract\query-interface.js:930:12)
+    at async Function.update (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:3352:28)
+    at async ProductDiscountRepository.update (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductDiscountRepository.js:133:12)
+    at async ProductDiscountService.updateProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:58:5)
+    at async ProductDiscountController.updateProductDiscount (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductDiscountController.js:154:5)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T09:31:10.117Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-24T09:31:10.123Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T09:31:30.795Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-24T09:31:30.796Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T09:31:46.186Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-24T09:31:46.187Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T09:32:22.431Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-24T09:32:22.432Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T09:35:10.386Z [ERROR]: Error in bound login: Invalid credentials
+2025-03-24T09:35:10.386Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\content-sharing-backend Staging\src\services\AuthService.js:43:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AuthController.login (D:\Content Sharing\content-sharing-backend Staging\src\controllers\User\AuthController.js:69:29)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:17:44.855Z [ERROR]: Error in bound getAllProductSEO: SEO not found
+2025-03-24T10:17:44.856Z [ERROR]: Error: SEO not found
+    at ProductSEOService.getAllSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:23:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.getAllProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:81:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:17:52.709Z [ERROR]: Error in bound createProductSEO: Product not found
+2025-03-24T10:17:52.710Z [ERROR]: Error: Product not found
+    at ProductSEOService.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:9:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:72:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:18:00.514Z [ERROR]: Error in bound createProductSEO: Product not found
+2025-03-24T10:18:00.514Z [ERROR]: Error: Product not found
+    at ProductSEOService.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:9:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:72:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:22:10.515Z [ERROR]: Error in bound getAllProductSEO: Unexpected token 'o', "office, li"... is not valid JSON
+2025-03-24T10:22:10.517Z [ERROR]: SyntaxError: Unexpected token 'o', "office, li"... is not valid JSON
+    at JSON.parse (<anonymous>)
+    at D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:27:33
+    at Array.map (<anonymous>)
+    at ProductSEOService.getAllSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:25:25)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.getAllProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:81:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:25:20.232Z [ERROR]: Error in bound createProductSEO: SEO for this product already exist
+2025-03-24T10:25:20.234Z [ERROR]: Error: SEO for this product already exist
+    at ProductSEOService.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:72:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:25:25.584Z [ERROR]: Error in bound createProductSEO: string violation: meta_keywords cannot be an array or an object
+2025-03-24T10:25:25.614Z [ERROR]: SequelizeValidationError: string violation: meta_keywords cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async ProductSEO.save (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\content-sharing-backend Staging\node_modules\sequelize\src\model.js:2305:12)
+    at async ProductSEORepository.create (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductSEORepository.js:8:12)
+    at async ProductSEOService.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:17:12)
+    at async ProductSEOController.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:72:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7
+2025-03-24T10:25:56.838Z [ERROR]: Error in bound createProductSEO: SEO for this product already exist
+2025-03-24T10:25:56.839Z [ERROR]: Error: SEO for this product already exist
+    at ProductSEOService.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductSEOService.js:15:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProductSEOController.createProductSEO (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductSEOController.js:72:22)
+    at async D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:7

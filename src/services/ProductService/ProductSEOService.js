@@ -14,6 +14,7 @@ class ProductSEOService {
     if (productSEOExist) {
       throw new HttpError(409, "SEO for this product already exist");
     }
+    data.meta_keywords = JSON.stringify(data.meta_keywords)
     return await ProductSEORepository.create(data);
   }
 
@@ -21,6 +22,11 @@ class ProductSEOService {
     const response = await ProductSEORepository.getAll();
     if (response.length === 0) {
       throw new HttpError(404, "SEO not found");
+    }
+    for(let item of response){
+      if (Array.isArray(JSON.parse(item.meta_keywords))) {
+        item.meta_keywords = JSON.parse(item.meta_keywords).join(", ");
+      }
     }
     return response;
   }
