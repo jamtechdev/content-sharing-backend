@@ -81,7 +81,7 @@ class ProductOfferController {
       });
     }
     const response = await ProductOfferService.createProductOffer(req.body);
-    if(response.code=== "ERR409"){
+    if(response.code=== 409){
       return res
       .status(409)
       .json({
@@ -108,7 +108,7 @@ class ProductOfferController {
   async getProductOfferById(req, res) {
     const offerId = req.params.id;
     const response = await ProductOfferService.getProductOfferById(offerId);
-    if(response.code === "ERR404"){
+    if(response.code === 200){
       return res.status(200).json({code: 200, success: true, message: response.message })
     }
     return res.status(200).json({code: 200, success: true, data: response });
@@ -135,7 +135,7 @@ class ProductOfferController {
       req.body.offerId,
       req.body
     );
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res
       .status(404)
       .json({

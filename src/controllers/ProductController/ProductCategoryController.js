@@ -114,7 +114,7 @@ class ProductCategoryController {
   async updateProductCategory(req, res) {
     const updateData = req.body;
     const response = await ProductCategoryService.updateProductCategory(updateData.categoryId, updateData);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,
@@ -131,7 +131,7 @@ class ProductCategoryController {
   async deleteProductCategory(req, res) {
     const categoryId = req.params.id;
     const response = await ProductCategoryService.deleteProductCategory(categoryId);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,

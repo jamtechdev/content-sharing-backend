@@ -5,7 +5,7 @@ class ProductOfferService {
   async createProductOffer(data) {
     const offerExist = await ProductOfferRepository.getByProductId(data.product_id);
     if(offerExist){
-      return {code: "ERR409", message: "Offer already created for the product"}
+      return {code: 409, message: "Offer already created for the product"}
     }
     const productOffer = await ProductOfferRepository.create(data);
     return productOffer;
@@ -22,7 +22,7 @@ class ProductOfferService {
   async getProductOfferById(offerId) {
     const offer = await ProductOfferRepository.getById(offerId);
     if (!offer) {
-      return {code: "ERR404", message: "Product offer not found"}
+      return {code: 200, message: "Product offer not found"}
     }
     return offer;
   }
@@ -46,7 +46,7 @@ class ProductOfferService {
   async updateProductOffer(offerId, data) {
     const offer = await ProductOfferRepository.getById(offerId);
     if (!offer) {
-      return {code: "ERR404", message: "Product offer not found"}
+      return {code: 404, message: "Product offer not found"}
     }
     const updatedOffer = await ProductOfferRepository.update(offerId, data);
     return updatedOffer;

@@ -4,12 +4,12 @@ const HttpError = require("../../decorators/HttpError");
 class ProductCouponService {
   async createProductCoupon(data) {
     const {usage_limit, max_usage_per_user}= data
-    if(usage_limit > max_usage_per_user){
-      throw new HttpError(400, "Usage limit value can't greater than max limit value")
+    if(max_usage_per_user > usage_limit){
+      return {code: 400, message: "User usage limit can't greater than usage limit"}
     }
     const existingCoupon = await ProductCouponsRepository.getByCode(data.code);
     if (existingCoupon) {
-      throw new HttpError(409, "A coupon with this code already exists");
+      return {code: 409, message: "Coupon code already exists"}
     }
     return await ProductCouponsRepository.create(data);
   }
@@ -17,7 +17,7 @@ class ProductCouponService {
   async getAllProductCoupons() {
     const coupons = await ProductCouponsRepository.getAll();
     if (coupons.length === 0) {
-      throw new HttpError(404, "No product coupons found");
+      return { code: 404, message: "No product coupons found"}
     }
     return coupons;
   }
@@ -25,7 +25,7 @@ class ProductCouponService {
   async getProductCouponById(couponId) {
     const coupon = await ProductCouponsRepository.getById(couponId);
     if (!coupon) {
-      throw new HttpError(404, "Product coupon not found");
+      return { code: 404, message: "No product coupon found"}
     }
     return coupon;
   }
@@ -33,7 +33,7 @@ class ProductCouponService {
   async getProductCouponByCode(code) {
     const coupon = await ProductCouponsRepository.getByCode(code);
     if (!coupon) {
-      throw new HttpError(404, "Product coupon not found");
+      return { code: 404, message: "No product coupon found"}
     }
     return coupon;
   }
@@ -41,7 +41,7 @@ class ProductCouponService {
   async getActiveCoupons() {
     const coupons = await ProductCouponsRepository.getActiveCoupons();
     if (coupons.length === 0) {
-      throw new HttpError(404, "No active coupons available");
+      return {code: 404, message: "No active coupons available"};
     }
     return coupons;
   }
@@ -49,7 +49,7 @@ class ProductCouponService {
   async updateProductCoupon(couponId, data) {
     const coupon = await ProductCouponsRepository.getById(couponId);
     if (!coupon) {
-      throw new HttpError(404, "Product coupon not found");
+      return {code: 404, message: "Product coupon not found"};
     }
     
     await ProductCouponsRepository.update(couponId, data);
@@ -59,7 +59,7 @@ class ProductCouponService {
   async deleteProductCoupon(couponId) {
     const coupon = await ProductCouponsRepository.getById(couponId);
     if (!coupon) {
-      throw new HttpError(404, "Product coupon not found");
+      return {code: 404, message: "Product coupon not found"};
     }
     return await ProductCouponsRepository.delete(couponId);
   }

@@ -67,71 +67,120 @@ class ProductCouponController {
 
   async createProductCoupon(req, res) {
     const couponData = req.body;
-    const newCoupon = await ProductCouponService.createProductCoupon(couponData);
+    const response = await ProductCouponService.createProductCoupon(couponData);
+    if(response.code === 400 || response.code === 409){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(201).json({
       code: 201,
       success: true,
       message: "Product coupon created successfully",
-      data: newCoupon,
+      data: response,
     });
   }
 
   async getAllProductCoupons(req, res) {
-    const coupons = await ProductCouponService.getAllProductCoupons();
+    const response = await ProductCouponService.getAllProductCoupons();
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product coupons fetched successfully",
-      data: coupons,
+      data: response,
     });
   }
 
   async getProductCouponById(req, res) {
     const couponId = req.params.id;
-    const coupon = await ProductCouponService.getProductCouponById(couponId);
+    const response = await ProductCouponService.getProductCouponById(couponId);
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product coupon fetched successfully",
-      data: coupon,
+      data: response,
     });
   }
 
   async getProductCouponByCode(req, res) {
     const code = req.params.code;
-    const coupon = await ProductCouponService.getProductCouponByCode(code);
+    const response = await ProductCouponService.getProductCouponByCode(code);
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product coupon fetched successfully",
-      data: coupon,
+      data: response,
     });
   }
 
   async getActiveCoupons(req, res) {
-    const coupons = await ProductCouponService.getActiveCoupons();
+    const response = await ProductCouponService.getActiveCoupons();
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Active coupons fetched successfully",
-      data: coupons,
+      data: response,
     });
   }
 
   async updateProductCoupon(req, res) {
     const updateData = req.body;
-    const updatedCoupon = await ProductCouponService.updateProductCoupon(updateData.couponId, updateData);
+    const response = await ProductCouponService.updateProductCoupon(updateData.couponId, updateData);
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,
       message: "Product coupon updated successfully",
-      data: updatedCoupon,
+      data: response,
     });
   }
 
   async deleteProductCoupon(req, res) {
     const couponId = req.params.id;
-    await ProductCouponService.deleteProductCoupon(couponId);
+    const response = await ProductCouponService.deleteProductCoupon(couponId);
+    if(response.code === 404){
+      return res.status(response.code).json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
     return res.status(200).json({
       code: 200,
       success: true,

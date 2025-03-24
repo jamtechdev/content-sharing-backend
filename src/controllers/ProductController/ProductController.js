@@ -233,7 +233,7 @@ class ProductController {
   async deleteProduct(req, res) {
     const productId = req.params.id;
     const response = await ProductService.deleteProduct(productId);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: false,

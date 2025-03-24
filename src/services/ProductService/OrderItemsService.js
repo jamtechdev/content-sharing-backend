@@ -8,14 +8,14 @@ class OrderItemsService {
       data;
     const product = await ProductRepository.getById(product_id);
     if (!product) {
-      return {code: "ERR404", message: "Product not found"}
+      return {code: 404, message: "Product not found"}
     }
     let itemPrice = product.sale_price ? product.sale_price : product.price;
     let totalPrice = quantity * itemPrice;
 
     const orderExist = await OrderItemsRepository.getByOrderId(order_id);
     if (orderExist) {
-      return {code: "ERR409", message: "Order already created"}
+      return {code: 409, message: "Order already created"}
     }
     data.price_per_item = itemPrice;
     data.total_price = totalPrice;
@@ -38,7 +38,7 @@ class OrderItemsService {
     if (product_id) {
       const product = await ProductRepository.getById(product_id);
       if (!product) {
-        return {code: "ERR404", message: "Product not found"}
+        return {code: 404, message: "Product not found"}
       }
       const itemPrice = product.sale_price ? product.sale_price : product.price;
       const totalPrice = quantity ? quantity : orderItem.quantity * itemPrice;

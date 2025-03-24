@@ -8704,3 +8704,15 @@ string violation: tags cannot be an array or an object
     at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
     at D:\Content Sharing\content-sharing-backend Staging\node_modules\jsonwebtoken\verify.js:261:12
+2025-03-24T06:47:22.288Z [ERROR]: Error in bound getAllProductDiscounts: currentDate is not defined
+2025-03-24T06:47:22.293Z [ERROR]: ReferenceError: currentDate is not defined
+    at ProductDiscountRepository.getAll (D:\Content Sharing\content-sharing-backend Staging\src\repositories\ProductRepository\ProductDiscountRepository.js:33:50)
+    at ProductDiscountService.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend Staging\src\services\ProductService\ProductDiscountService.js:19:55)
+    at ProductDiscountController.getAllProductDiscounts (D:\Content Sharing\content-sharing-backend Staging\src\controllers\ProductController\ProductDiscountController.js:95:52)
+    at D:\Content Sharing\content-sharing-backend Staging\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\content-sharing-backend Staging\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\content-sharing-backend Staging\src\middleware\AuthMiddleware.js:19:5
