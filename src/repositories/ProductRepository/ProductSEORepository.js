@@ -35,19 +35,19 @@ class ProductSEORepository {
     });
   }
 
-  // async getByProductId(id) {
-  //   return await ProductSEO.findOne({
-  //     where: { product_id:id },
-  //     attributes: { exclude: ["createdAt", "updatedAt"] },
-  //     include: [
-  //       {
-  //         model: Product,
-  //         as: "product",
-  //         attributes: { exclude: ["createdAt", "updatedAt"] },
-  //       },
-  //     ],
-  //   });
-  // }
+  async getByProductId(id) {
+    return await ProductSEO.findOne({
+      where: { product_id: id },
+      attributes: { exclude: ["createdAt", "updatedAt"] },
+      include: [
+        {
+          model: Product,
+          as: "product",
+          attributes: { exclude: ["createdAt", "updatedAt"] },
+        },
+      ],
+    });
+  }
 
   // async searchByTitle(search) {
   //   return await ProductSEO.findAll({
@@ -85,18 +85,24 @@ class ProductSEORepository {
   //   });
   // }
 
+  // async update(data) {
+  //   return await ProductSEO.update(data, {
+  //     where: {
+  //       id: data.id,
+  //     },
+  //   });
+  // }
   async update(data) {
-    return await ProductSEO.update(data, {
-      where: {
-        id: data.id,
-      },
-    });
+    if (data?.meta_keywords && Array.isArray(data.meta_keywords)) {
+      data.meta_keywords = JSON.stringify(data.meta_keywords);
+    }
+    return await ProductSEO.update(data, { where: { id: data.id } });
   }
 
   async deleteByProductId(id) {
     return await ProductSEO.destroy({
       where: {
-        product_id: id
+        product_id: id,
       },
     });
   }
