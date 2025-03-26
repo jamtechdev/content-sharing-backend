@@ -81,11 +81,11 @@ class ProductOfferController {
       });
     }
     const response = await ProductOfferService.createProductOffer(req.body);
-    if(response.code=== "ERR409"){
+    if(response.code=== 409){
       return res
-      .status(409)
+      .status(response.code)
       .json({
-        code: 409,
+        code: response.code,
         success: false,
         message: response.message
       });
@@ -101,14 +101,23 @@ class ProductOfferController {
   }
 
   async getAllProductOffers(req, res) {
-    const offers = await ProductOfferService.getAllProductOffers();
-    res.status(200).json({code: 200, success: true, data: offers });
+    const response = await ProductOfferService.getAllProductOffers();
+    if(response.code=== 200){
+      return res
+      .status(response.code)
+      .json({
+        code: response.code,
+        success: true,
+        message: response.message
+      });
+    }
+    res.status(200).json({code: 200, success: true, data: response });
   }
 
   async getProductOfferById(req, res) {
     const offerId = req.params.id;
     const response = await ProductOfferService.getProductOfferById(offerId);
-    if(response.code === "ERR404"){
+    if(response.code === 200){
       return res.status(200).json({code: 200, success: true, message: response.message })
     }
     return res.status(200).json({code: 200, success: true, data: response });
@@ -116,18 +125,36 @@ class ProductOfferController {
 
   async getProductOffersByProductId(req, res) {
     const productId = req.params.productId;
-    const offers = await ProductOfferService.getProductOffersByProductId(
+    const response = await ProductOfferService.getProductOffersByProductId(
       productId
     );
-    res.status(200).json({code: 200, success: true, data: offers });
+    if(response.code=== 404){
+      return res
+      .status(response.code)
+      .json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
+    return res.status(200).json({code: 200, success: true, data: response });
   }
 
   async getActiveOffers(req, res) {
     const productId = req.params.productId;
-    const offers = await ProductOfferService.getActiveOffers(
+    const response = await ProductOfferService.getActiveOffers(
       productId
     );
-    res.status(200).json({code: 200, success: true, data: offers });
+    if(response.code=== 404){
+      return res
+      .status(response.code)
+      .json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
+    res.status(200).json({code: 200, success: true, data: response });
   }
 
   async updateProductOffer(req, res) {
@@ -135,11 +162,11 @@ class ProductOfferController {
       req.body.offerId,
       req.body
     );
-    if(response.code === "ERR404"){
+    if(response.code === 404 || response.code === 404){
       return res
-      .status(404)
+      .status(response.code)
       .json({
-        code: 404, success: false,
+        code: response.code, success: false,
         message: response.message,
       });
     }
@@ -153,14 +180,32 @@ class ProductOfferController {
 
   async deleteProductOffer(req, res) {
     const offerId = req.params.id;
-    await ProductOfferService.deleteProductOffer(offerId);
-    res.status(200).json({code: 200, success: true, message: "Product offer deleted successfully" });
+    const response = await ProductOfferService.deleteProductOffer(offerId);
+    if(response.code=== 404){
+      return res
+      .status(response.code)
+      .json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
+    return res.status(200).json({code: 200, success: true, message: "Product offer deleted successfully" });
   }
 
   async deleteOffersByProductId(req, res) {
     const productId = req.params.productId;
-    await ProductOfferService.deleteOffersByProductId(productId);
-    res
+    const response = await ProductOfferService.deleteOffersByProductId(productId);
+    if(response.code=== 404){
+      return res
+      .status(response.code)
+      .json({
+        code: response.code,
+        success: false,
+        message: response.message
+      });
+    }
+    return res
       .status(200)
       .json({code: 200, success: true, message: "All offers for the product deleted successfully" });
   }

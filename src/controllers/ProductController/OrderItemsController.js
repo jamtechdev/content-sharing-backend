@@ -48,16 +48,9 @@ class OrderItemsController {
   async createOrderItems(req, res) {
     const data = req?.body;
     const response = await OrderItemsService.createOrderItems(data);
-    if(response.code === "ERR404"){
-      return res.status(404).json({
-        code: 404,
-        success: false,
-        message: response.message
-      });
-    }
-    if(response.code === "ERR409"){
-      return res.status(409).json({
-        code: 409,
+    if(response.code === 404 || response.code === 409){
+      return res.status(response.code).json({
+        code: response.code,
         success: false,
         message: response.message
       });
@@ -94,9 +87,9 @@ class OrderItemsController {
   async updateOrder(req, res) {
     const data = req?.body;
     const response = await OrderItemsService.updateOrder(data);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
-        code: 404,
+        code: response.code,
         success: false,
         message: response.message
       });

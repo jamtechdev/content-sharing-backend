@@ -37,7 +37,7 @@ class ProductSEORepository {
 
   async getByProductId(id) {
     return await ProductSEO.findOne({
-      where: { product_id: id },
+      where: { product_id:id },
       attributes: { exclude: ["createdAt", "updatedAt"] },
       include: [
         {

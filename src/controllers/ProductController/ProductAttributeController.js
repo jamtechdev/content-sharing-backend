@@ -68,7 +68,7 @@ class ProductAttributeController {
   async createProductAttribute(req, res) {
     const attributeData = req.body;
     const response = await ProductAttributeService.createProductAttribute(attributeData);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,
@@ -85,7 +85,7 @@ class ProductAttributeController {
 
   async getAllProductAttributes(req, res) {
     const response = await ProductAttributeService.getAllProductAttributes();
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,
@@ -103,7 +103,7 @@ class ProductAttributeController {
   async getProductAttributeById(req, res) {
     const attributeId = req.params.id;
     const response = await ProductAttributeService.getProductAttributeById(attributeId);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,
@@ -132,7 +132,7 @@ class ProductAttributeController {
   async updateProductAttribute(req, res) {
     const updateData = req.body;
     const response = await ProductAttributeService.updateProductAttribute(updateData.attributeId, updateData);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,
@@ -149,7 +149,7 @@ class ProductAttributeController {
   async deleteProductAttribute(req, res) {
     const attributeId = req.params.id;
     const response = await ProductAttributeService.deleteProductAttribute(attributeId);
-    if(response.code === "ERR404"){
+    if(response.code === 404){
       return res.status(404).json({
         code: 404,
         success: true,

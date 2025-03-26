@@ -126,11 +126,11 @@ class ProductService {
       const transaction = await db.sequelize.transaction();
     const product = await ProductRepository.getById(productId);
     if (!product) {
-      return {code: "ERR404", message: "Product not found or already deleted"}
+      return {code: 404, message: "Product not found or already deleted"}
     }
     const deletedProduct = await ProductRepository.delete(productId);
     if (!deletedProduct) {
-      return {code: "ERR404", message: "Product not found"}
+      return {code: 404, message: "Product not found"}
     }
     await ProductAttributeRepository.deleteByProductId(productId, {transaction});
     await ProductDiscountRepository.deleteByProductId(productId, {transaction});

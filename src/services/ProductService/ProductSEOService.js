@@ -6,23 +6,27 @@ class ProductSEOService {
   async createProductSEO(data) {
     const product = await ProductRepository.getById(data.product_id);
     if (!product) {
-      throw new HttpError(404, "Product not found");
+      return {code: 404, message: "Product not found"}
     }
     const productSEOExist = await ProductSEORepository.getByProductId(
       data.product_id
     );
     if (productSEOExist) {
-      throw new HttpError(409, "SEO for this product already exist");
+      return {code: 409, message: "SEO for this product already exist"};
     }
-    data.meta_keywords = JSON.stringify(data.meta_keywords);
-
+    data.meta_keywords = JSON.stringify(data.meta_keywords)
     return await ProductSEORepository.create(data);
   }
 
   async getAllSEO() {
     const response = await ProductSEORepository.getAll();
     if (response.length === 0) {
-      throw new HttpError(404, "SEO not found");
+      return {code: 404, message: "SEO data not found"}
+    }
+    for(let item of response){
+      if (Array.isArray(JSON.parse(item.meta_keywords))) {
+        item.meta_keywords = JSON.parse(item.meta_keywords).join(", ");
+      }
     }
     for (let item of response) {
       if (Array.isArray(JSON.parse(item.meta_keywords))) {
@@ -35,7 +39,7 @@ class ProductSEOService {
   async getSEOById(id) {
     const response = await ProductSEORepository.getById(id);
     if (!response) {
-      throw new HttpError(404, "SEO not found");
+      return {code: 404, message: "SEO data not found"}
     }
     return response;
   }
@@ -68,19 +72,20 @@ class ProductSEOService {
     const { id, product_id } = data;
     const response = await ProductSEORepository.getById(id);
     if (!response) {
-      throw new HttpError(404, "Product SEO not found");
+      return {code: 404, message: "Product SEO not found"};
     }
     const product = await ProductRepository.getById(product_id);
     if (!product) {
-      throw new HttpError(404, "Product not found");
+      return {code: 404, message: "Product not found"};
     }
+    data.meta_keywords = JSON.stringify(data.meta_keywords);
     return await ProductSEORepository.update(data);
   }
 
   async deleteBySEOId(id) {
     const response = await ProductSEORepository.getById(id);
     if (!response) {
-      throw new HttpError(404, "Product SEO not found");
+      return {code: 404, message: "Product SEO not found"};
     }
     return await ProductSEORepository.deleteById(id);
   }

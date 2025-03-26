@@ -4,31 +4,34 @@ const HttpError = require("../../decorators/HttpError");
 
 class ProductDiscountService {
   async createProductDiscount(data) {
+    const currentDate = new Date()
+    const startDate=  new Date(data.start_date);
+    const endDate= new Date(data.end_date);
+    if(endDate < currentDate){
+      return {code: 400, message: "End date should be greater than or equal current date"}
+    }
+    if(startDate > endDate){
+      return {code: 400, message: "Start date should be smaller than or equal to end date"}
+    }
     const product = await ProductRepository.getById(data.product_id)
     if(!product){
-      return {code: "ERR404", message: "Product not found"}
+      return {code: 404, message: "Product not found"}
     }
     const alreadyDiscountCreated = await ProductDiscountRepository.getByProductId(data.product_id)
     if(alreadyDiscountCreated){
-      return {code: "ERR409", message: "Product discount already created"}
+      return {code: 409, message: "Product discount already created"}
     }
     return await ProductDiscountRepository.create(data);
   }
 
   async getAllProductDiscounts() {
     const discounts = await ProductDiscountRepository.getAll();
-    // if (discounts.length === 0) {
-    //   throw new HttpError(404, "No product discounts found");
-    // }
     return discounts;
   }
 
   async getProductDiscountById(discountId) {
     const discount = await ProductDiscountRepository.getById(discountId);
-    // if (!discount) {
-    //   throw new HttpError(404, "Product discount not found");
-    // }
-    return discount;
+       return discount;
   }
 
   async getProductDiscountsByProductId(productId) {
