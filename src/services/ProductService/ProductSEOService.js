@@ -21,20 +21,16 @@ class ProductSEOService {
   async getAllSEO() {
     const response = await ProductSEORepository.getAll();
     if (response.length === 0) {
-      return {code: 404, message: "SEO data not found"}
+      throw new HttpError(404, "SEO not found");
     }
     for(let item of response){
       if (Array.isArray(JSON.parse(item.meta_keywords))) {
         item.meta_keywords = JSON.parse(item.meta_keywords).join(", ");
       }
     }
-    for (let item of response) {
-      if (Array.isArray(JSON.parse(item.meta_keywords))) {
-        item.meta_keywords = JSON.parse(item.meta_keywords).join(", ");
-      }
-    }
     return response;
   }
+
 
   async getSEOById(id) {
     const response = await ProductSEORepository.getById(id);
