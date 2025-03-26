@@ -60,7 +60,6 @@ class UserController {
       const getModelProfileData = await ProfileService.getProfileByUserId(
         user?.userId
       );
-
       return res.status(200).json({
         code: 200,
         data: getModelProfileData,
@@ -68,7 +67,6 @@ class UserController {
     } else {
       const newUser = await UserService.getUserById(user?.userId);
       const subscription = await SubscriptionRepository.getByUser(user?.userId)
-
       return res.status(200).json({
         code: 200,
         data: {

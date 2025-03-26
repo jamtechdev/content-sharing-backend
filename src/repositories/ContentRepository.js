@@ -97,22 +97,30 @@ class ContentRepository {
   // }
 
   async getContent(regionId, id) {
+    console.log("arguments ========", regionId, id);
+    const plans = await db.Plan.findAll({});
+
+    const planMap = plans.reduce((acc, plan) => {
+      acc[plan.id] = plan.name;
+      return acc;
+    }, {});
+
     const subscription = await db.Subscription.findOne({
       where: { subscriber_id: id },
     });
-
     let contentFilter = {
       region_id: {
         [db.Sequelize.Op.like]: `%${regionId}%`,
       },
     };
-
-    if (subscription) {
-      contentFilter[db.Sequelize.Op.or] = [
-        { plan_id: null },
-        { plan_id: subscription.plan_id },
-      ];
-    }
+    // if (subscription) {
+    //   console.log("If subscription=====")
+    //   contentFilter[db.Sequelize.Op.or] = [
+    //     { plan_id: null },
+    //     { plan_id: subscription.plan_id },
+    //   ];
+    //   console.log("Second filter=======", contentFilter)
+    // }
 
     const rows = await Content.findAll({
       where: contentFilter,
@@ -144,6 +152,14 @@ class ContentRepository {
                 )`),
           "commentCount",
         ],
+        [
+          db.Sequelize.literal(`(
+                SELECT name
+                FROM plans
+                WHERE plans.id = Content.plan_id
+            )`),
+          "planName",
+        ],
       ],
       include: [
         { model: User, as: "user", attributes: ["name", "avatar"] },
@@ -154,13 +170,57 @@ class ContentRepository {
 
     let content = rows.map((item) => {
       let itemData = item.get();
-      if (!subscription && itemData.plan_id !== null) {
-        itemData.media_url = null;
-        itemData.type = "locked";
+      if (!subscription) {
+        if (itemData.planName === null) {
+          itemData.type = "unlocked";
+        }
+      } else {
+        if (planMap[subscription.plan_id] === "exclusive") {
+          if (
+            itemData.planName === "exclusive" ||
+            itemData.planName === "premium" ||
+            itemData.planName === "basic" ||
+            itemData.planName === null
+          ) {
+            itemData.type = "unlocked";
+          } else {
+            itemData.type = "locked";
+            itemData.media_url = null;
+          }
+        }
+        if (planMap[subscription.plan_id] === "premium") {
+          if (
+            itemData.planName === "premium" ||
+            itemData.planName === "basic" ||
+            itemData.planName === null
+          ) {
+            itemData.type = "unlocked";
+          } else {
+            itemData.type = "locked";
+            itemData.media_url = null;
+          }
+        }
+        if (planMap[subscription.plan_id] === "basic") {
+          if (itemData.planName === "basic" || itemData.planName === null) {
+            itemData.type = "unlocked";
+          } else {
+            itemData.type = "locked";
+            itemData.media_url = null;
+          }
+        }
       }
+
+      // else {
+      //   // if (itemData.plan_id === null || itemData.plan_id === subscription?.plan_id) {
+      //   //   itemData.type = "unlocked";
+      //   // } else {
+      //   //   itemData.media_url = null;
+      //   //   itemData.type = "locked";
+      //   // }
+      // }
       return itemData;
     });
-
+    const result = content.map((item) => item.id);
     return content;
   }
 
@@ -206,7 +266,7 @@ class ContentRepository {
       region_id,
       premium_access,
       price,
-      plan_id
+      plan_id,
     },
     userId
   ) {
@@ -222,7 +282,7 @@ class ContentRepository {
         region_id,
         premium_access,
         price,
-        plan_id
+        plan_id,
       },
       { where: { id: contentId, user_id: userId } }
     );
@@ -335,9 +395,6 @@ class ContentRepository {
     });
   }
 
-
-
-
   async addComment(data) {
     return await Comment.create(data);
   }
@@ -447,7 +504,6 @@ class ContentRepository {
     );
   }
 
-
   async getCommentByUserId(userId) {
     return await Comment.findAll({
       where: {
@@ -528,13 +584,12 @@ class ContentRepository {
     });
   }
 
-
-  async deleteCommentByContentId(contentId){
-    return await Comment.destroy({where: {content_id: contentId}})
+  async deleteCommentByContentId(contentId) {
+    return await Comment.destroy({ where: { content_id: contentId } });
   }
 
-  async deleteLikeByContentId(contentId){
-    return await Likes.destroy({where: {content_id: contentId}})
+  async deleteLikeByContentId(contentId) {
+    return await Likes.destroy({ where: { content_id: contentId } });
   }
 }
 

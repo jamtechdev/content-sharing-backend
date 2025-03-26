@@ -12,7 +12,7 @@ class SubscriptionRepository {
   }
 
   async getByUser(id){
-    return await Subscription.findOne({subscriber_id: id})
+    return await Subscription.findOne({where: {subscriber_id: id}})
   }
   
   async getBySubscriberIdAndModelId(subscriberId, modelId){

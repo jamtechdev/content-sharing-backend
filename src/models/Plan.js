@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
         // },
       },
       name: {
-        type: DataTypes.ENUM("basic", "premium"),
+        type: DataTypes.ENUM("basic", "premium", "exclusive"),
         allowNull: true,
       },
       price: {
@@ -54,8 +54,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       coins: {
-        type: DataTypes.BIGINT
+        type: DataTypes.BIGINT,
+        allowNull: false
       },
+      features: {
+        type: DataTypes.TEXT('long'),
+        allowNull: false
+      }
     },
     {
       sequelize,

@@ -5,7 +5,7 @@ const VideoCall = db.video_call;
 
 
 
-class RtcTokenRepository {
+class VideoCallRepository {
     async create(data){
         return await VideoCall.create(data)
     }
@@ -25,4 +25,4 @@ class RtcTokenRepository {
     }
 }
 
-module.exports = new RtcTokenRepository()
+module.exports = new VideoCallRepository()

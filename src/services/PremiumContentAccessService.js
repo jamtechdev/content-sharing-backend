@@ -54,7 +54,7 @@ class PremiumContentAccessService {
             sessionId: session.id,
             publicKey: process.env.STRIPE_PUBLIC_KEY,
           }; 
-          console.log("service result================>", result)  
+          console.log("service results================>", result)  
         
           return result;
     }
