@@ -2,9 +2,9 @@ const Router = require("../../decorators/Router");
 const TryCatch = require("../../decorators/TryCatch");
 const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
-const RtcTokenService = require("../../services/RtcTokenService");
+const VideoCallService = require("../../services/VideoCallService");
 
-class RtcTokenController {
+class VideoCallController {
   constructor() {
     this.router = new Router();
     this.router.addRoute(
@@ -22,7 +22,7 @@ class RtcTokenController {
     if(!receiverId){
         return res.status(400).json({code: 400, status: false, message: "Receiver id is required"})
     }
-    const response = await RtcTokenService.createVideoCall({callerId, receiverId})
+    const response = await VideoCallService.createVideoCall({callerId, receiverId})
     return res.status(201).json({code: 201, status: true, data: response})
   }
   getRouter() {
@@ -31,4 +31,4 @@ class RtcTokenController {
 }
 
 
-module.exports = new RtcTokenController()
+module.exports = new VideoCallController()

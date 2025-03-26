@@ -1,16 +1,16 @@
-const RtcTokenRepository = require("../repositories/RtcTokenRepository");
+const VideoCallRepository = require("../repositories/VideoCallRepository");
 
 const { generateRtcToken } = require("../utils/generateRtcToken");
 
-class RtcTokenService {
+class VideoCallService {
   async createVideoCall(data) {
     const { callerId, receiverId } = data;
     console.log("Create call service===>", callerId, receiverId)
-    // const ongoingCall = await RtcTokenRepository.getSpecificOngoingCall(
+    // const ongoingCall = await VideoCallRepository.getSpecificOngoingCall(
     //   callerId,
     //   receiverId
     // );
-    // await RtcTokenRepository.update({status: "ended"}, callerId, receiverId)
+    // await VideoCallRepository.update({status: "ended"}, callerId, receiverId)
     // if (!ongoingCall) {
       const response = await generateRtcToken(callerId, receiverId);
       console.log(response)
@@ -21,10 +21,10 @@ class RtcTokenService {
         start_time: new Date(),
         // status : "ongoing", // how to identify status
       };
-      await RtcTokenRepository.create(callDetails);
+      await VideoCallRepository.create(callDetails);
       return response;
     }
   }
 // }
 
-module.exports = new RtcTokenService();
+module.exports = new VideoCallService();
