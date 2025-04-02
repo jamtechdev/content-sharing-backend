@@ -51,6 +51,7 @@ class AuthService {
     const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, {
       expiresIn: "15d",
     });
+    await UserRepository.updateUserById(user.id, {status: "online"})
     return { token, user };
   }
 

@@ -27,8 +27,15 @@ module.exports = {
       mediaSize: {
         type: Sequelize.FLOAT,
       },
+      messageId: {
+        type: Sequelize.STRING
+      },
       status: {
         type: Sequelize.ENUM("sent", "pending", "delivered", "seen"),
+      },
+      isEdited: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
       },
       deletedBy: {
         type: Sequelize.INTEGER,
@@ -36,11 +43,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"), // Default to current time
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"), // Default to current time
       }
     });
   },

@@ -6,6 +6,7 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const NotificationService = require("../../services/NotificationService");
 const SubscriptionRepository = require('../../repositories/SubscriptionRepository')
+const UserRepository = require('../../repositories/UserRepository')
 
 class AuthController {
   constructor() {
@@ -124,9 +125,11 @@ class AuthController {
       is_loggedin: false,
     };
 
+    console.log("Logged out user data", userId, data)
     await NotificationService.updateToken(data);
 
     res.clearCookie("token");
+    await UserRepository.updateUserById(userId, {status: "offline"})
     return res.status(200).json({
       code: 200,
       message: "Logout successful",

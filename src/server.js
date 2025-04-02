@@ -9,10 +9,10 @@ const socketIo = require("socket.io");
 const routes = require("./router/routes");
 const errorHandler = require("./middleware/ErrorHandler");
 const socketHandler = require('./utils/socket')
-const {
-  cronJob,
-} = require("./controllers/SubscriptionController/SubscriptionController");
-cronJob();
+// const {
+//   cronJob,
+// } = require("./controllers/SubscriptionController/SubscriptionController");
+// cronJob();
 dotenv.config();
 const app = express();
 app.use(cors());
@@ -39,6 +39,9 @@ app.use(
     },
   })
 );
+app.get("/test", (req, res)=>{
+  res.json("Hello")
+})
 // app.use(express.raw({ type: "*/*" }));
 app.use("/api", routes);
 socketHandler(io)

@@ -15,6 +15,8 @@ const AdditionalSupportController = require('../controllers/AdditionalSupportCon
 const HelpAndSupportController = require('../controllers/HelpAndSupportController/HelpAndSupportController')
 const VideoCallController = require('../controllers/VideoCallController/VideoCallController');
 const PremiumContentAccessController = require("../controllers/PremiumContentAccessController/PremiumContentAccessController");
+const MuseProposalController = require("../controllers/MuseProposalController/MuseProposalController");
+const MuseProposalPollingController = require("../controllers/MuseProposalController/MuseProposalPollingController");
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -32,6 +34,8 @@ router.use('/add-support', AdditionalSupportController.getRouter())
 router.use('/help-and-support', HelpAndSupportController.getRouter())
 router.use('/video-call', VideoCallController.getRouter());
 router.use('/premium', PremiumContentAccessController.getRouter());
+router.use('/proposal', MuseProposalController.getRouter());
+router.use('/vote', MuseProposalPollingController.getRouter());
 // router.post(
 //   "/stripe/webhook",
 //   express.raw({ type: "application/json" }),
