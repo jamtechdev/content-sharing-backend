@@ -19,13 +19,21 @@ module.exports = (sequelize, DataTypes) => {
       mediaUrl: DataTypes.TEXT("long"),
       mediaType: DataTypes.STRING,
       mediaSize: DataTypes.FLOAT,
+      messageId: {
+        type: DataTypes.STRING
+      },
       status: DataTypes.ENUM("sent", "pending", "delivered", "seen"),
+      isEdited: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
       deletedBy: {
         type: DataTypes.INTEGER,
         defaultValue: null,
-      }
+      },
     },
     {
+      timestamps: true,
       sequelize,
       modelName: "Message",
     }

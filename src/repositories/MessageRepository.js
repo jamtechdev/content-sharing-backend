@@ -4,6 +4,7 @@ const Message = db.Message;
 
 class MessageRepository {
   async createChat(data) {
+    console.log("Getting save data===>", data)
     return await Message.create(data);
   }
 
@@ -108,47 +109,93 @@ class MessageRepository {
     return data;
   }
 
-  async deleteChat(senderId, receiverId, deletedBy) {
-    const messageCondition = {
+  async getSpecificMessage({senderId, receiverId, timestamps}){
+    const condition = {
+      messageId: timestamps,
       [db.Sequelize.Op.or]: [
-        { senderId, receiverId },
-        { senderId: receiverId, receiverId: senderId },
-      ],
-    };
-  
-    const undeletedMessages = await Message.findAll({
-      where: {
-        ...messageCondition,
-        deletedBy: { [db.Sequelize.Op.ne]: deletedBy },
-      },
-    });
-  
-    if (undeletedMessages.length > 0) {
-       return await Message.destroy({
-        where: {
-          ...messageCondition,
-          deletedBy: { [db.Sequelize.Op.ne]: deletedBy },
-        },
-      });
-    } else {
-      return await Message.update(
-        { deletedBy },
         {
-          where: {
-            ...messageCondition,
-            deletedBy: null, 
-          },
+          senderId,
+          receiverId
+        },
+        {
+          senderId: receiverId,
+          receiverId: senderId
         }
-      );
+      ]
     }
+    return await Message.findOne({where: condition})
   }
 
+  // async deleteChat(senderId, receiverId, deletedBy) {
+  //   const messageCondition = {
+  //     [db.Sequelize.Op.or]: [
+  //       { senderId, receiverId },
+  //       { senderId: receiverId, receiverId: senderId },
+  //     ],
+  //   };
+  
+  //   const undeletedMessages = await Message.findAll({
+  //     where: {
+  //       ...messageCondition,
+  //       deletedBy: { [db.Sequelize.Op.ne]: deletedBy },
+  //     },
+  //   });
+  
+  //   if (undeletedMessages.length > 0) {
+  //      return await Message.destroy({
+  //       where: {
+  //         ...messageCondition,
+  //         deletedBy: { [db.Sequelize.Op.ne]: deletedBy },
+  //       },
+  //     });
+  //   } else {
+  //     return await Message.update(
+  //       { deletedBy },
+  //       {
+  //         where: {
+  //           ...messageCondition,
+  //           deletedBy: null, 
+  //         },
+  //       }
+  //     );
+  //   }
+  // }
 
-  async deleteById(messageId) {
+
+  // async deleteById(messageId) {
+  //   return await Message.destroy({
+  //     where: { id: messageId },
+  //   });
+  // }
+
+  
+  async deleteMessage(messageId){
     return await Message.destroy({
-      where: { id: messageId },
-    });
+      where: {
+        messageId
+      }
+    })
   }
+
+  async update(data){
+    const {senderId, receiverId, timestamps, message} = data
+    return await Message.update({message: message, isEdited: true}, {
+      where: {
+        messageId: timestamps,
+        [db.Sequelize.Op.or]: [
+          {
+            senderId,
+            receiverId,
+          },
+          {
+            senderId: receiverId,
+            receiverId: senderId,
+          }
+        ]
+      }
+    })
+  }
+
 }
 
 module.exports = new MessageRepository();

@@ -6,7 +6,7 @@ const SubscriptionService = require("../../services/SubscriptionService");
 
 // const db = require('../../models/index')
 // const Subscription = db.Subscription
-const cron = require("node-cron");
+// const cron = require("node-cron");
 class SubscriptionController {
   constructor() {
     this.router = new Router();
@@ -154,14 +154,14 @@ class SubscriptionController {
   }
 
 
-  async cronJob(subscriberId, planId) {
-    cron.schedule("* * * * *", async () => {
-      console.log("cron is running");
-      const response =
-        await SubscriptionService.cronJobUpdateSubscriptionStatus(4, 1);
-      console.log(response);
-    });
-  }
+  // async cronJob(subscriberId, planId) {
+  //   cron.schedule("* * * * *", async () => {
+  //     console.log("cron is running");
+  //     const response =
+  //       await SubscriptionService.cronJobUpdateSubscriptionStatus(4, 1);
+  //     console.log(response);
+  //   });
+  // }
   getRouter() {
     return this.router.getRouter();
   }

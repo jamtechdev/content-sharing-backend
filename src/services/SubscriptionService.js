@@ -2,7 +2,7 @@ const SubscriptionRepository = require("../repositories/SubscriptionRepository")
 const PlanRepository = require("../repositories/PlanRepository");
 const PlanCountExtensionRepository = require('../repositories/PlanCountExtensionRepository')
 const HttpError = require("../decorators/HttpError");
-const cron = require("node-cron");
+// const cron = require("node-cron");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
@@ -106,21 +106,21 @@ class SubscriptionService {
 
 
   
-  async cronJobUpdateSubscriptionStatus(subscriberId, planId) {
-    const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(
-      subscriberId,
-      planId
-    );
-    console.log("By cron subscription==========>", subscription);
-    if (
-      subscription?.status === "active" &&
-      subscription.end_date < Date.now()
-    ) {
-      console.log("Inside if");
-      return await SubscriptionRepository.update(planId, { status: "expired" });
-    }
-    return "Your subscription is active";
-  }
+  // async cronJobUpdateSubscriptionStatus(subscriberId, planId) {
+  //   const subscription = await SubscriptionRepository.getBySubscriberAndPlanId(
+  //     subscriberId,
+  //     planId
+  //   );
+  //   console.log("By cron subscription==========>", subscription);
+  //   if (
+  //     subscription?.status === "active" &&
+  //     subscription.end_date < Date.now()
+  //   ) {
+  //     console.log("Inside if");
+  //     return await SubscriptionRepository.update(planId, { status: "expired" });
+  //   }
+  //   return "Your subscription is active";
+  // }
   // cronJobExpiryCheck();
 
   async getSubscriptionById(id) {

@@ -36,19 +36,35 @@ class MessageController {
     );
 
     this.router.addRoute(
-      "put",
-      "/",
-      authenticate,
-      authorize(["user", "model"]),
-      TryCatch(this.deleteSpecificChat.bind(this))
-    );
-
-    this.router.addRoute(
       "delete",
       "/:id",
       authenticate,
       authorize(["user", "model"]),
-      TryCatch(this.deleteMessageById.bind(this))
+      TryCatch(this.deleteSpecificMessage.bind(this))
+    );
+
+    // this.router.addRoute(
+    //   "put",
+    //   "/delete/chat",
+    //   authenticate,
+    //   authorize(["user", "model"]),
+    //   TryCatch(this.deleteSpecificChat.bind(this))
+    // );
+
+    // this.router.addRoute(
+    //   "delete",
+    //   "/:id",
+    //   authenticate,
+    //   authorize(["user", "model"]),
+    //   TryCatch(this.deleteMessageById.bind(this))
+    // );
+
+    this.router.addRoute(
+      "put",
+      "/edit/message",
+      authenticate,
+      authorize(["user", "model"]),
+      TryCatch(this.updateMessages.bind(this))
     );
   }
 
@@ -81,31 +97,61 @@ class MessageController {
       page,
       limit
     );
+    if (response.code === 404) {
+     return res.status(response.code).json({ code: response.code, success: false, message: response.message })
+    }
     return res.status(200).json({ code: 200, success: true, data: response });
   }
 
-  async deleteSpecificChat(req, res) {
-    const { senderId, receiverId } = req?.body;
-    const deletedBy = req?.user?.userId;
-    const response = await MessageService.deleteChat(
-      senderId,
-      receiverId,
-      deletedBy
-    );
-    return res.status(200).json({
-      code: 200,
-      success: true,
-      message: "User's chat deleted successfully",
-    });
+  // async deleteSpecificChat(req, res) {
+  //   const { senderId, receiverId } = req?.body;
+  //   const deletedBy = req?.user?.userId;
+  //   const response = await MessageService.deleteChat(
+  //     senderId,
+  //     receiverId,
+  //     deletedBy
+  //   );
+  //   if (response.code === 404) {
+  //     return res.status(response.code).json({ code: response.code, success: false, message: response.message })
+  //    }
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "User's chat deleted successfully",
+  //   });
+  // }
+
+  // async deleteMessageById(req, res) {
+  //   const { id } = req?.params;
+  //   const response = await MessageService.deleteMessage(id);
+  //   if (response.code === 404) {
+  //     return res.status(response.code).json({ code: response.code, success: false, message: response.message })
+  //    }
+  //   return res.status(200).json({
+  //     code: 200,
+  //     success: true,
+  //     message: "User's chat deleted successfully",
+  //   });
+  // }
+
+
+  async deleteSpecificMessage(req, res){
+    const {id} = req?.params
+    const response = await MessageService.deleteMessage(id)
+    return res.status(200).json({code: 200, success: true, message: "Message deleted successfully"})
   }
 
-  async deleteMessageById(req, res) {
-    const { id } = req?.params;
-    await MessageService.deleteMessage(id);
+  async updateMessages(req, res) {
+    const data = req.body
+    console.log("updated time data", data )
+    const response = await MessageService.updateMessages(data);
+    if (response.code === 404 || response.code === 400) {
+      return res.status(response.code).json({ code: response.code, success: false, message: response.message })
+     }
     return res.status(200).json({
       code: 200,
       success: true,
-      message: "User's chat deleted successfully",
+      message: "User's chat updated successfully",
     });
   }
 

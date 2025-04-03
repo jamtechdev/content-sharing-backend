@@ -107,6 +107,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: true,
       },
+      status: {
+        type: DataTypes.ENUM("online", "offline", "busy"),
+        defaultValue: "offline"
+      },
       created_at: {
         allowNull: false,
         type: DataTypes.DATE,
