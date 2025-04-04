@@ -50,6 +50,14 @@ class UserController {
       authorize(["user", "model"]),
       TryCatch(this.getUsersByRole.bind(this))
     )
+
+    this.router.addRoute(
+      "put",
+      "/user/block-unblock",
+      authenticate,
+      authorize(["model"]),
+      TryCatch(this.blockUnblockUser.bind(this))
+    )
   }
   //   get-user-profile
   async me(req, res) {
@@ -195,6 +203,16 @@ class UserController {
       code:200,
       message:"Data fetched successfully.",
       data: response
+    })
+  }
+
+  async blockUnblockUser(req, res){
+    const {id, isBlocked} = req.body;
+    const response = await UserService.updateUserbyId(id, {is_blocked_by_platform: isBlocked})
+    return res.status(200).json({
+      code: 200,
+      success: true, 
+      message: `User ${isBlocked === true? 'blocked' : "unblocked"} successfully`
     })
   }
   getRouter() {
