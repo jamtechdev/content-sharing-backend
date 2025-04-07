@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   WildcardReveal.init({
-    reveal_content: DataTypes.STRING,
+    reveal_content: DataTypes.JSON,
     reveal_type: DataTypes.STRING,
     reveal_date: DataTypes.DATE,
     is_revealed: {
