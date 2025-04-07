@@ -16,9 +16,12 @@ module.exports = (sequelize, DataTypes) => {
   WildcardReveal.init({
     reveal_content: DataTypes.STRING,
     reveal_type: DataTypes.STRING,
-    user_id: DataTypes.INTEGER,
     reveal_date: DataTypes.DATE,
-    description: DataTypes.TEXT,
+    is_revealed: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    description: DataTypes.TEXT('long'),
   }, {
     sequelize,
     modelName: 'wildcard_reveal',

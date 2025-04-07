@@ -50,6 +50,10 @@ module.exports = (sequelize, DataTypes) => {
         as: "region",
         onDelete: "SET NULL",
       });
+      Content.belongsTo(models.Plan, {
+        foreignKey: "plan_id",
+        as: "plan"
+      })
     }
   }
   Content.init(

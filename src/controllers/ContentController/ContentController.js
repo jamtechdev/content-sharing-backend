@@ -40,6 +40,13 @@ class ContentController {
       TryCatch(this.getContentByModelId.bind(this))
     );
     this.router.addRoute(
+      "post",
+      "/get/random",
+      authenticate,
+      authorize(["user"]),
+      TryCatch(this.getRandomContent.bind(this))
+    );
+    this.router.addRoute(
       "put",
       "/update-content",
       authenticate,
@@ -148,12 +155,12 @@ class ContentController {
         plan_id,
       } = req.body;
 
-     if(plan_id){
-      const planExist = await PlanService.getPlanById(plan_id)
-      if(!planExist){
-        return res.status(404).json({code: 404, success: false, message: "Plan not exits, choose another plan"})
+      if (plan_id) {
+        const planExist = await PlanService.getPlanById(plan_id)
+        if (!planExist) {
+          return res.status(404).json({ code: 404, success: false, message: "Plan not exits, choose another plan" })
+        }
       }
-     }
       // Ensure region_id is correctly formatted as JSON array
       const region_id = JSON.stringify(
         modal_region_id
@@ -230,6 +237,22 @@ class ContentController {
     }
   }
 
+  async getRandomContent(req, res) {
+    const { plan } = req.body;
+    const {userId} = req?.user
+    if (!plan) {
+      return res.status(400).json({ code: 400, success: false, message: "Plan type required" })
+    }
+ 
+      const response = await ContentService.getRandomContent(plan, userId)
+      if (response.code) {
+        return res.status(response.code).json({ code: response.code, success: false, message: response.message })
+      }
+      return res.status(200).json({ code: 200, success: true, data: response })
+
+  
+  }
+
   async updateContent(req, res) {
     const { userId } = req?.user;
     const mediaFile = req.file;
@@ -260,15 +283,15 @@ class ContentController {
     );
 
     const content = await ContentService.findById(contentId, userId);
-    if(!content){
-      return res.status(404).json({code: 404, success: false, message: "Content not found"})
+    if (!content) {
+      return res.status(404).json({ code: 404, success: false, message: "Content not found" })
     }
     let mediaFileUrl;
     if (mediaFile) {
       mediaFileUrl = await uploadToS3(mediaFile?.path, req.file.filename);
     }
     const planId = plan_id && !isNaN(plan_id) ? parseInt(plan_id, 10) : null;
- 
+
     const response = await ContentService.updateContent(
       {
         status,
@@ -284,7 +307,7 @@ class ContentController {
         premium_access,
         price: price ? parseFloat(price) : null,
         plan_id: planId
-          // plan_id && parseInt(plan_id) !== 0 ? parseInt(plan_id) : null,
+        // plan_id && parseInt(plan_id) !== 0 ? parseInt(plan_id) : null,
       },
       userId
     );
@@ -338,7 +361,7 @@ class ContentController {
       sender_id: userId,
       type: "like",
       item_id: contentId,
-      media : getContent.content_type ==='image' ? getContent?.media_url[0]?.url : ""
+      media: getContent.content_type === 'image' ? getContent?.media_url[0]?.url : ""
     };
 
     // await pushNotification(payload);

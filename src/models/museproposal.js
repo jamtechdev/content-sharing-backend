@@ -17,10 +17,18 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   MuseProposal.init({
-    subscriber_id: DataTypes.INTEGER,
-    plan_id: DataTypes.INTEGER,
-    proposal: DataTypes.TEXT('long'),
-    status:{type: DataTypes.ENUM("pending", "selected", "rejected"),defaultValue: "pending"},
+    subscriber_id: {
+      type: DataTypes.INTEGER,
+      allowNull:false
+    },
+    plan_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    proposal: {
+      type: DataTypes.TEXT('long'),
+      allowNull: false
+    },
     total_vote_count: {
       type: DataTypes.BIGINT,
       defaultValue: 0,
@@ -43,9 +51,17 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
+    status:{
+      type: DataTypes.ENUM("pending", "approved", "rejected"),
+      defaultValue: "pending"
+    },
     polling_status: {
       type: DataTypes.ENUM("open","closed"),
       defaultValue: "open"
+    },
+    proposal_type: {
+      type: DataTypes.ENUM("poll", "question"),
+      allowNull: false
     }
   }, {
     sequelize,

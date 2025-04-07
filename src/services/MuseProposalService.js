@@ -13,6 +13,10 @@ class MuseProposalService{
         return await MuseProposalRepository.getAll()
     }
 
+    async getApprovedProposal(){
+        return await MuseProposalRepository.getApprovedProposal()
+    }
+
     async updateProposal(id, data){
         return await MuseProposalRepository.update(id, data)
     }

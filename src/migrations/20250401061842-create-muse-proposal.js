@@ -10,17 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       subscriber_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       plan_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       proposal: {
-        type: Sequelize.TEXT('long')
-      },
-      status: {
-        type: Sequelize.ENUM("pending", "selected", "rejected"),
-        defaultValue: "pending"
+        type: Sequelize.TEXT('long'),
+        allowNull: false,
       },
       total_vote_count: {
         type: Sequelize.BIGINT,
@@ -44,9 +43,17 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
+      status: {
+        type: Sequelize.ENUM("pending", "approved", "rejected"),
+        defaultValue: "pending"
+      },
       polling_status: {
         type: Sequelize.ENUM("open","closed"),
         defaultValue: "open"
+      },
+      proposal_type: {
+        type: Sequelize.ENUM("poll", "question"),
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
