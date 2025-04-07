@@ -5698,3 +5698,313 @@ notNull Violation: comment.comment_text cannot be null
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async WildcardRevealController.getRandomRevealContent (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:79:26)
     at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T06:41:28.751Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T06:41:28.775Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T06:46:35.244Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T06:46:35.250Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T06:50:07.610Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T06:50:07.611Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T06:56:04.713Z [ERROR]: Error in bound createReveal: secureUrl is not defined
+2025-04-07T06:56:04.716Z [ERROR]: ReferenceError: secureUrl is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:83)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T06:56:39.804Z [ERROR]: Error in bound createReveal: reveal_content is not defined
+2025-04-07T06:56:39.808Z [ERROR]: ReferenceError: reveal_content is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:68)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T06:57:21.911Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T06:57:21.918Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:01:20.800Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:01:20.821Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:04:03.959Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:04:03.966Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:07:28.102Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:07:28.111Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:07:38.884Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:07:38.885Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:08:13.732Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:08:13.732Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:10:05.563Z [ERROR]: SyntaxError: Bad control character in string literal in JSON at position 27 (line 2 column 25)
+    at JSON.parse (<anonymous>)
+    at parse (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+2025-04-07T07:11:02.262Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:11:02.263Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:62:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:12:55.408Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:12:55.414Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:63:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:13:53.694Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:13:53.701Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:63:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:13:55.054Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:13:55.055Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:63:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:14:10.812Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:14:10.819Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:63:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:14:58.094Z [ERROR]: Error in bound createReveal: media is not defined
+2025-04-07T07:14:58.097Z [ERROR]: ReferenceError: media is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:99)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T07:15:13.374Z [ERROR]: Error in bound createReveal: resourceType is not defined
+2025-04-07T07:15:13.377Z [ERROR]: ReferenceError: resourceType is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:125)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T07:15:29.906Z [ERROR]: Error in bound createReveal: resourceType is not defined
+2025-04-07T07:15:29.907Z [ERROR]: ReferenceError: resourceType is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:125)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T07:15:31.653Z [ERROR]: Error in bound createReveal: resourceType is not defined
+2025-04-07T07:15:31.653Z [ERROR]: ReferenceError: resourceType is not defined
+    at WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:125)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+    at getSecret (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:97:14)
+2025-04-07T07:15:55.162Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:15:55.168Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:15:56.663Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:15:56.665Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:16:25.368Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:16:25.374Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:17:41.792Z [ERROR]: Error in bound createReveal: string violation: reveal_content cannot be an array or an object
+2025-04-07T07:17:41.799Z [ERROR]: SequelizeValidationError: string violation: reveal_content cannot be an array or an object
+    at InstanceValidator._validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:78:13)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:111:7)
+    at async InstanceValidator.validate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\instance-validator.js:93:12)
+    at async WildcardReveal.save (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:4077:7)
+    at async Function.create (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2305:12)
+    at async WildcardRevealRepository.create (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\WildcardRevealRepository.js:7:16)
+    at async WildcardRevealService.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\WildcardRevealService.js:7:16)
+    at async WildcardRevealController.createReveal (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\WildcardRevealController\WildcardRevealController.js:61:26)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-07T07:22:27.474Z [ERROR]: SyntaxError: Expected double-quoted property name in JSON at position 295 (line 9 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\body-parser\lib\types\json.js:92:19)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:238:16)
+    at done (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1696:12)
