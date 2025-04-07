@@ -53,7 +53,6 @@ module.exports = {
       },
       proposal_type: {
         type: Sequelize.ENUM("poll", "question"),
-        allowNull: false
       },
       createdAt: {
         allowNull: false,
