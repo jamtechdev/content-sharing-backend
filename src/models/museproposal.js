@@ -60,8 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: "open"
     },
     proposal_type: {
-      type: DataTypes.ENUM("poll", "question"),
-      allowNull: false
+      type: DataTypes.ENUM("poll", "question")
     }
   }, {
     sequelize,
