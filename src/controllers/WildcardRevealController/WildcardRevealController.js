@@ -15,7 +15,6 @@ class WildcardRevealController {
         "/create",
         authenticate,
         authorize(["model"]),
-        // upload.single('mediaFile'),
         TryCatch(this.createReveal.bind(this))
       );
 
@@ -55,9 +54,6 @@ class WildcardRevealController {
 
     async createReveal(req, res){
         const data = req.body;
-        // const mediaFile = req.file;
-        // const {secureUrl, resourceType} = await uploadToS3(mediaFile.path, mediaFile.filename)
-
         const response = await WildcardRevealService.createReveal({reveal_content: data.content, reveal_type: data.resourceType, ...data})
         if(response.code === 409){
           return res.status(response.code).json({code: response.code, success:false, message: response.message})
