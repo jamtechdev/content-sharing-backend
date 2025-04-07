@@ -25,16 +25,22 @@ class MuseProposalController {
         TryCatch(this.getAllMuseProposal.bind(this))
       );
 
+      // this.router.addRoute(
+      //   "get",
+      //   "/approved/proposals",
+      //   authenticate,
+      //   authorize(["user", "model"]),
+      //   TryCatch(this.getApprovedProposal.bind(this))
+      // );
+
       this.router.addRoute(
         "put",
         "/",
         authenticate,
-        authorize(["user"]),
+        authorize(["model"]),
         TryCatch(this.updateMuseProposal.bind(this))
       );
-
     }
-
 
     async createMuseProposal(req, res){
         const data = req.body;
@@ -52,12 +58,26 @@ class MuseProposalController {
     }
     
     async getAllMuseProposal(req, res){
-        const response = await MuseProposalService.getAllProposal()
+      let response 
+      if(req?.user.role === "user"){
+        response = await MuseProposalService.getApprovedProposal()
+      }
+      else {
+        response = await MuseProposalService.getAllProposal()
+      }
         if(response.length === 0){
             return res.status(404).json({code: 404, success: false, message: "Muse proposal data not found"})
         }
         return res.status(200).json({code: 200, success: true, data: response})
     }
+
+    // async getApprovedProposal(req, res){
+    //     const response = await MuseProposalService.getApprovedProposal()
+    //     if(response.length === 0){
+    //         return res.status(404).json({code: 404, success: false, message: "Muse proposal data not found"})
+    //     }
+    //     return res.status(200).json({code: 200, success: true, data: response})
+    // }
 
     async updateMuseProposal(req, res){
         const data = req?.body

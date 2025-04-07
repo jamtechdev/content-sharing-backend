@@ -80,6 +80,12 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.JSON,
         allowNull: true,
       },
+      content_grant: {
+        type: DataTypes.DATE
+      },
+      last_wildcard_reveal: {
+        type: DataTypes.DATE
+      },
       createdAt: {
         type: DataTypes.DATE,
         allowNull: false,

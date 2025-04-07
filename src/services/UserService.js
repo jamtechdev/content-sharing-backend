@@ -25,8 +25,6 @@ class userService {
   }
 
   async updateUserbyId(id, query) {
-    console.log(id, query);
-
     const updateUser = await UserRepository.updateUserById(id, query);
     if (!updateUser) {
       throw new HttpError(400, "User not found");

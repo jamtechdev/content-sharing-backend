@@ -10,19 +10,22 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       reveal_content: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       reveal_type: {
-        type: Sequelize.STRING
-      },
-      user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING,
+        allowNull: false
       },
       reveal_date: {
         type: Sequelize.DATE
       },
+      is_revealed: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+      },
       description: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT('long')
       },
       createdAt: {
         allowNull: false,

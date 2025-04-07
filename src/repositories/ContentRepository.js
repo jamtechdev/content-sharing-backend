@@ -6,7 +6,7 @@ const Likes = db.Likes;
 const Comment = db.comment;
 const ReplyComment = db.ReplyComment;
 const Bookmarks = db.Bookmarks;
-
+const { Plan } = db
 const { Op, where } = require("sequelize");
 
 class ContentRepository {
@@ -97,7 +97,6 @@ class ContentRepository {
   // }
 
   async getContent(regionId, id) {
-    console.log("arguments ========", regionId, id);
     const plans = await db.Plan.findAll({});
 
     const planMap = plans.reduce((acc, plan) => {
@@ -254,6 +253,38 @@ class ContentRepository {
   async findById(contentId, userId) {
     return await Content.findOne({ where: { id: contentId, user_id: userId } });
   }
+
+
+  async getRandom(planType) {
+    const content = await Content.findAll({
+      include: [{
+        model: Plan,
+        as: 'plan',
+        attributes: ["name"],
+        where: {
+          name: planType !== "noPlan" ? planType : "basic"
+        }
+      }]
+    })
+    const contentIds = content.map(item => item.id);
+    const id = Math.ceil(Math.random() * contentIds.length - 1);
+
+    const randomContent = await Content.findOne({
+      where: {
+        id: contentIds[id]
+      },
+      include: [{
+        model: Plan,
+        as: 'plan',
+        attributes: ["name"],
+        where: {
+          name: planType !== "noPlan" ? planType : "basic"
+        }
+      }]
+    });
+    return randomContent;
+  }
+
   async update(
     {
       status,

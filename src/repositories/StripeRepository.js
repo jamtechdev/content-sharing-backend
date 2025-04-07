@@ -7,6 +7,10 @@ class StripeRepository {
   async saveSession(sessionData) {
     console.log("sessionData============]]]]]]]]]]]]]]]]]", sessionData);
     try {
+      const now = new Date()
+      now.setDate(now.getDate()+90)
+      sessionData.content_grant = now
+      sessionData.last_wildcard_reveal = new Date()
       return await StripeSession.create(sessionData);
     } catch (error) {
       Logger.error(`❌ Error saving session: ${error.message}`);
@@ -27,6 +31,10 @@ class StripeRepository {
 
  async updateSession(subscriberId, data){
     try {
+      const now = new Date()
+      now.setDate(now.getDate()+90)
+      data.content_grant = now
+      data.last_wildcard_reveal = new Date()
       return await StripeSession.update(data, {
         where: {subscriber_id: subscriberId}
       })

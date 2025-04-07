@@ -1,6 +1,8 @@
 const HttpError = require("../decorators/HttpError");
 const ContentRepository = require("../repositories/ContentRepository");
+const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 const UserService = require("./UserService");
+const { premiumWindowCalculator } = require('../utils/subscriptionUtils')
 
 class ContentService {
   async createContent(data) {
@@ -13,7 +15,6 @@ class ContentService {
   async getContent(region_id, id) {
     // console.log(userId)
     // const { region_id } = await UserService.getUserById(userId);
-    console.log(region_id);
     const response = await ContentRepository.getContent(region_id, id);
     if (response.length === 0) {
       throw new HttpError(404, "Not content found");
@@ -21,7 +22,7 @@ class ContentService {
     return response;
   }
 
-  async getContentById(contentId){
+  async getContentById(contentId) {
     return await ContentRepository.getContentById(contentId)
   }
 
@@ -32,6 +33,27 @@ class ContentService {
     // }
     return response;
   }
+
+  async getRandomContent(plan, userId) {
+    if (plan !== "basic" && plan !== "premium" && plan !== "noPlan") {
+      return { code: 400, message: "You don't have any valid subscription plan" }
+    }
+    const subscription = await SubscriptionRepository.getByUser(userId)
+    let remainingDays = premiumWindowCalculator(subscription?.content_grant);
+    if (remainingDays === 0 && subscription.end_date >= new Date()) {
+      plan = plan === "basic" ? "premium" : plan === "premium" ? "exclusive" : "noPlan"
+      return await ContentRepository.getRandom(plan)
+    }
+    else if (remainingDays < 0) {
+      const now = new Date()
+      now.setDate(now.getDate() + 90);
+      const newDate = new Date(now)
+      await SubscriptionRepository.update(subscription.id, { content_grant: newDate })
+      return { code: 400, message: "Your quarterly 24hr premium premium pass expired" }
+    }
+    return { code: 400, message: "No content to preview" }
+  }
+
   async updateContent(
     {
       status,
@@ -127,7 +149,7 @@ class ContentService {
     return response;
   }
   async getCommentById(commnetId) {
-    return await ContentRepository.getCommentById(commnetId); 
+    return await ContentRepository.getCommentById(commnetId);
   }
   async getCommentByUserId(userId) {
     return await ContentRepository.getCommentByUserId(userId);
@@ -154,11 +176,11 @@ class ContentService {
     return await ContentRepository.deleteReplyComment(data);
   }
 
-  async deleteCommentByContentId(id){
+  async deleteCommentByContentId(id) {
     return await ContentRepository.deleteCommentByContentId(id)
   }
 
-  async deleteLikeByContentId(id){
+  async deleteLikeByContentId(id) {
     return await ContentRepository.deleteLikeByContentId(id)
   }
 }
