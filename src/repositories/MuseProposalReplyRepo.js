@@ -13,7 +13,19 @@ class MuseProposalReplyRepo {
     }
 
     async getAll() {
-        return await MuseProposalReply.findAll({})
+        return await MuseProposalReply.findAll({include: [
+            {
+                model: db.users,
+                as: "user",
+                attributes: ["name", "email"]
+            },
+            {
+                model: db.muse_proposal,
+                as: "proposal",
+                attributes: {exclude: ["createdAt", "updatedAt", "id", "subscriber_id", "plan_id"]}
+            },
+
+        ]})
     }
 
     async getAllApproved(){

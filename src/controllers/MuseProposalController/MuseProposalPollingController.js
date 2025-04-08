@@ -73,7 +73,7 @@ class MuseProposalPollingController {
 
     // async deletePoll(req, res){
     //     const id = req?.params?.id
-    //     const response = await MuseProposalPollingService.deletePoll(id)
+    //     const response = await MuseProposalPollingService.deleteP oll(id)
     //     return res.status(200).json({code: 200, success: true, data: "Poll delete successfully"})
     // }
 
