@@ -18,6 +18,7 @@ const PremiumContentAccessController = require("../controllers/PremiumContentAcc
 const MuseProposalController = require("../controllers/MuseProposalController/MuseProposalController");
 const MuseProposalPollingController = require("../controllers/MuseProposalController/MuseProposalPollingController");
 const WildcardRevealController = require("../controllers/WildcardRevealController/WildcardRevealController");
+const MuseProposalReplyController = require("../controllers/MuseProposalController/MuseProposalReplyController");
 
 const router = express.Router();
 router.use("/auth", AuthController.getRouter());
@@ -38,6 +39,7 @@ router.use('/premium', PremiumContentAccessController.getRouter());
 router.use('/proposal', MuseProposalController.getRouter());
 router.use('/vote', MuseProposalPollingController.getRouter());
 router.use('/reveal', WildcardRevealController.getRouter());
+router.use('/reply', MuseProposalReplyController.getRouter());
 // router.post(
 //   "/stripe/webhook",
 //   express.raw({ type: "application/json" }),

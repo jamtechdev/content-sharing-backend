@@ -25,20 +25,20 @@ class MuseProposalController {
         TryCatch(this.getAllMuseProposal.bind(this))
       );
 
-      // this.router.addRoute(
-      //   "get",
-      //   "/approved/proposals",
-      //   authenticate,
-      //   authorize(["user", "model"]),
-      //   TryCatch(this.getApprovedProposal.bind(this))
-      // );
-
       this.router.addRoute(
         "put",
         "/",
         authenticate,
         authorize(["model"]),
         TryCatch(this.updateMuseProposal.bind(this))
+      );
+
+      this.router.addRoute(
+        "delete",
+        "/type/:type/:id",
+        authenticate,
+        authorize(["model"]),
+        TryCatch(this.deleteMuseProposal.bind(this))
       );
     }
 
@@ -71,20 +71,17 @@ class MuseProposalController {
         return res.status(200).json({code: 200, success: true, data: response})
     }
 
-    // async getApprovedProposal(req, res){
-    //     const response = await MuseProposalService.getApprovedProposal()
-    //     if(response.length === 0){
-    //         return res.status(404).json({code: 404, success: false, message: "Muse proposal data not found"})
-    //     }
-    //     return res.status(200).json({code: 200, success: true, data: response})
-    // }
-
     async updateMuseProposal(req, res){
         const data = req?.body
         const response = await MuseProposalService.updateProposal(data.id, data)
         return res.status(200).json({code: 200, success: true, data: response})
     }
 
+    async deleteMuseProposal(req, res){
+        const {id, type} = req?.params
+        const response = await MuseProposalService.deleteProposal(id, type)
+        return res.status(200).json({code: 200, success: true, data: `${type === "proposal"? "Proposal": type === "poll"? "Poll": "Question" } deleted successfully`})
+    }
 
     getRouter() {
         return this.router.getRouter();
