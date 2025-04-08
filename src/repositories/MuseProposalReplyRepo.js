@@ -17,7 +17,7 @@ class MuseProposalReplyRepo {
             {
                 model: db.users,
                 as: "user",
-                attributes: ["name", "email"]
+                attributes: ["name", "email", "avatar"]
             },
             {
                 model: db.muse_proposal,
