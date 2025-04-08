@@ -6093,3 +6093,15 @@ notNull Violation: comment.comment_text cannot be null
     at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
     at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\AuthMiddleware.js:19:5
     at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\jsonwebtoken\verify.js:261:12
+2025-04-08T10:47:11.875Z [ERROR]: Error in bound createVideoCall: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received type number (43)
+2025-04-08T10:47:11.880Z [ERROR]: TypeError: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received type number (43)
+    at Function.from (node:buffer:319:9)
+    at AccessToken.build (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\agora-access-token\src\AccessToken.js:32:20)
+    at Function.buildTokenWithAccount (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\agora-access-token\src\RtcTokenBuilder.js:70:25)
+    at Function.buildTokenWithUid (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\agora-access-token\src\RtcTokenBuilder.js:40:21)
+    at module.exports.generateRtcToken (D:\Content Sharing\Main Branch\content-sharing-backend\src\utils\generateRtcToken.js:17:33)
+    at VideoCallService.createVideoCall (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\VideoCallService.js:15:30)
+    at VideoCallController.createVideoCall (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\VideoCallController\VideoCallController.js:25:45)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)

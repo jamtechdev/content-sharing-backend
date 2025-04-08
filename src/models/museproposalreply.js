@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      museProposalReply.belongsTo(models.users, {
+        foreignKey: "user_id",
+        as: "user"
+      })
+      museProposalReply.belongsTo(models.muse_proposal, {
+        foreignKey: "proposal_id",
+        as: "proposal"
+      })
     }
   }
   museProposalReply.init({
