@@ -33,6 +33,14 @@ class MuseProposalPollingController {
         TryCatch(this.updatePoll.bind(this))
       );
 
+      this.router.addRoute(
+        "delete",
+        "/:id",
+        authenticate,
+        authorize(["model"]),
+        TryCatch(this.deletePoll.bind(this))
+      );
+
     }
 
     async createPoll(req, res){
@@ -61,6 +69,12 @@ class MuseProposalPollingController {
         const data = req?.body
         const response = await MuseProposalPollingService.updatePoll(data.id, data)
         return res.status(200).json({code: 200, success: true, data: response})
+    }
+
+    async deletePoll(req, res){
+        const id = req?.params?.id
+        const response = await MuseProposalPollingService.deletePoll(id)
+        return res.status(200).json({code: 200, success: true, data: "Poll delete successfully"})
     }
 
 

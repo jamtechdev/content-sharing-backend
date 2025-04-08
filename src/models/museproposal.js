@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "proposal_id",
         as: "poll_data"
       })
+      MuseProposal.belongsTo(models.users, {
+        foreignKey: "subscriber_id",
+        as: "profile"
+      })
     }
   }
   MuseProposal.init({

@@ -24,7 +24,13 @@ class MuseProposalRepository {
             include: [{
                 model: MuseProposalPolling,
                 as: "poll_data"
-            }]
+            },
+            {
+                model: db.users,
+                as: "profile",
+                attributes: ["name", "avatar"]
+            }
+        ]
         })
     }
 
@@ -41,6 +47,10 @@ class MuseProposalRepository {
 
     async update(id, data) {
         return await MuseProposal.update(data, { where: { id } })
+    }
+
+    async delete(id) {
+        return await MuseProposal.destroy({ where: { id } })
     }
 }
 

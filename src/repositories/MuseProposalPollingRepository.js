@@ -25,6 +25,10 @@ class MuseProposalPollingRepository{
     async update(id, data){
         return await MuseProposalPolling.update(data, {where: {id}})
     }
+
+    async delete(id) {
+        return await MuseProposalPolling.destroy({ where: { id } })
+    }
 }
 
 module.exports = new MuseProposalPollingRepository();

@@ -20,6 +20,10 @@ class MuseProposalService{
     async updateProposal(id, data){
         return await MuseProposalRepository.update(id, data)
     }
+
+    async deleteProposal(id){
+        return await MuseProposalRepository.delete(id)
+    }
 }
 
 module.exports = new MuseProposalService()
