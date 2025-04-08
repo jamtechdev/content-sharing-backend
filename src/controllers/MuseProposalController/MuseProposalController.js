@@ -35,7 +35,7 @@ class MuseProposalController {
 
       this.router.addRoute(
         "delete",
-        "/:id",
+        "/type/:type/:id",
         authenticate,
         authorize(["model"]),
         TryCatch(this.deleteMuseProposal.bind(this))
@@ -78,11 +78,10 @@ class MuseProposalController {
     }
 
     async deleteMuseProposal(req, res){
-        const id = req?.params?.id
-        const response = await MuseProposalService.deleteProposal(id)
+        const {id, type} = req?.params
+        const response = await MuseProposalService.deleteProposal(id, type)
         return res.status(200).json({code: 200, success: true, data: "Proposal deleted successfully"})
     }
-
 
     getRouter() {
         return this.router.getRouter();

@@ -28,6 +28,10 @@ class MuseProposalReplyRepo {
     async delete(id) {
         return await MuseProposalReply.destroy({ where: { id } })
     }
+
+    async deleteByProposalId(id) {
+        return await MuseProposalReply.destroy({ where: { proposal_id: id } })
+    }
 }
 
 module.exports = new MuseProposalReplyRepo();

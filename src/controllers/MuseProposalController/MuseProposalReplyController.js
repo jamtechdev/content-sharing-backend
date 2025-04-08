@@ -24,13 +24,13 @@ class MuseProposalReplyController {
         TryCatch(this.getAllMuseProposalReply.bind(this))
       );
 
-    //   this.router.addRoute(
-    //     "put",
-    //     "/",
-    //     authenticate,
-    //     authorize(["model"]),
-    //     TryCatch(this.updateMuseProposalReply.bind(this))
-    //   );
+      this.router.addRoute(
+        "put",
+        "/",
+        authenticate,
+        authorize(["model"]),
+        TryCatch(this.updateMuseProposalReply.bind(this))
+      );
 
       this.router.addRoute(
         "delete",
@@ -62,6 +62,12 @@ class MuseProposalReplyController {
             return res.status(404).json({code: 404, success: false, message: "Proposal reply data not found"})
         }
         return res.status(200).json({code: 200, success: true, data: response})
+    }
+
+    async updateMuseProposalReply(req, res){
+        const data = req?.body
+        const response = await MuseProposalReplyService.updateProposalReply(data.id, data)
+        return res.status(200).json({code: 200, success: true, message: "Muse proposal reply updated successfully"})
     }
 
     async deleteMuseProposalReply(req, res){

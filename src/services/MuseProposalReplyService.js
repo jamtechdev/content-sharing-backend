@@ -17,7 +17,7 @@ class MuseProposalReplyService{
         return await MuseProposalReplyRepo.update(id, data)
     }
 
-    async deleteProposalReply(id, data){
+    async deleteProposalReply(id){
         return await MuseProposalReplyRepo.delete(id)
     }
 }
