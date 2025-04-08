@@ -80,7 +80,7 @@ class MuseProposalController {
     async deleteMuseProposal(req, res){
         const {id, type} = req?.params
         const response = await MuseProposalService.deleteProposal(id, type)
-        return res.status(200).json({code: 200, success: true, data: "Proposal deleted successfully"})
+        return res.status(200).json({code: 200, success: true, data: `${type === "proposal"? "Proposal": type === "poll"? "Poll": "Question" } deleted successfully`})
     }
 
     getRouter() {

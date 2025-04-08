@@ -32,13 +32,13 @@ class MuseProposalReplyController {
         TryCatch(this.updateMuseProposalReply.bind(this))
       );
 
-      this.router.addRoute(
-        "delete",
-        "/:id",
-        authenticate,
-        authorize(["model"]),
-        TryCatch(this.deleteMuseProposalReply.bind(this))
-      );
+      // this.router.addRoute(
+      //   "delete",
+      //   "/:id",
+      //   authenticate,
+      //   authorize(["model"]),
+      //   TryCatch(this.deleteMuseProposalReply.bind(this))
+      // );
     }
 
     async createMuseProposalReply(req, res){
@@ -70,11 +70,11 @@ class MuseProposalReplyController {
         return res.status(200).json({code: 200, success: true, message: "Muse proposal reply updated successfully"})
     }
 
-    async deleteMuseProposalReply(req, res){
-        const id = req?.params?.id;
-        const response = await MuseProposalReplyService.deleteProposalReply(id)
-        return res.status(200).json({code: 200, success: true, message: "Reply deleted successfully"})
-    }
+    // async deleteMuseProposalReply(req, res){
+    //     const id = req?.params?.id;
+    //     const response = await MuseProposalReplyService.deleteProposalReply(id)
+    //     return res.status(200).json({code: 200, success: true, message: "Reply deleted successfully"})
+    // }
 
     getRouter() {
         return this.router.getRouter();
