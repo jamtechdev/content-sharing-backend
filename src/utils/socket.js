@@ -205,7 +205,7 @@ const socketHandler = (io) => {
           activeSessions[disconnectedUserId] &&
           activeSessions[disconnectedUserId].size > 0
         ) {
-          console.log("Active sesesion for the disconnected user", activeSessions)
+          console.log("Active session for the disconnected user", activeSessions)
           console.log(`Ending chat session for ${disconnectedUserId}`);
           activeSessions[disconnectedUserId].clear();
           delete activeSessions[disconnectedUserId];

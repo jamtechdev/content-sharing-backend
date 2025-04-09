@@ -13,24 +13,26 @@ class MuseProposalReplyRepo {
     }
 
     async getAll() {
-        return await MuseProposalReply.findAll({include: [
-            {
-                model: db.users,
-                as: "user",
-                attributes: ["name", "email", "avatar"]
-            },
-            {
-                model: db.muse_proposal,
-                as: "proposal",
-                attributes: {exclude: ["createdAt", "updatedAt", "id", "subscriber_id", "plan_id"]}
-            },
+        return await MuseProposalReply.findAll({
+            include: [
+                {
+                    model: db.users,
+                    as: "user",
+                    attributes: ["name", "email", "avatar"]
+                },
+                {
+                    model: db.muse_proposal,
+                    as: "proposal",
+                    attributes: { exclude: ["createdAt", "updatedAt", "id", "subscriber_id", "plan_id"] }
+                },
 
-        ]})
+            ]
+        })
     }
 
-    async getAllApproved(){
+    async getAllApproved() {
         return await MuseProposalReply.findAll({
-            where: {status: "approved"}
+            where: { status: "approved" }
         })
     }
     async update(id, data) {
