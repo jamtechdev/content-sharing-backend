@@ -38,10 +38,17 @@ class MuseProposalRepository {
         return await MuseProposal.findAll({
             where: {
                 status: "approved", polling_status: "open"
-            }, include: [{
+            }, include: [
+            {
                 model: MuseProposalPolling,
                 as: "poll_data"
-            }]
+            },
+            {
+                model: db.users,
+                as: "profile",
+                attributes: ["id","name", "email"]
+            }
+        ]
         })
     }
 
