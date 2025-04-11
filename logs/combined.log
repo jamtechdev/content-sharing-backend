@@ -6105,3 +6105,281 @@ notNull Violation: comment.comment_text cannot be null
     at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
     at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
     at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+2025-04-10T08:05:01.976Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:05:01.979Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:05:38.159Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:05:38.162Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:05:57.254Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:05:57.256Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:06:26.904Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:06:26.905Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:06:36.181Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:06:36.182Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:06:38.311Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:06:38.312Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:07:40.569Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:07:40.572Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:08:49.252Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:08:49.253Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:08:55.827Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:08:55.828Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:09:34.416Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:09:34.416Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:09:58.435Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:09:58.436Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:46:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:10:39.896Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:10:39.898Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:47:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:12:26.830Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:12:26.832Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:47:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:15:06.852Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:15:06.855Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:47:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:16:11.574Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:16:11.577Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:17:36.061Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:17:36.062Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:18:27.512Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:18:27.513Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:18:47.810Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:18:47.810Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:27:50.550Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:27:50.550Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:27:58.211Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:27:58.212Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:28:05.684Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:28:05.684Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T08:29:36.952Z [ERROR]: Error in bound login: Invalid credentials
+2025-04-10T08:29:36.953Z [ERROR]: Error: Invalid credentials
+    at AuthService.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\AuthService.js:48:13)
+    at async AuthController.login (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\User\AuthController.js:72:29)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T10:10:42.980Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:10:43.035Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:20:23.836Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:20:23.842Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:21:05.974Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:21:05.980Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:21:15.748Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:21:15.754Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:23:17.719Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:23:17.725Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:25:52.215Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:25:52.231Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:26:09.219Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:26:09.223Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:26:32.322Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:26:32.330Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:28:11.879Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:28:11.886Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:29:10.175Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:29:10.180Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:34:39.503Z [ERROR]: Error in bound mysteryShoutOutWinner: smth.col.startsWith is not a function
+2025-04-10T10:34:39.509Z [ERROR]: TypeError: smth.col.startsWith is not a function
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2402:20)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2389:25
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2387:19)
+    at MySQLQueryGenerator.handleSequelizeMethod (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query-generator.js:287:18)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1576:26
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator.escapeAttributes (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1563:37)
+    at MySQLQueryGenerator.selectQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1313:28)
+2025-04-10T10:37:50.619Z [ERROR]: Error in bound mysteryShoutOutWinner: Invalid value { model: muse_proposal_polling, as: 'poll_data' }
+2025-04-10T10:37:50.635Z [ERROR]: Error: Invalid value { model: muse_proposal_polling, as: 'poll_data' }
+    at Object.escape (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sql-string.js:67:11)
+    at MySQLQueryGenerator.escape (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:1128:22)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2763:69
+    at Array.map (<anonymous>)
+    at MySQLQueryGenerator._whereParseSingleValueObject (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2763:52)
+    at MySQLQueryGenerator.whereItemQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2535:19)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2440:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2438:35)
+    at MySQLQueryGenerator.getWhereConditions (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-generator.js:2866:19)
+2025-04-10T10:38:31.285Z [ERROR]: Error in bound mysteryShoutOutWinner: In aggregated query without GROUP BY, expression #2 of SELECT list contains nonaggregated column 'contentsharing.poll_data.id'; this is incompatible with sql_mode=only_full_group_by
+2025-04-10T10:38:31.286Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.rawSelect (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1043:18)
+    at async Function.aggregate (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2067:19)
+    at async Function.max (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:2206:12)
+    at async MuseProposalRepository.getWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\MuseProposalRepository.js:59:16)
+    at async MuseProposalService.shoutOutWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\MuseProposalService.js:25:16)
+    at async MuseProposalController.mysteryShoutOutWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:83:24)
+    at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-10T10:43:54.577Z [ERROR]: Error in bound mysteryShoutOutWinner: The argument passed to findOne must be an options object, use findByPk if you wish to pass a single primary key value
+2025-04-10T10:43:54.583Z [ERROR]: Error: The argument passed to findOne must be an options object, use findByPk if you wish to pass a single primary key value
+    at Function.findOne (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1972:13)
+    at MuseProposalRepository.getWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\repositories\MuseProposalRepository.js:59:35)
+    at MuseProposalService.shoutOutWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\services\MuseProposalService.js:25:45)
+    at MuseProposalController.mysteryShoutOutWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:83:50)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:13
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)
+    at D:\Content Sharing\Main Branch\content-sharing-backend\src\middleware\RoleMiddleware.js:8:14
+    at Layer.handle [as handle_request] (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Content Sharing\Main Branch\content-sharing-backend\node_modules\express\lib\router\route.js:149:13)

@@ -13,6 +13,14 @@ class MuseProposalService {
         return await MuseProposalRepository.create(data)
     }
 
+    async getProposalById(id){
+        const response= await MuseProposalRepository.getById(id)
+        if(!response){
+            return {code: 404, message: "Proposal not found"}
+        }
+        return response;
+    }
+
     async getAllProposal() {
         return await MuseProposalRepository.getAll()
     }
