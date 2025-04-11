@@ -33,6 +33,14 @@ class MuseProposalService {
         return await MuseProposalRepository.getShoutOutShortlist()
     }
 
+    async getShoutOutWinner(){
+        const response = await MuseProposalRepository.getWinner()
+        if(!response){
+            return {code: 404, message: "Proposal not found"}
+        }
+        return response;
+    }
+
     async updateProposal(id, data) {
         return await MuseProposalRepository.update(id, data)
     }

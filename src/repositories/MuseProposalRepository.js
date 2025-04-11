@@ -83,6 +83,25 @@ class MuseProposalRepository {
         })
     }
 
+    async getWinner() {
+        const {startDate, endDate }= getLastMonthDateRange()
+      return await MuseProposal.findOne({
+          where: {
+              is_winner: true,
+              createdAt: {
+                  [db.Sequelize.Op.gte]: startDate,
+                  [db.Sequelize.Op.lte]: endDate
+              },
+          },
+          include: [
+              {
+                  model: db.users,
+                  as: "profile",
+                  attributes: ["id", "name", "email", "avatar"]
+              }
+          ]
+      })
+  }
     
 
     async update(id, data) {

@@ -21,8 +21,16 @@ class MuseProposalController {
         "get",
         "/winner/:id",
         authenticate,
-        authorize(["user", "model"]),
+        authorize(["model"]),
         TryCatch(this.shoutOutWinner.bind(this))
+      );
+
+      this.router.addRoute(
+        "get",
+        "/month/winner",
+        authenticate,
+        authorize(["user", "model"]),
+        TryCatch(this.getMonthlyShoutOutWinner.bind(this))
       );
 
       this.router.addRoute(
@@ -85,6 +93,14 @@ class MuseProposalController {
             return res.status(404).json({code: 404, success: false, message: "Muse proposal data not found"})
         }
         return res.status(200).json({code: 200, success: true, data: response})
+    }
+
+    async getMonthlyShoutOutWinner(req, res){
+      const response = await MuseProposalService.getShoutOutWinner()
+      if(response.code){
+        return res.status(response.code).json({code: response.code, success: false, message: response.message})
+      }
+      return res.status(200).json({code: 200, success: true, data: response})
     }
 
     async shoutOutWinner(req, res){
