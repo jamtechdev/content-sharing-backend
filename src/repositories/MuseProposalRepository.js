@@ -77,6 +77,8 @@ class MuseProposalRepository {
         })
     }
 
+    
+
     async update(id, data) {
         return await MuseProposal.update(data, { where: { id } })
     }

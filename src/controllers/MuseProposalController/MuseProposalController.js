@@ -19,6 +19,14 @@ class MuseProposalController {
 
       this.router.addRoute(
         "get",
+        "/shoutout/:id",
+        authenticate,
+        authorize(["user", "model"]),
+        TryCatch(this.shoutOutWinner.bind(this))
+      );
+
+      this.router.addRoute(
+        "get",
         "/",
         authenticate,
         authorize(["user", "model"]),
@@ -29,7 +37,7 @@ class MuseProposalController {
         "get",
         "/shoutout/shortlist",
         authenticate,
-        authorize(["user"]),
+        authorize(["user", "model"]),
         TryCatch(this.mysteryShoutOutShortlist.bind(this))
       );
 
@@ -77,6 +85,15 @@ class MuseProposalController {
             return res.status(404).json({code: 404, success: false, message: "Muse proposal data not found"})
         }
         return res.status(200).json({code: 200, success: true, data: response})
+    }
+
+    async shoutOutWinner(req, res){
+      const {id} = req?.params;
+      const response = await MuseProposalService.getProposalById(id)
+      if(response.code){
+        return res.status(response.code).json({code: response.code, success: false, message: response.message})
+      }
+      return res.status(200).json({code: 200, success: true, data: response})
     }
 
     async mysteryShoutOutShortlist(req, res){
