@@ -18,7 +18,13 @@ class MuseProposalRepository {
     }
 
     async getById(id) {
-        return await MuseProposal.findOne({ where: { id } })
+        return await MuseProposal.findOne({ where: { id },  include: [
+            {
+                model: db.users,
+                as: "profile",
+                attributes: ["id", "name", "email", "avatar"]
+            }
+        ] })
     }
 
     async getAll() {
@@ -71,7 +77,7 @@ class MuseProposalRepository {
                 {
                     model: db.users,
                     as: "profile",
-                    attributes: ["id", "name", "email"]
+                    attributes: ["id", "name", "email", "avatar"]
                 }
             ]
         })
