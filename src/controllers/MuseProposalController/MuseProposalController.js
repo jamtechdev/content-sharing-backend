@@ -19,7 +19,7 @@ class MuseProposalController {
 
       this.router.addRoute(
         "get",
-        "/shoutout/:id",
+        "/winner/:id",
         authenticate,
         authorize(["user", "model"]),
         TryCatch(this.shoutOutWinner.bind(this))
