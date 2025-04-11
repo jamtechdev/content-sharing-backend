@@ -248,9 +248,7 @@ class ContentController {
       if (response.code) {
         return res.status(response.code).json({ code: response.code, success: false, message: response.message })
       }
-      return res.status(200).json({ code: 200, success: true, data: response })
-
-  
+      return res.status(200).json({ code: 200, success: true, data: response })  
   }
 
   async updateContent(req, res) {

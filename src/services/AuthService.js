@@ -38,11 +38,10 @@ class AuthService {
   async login(email, password) {
     if (!email || !password) {
       throw new HttpError(400, "Email and password are required");
-    }
-    console.log(email, password, "user data========")
+    }          
     const user = await UserRepository.findByEmail(email);
-    
-    if (!user || !(bcrypt.compare(password, user.password))) { // removed await from bcrypt
+    console.log("decrypt", await bcrypt.compare(password, user.password))
+    if (!user || !(await bcrypt.compare(password, user.password))) { // removed await from bcrypt
       throw new HttpError(401, "Invalid credentials");
     }
 
