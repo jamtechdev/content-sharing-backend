@@ -21,6 +21,10 @@ class MuseProposalService {
         return await MuseProposalRepository.getApprovedProposal()
     }
 
+    async getShoutOutShortlist(){
+        return await MuseProposalRepository.getShoutOutShortlist()
+    }
+
     async updateProposal(id, data) {
         return await MuseProposalRepository.update(id, data)
     }
