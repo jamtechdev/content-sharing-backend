@@ -18,7 +18,7 @@ class MuseProposalRepository {
     }
 
     async getById(id) {
-        return await MuseProposal.findOne({ where: { id },  include: [
+        return await MuseProposal.findOne({ where: { id, is_winner: false },  include: [
             {
                 model: db.users,
                 as: "profile",
