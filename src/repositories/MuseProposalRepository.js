@@ -85,7 +85,7 @@ class MuseProposalRepository {
 
     async getWinner() {
         const {startDate, endDate }= getLastMonthDateRange()
-      return await MuseProposal.findOne({
+      return await MuseProposal.findAll({
           where: {
               is_winner: true,
               createdAt: {

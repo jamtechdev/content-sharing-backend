@@ -58,6 +58,14 @@ class UserController {
       authorize(["model"]),
       TryCatch(this.blockUnblockUser.bind(this))
     )
+
+    this.router.addRoute(
+      'get',
+      "/user/:id",
+      authenticate,
+      authorize(["model"]),
+      TryCatch(this.getUserDetailById.bind(this))
+    )
   }
   //   get-user-profile
   async me(req, res) {
@@ -217,6 +225,16 @@ class UserController {
   }
   getRouter() {
     return this.router.getRouter();
+  }
+
+  async getUserDetailById(req, res){
+    const {id} = req?.params;
+    const response = await UserService.getUserById(id);
+    return res.status(200).json({
+      code: 200,
+      success: true, 
+      data: response
+    })
   }
 }
 
