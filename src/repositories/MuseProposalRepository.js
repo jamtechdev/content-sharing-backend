@@ -44,7 +44,13 @@ class MuseProposalRepository {
             {
                 model: db.users,
                 as: "profile",
-                attributes: ["id", "name", "avatar"]
+                attributes: ["id", "name", "avatar", "role_id"],
+                include: [
+                    {
+                        model: db.Roles,
+                        as: "role"
+                    }
+                ]
             }
         ]})
     }
@@ -61,7 +67,14 @@ class MuseProposalRepository {
                 {
                     model: db.users,
                     as: "profile",
-                    attributes: ["id", "name", "email"]
+                    attributes: ["id", "name", "email", "role_id"],
+                    include: [
+                        { 
+                            model: db.Roles,
+                            as: "role",
+                            attributes: ["name"]
+                        }
+                    ]
                 }
             ]
         })
