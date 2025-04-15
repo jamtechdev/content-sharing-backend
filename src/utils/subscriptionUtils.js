@@ -40,3 +40,22 @@ module.exports.getLastMonthDateRange = () => {
 
     return { startDate, endDate };
 };
+
+module.exports.getCurrentMonthDateRange = () => {
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth(); // Current month (0-indexed)
+    const currentYear = currentDate.getFullYear(); // Current year
+
+    // Get the first day of the current month
+    const startDate = new Date(currentYear, currentMonth, 1);
+    
+    // Get the last day of the current month by setting the day to 0 on the next month.
+    // This gives the correct last day of the current month.
+    const endDate = new Date(currentYear, currentMonth + 1, 0); // This gives the last day of the current month.
+
+    // Normalize to local timezone if needed
+    startDate.setHours(0, 0, 0, 0);
+    endDate.setHours(23, 59, 59, 999);
+
+    return { startDate, endDate };
+};

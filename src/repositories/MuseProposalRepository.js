@@ -2,7 +2,7 @@ const db = require('../models/index')
 const MuseProposal = db.muse_proposal;
 const MuseProposalPolling = db.muse_proposal_polling
 const MuseProposalReply = db.muse_proposal_replies;
-const {getLastMonthDateRange} = require('../utils/subscriptionUtils')
+const {getLastMonthDateRange, getCurrentMonthDateRange} = require('../utils/subscriptionUtils')
 
 
 class MuseProposalRepository {
@@ -15,7 +15,14 @@ class MuseProposalRepository {
     // }
 
     async getByUser(userId) {
-        return MuseProposal.findOne({ where: { subscriber_id: userId } })
+        const {startDate, endDate} = getCurrentMonthDateRange()
+        return MuseProposal.findOne({ where: { 
+            createdAt: {
+                [db.Sequelize.Op.gte]: startDate,
+                [db.Sequelize.Op.lte]: endDate
+            },
+            subscriber_id: userId 
+        } })
     }
 
     async getById(id) {
