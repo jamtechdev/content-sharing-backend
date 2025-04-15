@@ -6780,3 +6780,14 @@ notNull Violation: comment.comment_text cannot be null
     at async MuseProposalService.getApprovedProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\services\MuseProposalService.js:33:16)
     at async MuseProposalController.getAllMuseProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:88:20)
     at async D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-15T10:51:00.022Z [ERROR]: Error in bound getAllMuseProposal: Unknown column 'profile->role.created_at' in 'field list'
+2025-04-15T10:51:00.024Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async MuseProposalRepository.getAll (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\repositories\MuseProposalRepository.js:39:16)
+    at async MuseProposalService.getAllProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\services\MuseProposalService.js:29:16)
+    at async MuseProposalController.getAllMuseProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:91:20)
+    at async D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
