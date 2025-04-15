@@ -6704,3 +6704,50 @@ notNull Violation: comment.comment_text cannot be null
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async MuseProposalController.getMonthlyShoutOutWinner (D:\Content Sharing\Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:99:24)
     at async D:\Content Sharing\Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
+2025-04-15T10:44:15.960Z [ERROR]: Error in bound getAllMuseProposal: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-04-15T10:44:15.979Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:405:16)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+2025-04-15T10:44:18.205Z [ERROR]: Error in bound getAllMuseProposal: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-04-15T10:44:18.206Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:405:16)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+2025-04-15T10:44:32.229Z [ERROR]: Error in bound getAllMuseProposal: Include unexpected. Element has to be either a Model, an Association or an object.
+2025-04-15T10:44:32.235Z [ERROR]: Error: Include unexpected. Element has to be either a Model, an Association or an object.
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:416:11)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._conformInclude (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:405:16)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:59
+    at Array.map (<anonymous>)
+    at Function._conformIncludes (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:352:39)
+    at Function._baseMerge (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:818:10)
+    at Function._defaultsOptions (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:861:17)
+2025-04-15T10:45:02.548Z [ERROR]: Error in bound getAllMuseProposal: Unknown column 'profile->role.created_at' in 'field list'
+2025-04-15T10:45:02.550Z [ERROR]: Error
+    at Query.run (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\mysql\query.js:46:25)
+    at D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\sequelize.js:650:28
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.select (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+    at async Function.findAll (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\node_modules\sequelize\src\model.js:1824:21)
+    at async MuseProposalRepository.getApprovedProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\repositories\MuseProposalRepository.js:59:16)
+    at async MuseProposalService.getApprovedProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\services\MuseProposalService.js:33:16)
+    at async MuseProposalController.getAllMuseProposal (D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\controllers\MuseProposalController\MuseProposalController.js:88:20)
+    at async D:\Content Sharing\Content Sharing Main Branch\content-sharing-backend\src\decorators\TryCatch.js:5:7
