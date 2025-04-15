@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "subscriber_id",
         as: "profile"
       })
+      MuseProposal.hasMany(models.muse_proposal_replies, {
+        foreignKey: "proposal_id",
+        as: "reply"
+      })
     }
   }
   MuseProposal.init({
@@ -65,6 +69,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     proposal_type: {
       type: DataTypes.ENUM("poll", "question")
+    },
+    winner_declared_at: {
+      type: DataTypes.DATE,
     }
   }, {
     sequelize,
