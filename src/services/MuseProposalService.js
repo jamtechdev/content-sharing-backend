@@ -2,22 +2,25 @@ const MuseProposalRepository = require('../repositories/MuseProposalRepository')
 const MuseProposalPollingRepository = require('../repositories/MuseProposalPollingRepository')
 const MuseProposalReplyRepo = require('../repositories/MuseProposalReplyRepo')
 const { sequelize } = require('../models'); // adjust path to where sequelize is exported
-const {timeRangeCalculator} = require('../utils/subscriptionUtils')
+const { timeRangeCalculator } = require('../utils/subscriptionUtils')
 
 
 class MuseProposalService {
-    async createProposal(data) {
-        const proposalExist = await MuseProposalRepository.getByUser(data.subscriber_id)
-        if (proposalExist) {
-            return { code: 409, message: "You have already created proposal" }
+    async createProposal(data, role) {
+        console.log(data, role)
+        if (role === "user") {
+            const proposalExist = await MuseProposalRepository.getByUser(data.subscriber_id)
+            if (proposalExist) {
+                return { code: 409, message: "You have already created proposal" }
+            }
         }
         return await MuseProposalRepository.create(data)
     }
 
-    async getProposalById(id){
-        const response= await MuseProposalRepository.getById(id)
-        if(!response){
-            return {code: 404, message: "Proposal not found"}
+    async getProposalById(id) {
+        const response = await MuseProposalRepository.getById(id)
+        if (!response) {
+            return { code: 404, message: "Proposal not found" }
         }
         return response;
     }
@@ -30,18 +33,18 @@ class MuseProposalService {
         return await MuseProposalRepository.getApprovedProposal()
     }
 
-    async getShoutOutShortlist(){
+    async getShoutOutShortlist() {
         return await MuseProposalRepository.getShoutOutShortlist()
     }
 
-    async getShoutOutWinner(){
+    async getShoutOutWinner() {
         let response = await MuseProposalRepository.getWinner()
-        if(response.length === 0){
-            return {code: 404, message: "Proposal not found"}
+        if (response.length === 0) {
+            return { code: 404, message: "Proposal not found" }
         }
-        response = response.filter(item=>{
+        response = response.filter(item => {
             const timeDiff = timeRangeCalculator(item.winner_declared_at)
-            if(timeDiff === 0){
+            if (timeDiff === 0) {
                 return item
             }
         })

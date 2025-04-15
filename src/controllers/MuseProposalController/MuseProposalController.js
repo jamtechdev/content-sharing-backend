@@ -69,12 +69,13 @@ class MuseProposalController {
     async createMuseProposal(req, res){
         const data = req.body;
         const subscriberId = req?.user?.userId
+        const role = req?.user?.role
         if(!data.proposal){
             return res.status(400).json({code: 400, success: false, message: "Missing required parameters"})
         }
         
         data.subscriber_id = subscriberId
-        const response = await MuseProposalService.createProposal(data)
+        const response = await MuseProposalService.createProposal(data, role)
         if(response.code === 409){
           return res.status(response.code).json({code: response.code, success:false, message: response.message})
         }
