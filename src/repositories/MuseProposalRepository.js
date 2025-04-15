@@ -37,7 +37,7 @@ class MuseProposalRepository {
             {
                 model: db.users,
                 as: "profile",
-                attributes: ["name", "avatar"]
+                attributes: ["id", "name", "avatar"]
             }
         ]})
     }
