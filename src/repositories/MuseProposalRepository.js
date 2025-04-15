@@ -48,7 +48,8 @@ class MuseProposalRepository {
                 include: [
                     {
                         model: db.Roles,
-                        as: "role"
+                        as: "role",
+                        attributes: ["name"]
                     }
                 ]
             }
