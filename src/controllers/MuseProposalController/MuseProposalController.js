@@ -13,7 +13,7 @@ class MuseProposalController {
         "post",
         "/create",
         authenticate,
-        authorize(["user"]),
+        authorize(["user", "model"]),
         TryCatch(this.createMuseProposal.bind(this))
       );
 
@@ -22,7 +22,7 @@ class MuseProposalController {
         "/winner/:id",
         authenticate,
         authorize(["model"]),
-        TryCatch(this.shoutOutWinner.bind(this))
+        TryCatch(this.shoutOutWinnerDeclare.bind(this))
       );
 
       this.router.addRoute(
@@ -103,13 +103,13 @@ class MuseProposalController {
       return res.status(200).json({code: 200, success: true, data: response})
     }
 
-    async shoutOutWinner(req, res){
+    async shoutOutWinnerDeclare(req, res){
       const {id} = req?.params;
       const response = await MuseProposalService.getProposalById(id)
       if(response.code){
         return res.status(response.code).json({code: response.code, success: false, message: response.message})
       }
-      await MuseProposalService.updateProposal(id, {is_winner: true})
+      await MuseProposalService.updateProposal(id, {is_winner: true, winner_declared_at: new Date()})
       return res.status(200).json({code: 200, success: true, data: response})
     }
 

@@ -1,10 +1,10 @@
 const SubscriptionRepository = require('../repositories/SubscriptionRepository')
 
-module.exports.premiumWindowCalculator = (contentGrantDate) => {
+module.exports.timeRangeCalculator = (getDate) => {
     // let quarterDays = 90;
     let millisecondsInADay = 24 * 60 * 60 * 1000
     let now = new Date()
-    let timeDiff = Math.ceil((contentGrantDate - now) / millisecondsInADay)
+    let timeDiff = Math.ceil((getDate - now) / millisecondsInADay)
 
     // const remainingDays = Math.floor(quarterDays - (timeDiff / millisecondsInADay))
     console.log("Remaining days to unlock on premium content===>", timeDiff)

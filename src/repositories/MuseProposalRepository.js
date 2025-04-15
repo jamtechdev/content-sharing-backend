@@ -1,6 +1,7 @@
 const db = require('../models/index')
 const MuseProposal = db.muse_proposal;
 const MuseProposalPolling = db.muse_proposal_polling
+const MuseProposalReply = db.muse_proposal_replies;
 const {getLastMonthDateRange} = require('../utils/subscriptionUtils')
 
 
@@ -98,6 +99,10 @@ class MuseProposalRepository {
                   model: db.users,
                   as: "profile",
                   attributes: ["id", "name", "email", "avatar"]
+              },
+              {
+                model: MuseProposalReply,
+                as: "reply"
               }
           ]
       })

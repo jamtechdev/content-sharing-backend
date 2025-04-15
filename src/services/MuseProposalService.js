@@ -2,6 +2,7 @@ const MuseProposalRepository = require('../repositories/MuseProposalRepository')
 const MuseProposalPollingRepository = require('../repositories/MuseProposalPollingRepository')
 const MuseProposalReplyRepo = require('../repositories/MuseProposalReplyRepo')
 const { sequelize } = require('../models'); // adjust path to where sequelize is exported
+const {timeRangeCalculator} = require('../utils/subscriptionUtils')
 
 
 class MuseProposalService {
@@ -34,10 +35,16 @@ class MuseProposalService {
     }
 
     async getShoutOutWinner(){
-        const response = await MuseProposalRepository.getWinner()
-        if(!response){
+        let response = await MuseProposalRepository.getWinner()
+        if(response.length === 0){
             return {code: 404, message: "Proposal not found"}
         }
+        response = response.filter(item=>{
+            const timeDiff = timeRangeCalculator(item.winner_declared_at)
+            if(timeDiff === 0){
+                return item
+            }
+        })
         return response;
     }
 

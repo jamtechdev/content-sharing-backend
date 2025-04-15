@@ -2,7 +2,7 @@ const HttpError = require("../decorators/HttpError");
 const ContentRepository = require("../repositories/ContentRepository");
 const SubscriptionRepository = require("../repositories/SubscriptionRepository");
 const UserService = require("./UserService");
-const { premiumWindowCalculator } = require('../utils/subscriptionUtils')
+const { timeRangeCalculator } = require('../utils/subscriptionUtils')
 
 class ContentService {
   async createContent(data) {
@@ -39,7 +39,7 @@ class ContentService {
       return { code: 400, message: "You don't have any valid subscription plan" }
     }
     const subscription = await SubscriptionRepository.getByUser(userId)
-    let remainingDays = premiumWindowCalculator(subscription?.content_grant);
+    let remainingDays = timeRangeCalculator(subscription?.content_grant);
     if (remainingDays === 0 && subscription.end_date >= new Date()) {
       plan = plan === "basic" ? "premium" : plan === "premium" ? "exclusive" : "noPlan"
       return await ContentRepository.getRandom(plan)
