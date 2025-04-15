@@ -86,6 +86,7 @@ class MuseProposalRepository {
           console.log("Current and end date", startDate, endDate)
         return await MuseProposal.findAll({
             where: {
+                proposal_type: "poll",
                 createdAt: {
                     [db.Sequelize.Op.gte]: startDate,
                     [db.Sequelize.Op.lte]: endDate
