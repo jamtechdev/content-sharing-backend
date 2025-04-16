@@ -72,6 +72,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     winner_declared_at: {
       type: DataTypes.DATE,
+    },
+    seen_status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false 
     }
   }, {
     sequelize,
