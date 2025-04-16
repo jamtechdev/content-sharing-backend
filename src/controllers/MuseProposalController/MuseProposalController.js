@@ -3,6 +3,8 @@ const authenticate = require("../../middleware/AuthMiddleware");
 const authorize = require("../../middleware/RoleMiddleware");
 const Router = require("../../decorators/Router");
 const TryCatch = require("../../decorators/TryCatch");
+const MuseProposalReplyService = require('../../services/MuseProposalReplyService')
+
 
 
 class MuseProposalController {
@@ -27,11 +29,20 @@ class MuseProposalController {
 
       this.router.addRoute(
         "get",
+        "/reply/shoutout/:id",
+        authenticate,
+        authorize(["user", "model"]),
+        TryCatch(this.shoutOutWinnerDeclareForReply.bind(this))
+      );
+
+      this.router.addRoute(
+        "get",
         "/month/winner",
         authenticate,
         authorize(["user", "model"]),
         TryCatch(this.getMonthlyShoutOutWinner.bind(this))
       );
+
 
       this.router.addRoute(
         "get",
@@ -114,18 +125,30 @@ class MuseProposalController {
 
     async shoutOutWinnerDeclare(req, res){
       const {id} = req?.params;
-      const response = await MuseProposalService.getProposalById(id)
-      if(response.code){
-        return res.status(response.code).json({code: response.code, success: false, message: response.message})
-      }
+      // const response = await MuseProposalService.getProposalById(id)
+      // if(response.code){
+      //   return res.status(response.code).json({code: response.code, success: false, message: response.message})
+      // }
       await MuseProposalService.updateProposal(id, {is_winner: true, winner_declared_at: new Date()})
-      return res.status(200).json({code: 200, success: true, data: response})
+      return res.status(200).json({code: 200, success: true, message: "Poll shoutout declared successfully"})
+    }
+    
+    async shoutOutWinnerDeclareForReply(req, res){ 
+      const {id} = req?.params;
+      // const response = await MuseProposalService.getShoutOutWinnerForReply(id)
+      // if(response.code){
+      //   return res.status(response.code).json({code: response.code, success: false, message: response.message})
+      // }
+      // return res.status(200).json({code: 200, success: true, data: response})
+      await MuseProposalReplyService.updateProposalReply(id, {is_winner: true, winner_declared_at: new Date()})
+      return res.status(200).json({code: 200, success: true, message: "Reply shoutout declared successfully"})
     }
 
     async mysteryShoutOutShortlist(req, res){
       const response = await MuseProposalService.getShoutOutShortlist();
       return res.status(200).json({code: 200, success: true, data: response})
     }
+
 
     async updateWinnerSeenStatus(req, res){
       const data = req.body

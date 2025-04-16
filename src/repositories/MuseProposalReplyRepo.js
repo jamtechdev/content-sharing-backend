@@ -1,7 +1,7 @@
 const db = require('../models/index')
 const MuseProposal = db.muse_proposal;
 const MuseProposalReply = db.muse_proposal_replies
-
+const {getLastMonthDateRange} = require('../utils/subscriptionUtils')
 
 class MuseProposalReplyRepo {
     async create(data) {
@@ -35,6 +35,32 @@ class MuseProposalReplyRepo {
             where: { status: "approved" }
         })
     }
+
+   async getWinner() {
+           const {startDate, endDate }= getLastMonthDateRange()
+         return await MuseProposalReply.findOne({
+             where: {
+                 is_winner: true,
+                 status: "approved",
+                 createdAt: {
+                     [db.Sequelize.Op.gte]: startDate,
+                     [db.Sequelize.Op.lte]: endDate
+                 },
+             },
+             include: [
+                //  {
+                //      model: db.users,
+                //      as: "profile",
+                //      attributes: ["id", "name", "email", "avatar"]
+                //  },
+                 {
+                   model: MuseProposal,
+                   as: "proposal"
+                 }
+             ]
+         })
+     }
+
     async update(id, data) {
         return await MuseProposalReply.update(data, { where: { id } })
     }

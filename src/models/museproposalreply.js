@@ -36,6 +36,17 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       type: DataTypes.ENUM("pending", "approved", "rejected"),
       defaultValue: "pending"
+    },
+    is_winner: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    is_runner_up: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    winner_declared_at: {
+      type: DataTypes.DATE
     }
   }, {
     sequelize,
