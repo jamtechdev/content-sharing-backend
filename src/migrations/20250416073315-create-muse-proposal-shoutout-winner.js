@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('MuseProposalWinners', {
+    await queryInterface.createTable('muse_proposal_shoutout_winners', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -34,6 +34,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('MuseProposalWinners');
+    await queryInterface.dropTable('muse_proposal_shoutout_winners');
   }
 };

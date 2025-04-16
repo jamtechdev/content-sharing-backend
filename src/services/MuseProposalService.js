@@ -39,9 +39,9 @@ class MuseProposalService {
 
     async getShoutOutWinner() {
         let pollWinner = await MuseProposalRepository.getWinner()
-        if (!pollWinner) {
-            return { code: 404, message: "Proposal not found" }
-        }
+        // if (!pollWinner) {
+        //     return { code: 404, message: "Proposal not found" }
+        // }
         let replyWinner = await MuseProposalReplyRepo.getWinner()
         let response = [pollWinner, replyWinner]
         response = response.filter(item => {
