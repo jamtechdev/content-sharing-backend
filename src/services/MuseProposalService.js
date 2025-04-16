@@ -38,18 +38,33 @@ class MuseProposalService {
     }
 
     async getShoutOutWinner() {
-        let response = await MuseProposalRepository.getWinner()
-        if (response.length === 0) {
+        let pollWinner = await MuseProposalRepository.getWinner()
+        if (!pollWinner) {
             return { code: 404, message: "Proposal not found" }
         }
+        let replyWinner = await MuseProposalReplyRepo.getWinner()
+        let response = [pollWinner, replyWinner]
         response = response.filter(item => {
-            const timeDiff = timeRangeCalculator(item.winner_declared_at)
+            const timeDiff = timeRangeCalculator(item?.winner_declared_at)
             if (timeDiff === 0) {
                 return item
             }
         })
+
         return response;
     }
+
+    // async getShoutOutWinnerForReply(id){
+    //     const reply = await MuseProposalReplyRepo.getById(id)
+    //     if(!reply){
+    //         return {code: 404, message: "Reply data not found"}
+    //     }
+    //     const proposal = await MuseProposalRepository.getById(reply.proposal_id)
+    //     if(!proposal){
+    //         return {code: 404, message: "Proposal not found"}
+    //     }
+    //     return reply
+    // }
 
     async updateProposal(id, data) {
         return await MuseProposalRepository.update(id, data)

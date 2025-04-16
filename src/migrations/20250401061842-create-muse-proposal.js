@@ -54,6 +54,14 @@ module.exports = {
       proposal_type: {
         type: Sequelize.ENUM("poll", "question"),
       },
+
+      winner_declared_at: {
+        type: Sequelize.DATE
+      },
+      seen_status: {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

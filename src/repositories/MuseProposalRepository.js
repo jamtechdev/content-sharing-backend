@@ -31,7 +31,11 @@ class MuseProposalRepository {
                 model: db.users,
                 as: "profile",
                 attributes: ["id", "name", "email", "avatar"]
-            }
+            },
+            {
+                model: MuseProposalReply,
+                as: "reply"
+            },
         ] })
     }
 
@@ -40,6 +44,10 @@ class MuseProposalRepository {
             include: [{
                 model: MuseProposalPolling,
                 as: "poll_data"
+            },
+            {
+                model: MuseProposalReply,
+                as: "reply"
             },
             {
                 model: db.users,
@@ -64,6 +72,10 @@ class MuseProposalRepository {
                 {
                     model: MuseProposalPolling,
                     as: "poll_data"
+                },
+                {
+                    model: MuseProposalReply,
+                    as: "reply"
                 },
                 {
                     model: db.users,
@@ -108,9 +120,10 @@ class MuseProposalRepository {
 
     async getWinner() {
         const {startDate, endDate }= getLastMonthDateRange()
-      return await MuseProposal.findAll({
+      return await MuseProposal.findOne({
           where: {
               is_winner: true,
+              status: "approved",
               createdAt: {
                   [db.Sequelize.Op.gte]: startDate,
                   [db.Sequelize.Op.lte]: endDate
@@ -129,7 +142,6 @@ class MuseProposalRepository {
           ]
       })
   }
-
 
     async update(id, data) {
         return await MuseProposal.update(data, { where: { id } })
