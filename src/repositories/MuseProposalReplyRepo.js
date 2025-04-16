@@ -55,7 +55,14 @@ class MuseProposalReplyRepo {
                 //  },
                  {
                    model: MuseProposal,
-                   as: "proposal"
+                   as: "proposal",
+                   include: [
+                    {
+                        model: db.users,
+                        as: "profile",
+                        attributes: ["id", "name", "email", "avatar"]
+                    }
+                   ]
                  }
              ]
          })
