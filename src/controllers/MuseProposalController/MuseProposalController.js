@@ -61,7 +61,7 @@ class MuseProposalController {
         "put",
         "/seen/status",
         authenticate,
-        authorize(["model"]),
+        authorize(["model", "user"]),
         TryCatch(this.updateWinnerSeenStatus.bind(this))
       );
 
