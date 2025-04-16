@@ -58,6 +58,14 @@ class MuseProposalController {
       );
 
       this.router.addRoute(
+        "put",
+        "/seen/status",
+        authenticate,
+        authorize(["model"]),
+        TryCatch(this.updateWinnerSeenStatus.bind(this))
+      );
+
+      this.router.addRoute(
         "delete",
         "/type/:type/:id",
         authenticate,
@@ -117,6 +125,14 @@ class MuseProposalController {
     async mysteryShoutOutShortlist(req, res){
       const response = await MuseProposalService.getShoutOutShortlist();
       return res.status(200).json({code: 200, success: true, data: response})
+    }
+
+    async updateWinnerSeenStatus(req, res){
+      const data = req.body
+      for(let id of data.winner_id){
+        await MuseProposalService.updateProposal(id, data)
+      }
+      return res.status(200).json({code: 200, success: true, message: "Seen status updated successfully"})
     }
 
     async updateMuseProposal(req, res){
