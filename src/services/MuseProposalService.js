@@ -43,14 +43,25 @@ class MuseProposalService {
         //     return { code: 404, message: "Proposal not found" }
         // }
         let replyWinner = await MuseProposalReplyRepo.getWinner()
-        let response = [pollWinner, replyWinner]
-        response = response.filter(item => {
-            const timeDiff = timeRangeCalculator(item?.winner_declared_at)
-            if (timeDiff === 0) {
-                return item
-            }
-        })
+        
+        // let response = [pollWinner, replyWinner]
+        // response = response.filter(item => {
+        //     const timeDiff = timeRangeCalculator(item?.winner_declared_at)
+        //     if (timeDiff === 0) {
+        //         return item
+        //     }
+        // })
 
+        const poll = pollWinner?.toJSON?.() ?? null;
+        const reply = replyWinner?.toJSON?.() ?? null;
+        if (reply && reply.proposal && typeof reply.proposal.seen_status !== 'undefined') {
+            reply.seen_status = reply.proposal.seen_status;
+          }
+
+        let response = [poll, reply].filter(item => {
+            const timeDiff = timeRangeCalculator(item?.winner_declared_at);
+            return timeDiff === 0;
+          });
         return response;
     }
 
